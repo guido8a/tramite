@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="/home/grails/aplicaciones/git-hub/happyNew/web-app/font/open/stylesheet.css" rel="stylesheet"/><style language='text/css'>
+  @page {
+            size   : 21cm 29.7cm;  /*width height */
+            margin : 4.5cm 2.5cm 2.5cm 3cm;
+        }
+.hoja {
+            font-family : arial;
+            font-size   : 12pt;
+        }
+.titulo-horizontal {
+    padding-bottom : 15px;
+    border-bottom  : 1px solid #000000;
+    text-align     : center;
+    width          : 105%;
+}
+.titulo-azul {
+    white-space : nowrap;
+    display     : block;
+    width       : 98%;
+    height      : 30px;
+    font-family : 'open sans condensed';
+    font-weight : bold;
+    font-size   : 25px;
+    margin-top  : 10px;
+    line-height : 20px;
+}
+.tramiteHeader {
+   width        : 100%;
+   border-bottom: solid 1px black;
+}
+p{
+   text-align: justify;
+}
+</style>
+</head>
+<body>
+<div class='hoja'>
+<div class="titulo-azul titulo-horizontal">MEMORANDO</div><table class='tramiteHeader'><tr><td class='negrilla'><b>No.</b></td><td>MEM-4-GSTI-14</td></tr><tr><td class='negrilla'><b>DE</b></td><td>GESTION DE SISTEMAS Y TECNOLOGIAS DE INFORMACION</td></tr><tr><td class='negrilla'><b>PARA</b></td><td>Marcelo Moya</td></tr><tr><td class='negrilla'><b>FECHA</b></td><td>Quito, 10 de Abril de 2014</td></tr><tr><td class='negrilla'><b>ASUNTO</b></td><td>prueba M Moya</td></tr></table><br />
+<?xml version="1.0" encoding="ISO-8859-1" ?> <HelloEncodingWorld>Üöäüßßß Test!!!</HelloEncodingWorld>Not i want to encode it into UTF-8. I tried following:f=new File('c:/temp/myiso88591.xml').getText('ISO-8859-1') ts=new String(f.getBytes("UTF-8"), "UTF-8") g=new File('c:/temp/myutf8.xml').write(ts)didnt work due to String incompatibilities. Then i read something about bytestreamreaders/writers/streamingmarkupbuilder and other...<br />
+<br />
+then i triedf=new File('c:/temp/myiso88591.xml').getText('ISO-8859-1') mb = new groovy.xml.StreamingMarkupBuilder() mb.encoding = "UTF-8" new OutputStreamWriter(new FileOutputStream('c:/temp/myutf8.xml'),'utf-8') << mb.bind { mkp.xmlDeclaration() out << f }<br />
+<br />
+<br />
+Atentamente,<br />
+<br />
+ </div>
+</body>
+</html>

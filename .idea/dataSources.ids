@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - happy@localhost" uuid="e626e224-cfba-4687-8720-5827b6bdd56f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="happyNew dev" uuid="e0d38a05-e046-446e-b3c6-6b3b51f47d1c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="happy dev" uuid="c8a5a0c4-3af6-48dd-9813-d22e09b7f90f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
