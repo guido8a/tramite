@@ -125,7 +125,7 @@
             </g:link>
         </g:if>
 
-        <p>Reprotes de trámites generados, retrasados y Gestión de trámites</p>
+        <p>Reportes de trámites generados, retrasados y Gestión de trámites</p>
 
     </div>
 
