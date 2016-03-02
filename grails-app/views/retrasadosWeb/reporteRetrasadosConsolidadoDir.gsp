@@ -21,7 +21,7 @@
 
     <body>
         <h2 class="title">
-            S.A.D. Web - Trámites Retrasados y Sin Recepción - ${dep.descripcion} (${dep.codigo})
+           Trámites Retrasados y Sin Recepción - ${dep.descripcion} (${dep.codigo})
 
         </h2>
 

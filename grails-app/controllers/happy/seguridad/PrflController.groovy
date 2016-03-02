@@ -1,8 +1,5 @@
 package happy.seguridad
 
-import com.sun.xml.internal.bind.v2.TODO
-import happy.tramites.PermisoTramite
-
 class PrflController extends happy.seguridad.Shield {
 
     def dbConnectionService
@@ -100,15 +97,15 @@ class PrflController extends happy.seguridad.Shield {
         return [datos: resultado, mdlo__id: ids, tpac__id: tpac]
     }
 
-    def creaMdlo = {
-        def mdloInstance = new Modulo()
-        render(view: 'creaMdlo', model: ['mdloInstance': mdloInstance])
-    }
+//    def creaMdlo = {
+//        def mdloInstance = new Modulo()
+//        render(view: 'creaMdlo', model: ['mdloInstance': mdloInstance])
+//    }
 
-    def editMdlo = {
-        def mdloInstance = Modulo.get(params.id)
-        render(view: 'creaMdlo', model: ['mdloInstance': mdloInstance])
-    }
+//    def editMdlo = {
+//        def mdloInstance = Modulo.get(params.id)
+//        render(view: 'creaMdlo', model: ['mdloInstance': mdloInstance])
+//    }
 
     def grabaMdlo = {
         if (!params.id) {
@@ -147,10 +144,10 @@ class PrflController extends happy.seguridad.Shield {
         render('borrado: ${params.id}')
     }
 
-    def creaPrfl = {
-        def prflInstance = new Prfl()
-        render(view: 'crear', model: ['prflInstance': prflInstance])
-    }
+//    def creaPrfl = {
+//        def prflInstance = new Prfl()
+//        render(view: 'crear', model: ['prflInstance': prflInstance])
+//    }
 
     def grabaPrfl = {
         if (!params.id) {
@@ -187,10 +184,10 @@ class PrflController extends happy.seguridad.Shield {
         }
     }
 
-    def editPrfl = {
-        def prflInstance = Prfl.get(params.id)
-        render(view: 'crear', model: ['prflInstance': prflInstance])
-    }
+//    def editPrfl = {
+//        def prflInstance = Prfl.get(params.id)
+//        render(view: 'crear', model: ['prflInstance': prflInstance])
+//    }
 
     def borraPrfl = {
         params.controllerName = controllerName
@@ -412,9 +409,9 @@ class PrflController extends happy.seguridad.Shield {
             if (prflInstance) {
                 try {
                     prflInstance.delete(flush: true)
-                    render "OK_Eliminación de Prfl exitosa."
+                    render "OK_Eliminación de perfil exitosa."
                 } catch (e) {
-                    render "NO_No se pudo eliminar Prfl."
+                    render "NO_No se pudo eliminar perfil."
                 }
             } else {
                 notFound_ajax()
@@ -472,7 +469,8 @@ class PrflController extends happy.seguridad.Shield {
                     flash.message = "${message(code: 'default.updated.message', args: [message(code: 'prfl.label', default: 'Prfl'), prflInstance.id])}"
                     redirect(action: "show", id: prflInstance.id)
                 } else {
-                    render(view: "form", model: [prflInstance: prflInstance, title: title, source: "edit"])
+//                    render(view: "form", model: [prflInstance: prflInstance, title: title, source: "edit"])
+                    render(view: "form_ajax", model: [prflInstance: prflInstance, title: title, source: "edit"])
                 }
             } else {
                 flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'prfl.label', default: 'Prfl'), params.id])}"
@@ -485,35 +483,36 @@ class PrflController extends happy.seguridad.Shield {
                 flash.message = "${message(code: 'default.created.message', args: [message(code: 'prfl.label', default: 'Prfl'), prflInstance.id])}"
                 redirect(action: "show", id: prflInstance.id)
             } else {
-                render(view: "form", model: [prflInstance: prflInstance, title: title, source: "create"])
+//                render(view: "form", model: [prflInstance: prflInstance, title: title, source: "create"])
+                render(view: "form_ajax", model: [prflInstance: prflInstance, title: title, source: "create"])
             }
         }
     }
 
-    def update = {
-        def prflInstance = Prfl.get(params.id)
-        if (prflInstance) {
-            if (params.version) {
-                def version = params.version.toLong()
-                if (prflInstance.version > version) {
-
-                    prflInstance.errors.rejectValue("version", "default.optimistic.locking.failure", [message(code: 'prfl.label', default: 'Prfl')] as Object[], "Another user has updated this Prfl while you were editing")
-                    render(view: "edit", model: [prflInstance: prflInstance])
-                    return
-                }
-            }
-            prflInstance.properties = params
-            if (!prflInstance.hasErrors() && prflInstance.save(flush: true)) {
-                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'prfl.label', default: 'Prfl'), prflInstance.id])}"
-                redirect(action: "show", id: prflInstance.id)
-            } else {
-                render(view: "edit", model: [prflInstance: prflInstance])
-            }
-        } else {
-            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'prfl.label', default: 'Prfl'), params.id])}"
-            redirect(action: "list")
-        }
-    }
+//    def update = {
+//        def prflInstance = Prfl.get(params.id)
+//        if (prflInstance) {
+//            if (params.version) {
+//                def version = params.version.toLong()
+//                if (prflInstance.version > version) {
+//
+//                    prflInstance.errors.rejectValue("version", "default.optimistic.locking.failure", [message(code: 'prfl.label', default: 'Prfl')] as Object[], "Another user has updated this Prfl while you were editing")
+//                    render(view: "edit_old", model: [prflInstance: prflInstance])
+//                    return
+//                }
+//            }
+//            prflInstance.properties = params
+//            if (!prflInstance.hasErrors() && prflInstance.save(flush: true)) {
+//                flash.message = "${message(code: 'default.updated.message', args: [message(code: 'prfl.label', default: 'Prfl'), prflInstance.id])}"
+//                redirect(action: "show", id: prflInstance.id)
+//            } else {
+//                render(view: "edit_old", model: [prflInstance: prflInstance])
+//            }
+//        } else {
+//            flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'prfl.label', default: 'Prfl'), params.id])}"
+//            redirect(action: "list")
+//        }
+//    }
 
     def show = {
         def prflInstance = Prfl.get(params.id)

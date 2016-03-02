@@ -647,65 +647,8 @@
                     }
                 };
 
-                %{--var anular = {--}%
-                %{--label  : 'Anular Trámite',--}%
-                %{--icon   : "fa fa-flash",--}%
-                %{--action : function (e) {--}%
-
-                %{--$.ajax({--}%
-                %{--type    : "POST",--}%
-                %{--url     : "${createLink(controller: 'tramite', action: "revisarHijos")}",--}%
-                %{--data    : {--}%
-                %{--id   : id,--}%
-                %{--tipo : "anular"--}%
-                %{--},--}%
-                %{--success : function (msg) {--}%
-                %{--var b = bootbox.dialog({--}%
-                %{--id      : "dlgAnular",--}%
-                %{--title   : 'Anular Trámite',--}%
-                %{--message : msg,--}%
-                %{--buttons : {--}%
-                %{--cancelar : {--}%
-                %{--label     : '<i class="fa fa-times"></i> Cancelar',--}%
-                %{--className : 'btn-danger',--}%
-                %{--callback  : function () {--}%
-
-                %{--}--}%
-                %{--},--}%
-                %{--anular   : {--}%
-                %{--id        : 'btnAnular',--}%
-                %{--label     : '<i class="fa fa-check"></i> Anular',--}%
-                %{--className : "btn-success",--}%
-                %{--callback  : function () {--}%
-
-                %{--$.ajax({--}%
-                %{--type    : 'POST',--}%
-                %{--url     : '${createLink(action: 'anular')}/' + id,--}%
-                %{--data    : {--}%
-                %{--texto : $("#observacionArchivar").val()--}%
-                %{--},--}%
-                %{--success : function (msg) {--}%
-                %{--openLoader();--}%
-                %{--cargarBandeja();--}%
-                %{--closeLoader();--}%
-                %{--if (msg == 'ok') {--}%
-                %{--log("Trámite anulado correctamente", 'success')--}%
-                %{--} else if (msg == 'no') {--}%
-                %{--log("Error al anular el trámite", 'error')--}%
-                %{--}--}%
-                %{--}--}%
-                %{--});--}%
-                %{--}--}%
-                %{--}--}%
-                %{--}--}%
-                %{--})--}%
-                %{--}--}%
-                %{--});--}%
-                %{--}--}%
-                %{--};--}%
 
                 items.header.label = "Acciones";
-
                 items.infoRemitente = infoRemitente;
 
                 var idSession = ${session.usuario.id};

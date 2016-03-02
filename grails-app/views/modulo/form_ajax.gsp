@@ -14,7 +14,7 @@
                     Descripción
                 </label>
                 <div class="col-md-6">
-                    <g:textField name="descripcion" class="form-control" value="${moduloInstance?.descripcion}"/>
+                    <g:textField name="descripcion" class="form-control" value="${moduloInstance?.descripcion}" maxlength="60"/>
                 </div> *
                 
             </span>
@@ -26,7 +26,7 @@
                     Nombre
                 </label>
                 <div class="col-md-6">
-                    <g:textField name="nombre" class="form-control" value="${moduloInstance?.nombre}"/>
+                    <g:textField name="nombre" class="form-control" value="${moduloInstance?.nombre}" maxlength="30"/>
                 </div> *
                 
             </span>

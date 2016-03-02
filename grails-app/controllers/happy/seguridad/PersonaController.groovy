@@ -280,10 +280,10 @@ class PersonaController extends happy.seguridad.Shield {
 
         int newW = 300 * 0.7
         int newH = 400 * 0.7
-        int newX = params.x.toInteger()
-        int newY = params.y.toInteger()
-        def rx = newW / (params.w.toDouble())
-        def ry = newH / (params.h.toDouble())
+        int newX = params.x?.toInteger()
+        int newY = params.y?.toInteger()
+        def rx = newW / (params.w?.toDouble())
+        def ry = newH / (params.h?.toDouble())
 
         int resW = oldW * rx
         int resH = oldH * ry
@@ -350,10 +350,12 @@ class PersonaController extends happy.seguridad.Shield {
         def img
         def w
         def h
-        if (usuario.foto) {
-            img = ImageIO.read(new File(path + usuario.foto));
-            w = img.getWidth();
-            h = img.getHeight();
+        if (usuario?.foto) {
+            if(ImageIO?.read(new File(path + usuario.foto))){
+                img = ImageIO?.read(new File(path + usuario.foto));
+                w = img.getWidth();
+                h = img.getHeight();
+            }
         } else {
             w = 0
             h = 0

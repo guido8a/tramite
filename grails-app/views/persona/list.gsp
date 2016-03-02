@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta name="layout" content="main">
-        <title>Personal GADPP</title>
+        <title>Personal</title>
 
         <style type="text/css">
         .table {
@@ -48,15 +48,11 @@
         <table class="table table-condensed table-bordered" width='100%'>
             <thead>
                 <tr>
-                    %{--<th style="width:10px;"></th>--}%
                     <th style="width: 60px;" class="text-center">
                         <!-- Single button -->
                         <div class="btn-group text-left">
                             <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                 <g:if test="${params.estado}">
-                                %{--<g:if test="${params.estado == 'jefe'}">--}%
-                                %{--<i class="fa fa-user text-warning"></i>--}%
-                                %{--</g:if>--}%
                                     <g:if test="${params.estado == 'usuario'}">
                                         <i class="fa fa-user text-info"></i>
                                     </g:if>
@@ -90,11 +86,6 @@
                                         <i class="fa fa-user text-success"></i> Administrador
                                     </a>
                                 </li>
-                                %{--<li>--}%
-                                %{--<a href="#" class="a" data-tipo="jefe">--}%
-                                %{--<i class="fa fa-user text-warning"></i> Autoridad--}%
-                                %{--</a>--}%
-                                %{--</li>--}%
                                 <li>
                                     <a href="#" class="a" data-tipo="usuario">
                                         <i class="fa fa-user text-info"></i> Activo
@@ -102,7 +93,6 @@
                                 </li>
                             </ul>
                         </div>
-
                     </th>
                     <g:sortableColumn property="login" title="Usuario" params="${params}"/>
                     <g:sortableColumn property="nombre" title="Nombre" params="${params}"/>
@@ -117,7 +107,6 @@
             </thead>
             <tbody>
                 <g:each in="${personaInstanceList}" status="i" var="personaInstance">
-                %{--<g:if test="${params.estado != 'admin' || (params.estado == 'admin' && personaInstance.puedeAdmin)}">--}%
                     <g:set var="del" value="${true}"/>
                     <g:if test="${Tramite.countByDe(personaInstance) > 0}">
                         <g:set var="del" value="${false}"/>
@@ -181,10 +170,7 @@
                                 </g:if>
                             </g:each>
                         </td>
-                        %{--<td>${perfiles.perfil.nombre.join(", ")}</td>--}%
-                        %{--<td>${personaInstance.jefe == 1 ? "SI" : "NO"}</td>--}%
                     </tr>
-                %{--</g:if>--}%
                 </g:each>
             </tbody>
         </table>
@@ -264,9 +250,9 @@
             }
             function deleteRow(itemId) {
                 bootbox.dialog({
-                    title   : "Alerta - Está a punto de Eliminar una Persona del Sistema",
+                    title   : "Alerta - Está a punto de <strong>Eliminar</strong> una persona del sistema",
                     message : "<i class='fa fa-trash-o fa-3x pull-left text-danger text-shadow'></i>" +
-                            "<p>¿Está seguro que desea eliminar a la Persona seleccionada? Esta acción no se puede deshacer.</p>",
+                            "<p>¿Está seguro que desea eliminar a la persona seleccionada? Esta acción no se puede deshacer.</p>",
                     buttons : {
                         cancelar : {
                             label     : "Cancelar",
@@ -348,14 +334,6 @@
 
                     clase = "danger";
                     icon = "${iconDesactivar}";
-                    %{--textMsg = "<p>¿Está seguro que desea desactivar la persona seleccionada?</p>"--}%
-                    %{--if (tramites > 0) {--}%
-                    %{--textMsg += "<p>" + tramites + " trámite" + (tramites == 1 ? '' : 's') + " será" + (tramites == 1 ? '' : 'n') + " " +--}%
-                    %{--"redireccionados de su bandeja de entrada personal.</p>" +--}%
-                    %{--"<div id='divCombo'></div>";--}%
-                    %{--} else {--}%
-                    %{--textMsg += "<p>No tiene trámites en su bandeja de entrada personal.</p>"--}%
-                    %{--}--}%
                     textBtn = "Desactivar";
                     textLoader = "Desactivando";
                     url = "${createLink(action:'desactivar_ajax')}";

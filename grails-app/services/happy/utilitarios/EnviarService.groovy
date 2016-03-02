@@ -47,7 +47,8 @@ class EnviarService {
         } else {
             mensaje = parametros.first().imagenes
         }
-        def leyenda = "GAD de la provincia de Pichincha"
+//        def leyenda = "GAD de la provincia de Pichincha"
+        def leyenda = "TEDEIN S.A."
         def aux = Parametros.list([sort: "id", order: "asc"])
         if (aux.size() == 1) {
             leyenda = aux.first().institucion

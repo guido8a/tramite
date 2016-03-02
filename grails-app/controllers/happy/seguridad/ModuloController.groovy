@@ -199,9 +199,9 @@ class ModuloController extends happy.seguridad.Shield  {
             if (moduloInstance) {
                 try {
                     moduloInstance.delete(flush: true)
-                    render "OK_Eliminación de Modulo exitosa."
+                    render "OK_Eliminación del módulo exitosa."
                 } catch (e) {
-                    render "NO_No se pudo eliminar Modulo."
+                    render "NO_No se pudo eliminar el módulo."
                 }
             } else {
                 notFound_ajax()

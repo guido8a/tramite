@@ -195,10 +195,26 @@
                             </span>
 
                             <div class="descripcion hide">
-                                <h4>Tipo de Prioridad</h4>
+                                <h4>Tipo de prioridad</h4>
+                                <p>El tipo de prioridad determina el tiempo que se tiene para dar contestación al trámite.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-li ${iconTrmt}"></i>
+                            <span id="tptr">
+                                <g:link controller="tipoTramite" action="list">Tipo de trámite</g:link> para distinguir entre
+                                trámites normales y confidenciales
+                            </span>
 
-                                <p>El tipo de prioridad determina el tiempo que se tiene para dar contestacón al trámite.</p>
+                            <div class="descripcion hide">
+                                <h4>Tipo de Trámite</h4>
 
+                                <p>Sirve para distiguir entre confidencial y normal</p>
+
+                                <p>Los trámites de tipo normal pueden ser accedidos por todos los usuarios.</p>
+
+                                <p>A los trámites de tipo confidencial sólo tienen acceso los destinatarios del trámite, estos se hallan
+                                ocultos para los otros usuarios.</p>
                             </div>
                         </li>
                         <li>
@@ -286,27 +302,6 @@
             <div class="tab-pane" id="tramite">
                 <div class="left pull-left">
                     <ul class="fa-ul">
---}%
-
-%{--
-                        <li>
-                            <i class="fa-li ${iconTrmt}"></i>
-                            <span id="tptr">
-                                <g:link controller="tipoTramite" action="list">Tipo de trámite</g:link> para distinguir entre
-                                trámites normales y confidenciales
-                            </span>
-
-                            <div class="descripcion hide">
-                                <h4>Tipo de Trámite</h4>
-
-                                <p>Sirve para distiguir entre confidencial y normal</p>
-
-                                <p>Los trámites de tipo normal pueden ser accedidos por todos los usuarios.</p>
-
-                                <p>A los trámites de tipo confidencial sólo tienen acceso los destinatarios del trámite, estos se hallan
-                                ocultos para los otros usuarios.</p>
-                            </div>
-                        </li>
 --}%
 
 %{--
