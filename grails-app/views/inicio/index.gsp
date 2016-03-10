@@ -62,7 +62,7 @@
 
     <div style="text-align: center;"><h2 class="titl">
             <p class="text-info">${inst.institucion}</p>
-            <p class="text-info">Sistema de Administración de Trámites</p>
+            <p class="text-info">Sistema de Administración de Procesos y Trámites</p>
         </h2>
     </div>
 

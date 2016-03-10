@@ -14,7 +14,7 @@ environments {
         dataSource {
             dbCreate = "update"
 //            url = "jdbc:postgresql://10.0.0.2:5432/sadweb_brre3"
-            url = "jdbc:postgresql://10.0.0.2:5432/sadweb_prdc"
+            url = "jdbc:postgresql://10.0.0.2:5432/proceso"
 //            url = "jdbc:postgresql://127.0.0.1:5432/sadweb_prdc"
 //            url = "jdbc:postgresql://10.0.0.2:5432/happy10"
             username = "postgres"
@@ -46,7 +46,7 @@ environments {
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://10.0.0.2:5432/trmt"
+            url = "jdbc:postgresql://10.0.0.2:5432/proceso"
             username = "postgres"
             password = "postgres"
         }
@@ -54,7 +54,7 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:postgresql://127.0.0.1:5432/trmt"
+            url = "jdbc:postgresql://127.0.0.1:5432/proceso"
             username = "postgres"
             password = "steinsgate"
         }
