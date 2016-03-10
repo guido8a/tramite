@@ -10,7 +10,6 @@
         <table class="table table-bordered table-condensed table-hover">
             <thead>
             <tr>
-
                 <th class="cabecera">Documento</th>
                 <th class="cabecera">Fecha Recepción</th>
                 <th class="cabecera">De</th>
@@ -31,14 +30,10 @@
                     <td>${tramite?.tramite?.prioridad?.descripcion}</td>
                     <td>${tramite?.fechaLimiteRespuesta?.format('dd-MM-yyyy HH:mm')}</td>
                     <td>${tramite?.tramite?.padre?.codigo}</td>
-
                 </tr>
             </g:each>
-
             </tbody>
         </table>
-
     </span>
-
 </div>
 

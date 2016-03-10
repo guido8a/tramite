@@ -54,7 +54,6 @@
     </head>
 
     <body>
-    %{--<g:if test="${session.usuario.puedeDirector || session.usuario.puedeJefe}">--}%
         <g:if test="${session.usuario.puedeAdmin}">
             <g:set var="iconActivar" value="fa-hdd-o"/>
             <g:set var="iconDesactivar" value="fa-power-off"/>
@@ -80,11 +79,6 @@
 
                     <g:if test="${happy.utilitarios.Parametros.get(1).validaLDAP == 1}">
                         <div class="btn-group" style="margin-top: 4px;">
-                            %{--
-                                                <g:link controller="persona" action="cargarUsuariosLdap" class="btn btn-sm btn-primary" id="cargaPrsn">
-                                                    <i class="fa fa-users"></i> Usuarios LDAP
-                                                </g:link>
-                            --}%
                             <a href="#" id="cargaPrsn" class="btn btn-primary btn-sm"><i class="fa fa-users"></i> Cargar/Actualizar LDAP
                             </a>
 
@@ -135,7 +129,6 @@
             <script type="text/javascript">
 
                 var index = 0;
-
                 var $btnCloseModal = $('<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>');
                 var $btnSave = $('<button type="button" class="btn btn-success"><i class="fa fa-save"></i> Guardar</button>');
 
@@ -424,15 +417,6 @@
                     if (tramites != 0) {
                         clase = "default";
                         icon = "";
-//                    textMsg = "<p>No puede " + (activar ? 'activar' : 'desactivar') + " la persona seleccionada pues tiene" +
-//                              tramites + " trámite" + (tramites == 1 ? '' : "s") + " en su bandeja de entrada.</p>" +
-//                              "<p>Por favor redireccione los trámites para continuar</p>";
-//                        textMsg = "<p>" +
-//                                  "El usuario <span class='infoCambioEstado'>" + strUsuario + "</span> que desea " +
-//                                  "<span class='infoCambioEstado'>" + (activar ? 'activar' : 'desactivar') + "</span> tiene " +
-//                                  "<span class='infoCambioEstado entrada'>" + tramites + " trámite" + (tramites == 1 ? '' : "s") + " en su bandeja de entrada</span> y " +
-//                                  "<span class='infoCambioEstado salida'>" + tramitess + " trámite" + (tramitess == 1 ? '' : "s") + " en su bandeja de salida" +
-//                                  ".</p>";
                         textMsg = "<p>" +
                                   "Por favor verifique si el usuario <span class='infoCambioEstado'>" + strUsuario + "</span> que desea " +
                                   "<span class='infoCambioEstado'>" + (activar ? 'activar' : 'desactivar') + "</span> tiene " +
@@ -443,14 +427,7 @@
                                    "o <span class='infoCambioEstado'>" + (activar ? 'activar' : 'desactivar') +
                                    " la persona dejando sus trámites intactos.</span>" +
                                    "</p>";
-//                    botones = {
-//                        aceptar : {
-//                            label     : "Aceptar",
-//                            className : "btn-default",
-//                            callback  : function () {
-//                            }
-//                        }
-//                    };
+
                         botones = {
                             redireccionar : {
                                 label     : "<i class='fa fa-refresh'></i> Redireccionar trámites",
@@ -491,23 +468,6 @@
                                     className : "btn-" + clase,
                                     callback  : function () {
                                         cambiarEstadoRowPersonaAjax(itemId, true);
-//                                    openLoader(textLoader);
-//                                    $.ajax({
-//                                        type    : "POST",
-//                                        url     : url,
-//                                        data    : {
-//                                            id : itemId
-//                                        },
-//                                        success : function (msg) {
-//                                            var parts = msg.split("_");
-//                                            log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)
-//                                            if (parts[0] == "OK") {
-//                                                location.reload(true);
-//                                            } else {
-//                                                closeLoader();
-//                                            }
-//                                        }
-//                                    });
                                     }
                                 }
                             }
@@ -529,22 +489,6 @@
                                     className : "btn-" + clase,
                                     callback  : function () {
                                         cambiarEstadoRowPersonaAjax(itemId, false);
-//                                    openLoader(textLoader);
-//                                    $.ajax({
-//                                        type    : "POST",
-//                                        url     : url,
-//                                        data    : {
-//                                            id    : itemId,
-//                                            quien : $("#cmbRedirect").val()
-//                                        },
-//                                        success : function (msg) {
-//                                            var parts = msg.split("_");
-//                                            log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)
-//                                            if (parts[0] == "OK") {
-//                                                location.reload(true);
-//                                            }
-//                                        }
-//                                    });
                                     }
                                 }
                             }
@@ -570,22 +514,8 @@
                         clase = "danger";
                         icon = "${iconDesactivar}";
                         textMsg = "<p>¿Está seguro que desea desactivar el departamento seleccionado?</p>";
-//                        if (tramites > 0) {
                         textMsg += "<p id='pWarning'>Los trámites de las bandejas de entrada y de salida serán redireccionados al departamento seleccionado</p>";
-//                            textMsg += "<p id='pWarning'>" + tramites + " trámite" + (tramites == 1 ? '' : 's') + " será" + (tramites == 1 ? '' : 'n') + " " +
-//                                       "redireccionados de su bandeja a la bandeja de entrada de la oficina del departamento que seleccione a continuación.</p>";
-//                        textMsg += "<div class='row'>";
-//                        textMsg += "<div class='col-md-3'>Autorizado por</div>";
-//                        textMsg += "<div class='col-md-8'>";
-//                        textMsg += "<input type='text' name='aut' class='form-control' />";
-//                        textMsg += "</div>";
-//                        textMsg += "</div>";
-//                        } else {
-//                            textMsg += "<p>No tiene trámites en su bandeja de entrada.</p>"
-//                        }
                         var $sel = $("#selDptoOrig").clone();
-
-                        %{--textMsg += "${g.select(name:'selDpto', from:Departamento.list([sort:'descripcion']), class: 'form-control')}";--}%
                         textBtn = "Desactivar";
                         textLoader = "Desactivando";
                         url = "${createLink(action:'desactivar_ajax')}";
@@ -606,7 +536,6 @@
                                 className : "btn-" + clase,
                                 callback  : function () {
                                     var $txt = $("#aut");
-//                                if (validaAutorizacion($txt)) {
                                     openLoader(textLoader);
                                     $.ajax({
                                         type    : "POST",
@@ -624,9 +553,6 @@
                                             closeLoader();
                                         }
                                     });
-//                                } else {
-//                                    return false;
-//                                }
                                 }
                             }
                         }
@@ -646,14 +572,8 @@
                     var nodeId = nodeStrId.split("_")[1];
                     var nodeType = $node.data("jstree").type;
                     var nodeUsu = $node.data("usuario");
-
-//                var parentStrId = node.parent;
-//                var $parent = $("#" + parentStrId);
-//                var parentId = parentStrId.split("_")[1];
-
                     var nodeHasChildren = $node.hasClass("hasChildren");
                     var nodeOcupado = $node.hasClass("ocupado");
-
                     var nodeTramites = $node.data("tramites");
                     var nodeTramitess = $node.data("tramitess");
 
@@ -811,11 +731,6 @@
                                                             log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)
                                                             if (parts[0] == "OK") {
                                                                 location.reload(true);
-//                                                            var siblings = $node.siblings().size();
-//                                                            if (siblings == 0) {
-//                                                                $('#tree').jstree('set_type', "#" + nodeStrId, "hijo");
-//                                                            }
-//                                                            $('#tree').jstree('delete_node', $node);
                                                             } else {
                                                                 closeLoader();
                                                                 return false;
@@ -991,7 +906,6 @@
                         $("#loading").hide();
                         $("#tree").removeClass("hide").show();
                     }).on("select_node.jstree", function (node, selected, event) {
-//                    $('#tree').jstree('toggle_node', selected.selected[0]);
                     }).jstree({
                         plugins     : ["types", /*"state", */"contextmenu", "wholerow", "search"],
                         core        : {
@@ -1018,9 +932,6 @@
                             show_at_node : false,
                             items        : createContextMenu
                         },
-//                        state       : {
-//                            key : "departamentos"
-//                        },
                         search      : {
                             fuzzy             : false,
                             show_only_matches : true,

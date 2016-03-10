@@ -15,14 +15,12 @@
         <style type="text/css">
 
         body {
-            background-color : #ebe0f5; /*#fef8e1 */;
+            background-color : #ebe0f5;
         }
 
         .etiqueta {
             float       : left;
-            /*width: 100px;*/
             margin-left : 5px;
-            /*margin-top: 5px;*/
         }
 
         .alert {
@@ -34,14 +32,6 @@
             background-color : #ffffff;
             border-color     : #d0d0d0;
         }
-
-        /*.alertas {*/
-        /*float       : left;*/
-        /*width       : 100px;*/
-        /*height      : 40px;*/
-        /*margin-left : 20px;*/
-        /*cursor      : pointer;*/
-        /*}*/
 
         .cabecera {
             text-align : center;
@@ -89,19 +79,12 @@
 
         .alertas {
             float       : left;
-            /*width       : 100px;*/
-            /*height      : 40px;*/
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-            /*margin-top: -5px;*/
         }
 
         .letra {
-
-            /*font-family: "Arial Black", arial-black;*/
-            /*background-color: #7eb75e;*/
-            /*background-color:#faebc9;*/
             background-color : #c5a1ca;
         }
 
@@ -129,12 +112,8 @@
 
         <elm:flashMessage tipo="${flash.tipo}" clase="${flash.clase}">${flash.message}</elm:flashMessage>
 
-        %{--Es editor: ${esEditor}--}%
-
         <div class="btn-toolbar toolbar" style="margin-top: 10px !important">
             <div class="btn-group">
-                %{--<a href="#" class="btn btn-primary btnBuscar"><i class="fa fa-book"></i> Buscar</a>--}%
-
                 <g:link action="" class="btn btn-success btnActualizar">
                     <i class="fa fa-refresh"></i> Actualizar
                 </g:link>
@@ -150,20 +129,6 @@
                     (<span id="numBor"></span>)
                 ${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E001').descripcion)}
                 </div>
-
-                %{--<div id="alertaEnviados">--}%
-                %{--<div data-type="enviado" class="alert enviado alertas" clase="E003">--}%
-                %{--(<span id="numEnv"></span>)--}%
-                %{--${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E003').descripcion)}--}%
-                %{--</div>--}%
-                %{--</div>--}%
-
-                %{--<div id="alertaNoRecibidos">--}%
-                %{--<div data-type="noRecibido" class="alert alert-danger alertas" clase="alerta">--}%
-                %{--(<span id="numNoRec"></span>)--}%
-                %{--Sin Recepción--}%
-                %{--</div>--}%
-                %{--</div>--}%
             </div>
         </div>
 
@@ -172,7 +137,6 @@
 
             <fieldset>
                 <legend>Búsqueda</legend>
-
                 <div>
                     <div class="col-md-2">
                         <label>Documento</label>
@@ -188,33 +152,22 @@
                         <label>Fecha Envío</label>
                         <elm:datepicker name="fechaBusqueda" class="datepicker form-control" value=""/>
                     </div>
-
-
                     <div style="padding-top: 25px">
                         <a href="#" name="busqueda" class="btn btn-success btnBusqueda"><i
                                 class="fa fa-check-square-o"></i> Buscar</a>
 
                         <a href="#" name="salir" class="btn btn-danger btnSalir"><i class="fa fa-times"></i> Cerrar</a>
                     </div>
-
                 </div>
-
             </fieldset>
-
         </div>
-
-
-        %{--//bandeja--}%
-
 
         <g:select from="${personal}" name="selector" optionKey="id" class="form-control hide"
                   style="width: 300px; margin-left: 130px; margin-top: -30px"/>
 
         <div id="" style=";height: 600px;overflow: auto;position: relative">
             <div class="modalTabelGray" id="bloqueo-salida"></div>
-
             <div id="bandeja"></div>
-
         </div>
 
         <div class="modal fade " id="dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -251,7 +204,6 @@
                         $("#bandeja").html(msg).show("slide");
                         cargarAlertas();
                         if (band) {
-//                    bootbox.alert("Datos actualizados")
                             log('Datos actualizados', 'success');
                         }
                     }
@@ -461,23 +413,12 @@
                                 }
                             } else {
                                 cargarBandeja(true);
-//                                log('Ocurrió un error al enviar los trámites seleccionados!', 'error');
-                                %{--location.href = "${g.createLink(action: 'errores1')}";--}%
-
-//                                closeLoader();
                             }
                         }
                     });
                 }
 
                 cargarBandeja(false);
-
-//                setInterval(function () {
-//                    openLoader();
-//                    cargarBandeja(false);
-//                    closeLoader();
-//                    $(".qtip").hide();
-//                }, 300000);
 
                 $(".btnBusqueda").click(function () {
                     $("#bandeja").html("").append($("<div style='width:100%; text-align: center;'/>").append(spinnerSquare64));

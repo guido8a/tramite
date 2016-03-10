@@ -8,7 +8,6 @@
         ADVERTENCIA: El trámite <strong>${pxt.tramite?.codigo}</strong> está por ser
     ${params.tipo == "archivar" ? "archivado" : "anulado"}!
     </p>
-
     <g:if test="${params.tipo == 'anular' && hijos.size() > 0}">
         <p>
             Tenga en cuenta que se anularán los siguientes trámites derivados:

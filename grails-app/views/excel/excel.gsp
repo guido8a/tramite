@@ -139,11 +139,6 @@
                     </tr>
                     </tbody>
                 </table>
-                %{--<g:each in="${letras}" var="l" status="i">--}%
-                %{--<div class="cell-header header h-${l}" fila="${l}" fila-num="${i}">--}%
-                %{--${l}--}%
-                %{--</div>--}%
-                %{--</g:each>--}%
             </div>
         </div>
         <div id="container-filas">
@@ -168,9 +163,6 @@
                 </table>
             </div>
         </div>
-
-
-
     </div>
 </div>
 

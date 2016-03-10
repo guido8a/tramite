@@ -9,9 +9,6 @@ class AlertasController extends happy.seguridad.Shield {
         } else {
             alertas = Alerta.findAllByPersonaAndFechaRecibidoIsNull(session.usuario, [sort: "fechaCreacion", order: 'desc'])
         }
-//        alertas.sort {
-//            it.fechaCreacion
-//        }
         return [alertas: alertas]
     }
 

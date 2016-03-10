@@ -23,7 +23,7 @@
 
             <g:if test="${envia?.nombre}">
                 <div class="row">
-                    <div class="col-md-${width} text-info">
+                    <div class="col-md-3 text-info">
                         Enviado por
                     </div>
 
@@ -59,20 +59,6 @@
 
                 </div>
             </g:if>
-
-        %{--<g:if test="${departamentoInstance?.padre}">--}%
-        %{--<div class="row">--}%
-        %{--<div class="col-md-3 text-info">--}%
-        %{--Dirección/Secretaría--}%
-        %{--</div>--}%
-
-        %{--<div class="col-md-9">--}%
-        %{--${departamentoInstance?.padre?.encodeAsHTML()}--}%
-        %{--</div>--}%
-
-        %{--</div>--}%
-        %{--</g:if>--}%
-
 
             <g:if test="${departamentoInstance?.telefono}">
                 <div class="row">
@@ -112,51 +98,6 @@
 
                 </div>
             </g:if>
-
-        %{--<g:if test="${personaInstance?.jefe}">--}%
-        %{--
-                    <div class="row">
-                        <div class="col-md-${width} text-info">
-                            Autoridad
-                        </div>
-
-                        <div class="col-md-7">
-                            ${personaInstance.jefe == 1 ? "SI" : "NO"}
-                        </div>
-
-                    </div>
-        --}%
-        %{--</g:if>--}%
-
-        %{--<g:if test="${personaInstance?.activo}">--}%
-        %{--
-                    <div class="row">
-                        <div class="col-md-${width} text-info">
-                            Activo
-                        </div>
-
-                        <div class="col-md-7">
-                            ${personaInstance.activo == 1 ? "SI" : "NO"}
-                        </div>
-
-                    </div>
-        --}%
-        %{--</g:if>--}%
-
-        %{--
-                    <g:if test="${personaInstance?.titulo}">
-                        <div class="row">
-                            <div class="col-md-${width} text-info">
-                                Título
-                            </div>
-
-                            <div class="col-md-7">
-                                <g:fieldValue bean="${personaInstance}" field="titulo"/>
-                            </div>
-
-                        </div>
-                    </g:if>
-        --}%
 
         </div>
     </div>

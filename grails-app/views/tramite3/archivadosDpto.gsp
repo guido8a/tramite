@@ -17,17 +17,13 @@
         .etiqueta {
             float : left;
             width : 100px;
-            /*margin-top: 5px;*/
-
         }
 
         .textEtiqueta {
             float       : left;
-
             width       : 350px;
             height      : 25px;
             margin-left : 20px;
-            /*margin-top: 5px;*/
         }
 
         .alertas {
@@ -36,12 +32,10 @@
             width       : 250px;
             height      : 25px;
             margin-left : 90px;
-            /*margin-top: 5px;*/
         }
 
         .cabecera {
             text-align : center;
-
         }
 
         .container-celdas {
@@ -54,32 +48,25 @@
 
         .uno {
             float : left;
-
             width : 450px;
 
         }
 
         .dos {
-
             float : left;
             width : 350px;
-
         }
 
         .tres {
             float : left;
             width : 270px;
-
         }
 
         .fila {
-
-            /*height: 10px;*/
             clear : both;
         }
 
         .css-vertical-text {
-            /*position          : absolute;*/
             left              : 5px;
             bottom            : 5px;
             color             : #0088CC;
@@ -96,27 +83,18 @@
             font-family       : 'Tulpen One', cursive;
             font-weight       : bold;
             font-size         : 35px;
-            /*text-shadow       : -2px 2px 1px rgba(0, 0, 0, 0.25);*/
-
-            /*text-shadow: 0px 0px 1px #333;*/
         }
 
         .tituloChevere {
-
             color       : #0088CC;
             border      : 0px solid red;
             white-space : nowrap;
             display     : block;
-            /*width       : 98%;*/
             height      : 25px;
             font-family : 'open sans condensed';
             font-weight : bold;
             font-size   : 16px;
-            /*text-shadow : -2px 2px 1px rgba(0, 0, 0, 0.25);*/
-            /*margin-top  : 10px;*/
             line-height : 18px;
-
-            /*text-shadow: 0px 0px 1px #333;*/
         }
 
         .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -141,13 +119,10 @@
 
         <div class="btn-toolbar toolbar" style="margin-top: 10px !important">
             <div class="btn-group">
-
                 <a href="#" class="btn btn-primary btnBuscar"><i class="fa fa-book"></i> Buscar</a>
-
                 <g:link action="" class="btn btn-success btnActualizar">
                     <i class="fa fa-refresh"></i> Actualizar
                 </g:link>
-
                 <g:if test="${si == 'si'}">
                     <g:link action="bandejaEntradaDpto" class="btn btn-danger btnRegresar" controller="tramite3">
                         <i class="fa fa-hand-o-left"></i> Regresar
@@ -157,58 +132,39 @@
                     <g:link action="bandejaEntrada" class="btn btn-danger btnRegresar">
                         <i class="fa fa-hand-o-left"></i> Regresar
                     </g:link>
-
                 </g:else>
-
             </div>
-
         </div>
 
 
         <div class="buscar" hidden="hidden" style="margin-bottom: 20px">
-
             <fieldset>
                 <legend>Búsqueda</legend>
-
                 <div>
                     <div class="col-md-2">
                         <label>Documento</label>
                         <g:textField name="memorando" value="" maxlength="15" class="form-control"/>
                     </div>
-
                     <div class="col-md-2">
                         <label>Asunto</label>
                         <g:textField name="asunto" value="" style="width: 300px" maxlength="30" class="form-control"/>
                     </div>
-
                     <div class="col-md-2" style="margin-left: 130px">
                         <label>Fecha</label>
                         <elm:datepicker name="fechaBusqueda" class="datepicker form-control" value=""/>
                     </div>
-
-
                     <div style="padding-top: 25px">
                         <a href="#" name="busqueda" class="btn btn-success btnBusqueda"><i class="fa fa-check-square-o"></i> Buscar
                         </a>
-
                         <a href="#" name="salir" class="btn btn-danger btnSalir"><i class="fa fa-times"></i> Cerrar</a>
                     </div>
-
                 </div>
-
             </fieldset>
-
         </div>
-
-
-        %{--//bandeja--}%
-
 
         <div id="bandeja">
 
         </div>
-
-
 
         <script>
             $(function () {
@@ -216,7 +172,6 @@
                 var celHegth = 25;
                 var select = null;
                 var headerTop = $(".header-columnas");
-//        var headerLeft=$(".header-filas");
 
                 $(".h-A").resizable({
                     handles    : "e",
@@ -224,7 +179,6 @@
                     alsoResize : ".A"
                 });
                 $(".container-celdas").scroll(function () {
-//            $("#container-filas").scrollTop($(".container-celdas").scrollTop());
                     $("#container-cols").scrollLeft($(".container-celdas").scrollLeft());
                 });
 
@@ -252,15 +206,11 @@
             });
 
             $(".btnBuscar").click(function () {
-
                 $(".buscar").attr("hidden", false)
-
             });
 
             $(".btnSalir").click(function () {
-
                 $(".buscar").attr("hidden", true)
-
             });
 
             $(".btnActualizar").click(function () {
@@ -316,14 +266,9 @@
                     success   : function (msg) {
                         clearInterval(interval)
                         $("#bandeja").html(msg);
-
                     }
                 });
-
             });
-
-
         </script>
-
     </body>
 </html>

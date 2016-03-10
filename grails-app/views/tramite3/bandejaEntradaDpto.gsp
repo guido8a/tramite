@@ -831,12 +831,6 @@
                 return items
             }
 
-            //old contextMenu
-
-            %{--<g:if test="${bloqueo}">--}%
-            %{--$("#bloqueo-salida").show()--}%
-            %{--</g:if>--}%
-
             $(function () {
 
                 $("input").keyup(function (ev) {
@@ -865,13 +859,6 @@
                     cargarBandeja();
                 });
 
-//                intervalBandeja = setInterval(function () {
-//                    openLoader();
-//                    cargarBandeja(false);
-//                    closeLoader()
-//                    $(".qtip").hide();
-//                }, 1000 * 60);
-
                 $(".btnBuscar").click(function () {
                     $(".buscar").attr("hidden", false)
                 });
@@ -879,12 +866,7 @@
                 $(".btnActualizar").click(function () {
 
                     cargarBandeja();
-//                    clearInterval(intervalBandeja);
-//                    intervalBandeja = setInterval(function () {
-//                        openLoader();
-//                        cargarBandeja();
-//                        closeLoader()
-//                    }, 1000 * 60 * 5);
+
                     log('Tabla de trámites y alertas actualizadas!', "success");
 
                     return false;

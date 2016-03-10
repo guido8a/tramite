@@ -79,12 +79,6 @@
         </div>
     </div>
 
-    %{--<div class="row">--}%
-    %{--<div class="col-xs-3 negrilla">--}%
-    %{--Enviado el:--}%
-    %{--<input type="text" class="form-control required label-shared"  maxlength="30" value="${tramite.fechaEnvio?.format('dd-MM-yyyy hh:mm')}" disabled style="width: 160px">--}%
-    %{--</div>--}%
-    %{--</div>--}%
     <div class="row">
         <div class="col-xs-1 col-xs-uno-y-medio negrilla">
             Código:

@@ -32,14 +32,6 @@
                     </g:link>
                 </td>
                 <td>
-                    %{--${per.id}--}%
-%{--
-                    <g:if test="${happy.tramites.PersonaDocumentoTramite.findAllByPersonaAndRolPersonaTramite(happy.seguridad.Persona.get(per.id),
-                            happy.tramites.RolPersonaTramite.findAllByCodigoOrCodigo('R001', 'R002'))}">
-                        Tiene trámites
-                    </g:if>
---}%
-                    %{--"${personas.tieneTrmt[0]}"--}%
                     Bandeja de entrada: ${per.tieneTrmt} trámites<br/>
                     Bandeja de salida:  ${per.bandejaSalida} trámites<br/>
                 </td>

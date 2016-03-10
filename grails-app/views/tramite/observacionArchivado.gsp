@@ -12,14 +12,8 @@
 </head>
 
 <body>
-
-
 <label>ADVERTENCIA: El siguiente trámite está por ser archivado!</label><br>
-
 <label>Trámite: </label> ${tramite?.codigo}
-
 <g:textArea name="observacionArchivar" maxlength="255" class="form-control" style="resize: none; height: 150px; width: 530px" value="${observacion?.observaciones}" />
-
-
 </body>
 </html>

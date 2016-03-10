@@ -19,22 +19,14 @@
 
         .etiqueta {
             float       : left;
-            /*width: 100px;*/
             margin-left : 5px;
-            /*margin-top: 5px;*/
         }
 
-        /*.alert {*/
-        /*padding : 0;*/
-        /*}*/
         .alertas {
             float       : left;
-            /*width       : 100px;*/
-            /*height      : 40px;*/
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-            /*margin-top: -5px;*/
         }
 
         .alert-blanco {
@@ -94,10 +86,6 @@
         }
 
         .letra {
-
-            /*font-family: "Arial Black", arial-black;*/
-            /*background-color: #7eb75e;*/
-            /*background-color:#faebc9;*/
             background-color : #8fc6f3;
         }
 
@@ -111,7 +99,6 @@
         }
 
         </style>
-        %{--<link href="${resource(dir: 'css', file: 'custom/loader.css')}" rel="stylesheet">--}%
     </head>
 
     <body>
@@ -290,22 +277,17 @@
                     },
                     success : function (msg) {
                         closeLoader();
-//                            console.log(msg);
                         var parts = msg.split('_');
                         if (parts[0] == 'ok') {
                             if (!imprimir)
-//                        cargarBandeja(true);
                                 log('Trámites Enviados', 'success');
                             if (imprimir) {
                                 openLoader();
                                 location.href = "${g.createLink(controller: 'tramiteExport' ,action: 'imprimirGuia')}?ids=" + strIds + "&departamento=" + '${persona?.departamento?.descripcion}';
                                 closeLoader();
-//                                    console.log("llego")
                             }
                         } else {
                             log('Ocurrió un error al enviar los trámites seleccionados!', 'error');
-//                        cargarBandeja(true);
-                            %{--location.href = "${g.createLink(action: 'errores1')}";--}%
                         }
                         cargarBandeja();
                     }
@@ -323,18 +305,17 @@
                 };
 
                 <g:if test="${!bloqueo}">
+
                 var id = $tr.data("id");
                 var codigo = $tr.attr("codigo");
                 var estado = $tr.attr("estado");
                 var padre = $tr.attr("padre");
                 var de = $tr.attr("de");
                 var archivo = $tr.attr("departamento") + "/" + $tr.attr("anio") + "/" + $tr.attr("codigo");
-
                 var porEnviar = $tr.hasClass("E001"); //por enviar
                 var revisado = $tr.hasClass("E002"); //revisado
                 var enviado = $tr.hasClass("E003"); //enviado
                 var recibido = $tr.hasClass("E004"); //recibido
-
                 var esSumilla = $tr.hasClass("sumilla");
                 var esExterno = $tr.hasClass("externo");
                 var esExternoCC = $tr.hasClass("externoCC");
@@ -344,12 +325,8 @@
                 var tienePadre = $tr.hasClass("conPadre");
                 var tieneAlerta = $tr.hasClass("alerta");
                 var tieneAnexo = $tr.hasClass("conAnexo");
-
-//                var tienePrincipal = $tr.attr("principal").toString() != '0' && $tr.attr("principal").toString() != $tr.attr("id");
-
                 var puedeImprimir = $tr.hasClass("imprimir");
                 var puedeDesenviar = $tr.hasClass("desenviar");
-
                 var esRespuestaNueva = $tr.attr("ern");
 
                 var copia = {
@@ -434,13 +411,11 @@
                     action : function (e) {
                         $.ajax({
                             type    : 'POST',
-                            %{--url     : '${createLink(action: 'guardarRecibir')}/' + id,--}%
                             url     : '${createLink(controller: 'externos', action: 'recibirTramiteExterno')}/' + id,
                             success : function (msg) {
                                 var parts = msg.split('_');
                                 openLoader();
                                 resetValues();
-//                        cargarBandeja(true);
                                 closeLoader();
                                 if (parts[0] == 'NO') {
                                     log(parts[1], "error");
@@ -451,7 +426,6 @@
                                 }
                             }
                         }); //ajax
-
                     } //action
                 };
 
@@ -544,7 +518,6 @@
                     action : function (e) {
                         $.ajax({
                             type    : 'POST',
-                            %{--url     : '${createLink(action: 'guardarRecibir')}/' + id,--}%
                             url     : '${createLink(controller: 'tramite', action: 'saveDEX')}/' + id,
                             success : function (msg) {
                                 var parts = msg.split('_');
@@ -561,7 +534,6 @@
                                 }
                             }
                         }); //ajax
-
                     } //action
                 };
 
@@ -608,12 +580,6 @@
                     icon  : "fa fa-sitemap",
                     url   : '${createLink(controller: 'tramite3', action: 'arbolTramite')}/' + id + "?b=bsp"
                 }; //arbol
-
-                %{--var crearHermano = {--}%
-                %{--label : "Agregar documento al trámite",--}%
-                %{--icon  : "fa fa-paste",--}%
-                %{--url   : '${createLink(controller: "tramite2", action: "crearTramiteDep")}?padre=' + padre + '&hermano=' + id + "&buscar=1&esRespuestaNueva=N"--}%
-                %{--}; //crear hermano--}%
 
                 var crearHermano = {
                     label  : "Agregar documento al trámite",

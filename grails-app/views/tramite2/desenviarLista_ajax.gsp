@@ -1,7 +1,6 @@
 <style type="text/css">
 .lista {
     height     : 300px;
-    /*background : red;*/
     overflow-x : hidden;
     overflow-y : auto;
 }
@@ -22,7 +21,6 @@ td {
 </g:if>
 <g:else>
     <g:if test="${contestados != ''}">
-    %{--<g:if test="${cont != 0}">--}%
         <h5>No puede quitar el enviado del trámite ${tramite.codigo}</h5>
         <ul>
             <util:renderHTML html="${contestados}"/>
@@ -30,16 +28,13 @@ td {
     </g:if>
     <g:else>
         <i class='fa fa-magic fa-3x pull-left text-danger text-shadow'></i>
-
         <p>
             ¿Está seguro que desea quitar el enviado del trámite ${tramite.codigo}?<br/>Esta acción no se puede deshacer.
         </p>
-
         <p>
             A continuación se muestra una lista con las personas a las cuales se envió el trámite con su respectivo rol, seleccione aquellos
             a quienes desea quitar el enviado.
         </p>
-
         <div class="alert alert-info" style="padding: 10px; font-size: larger;">
             Si quita el enviado de la persona con rol PARA se eliminarán las copias aunque ya se encuentren recibidas o archivadas.
         </div>
@@ -56,7 +51,6 @@ td {
                         <g:else>
                             <i class="chk chkAll fa fa-square-o fa-lg"></i>
                         </g:else>
-                    %{--<i class="chk chkAll fa fa-square-o fa-lg"></i>--}%
                     </th>
                 </thead>
                 <tbody>
@@ -97,12 +91,6 @@ td {
                 </tbody>
             </table>
         </div>
-
-    %{--<div class="row">--}%
-    %{--<div class="col-md-3">Autorizado por</div>--}%
-
-    %{--<div class="col-md-9"><g:textField name="aut" class="form-control"/></div>--}%
-    %{--</div>--}%
 
         <script type="text/javascript">
             $(function () {

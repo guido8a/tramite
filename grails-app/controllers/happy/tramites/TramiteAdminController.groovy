@@ -15,7 +15,6 @@ class TramiteAdminController /*extends Shield*/ {
     }
 
     def buscarPersonasRedireccionar() {
-//        println "buscarPersonasRedireccionar ... $params"
         def nombre = params.nombre.trim() != "" ? params.nombre.trim() : null
         def apellido = params.apellido.trim() != "" ? params.apellido.trim() : null
         def user = params.user.trim() != "" ? params.user.trim() : null
@@ -29,7 +28,6 @@ class TramiteAdminController /*extends Shield*/ {
         def data = [:]
         def personas
         def contador = 0
-//        println "inicia busqueda de personas..."
         personas = Persona.withCriteria {
             if (nombre) {
                 ilike("nombre", "%" + nombre + "%")
@@ -42,41 +40,19 @@ class TramiteAdminController /*extends Shield*/ {
             }
             maxResults(10)
         }
-//        println "fin busqueda de personas..."
         personas.each { pr ->
             contador = 0
             data = [:]
             data.persona = pr
             data.tieneTrmt = 0
             data.bandejaSalida = 0
-/*
-            def tramites = PersonaDocumentoTramite.withCriteria {
-                eq("persona", pr)
-                inList("rolPersonaTramite", [rolPara, rolCopia])
-                isNotNull("fechaEnvio")
-                inList("estado", [enviado, recibido])
-            }
 
-            println "procesa trámites.."
-            tramites.each { tr ->
-                if (!(tr.tramite.tipoDocumento.codigo == "OFI")) {
-                    band = tramitesService.verificaHijos(tr, anulado)
-                    if (!band) {
-                        contador += 1
-                    }
-                }
-            }
-            if (contador) {
-                data.tieneTrmt = 'S'
-            }
-*/
             def sql = "SELECT count(*) cuenta FROM entrada_prsn($pr.id)"
             def cn = dbConnectionService.getConnection()
             data.tieneTrmt = cn.firstRow(sql.toString()).cuenta
 
             sql = "select count(*) cuenta FROM (select * from salida_prsn($pr.id) except select * from salida_dpto($pr.id)) as salida"
             data.bandejaSalida = cn.firstRow(sql.toString()).cuenta
-//            println "data: ${data.tieneTrmt} y ${data.bandejaSalida}"
 
             resultado.add(data)
         }
@@ -90,7 +66,6 @@ class TramiteAdminController /*extends Shield*/ {
         def trmt = Tramite.get(params.original)
         def rolPara = RolPersonaTramite.findByCodigo("R001")
         def rolCc = RolPersonaTramite.findByCodigo("R002")
-//        def persDoc = PersonaDocumentoTramite.findAllByTramiteAndRolPersonaTramiteInList(tramite, [rolPara, rolCopia])
         def persDoc = PersonaDocumentoTramite.withCriteria {
             eq("tramite", trmt)
             inList("rolPersonaTramite", [rolPara, rolCc])
@@ -354,22 +329,13 @@ class TramiteAdminController /*extends Shield*/ {
         def estadoArchivado = EstadoTramite.findByCodigo("E005")
         def estadosNo = [estadoAnulado/*, estadoArchivado*/]
 
-//        def puede = true
-
         if (!paraTramite) {
             if (tramite.copias.size() == 0) {
                 return [tramite: tramite, error: "No puede crear copias"]
             }
         }
 
-//        (tramite.para + tramite.allCopias).each {prtr->
-//            if(estadosNo.contains(prtr.estado)) {
-//                puede = false;
-//            }
-//        }
-
         if (estadosNo.contains(paraTramite?.estado)) {
-//        if (puede) {
             return [tramite: tramite, error: "El trámite se encuentra <strong>${paraTramite.estado.descripcion}</strong>, no puede crear copias"]
         } else {
             def de = tramite.de
@@ -423,7 +389,6 @@ class TramiteAdminController /*extends Shield*/ {
     }
 
     def enviarCopias_ajax() {
-//        println("params " + params)
         def tramite
         if (params.id) {
             def persDocTram = PersonaDocumentoTramite.get(params.id)
@@ -439,14 +404,12 @@ class TramiteAdminController /*extends Shield*/ {
         def estadoAnulado = EstadoTramite.findByCodigo("E006")
         def estadoArchivado = EstadoTramite.findByCodigo("E005")
 
-
         def errores = ""
 
         if (params.copias.trim() == "") {
             render "NO*" + "Tiene que seleccionar al menos una persona para enviar copia."
             return
         }
-
         if (tramite.para) {
             if (tramite.para?.estado == estadoAnulado /*|| tramite.para?.estado == estadoArchivado */ || tramite.para?.estado == estadoPorEnviar) {
                 render "NO*" + "El trámite se encuentra <strong>${tramite.para?.estado.descripcion}</strong>, no puede crear copias"
@@ -458,7 +421,6 @@ class TramiteAdminController /*extends Shield*/ {
                 return
             }
         }
-
 
         copias.each { copia ->
             copia = copia.trim()
@@ -506,7 +468,6 @@ class TramiteAdminController /*extends Shield*/ {
             } else {
 
             }
-
         }
         if (errores == "") {
             render "OK"
@@ -522,14 +483,11 @@ class TramiteAdminController /*extends Shield*/ {
 
     def guardarEstado() {
 
-
         def persDocTram = PersonaDocumentoTramite.get(params.prtr)
         def estadoArchivado = EstadoTramite.findByCodigo("E005")
         def estadoAnulado = EstadoTramite.findByCodigo("E006")
         def estadoEnviado = EstadoTramite.findByCodigo("E003")
         def estados = [estadoArchivado, estadoAnulado, estadoEnviado]
-
-//        println("estado " + persDocTram.estado.codigo)
 
         if (estados.contains(persDocTram?.estado)) {
             render "NO*el trámite está ${persDocTram.estado.descripcion}, no puede cambiar el estado"
@@ -559,7 +517,6 @@ class TramiteAdminController /*extends Shield*/ {
         }
 
         def sql = "SELECT * FROM entrada_prsn($persona.id) ORDER BY ${params.sort} ${params.order}"
-//        println "redireccionar tram: $sql"
         def cn = dbConnectionService.getConnection()
         def rows = cn.rows(sql.toString())
 
@@ -640,8 +597,6 @@ class TramiteAdminController /*extends Shield*/ {
             }
         }
 
-        /** mostrar bandeja de salida personal **/
-//        println "... es triángulo: ${persona.esTriangulo()}, id: ${persona.id}"
         def salida = cn.rows("select * from salida_prsn(${persona.id}) except select * from salida_dpto(${persona.id})".toString())
 
         return [persona: persona, rows: rows, personas: personas, dep: dep, filtradas: filtradas, salida: salida]
@@ -653,7 +608,6 @@ class TramiteAdminController /*extends Shield*/ {
         def rolPara = RolPersonaTramite.findByCodigo('R001');
         def rolCopia = RolPersonaTramite.findByCodigo('R002');
         def rolImprimir = RolPersonaTramite.findByCodigo('I005')
-
         def estadoEnviado = EstadoTramite.findByCodigo("E003")
         def estadoRecibido = EstadoTramite.findByCodigo("E004")
 
@@ -671,17 +625,11 @@ class TramiteAdminController /*extends Shield*/ {
         }
         tramites = tramites.findAll { Tramite.countByAQuienContesta(it) == 0 }
         def personas
-
         def dep = persona.departamento
-
         def filtradas = []
         def sesion
 
-        println()
-
         if (persona?.departamento?.id == persona?.departamentoDesde) {
-//            println("entro 1")
-
             if (persona.estaActivo) {
                 personas = Persona.withCriteria {
                     eq("departamento", persona.departamento)
@@ -714,8 +662,6 @@ class TramiteAdminController /*extends Shield*/ {
             }
 
         } else {
-//            println("entro 2")
-
             def depaDesde
 
             if (persona?.departamentoDesde) {
@@ -780,13 +726,10 @@ class TramiteAdminController /*extends Shield*/ {
 
         def errores = ""
 
-
         if (pr.rolPersonaTramite.codigo == "I005") {
             pr.delete(flush: true)
         } else {
             def obs = "Trámite antes dirigido a " + persona.nombre + " " + persona.apellido + ", redireccionado"
-
-//            def personaAntes = pr.persona
             def dptoAntes = pr.departamento
 
             if (redDpto) {
@@ -878,7 +821,6 @@ class TramiteAdminController /*extends Shield*/ {
                     }
                 }
             }
-//            def tramite = pr.tramite
             def observacionOriginal = pr.observaciones
             def accion = "Redirección de trámite"
             def solicitadoPor = ""
@@ -888,7 +830,6 @@ class TramiteAdminController /*extends Shield*/ {
             pr.observaciones = tramitesService.observaciones(observacionOriginal, accion, solicitadoPor, usuario, texto, nuevaObservacion)
             observacionOriginal = trmt.observaciones
             trmt.observaciones = tramitesService.observaciones(observacionOriginal, accion, solicitadoPor, usuario, texto, nuevaObservacion)
-
 
             if (trmt.save(flush: true)) {
                 println "tr.save ok, i: ${trmt.id}"
@@ -923,7 +864,6 @@ class TramiteAdminController /*extends Shield*/ {
         }
     }
 
-
     def arbolAdminTramite() {
         def html = "", url = "", tramite = null
 
@@ -953,11 +893,9 @@ class TramiteAdminController /*extends Shield*/ {
     }
 
     def dialogAdmin() {
-//        println("params quitar" + params)
 
         def tramite = Tramite.get(params.id)
         def personasRec = []
-
 
         if (params.copia) {
             def prtrCopia = PersonaDocumentoTramite.get(params.prtr)
@@ -1003,7 +941,15 @@ class TramiteAdminController /*extends Shield*/ {
         def icon = params.icon
         def msg = params.msg
         def personas = []
-        Persona.findAllByDepartamento(tramite.de?.departamento).each { p ->
+
+        def dep
+        if(tramite?.de?.departamento){
+            dep = tramite?.de?.departamento
+        }else{
+            dep = tramite?.departamento
+        }
+
+        Persona.findAllByDepartamento(dep).each { p ->
             if (p.estaActivo) {
                 def m = [:]
                 m.key = p.nombre + " " + p.apellido + " (funcionario de ${p.departamento.codigo})"
@@ -1011,8 +957,6 @@ class TramiteAdminController /*extends Shield*/ {
                 personas.add(m)
             }
         }
-//        println msg
-//        println icon
 
         def todas = personas + personasRec
         todas = todas.sort { it.value }
@@ -1026,7 +970,15 @@ class TramiteAdminController /*extends Shield*/ {
         def icon = params.icon
         def msg = params.msg
         def personas = []
-        Persona.findAllByDepartamento(tramite.de?.departamento).each { p ->
+        def dep
+        if(tramite?.de?.departamento){
+            dep = tramite?.de?.departamento
+        }else{
+            dep = tramite?.departamento
+        }
+
+
+        Persona.findAllByDepartamento(dep).each { p ->
             if (p.estaActivo) {
                 def m = [:]
                 m.key = p.nombre + " " + p.apellido + " (funcionario de ${p.departamento.codigo})"
@@ -1034,8 +986,6 @@ class TramiteAdminController /*extends Shield*/ {
                 personas.add(m)
             }
         }
-//        println msg
-//        println icon
 
         def personasRec = []
 
@@ -1054,36 +1004,8 @@ class TramiteAdminController /*extends Shield*/ {
         def todas = personas + personasRec
         todas = todas.sort { it.value }
 
-//        println("personas Reciben " + personasRec)
-
         return [tramite: tramite, icon: icon, msg: msg, personas: todas]
 
-    }
-
-    private String makeNewTreeExtended(Tramite principal) {
-        def html = ""
-        def tramitePrincipal = principal.tramitePrincipal
-        //debe hacer un arbol para cada tramite que tenga tramite.tramitePrincipal = principal.tramitePrincipal
-        def tramites
-        if (tramitePrincipal > 0) {
-            tramites = Tramite.findAllByTramitePrincipal(tramitePrincipal, [sort: "fechaCreacion"])
-        } else {
-            tramites = [principal]
-        }
-
-        tramites.each { p ->
-            def type = "tramite"
-            if (p.tramitePrincipal == p.id) {
-                type += "Principal"
-            }
-            html += "<li id='t_${p.id}' class='jstree-open' data-jstree='{\"type\":\"${type}\"}' >"
-            html += "<b>" + p.codigo + "</b>"
-            html += "<ul>"
-            html += makeTreeExtended(p)
-            html += "</ul>"
-        }
-
-        return html
     }
 
     private String makeTreeExtended(Tramite principal) {
@@ -1152,7 +1074,7 @@ class TramiteAdminController /*extends Shield*/ {
         }
 
         def rol = pdt.rolPersonaTramite
-        def duenioPrsn = pdt.tramite.de.id
+        def duenioPrsn = pdt?.tramite?.de?.id
         def duenioDpto = pdt.tramite.deDepartamento?.id
         def paraStr = "Para: "
         if (rol.codigo == "R002") {
@@ -1164,7 +1086,7 @@ class TramiteAdminController /*extends Shield*/ {
             paraStr += pdt.persona.departamento.codigo + ":" + pdt.persona.login
         }
 
-        def deStr = "De: " + (pdt.tramite.deDepartamento ? pdt.tramite.deDepartamento.codigo : pdt.tramite.de.departamento.codigo + ":" + pdt.tramite.de.login)
+        def deStr = "De: " + (pdt.tramite.deDepartamento ? pdt.tramite.deDepartamento.codigo : pdt?.tramite?.de?.departamento?.codigo + ":" + pdt.tramite.de.login)
 
         data += ',"tramite":"' + pdt.tramiteId + '"'
         data += ',"codigo":"' + pdt.tramite.codigo + '"'
@@ -1177,7 +1099,6 @@ class TramiteAdminController /*extends Shield*/ {
             //false: no tiene hijos vivos
             clase += " tieneHijos"
         }
-//        println "****** " + pdt.tramite + "   " + pdt.tramite.padre
         if (pdt.tramite.padre) {
             clase += " tienePadre"
         }
@@ -1338,15 +1259,8 @@ class TramiteAdminController /*extends Shield*/ {
                 ne("estado", estadoAnulado)
                 inList("rolPersonaTramite", [rolPara, rolCopia])
             }
-//            prtr.each {hj->
-//                println " "+hj.rolPersonaTramite.descripcion+"  "+hj.estado.descripcion
-//            }
             hijosVivos += prtr.size()
         }
-
-        println("tiene hijos " + hijosVivos)
-
-
         if (hijosVivos > 0) {
             render "NO*"
             return
@@ -1416,7 +1330,6 @@ class TramiteAdminController /*extends Shield*/ {
         def estados = [estadoArchivado]
         if (estados.contains(persDocTram.estado)) {
             render "NO*el trámite está ${persDocTram.estado.descripcion}, no puede anular el trámite archivado"
-
         } else {
             def funcion = { objeto ->
                 println "anulando " + objeto.id + " " + objeto.rolPersonaTramite.descripcion + "  " + objeto.tramite
@@ -1527,7 +1440,6 @@ class TramiteAdminController /*extends Shield*/ {
                 nuevaObservacion = params.texto
                 pdt.tramite.aQuienContesta.tramite.observaciones = tramitesService.observaciones(observacionOriginal, accion, solicitadoPor, usuario, texto, nuevaObservacion)
             }
-
             render "OK"
         }
     }
@@ -1538,19 +1450,16 @@ class TramiteAdminController /*extends Shield*/ {
         def estadoArchivado = EstadoTramite.findByCodigo("E005")
         def estados = [estadoArchivado]
 
-
         if (persDocTram == null) {
             render "NO*el trámite no se puede anular"
             return
         }
-
 
         if (estados.contains(persDocTram?.estado)) {
             render "NO*el trámite está ${persDocTram.estado.descripcion}, no puede anular el trámite archivado"
 
         } else {
             def funcion = { objeto ->
-//                println "anulando " + objeto.id + " " + objeto.rolPersonaTramite.descripcion + "  " + objeto.tramite
                 def anulado = EstadoTramite.findByCodigo("E006")
                 objeto.estado = anulado
                 objeto.fechaAnulacion = new Date()
@@ -1614,15 +1523,6 @@ class TramiteAdminController /*extends Shield*/ {
                         }
                     }
                 }
-
-//                if (objeto.rolPersonaTramite.codigo == "R002") {
-//                    if(objeto.delete(flush: true)){
-//                        println("anulado y borrado")
-//                    }else{
-//                        println("error anulado-borrado " + objeto.errors)
-//                    }
-//                }
-
             }
 
             def rolCopia = RolPersonaTramite.findByCodigo("R002")
@@ -1726,7 +1626,6 @@ class TramiteAdminController /*extends Shield*/ {
             } else if (pdt.persona) {
                 nuevaObs += " el usuario ${pdt.persona.login}"
             }
-//            nuevaObs += " reactivada"
             nuevaObs += " "
             observacionOriginal = pdt.tramite.observaciones
             texto = nuevaObs
@@ -1740,7 +1639,6 @@ class TramiteAdminController /*extends Shield*/ {
             } else if (pdt.persona) {
                 nuevaObs += " el usuario ${pdt.persona.login}"
             }
-//            nuevaObs += " reactivado"
             nuevaObs += " "
             observacionOriginal = pdt.tramite.observaciones
             texto = nuevaObs
@@ -1757,18 +1655,12 @@ class TramiteAdminController /*extends Shield*/ {
 
     def desanular() {
         def pdt = PersonaDocumentoTramite.get(params.id)
-//        if (pdt.rolPersonaTramite.codigo == "R001") { //es PARA
         def tramite = pdt.tramite
         def copias = tramite.allCopias
         def ok = true
 
         def listaDesanular = [pdt]
 
-        // 06-04-2015: ya no quieren que desanular PARA desanule COPIAS
-//        if (pdt.rolPersonaTramite.codigo == "R001") {// es PARA
-//            listaDesanular = (copias + pdt)
-//        }
-//        (copias + pdt).each { p ->
         listaDesanular.each { p ->
             println "desanular: " + p.rolPersonaTramite.descripcion
             if (!desanularPdt(p)) {
@@ -1776,20 +1668,15 @@ class TramiteAdminController /*extends Shield*/ {
             }
         }
         render ok ? "OK" : "NO"
-//        } else {
-//            render "NO"
-//        }
     }
 
     def getCadenaDown(pdt, funcion) {
         def res = []
         def tramites = Tramite.findAll("from Tramite where aQuienContesta=${pdt.id}")
-//        println "* tramites " + tramites + "     " + tramites.codigo
         def roles = [RolPersonaTramite.findByCodigo("R002"), RolPersonaTramite.findByCodigo("R001")]
         def lvl
         funcion pdt
         if (tramites.size() > 0) {
-//            tramite = tramite.pop()
             tramites.each { tramite ->
                 def tmp = [:]
                 tmp.put("nodo", tramite)
@@ -1814,7 +1701,6 @@ class TramiteAdminController /*extends Shield*/ {
     }
 
     def getHermanos(tramite, res, roles, funcion) {
-        def lvl
         def hermanos = PersonaDocumentoTramite.findAllByTramiteAndRolPersonaTramiteInList(tramite, roles)
         while (hermanos.size() > 0) {
             def nodo = hermanos.pop()
@@ -1850,6 +1736,4 @@ class TramiteAdminController /*extends Shield*/ {
         }
         return res
     }
-
-
 }

@@ -85,45 +85,18 @@
                 <g:link action="redactar" class="btn btn-azul btnSave">
                     <i class="fa fa-save"></i> Guardar %{--y empezar a redactar--}%
                 </g:link>
-            %{--<a href="#" class="btn btn-azul" id="guardar">--}%
-            %{--<i class="fa fa-save"></i> ${(tramite) ? "Guardar " : "Guardar y empezar a redactar"}--}%
-            %{--</a>--}%
-            %{--<g:link action="bandejaEntrada" class="btn btn-azul btnRegresar">--}%
-            %{--<i class="fa fa-list-ul"></i> Bandeja de Entrada--}%
-            %{--</g:link>--}%
                 <g:if test="${tramite.padre || tramite.id}">
                     <a href="#" class="btn btn-azul" id="btnDetalles">
                         <i class="fa fa-search"></i> Detalles
                     </a>
                 </g:if>
-            %{--<g:if test="${padre}">--}%
                 <g:link action="bandejaEntrada" class="btn btn-default btnRegresar">
                     <i class="fa fa-times"></i> Cancelar
                 </g:link>
-            %{--</g:if>--}%
-            %{--<g:link controller="tramite3" action="bandejaEntradaDpto" class="btn btn-azul btnRegresar">--}%
-            %{--<i class="f a fa-list-ul"></i> Bandeja de Entrada--}%
-            %{--</g:link>--}%
             </div>
-
         </div>
 
         <g:form class="frmTramite" controller="tramite3" action="save">
-        %{--<g:form class="frmTramite" action="saveDep">--}%
-        %{--Padre.id--}%
-        %{--<g:textField name="tramite.padre.id" value="${padre?.id}"/>--}%
-        %{--<br/>Tramite.id--}%
-        %{--<g:textField name="tramite.id" value="${tramite?.id}"/>--}%
-        %{--<br/>hiddenCC--}%
-        %{--<g:textField name="tramite.hiddenCC" id="hiddenCC" value="${cc}"/>--}%
-        %{--<br/>a quien contesta.id--}%
-        %{--<g:textField name="tramite.aQuienContesta.id" value="${pxt}"/>--}%
-        %{--<br/>esRespuesta--}%
-        %{--<g:textField name="tramite.esRespuesta" value="${params.esRespuesta}"/>--}%
-        %{--<br/>es respuesta nueva--}%
-        %{--<g:textField name="tramite.esRespuestaNueva" value="${params.esRespuestaNueva}"/>--}%
-        %{--<br/>Tramite principal--}%
-        %{--<g:textField name="tramite.tramitePrincipal" value="${tramite.tramitePrincipal}"/>--}%
             <g:hiddenField name="tramite.padre.id" value="${padre?.id}"/>
             <g:hiddenField name="tramite.id" value="${tramite?.id}"/>
             <g:hiddenField name="tramite.hiddenCC" id="hiddenCC" value="${cc}"/>
@@ -137,26 +110,17 @@
                 <g:set var="principal" value="${Tramite.get(tramite.tramitePrincipal)}"/>
             </g:if>
 
-        %{--<g:hiddenField name="dpto" id="hiddenCC" value="${dpto}"/>--}%
             <g:if test="${padre || principal}">
                 <g:if test="${principal?.id != tramite.id}">
                     <div style="margin-top: 30px; min-height: 100px;font-size: 11px" class="vertical-container">
-
                         <p class="css-vertical-text">D. Principal</p>
-
                         <div class="linea"></div>
-
                         <div class="row">
                             <div class="col-xs-1 negrilla">Documento:</div>
-
                             <div class="col-xs-2">${principal.codigo}</div>
-
                             <div class="col-xs-1 negrilla" style="width: 55px">Fecha:</div>
-
                             <div class="col-xs-2">${principal.fechaCreacion.format("dd-MM-yyyy")}</div>
-
                             <div class="col-xs-1 negrilla" style="width: 32px">De:</div>
-
                             <div class="col-xs-3">
                                 <g:if test="${principal.tipoDocumento.codigo == 'DEX'}">
                                     <td>${principal.paraExterno}</td>
@@ -181,19 +145,16 @@
 
                         <div class="row">
                             <div class="col-md-1 negrilla">Asunto:</div>
-
                             <div class="col-md-11">${principal.asunto}</div>
                         </div>
                         <g:if test="${principal.personaPuedeLeer(session.usuario) && principal.texto?.trim()?.size() > 0}">
                             <div class="row">
                                 <div class="col-md-1 negrilla">Texto:</div>
-
                                 <div class="col-md-11 texto">
                                     <util:renderHTML html="${principal.texto}"/>
                                 </div>
                             </div>
                         </g:if>
-
                         <g:if test="${principal.observaciones && principal.observaciones?.trim()?.size() > 0}">
                             <div class="row claseMin">
                                 <div class="col-md-1 negrilla">Obs:</div>
@@ -205,22 +166,14 @@
                 </g:if>
                 <g:if test="${padre && padre != principal}">
                     <div style="margin-top: 30px; min-height: 100px;font-size: 11px" class="vertical-container">
-
                         <p class="css-vertical-text">Contesta a</p>
-
                         <div class="linea"></div>
-
                         <div class="row">
                             <div class="col-xs-1 negrilla">Documento:</div>
-
                             <div class="col-xs-2">${padre.codigo}</div>
-
                             <div class="col-xs-1 negrilla" style="width: 55px">Fecha:</div>
-
                             <div class="col-xs-2">${padre.fechaCreacion.format("dd-MM-yyyy")}</div>
-
                             <div class="col-xs-1 negrilla" style="width: 32px">De:</div>
-
                             <div class="col-xs-3">
                                 <g:if test="${padre.tipoDocumento.codigo == 'DEX'}">
                                     <td>${padre.paraExterno}</td>
@@ -230,7 +183,6 @@
                                 </g:else>
                             </div>
                         </div>
-
                         <div class="row ">
                             <div class="col-xs-10">
                                 <g:each in="${happy.tramites.PersonaDocumentoTramite.findAllByTramiteAndRolPersonaTramiteNotInList(padre, rolesNo, [sort: 'rolPersonaTramite'])}" var="pdt" status="j">
@@ -245,14 +197,12 @@
 
                         <div class="row">
                             <div class="col-md-1 negrilla">Asunto:</div>
-
                             <div class="col-md-11">${padre.asunto}</div>
                         </div>
 
                         <g:if test="${padre.personaPuedeLeer(session.usuario) && padre.texto?.trim()?.size() > 0}">
                             <div class="row">
                                 <div class="col-md-1 negrilla">Texto:</div>
-
                                 <div class="col-md-11 texto">
                                     <util:renderHTML html="${padre.texto}"/>
                                 </div>
@@ -262,7 +212,6 @@
                         <g:if test="${padre.observaciones && padre.observaciones?.trim()?.size() > 0}">
                             <div class="row claseMin">
                                 <div class="col-md-1 negrilla">Obs:</div>
-
                                 <div class="col-md-11">${padre.observaciones}</div>
                             </div>
                         </g:if>
@@ -273,20 +222,7 @@
             <div style="margin-top: 30px;" class="vertical-container">
 
                 <p class="css-vertical-text">Trámite</p>
-
                 <div class="linea"></div>
-
-                %{--<g:if test="${padre}">--}%
-                %{--<div class="alert alert-info">--}%
-                %{--<p>--}%
-                %{--<b>Trámite principal:</b>--}%
-                %{--${padre.codigo} - ${padre.asunto}--}%
-                %{--<g:link controller="tramite3" action="seguimientoTramite" id="${padre.id}" params="[prev: 'crearTramite']" class="alert-link pull-right">--}%
-                %{--Seguimiento del trámite--}%
-                %{--</g:link>--}%
-                %{--</p>--}%
-                %{--</div>--}%
-                %{--</g:if>--}%
 
                 <div class="row">
                     <div class="col-xs-4">
@@ -313,60 +249,17 @@
 
                     </div>
 
-                    %{--<g:if test="${padre}">--}%
-                    %{--<div class="col-xs-3 negrilla">--}%
-                    %{--Padre:--}%
-                    %{--<input type="text" name="padre" class="form-control label-shared" id="padre" value="${padre?.codigo}" disabled/>--}%
-                    %{--</div>--}%
-                    %{--</g:if>--}%
 
                     <div class="col-xs-3" style="margin-top: -25px">
                         <b>Tipo de documento:</b>
-                        %{--<g:if test="${tramite.id}">--}%
-                        %{--<div class="uneditable-input">--}%
-                        %{--${tramite.tipoDocumento.descripcion}--}%
-                        %{--<g:hiddenField name="tramite.tipoDocumento.id" id="tipoDocumento" value="${tramite.tipoDocumento}"/>--}%
-                        %{--</div>--}%
-                        %{--</g:if>--}%
-                        %{--<g:else>--}%
-                        %{--${tramite.tipoDocumentoId}--}%
                         <elm:comboTipoDoc id="tipoDocumento" name="tramite.tipoDocumento.id" class="many-to-one form-control required"
                                           value="${tramite.tipoDocumentoId ?: happy.tramites.TipoDocumento.findByCodigo('MEM').id}"
                                           tramite="${tramite}" tipo="pers"/>
-                        %{--</g:else>--}%
                     </div>
-
-
-                    %{--<g:if test="${session.usuario.puedeTramitar}">--}%
-                    %{--<div class="col-xs-2 negrilla" id="divExterno" style="width: 100px; margin-left: -15px">--}%
-                    %{--<label for="externo"><input type="checkbox" name="externo" id="externo">--}%
-                    %{--Externo--}%
-                    %{--</label>--}%
-                    %{--</div>--}%
-                    %{--</g:if>--}%
-
 
                     <div class="col-xs-4 negrilla hide" id="divPara" style="margin-top: -10px">
-                        %{--<elm:comboPara name="tramite.para" id="para" style="width:310px;" value="${persona?.departamento?.id * -1}"--}%
-                        %{--class="form-control label-shared required"/>--}%
-                        %{--<g:select name="tramite.para" id="para" from="${disponibles}" optionKey="id" optionValue="label"--}%
-                        %{--style="width:310px;" class="form-control label-shared required" value="${persona?.departamento?.id * -1}"/>--}%
-                        %{--<g:select name="tramite.origenTramite.id" id="paraExt" from="${OrigenTramite.list([sort: 'nombre'])}" optionKey="id"--}%
-                        %{--optionValue="nombre" style="width:310px;" class="form-control label-shared required"/>--}%
+
                     </div>
-
-                    %{--<div class="col-xs-1 negrilla hide" id="divBotonInfo">--}%
-                    %{--<a href="#" id="btnInfoPara" class="btn btn-sm btn-info">--}%
-                    %{--<i class="fa fa-search"></i>--}%
-                    %{--</a>--}%
-                    %{--</div>--}%
-                    %{--<div class="col-xs-2 negrilla hide" id="divConfidencial">--}%
-                    %{--<label for="confi"><input type="checkbox" name="confi" id="confi"/> Confidencial</label>--}%
-                    %{--</div>--}%
-
-                    %{--<div class="col-xs-2 negrilla hide" id="divAnexos">--}%
-                    %{--<label for="anexo"><input type="checkbox" name="anexo" id="anexo"/> Con anexos</label>--}%
-                    %{--</div>--}%
                 </div>
 
                 <div class="row">
@@ -380,28 +273,12 @@
                 </div>
 
                 <div class="row">
-                    %{--<div class="col-xs-3">--}%
-                    %{--<b>Tipo de documento:</b>--}%
-                    %{--<elm:select id="tipoDocumento" name="tramite.tipoDocumento.id" class="many-to-one form-control required"--}%
-                    %{--from="${session.usuario.tiposDocumento}"--}%
-                    %{--value="${tramite.tipoDocumentoId}" optionKey="id" optionValue="descripcion"--}%
-                    %{--optionClass="codigo" noSelection="['': 'Seleccione el tipo de documento']"/>--}%
-                    %{--</div>--}%
 
                     <div class="col-xs-2 ">
                         <b>Prioridad:</b>
-                        %{--<g:select name="tramite.prioridad.id" class="many-to-one form-control required" from="${happy.tramites.TipoPrioridad.list(['sort': 'tiempo', order: 'desc'])}" value="" optionKey="id" optionValue="descripcion"></g:select>--}%
                         <elm:select name="tramite.prioridad.id" id="prioridad" class="many-to-one form-control required" from="${TipoPrioridad.list()}"
                                     value="${tramite.prioridadId ?: 3}" optionKey="id" optionValue="descripcion" optionClass="tiempo"/>
                     </div>
-
-                    %{--<div class="col-xs-3 negrilla">--}%
-                    %{--<span class="grupo">--}%
-                    %{--Fecha límite de respuesta:--}%
-                    %{--<elm:datetimepicker name="fechaLimiteRespuesta" title="Fecha límite de respuesta " class="datepicker form-control required"--}%
-                    %{--value="${tramite.fechaLimiteRespuesta?.format('dd-MM-yyyy')}"/>--}%
-                    %{--</span>--}%
-                    %{--</div>--}%
 
                     <div class="col-xs-2 ">
                         <b>Creado el:</b>
@@ -432,25 +309,8 @@
                         </label>
                     </div>
 
-                    %{--<g:if test="${persona.puedeTramitar}">--}%
-                    %{--<div class="col-xs-2 negrilla" id="divExterno" style="margin-top: 20px; width: 110px;">--}%
-                    %{--<label for="externo"><input type="checkbox" name="externo" id="externo">--}%
-                    %{--Externo--}%
-                    %{--</label>--}%
-                    %{--</div>--}%
-                    %{--</g:if>--}%
-
                 </div>
 
-                %{--<div class="row hide" id="divParaExt">--}%
-                %{--<div class="col-xs-12 ">--}%
-                %{--<span class="grupo">--}%
-                %{--<b>Para externo:</b>--}%
-                %{--<input type="text" name="paraExt2" class="form-control required" maxlength="63"--}%
-                %{--style="width:460px; display: inline" value="${tramite.paraExterno}"/>--}%
-                %{--</span>--}%
-                %{--</div>--}%
-                %{--</div>--}%
 
                 <div class="row">
                     <div class="col-xs-12 ">

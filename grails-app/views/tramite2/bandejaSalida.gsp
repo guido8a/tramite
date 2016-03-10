@@ -20,22 +20,14 @@
 
         .etiqueta {
             float       : left;
-            /*width: 100px;*/
             margin-left : 5px;
-            /*margin-top: 5px;*/
         }
 
-        /*.alert {*/
-        /*padding : 0;*/
-        /*}*/
         .alertas {
             float       : left;
-            /*width       : 100px;*/
-            /*height      : 40px;*/
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-            /*margin-top: -5px;*/
         }
 
         .alert-blanco {
@@ -95,10 +87,6 @@
         }
 
         .letra {
-
-            /*font-family: "Arial Black", arial-black;*/
-            /*background-color: #7eb75e;*/
-            /*background-color:#faebc9;*/
             background-color : #8fc6f3;
         }
 
@@ -111,7 +99,6 @@
             font-size : 8pt;
         }
         </style>
-        %{--<link href="${resource(dir: 'css', file: 'custom/loader.css')}" rel="stylesheet">--}%
     </head>
 
     <body>
@@ -156,19 +143,15 @@
                 ${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E001').descripcion)}
                 </div>
 
-                %{--<div id="alertaEnviados">--}%
                 <div data-type="enviado" class="alert enviado alertas" clase="E003">
                     (<span id="numEnv"></span>)
                 ${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E003').descripcion)}
                 </div>
-                %{--</div>--}%
 
-                %{--<div id="alertaNoRecibidos">--}%
                 <div data-type="noRecibido" class="alert alert-danger alertas" clase="alerta">
                     (<span id="numNoRec"></span>)
                 Sin Recepción
                 </div>
-                %{--</div>--}%
             </div>
         </div>
 
@@ -183,18 +166,14 @@
                         <label>Documento</label>
                         <g:textField name="memorando" value="" maxlength="15" class="form-control allCaps"/>
                     </div>
-
                     <div class="col-md-2">
                         <label>Asunto</label>
                         <g:textField name="asunto" value="" style="width: 300px" maxlength="30" class="form-control"/>
                     </div>
-
                     <div class="col-md-2" style="margin-left: 130px">
                         <label>Fecha Envío</label>
                         <elm:datepicker name="fechaBusqueda" class="datepicker form-control" value=""/>
                     </div>
-
-
                     <div style="padding-top: 25px">
                         <a href="#" name="busqueda" class="btn btn-success btnBusqueda"><i
                                 class="fa fa-check-square-o"></i> Buscar</a>
@@ -203,13 +182,9 @@
                     </div>
 
                 </div>
-
             </fieldset>
-
         </div>
 
-
-        %{--//bandeja--}%
 
         <div id="" style=";height: 600px;overflow: auto;position: relative">
             <div class="modalTabelGray" id="bloqueo-salida"></div>
@@ -308,7 +283,6 @@
                         closeLoader();
 //                                                console.log(msg);
                         var parts = msg.split("_");
-
                         if (parts[0] == 'ok') {
 //                        cargarBandeja(true);
                             log('Trámites Enviados' + parts[1], 'success');
@@ -319,11 +293,7 @@
                                 closeLoader();
                             }
                         } else {
-//                        cargarBandeja(true);
                             log('Ocurrió un error al enviar los trámites seleccionados!', 'error');
-                            %{--location.href = "${g.createLink(action: 'errores1')}";--}%
-
-//                                closeLoader();
                         }
                         cargarBandeja();
                     }
@@ -361,8 +331,6 @@
                 var tienePadre = $tr.hasClass("conPadre");
                 var tieneAlerta = $tr.hasClass("alerta");
                 var tieneAnexo = $tr.hasClass("conAnexo");
-
-//                var tienePrincipal = $tr.attr("principal").toString() != '0' && $tr.attr("principal").toString() != $tr.attr("id");
 
                 var puedeImprimir = $tr.hasClass("imprimir");
                 var puedeDesenviar = $tr.hasClass("desenviar");
@@ -447,31 +415,6 @@
                     }
                 };
 
-                //old
-                %{--var recibirExterno = {--}%
-                %{--label  : 'Confirmar recepción',--}%
-                %{--icon   : "fa fa-check-square-o",--}%
-                %{--action : function (e) {--}%
-                %{--$.ajax({--}%
-                %{--type    : 'POST',--}%
-                %{--url     : '${createLink(action: 'guardarRecibir')}/' + id,--}%
-                %{--url     : '${createLink(controller: 'externos', action: 'recibirTramiteExterno')}/' + id,--}%
-                %{--success : function (msg) {--}%
-                %{--var parts = msg.split('_')--}%
-                %{--resetValues();--}%
-                %{--if (parts[0] == 'NO') {--}%
-                %{--log(parts[1], "error");--}%
-                %{--} else if (parts[0] == "OK") {--}%
-                %{--log(parts[1], "success")--}%
-                %{--} else if (parts[0] == "ERROR") {--}%
-                %{--bootbox.alert(parts[1]);--}%
-                %{--}--}%
-                %{--}--}%
-                %{--}); //ajax--}%
-
-                %{--} //action--}%
-                %{--};--}%
-
                 var recibirExterno = {
                     label  : 'Confirmar recepción destinatarios externos',
                     icon   : "fa fa-check-square-o",
@@ -483,7 +426,6 @@
                                 id : id
                             },
                             success : function (msg) {
-                                //s.indexOf("oo") > -1
                                 var buttons = {};
                                 if (msg.indexOf("No puede") > -1) {
                                     buttons.aceptar = {
@@ -643,12 +585,6 @@
                     url   : '${createLink(controller: 'tramite3', action: 'arbolTramite')}/' + id + "?b=bsp"
                 }; //arbol
 
-                %{--var crearHermano = {--}%
-                %{--label : "Agregar documento al trámite",--}%
-                %{--icon  : "fa fa-paste",--}%
-                %{--url   : '${createLink(controller: "tramite", action: "crearTramite")}?padre=' + padre + '&hermano=' + id + "&buscar=1&esRespuestaNueva=N"--}%
-                %{--}; //crear hermano--}%
-
                 var crearHermano = {
                     label  : "Agregar documento al trámite",
                     icon   : "fa fa-paste",
@@ -794,7 +730,6 @@
                                         }
                                     };
                                 }
-
                                 bootbox.dialog({
                                     title   : "Alerta",
                                     message : msg,
@@ -851,86 +786,7 @@
                     }
                 };
 
-                %{--var desenviar = {--}%
-                %{--label  : "Quitar el enviado",--}%
-                %{--icon   : "fa fa-magic text-danger",--}%
-                %{--action : function () {--}%
-                %{--$.ajax({--}%
-                %{--type    : "POST",--}%
-                %{--url     : '${createLink(action:'desenviarLista_ajax')}',--}%
-                %{--data    : {--}%
-                %{--id : id--}%
-                %{--},--}%
-                %{--success : function (msg) {--}%
-                %{--bootbox.dialog({--}%
-                %{--title   : "Alerta",--}%
-                %{--message : msg,--}%
-                %{--buttons : {--}%
-                %{--cancelar  : {--}%
-                %{--label     : "Cancelar",--}%
-                %{--className : "btn-primary",--}%
-                %{--callback  : function () {--}%
-                %{--}--}%
-                %{--},--}%
-                %{--desenviar : {--}%
-                %{--label     : "<i class='fa fa-magic'></i> Quitar enviado",--}%
-                %{--className : "btn-danger",--}%
-                %{--callback  : function () {--}%
-                %{--var ids = "";--}%
-                %{--var $txt = $("#aut");--}%
-                %{--$(".chkOne").each(function () {--}%
-                %{--if ($(this).hasClass("fa-check-square")) {--}%
-                %{--if (ids != "") {--}%
-                %{--ids += "_"--}%
-                %{--}--}%
-                %{--ids += $(this).attr("id");--}%
-                %{--}--}%
-                %{--});--}%
-                %{--if (ids) {--}%
-                %{--//                                                    if (validaAutorizacion($txt)) {--}%
-                %{--openLoader("Quitando enviado");--}%
-                %{--$.ajax({--}%
-                %{--type    : "POST",--}%
-                %{--url     : '${createLink(action:'desenviar_ajax')}',--}%
-                %{--data    : {--}%
-                %{--id  : id,--}%
-                %{--ids : ids/*,--}%
-                %{--aut : $.trim($txt.val())*/--}%
-                %{--},--}%
-                %{--success : function (msg) {--}%
-                %{--var parts = msg.split("_");--}%
-                %{--log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)--}%
-                %{--if (parts[0] == "OK") {--}%
-                %{--resetValues()--}%
-                %{--closeLoader();--}%
-                %{--//                                                        cargarBandeja(true)--}%
-                %{--log("Envío del trámite cancelado correctamente", 'success')--}%
 
-                %{--}else{--}%
-                %{--if(parts[0] == 'NO'){--}%
-                %{--log(parts[1], "error")--}%
-                %{--closeLoader();--}%
-                %{--}--}%
-                %{--}--}%
-                %{--}--}%
-                %{--});--}%
-                %{--//                                                    } else {--}%
-                %{--//                                                        return false;--}%
-                %{--//                                                    }--}%
-                %{--} else {--}%
-                %{--log('No seleccionó ninguna persona ', 'error')--}%
-                %{--}--}%
-
-                %{--}--}%
-                %{--}--}%
-                %{--}--}%
-                %{--});--}%
-                %{--}--}%
-                %{--});--}%
-                %{--}--}%
-                %{--};--}%
-
-//                if (!revisado) {
                 items.header.label = "Acciones";
                 if (!esSumilla) {
                     items.ver = ver;
@@ -939,7 +795,6 @@
                 items.detalles = detalles;
                 items.arbol = arbol;
                 </g:if>
-//                items.detalles = detalles;
 
                 if (porEnviar) {
                     if (esSumilla || esDex) {
@@ -966,20 +821,14 @@
                 if ((enviado || tieneAlerta) && puedeDesenviar) {
                     items.desenviar = desenviar;
                 }
-//                if (esExterno && (enviado || tieneAlerta)) {
-//                    items.recibirExterno = recibirExterno
-//                }
-
                 if ((esExterno && (enviado || tieneAlerta)) || esExternoCC) {
                     items.recibirExterno = recibirExterno
                 }
-
                 if (enviado || tieneAlerta) {
                     <g:if test="${session.usuario.getPuedeCopiar()}">
                     items.copia = copia;
                     </g:if>
                 }
-
                 if (esOficio) {
                     delete items.copia;
                 }

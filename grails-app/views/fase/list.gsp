@@ -1,29 +1,27 @@
-<%@ page import="happy.tramites.RolPersonaTramite" %>
+
+<%@ page import="happy.proceso.Fase" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="layout" content="main">
-        <title>Rol de Personas</title>
+        <title>Lista de Fases</title>
     </head>
-
     <body>
 
         <elm:flashMessage tipo="${flash.tipo}" clase="${flash.clase}">${flash.message}</elm:flashMessage>
 
-        <!-- botones -->
+    <!-- botones -->
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
                 <g:link action="form" class="btn btn-default btnCrear">
-                    <i class="fa fa-file-o"></i> Crear
+                    <i class="fa fa-file-o"></i> Nueva fase
                 </g:link>
             </div>
-        <g:link class="btn btn-default col-md-2" style="width: 100px;" controller="inicio" action="parametros"><i class="fa fa-arrow-left"></i> Regresar</g:link>
-
-        <div class="btn-group pull-right col-md-3">
+            <div class="btn-group pull-right col-md-3">
                 <div class="input-group">
-                    <input type="text" class="form-control span2 input-search" placeholder="Buscar" value="${params.search}">
+                    <input type="text" class="form-control" placeholder="Buscar" value="${params.search}">
                     <span class="input-group-btn">
-                        <g:link action="list" class="btn btn-default btn-search">
+                        <g:link action="list" class="btn btn-default btn-search" type="button">
                             <i class="fa fa-search"></i>&nbsp;
                         </g:link>
                     </span>
@@ -31,62 +29,61 @@
             </div>
         </div>
 
-        <table class="table table-condensed table-bordered">
+        <table class="table table-condensed table-bordered table-striped">
             <thead>
                 <tr>
-
-                    <g:sortableColumn property="codigo" title="Código"/>
-
-                    <g:sortableColumn property="descripcion" title="Descripción"/>
-
+                    
+                    <g:sortableColumn property="descripcion" title="Descripción" />
+                    
+                    <g:sortableColumn property="objetivo" title="Objetivo" />
+                    
                 </tr>
             </thead>
             <tbody>
-                <g:each in="${rolPersonaTramiteInstanceList}" status="i" var="rolPersonaTramiteInstance">
-                    <tr data-id="${rolPersonaTramiteInstance.id}">
-
-                        <td><elm:textoBusqueda texto='${fieldValue(bean: rolPersonaTramiteInstance, field: "codigo")}' search='${params.search}' /></td>
-
-                        <td><elm:textoBusqueda texto='${fieldValue(bean: rolPersonaTramiteInstance, field: "descripcion")}' search='${params.search}' /></td>
-
+                <g:each in="${faseInstanceList}" status="i" var="faseInstance">
+                    <tr data-id="${faseInstance.id}">
+                        
+                        <td>${fieldValue(bean: faseInstance, field: "descripcion")}</td>
+                        
+                        <td>${fieldValue(bean: faseInstance, field: "objetivo")}</td>
+                        
                     </tr>
                 </g:each>
             </tbody>
         </table>
 
-        <elm:pagination total="${rolPersonaTramiteInstanceCount}" params="${params}"/>
+        <elm:pagination total="${faseInstanceCount}" params="${params}"/>
 
         <script type="text/javascript">
             var id = null;
             function submitForm() {
-                var $form = $("#frmRolPersonaTramite");
+                var $form = $("#frmFase");
                 var $btn = $("#dlgCreateEdit").find("#btnSave");
                 if ($form.valid()) {
-                    $btn.replaceWith(spinner);
-                    openLoader("Grabando");
+                $btn.replaceWith(spinner);
                     $.ajax({
                         type    : "POST",
                         url     : '${createLink(action:'save_ajax')}',
                         data    : $form.serialize(),
-                        success : function (msg) {
-                            var parts = msg.split("_");
-                            log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)
-                            if (parts[0] == "OK") {
-                                location.reload(true);
-                            } else {
-                                spinner.replaceWith($btn);
-                                return false;
-                            }
+                            success : function (msg) {
+                        var parts = msg.split("_");
+                        log(parts[1], parts[0] == "OK" ? "success" : "error"); // log(msg, type, title, hide)
+                        if (parts[0] == "OK") {
+                            location.reload(true);
+                        } else {
+                            spinner.replaceWith($btn);
+                            return false;
                         }
-                    });
-                } else {
-                    return false;
-                } //else
+                    }
+                });
+            } else {
+                return false;
+            } //else
             }
             function deleteRow(itemId) {
                 bootbox.dialog({
                     title   : "Alerta",
-                    message : "<i class='fa fa-trash-o fa-3x pull-left text-danger text-shadow'></i><p>¿Está seguro que desea eliminar el Rol de Persona seleccionado? Esta acción no se puede deshacer.</p>",
+                    message : "<i class='fa fa-trash-o fa-3x pull-left text-danger text-shadow'></i><p>¿Está seguro que desea eliminar el Fase seleccionado? Esta acción no se puede deshacer.</p>",
                     buttons : {
                         cancelar : {
                             label     : "Cancelar",
@@ -98,7 +95,6 @@
                             label     : "<i class='fa fa-trash-o'></i> Eliminar",
                             className : "btn-danger",
                             callback  : function () {
-                                openLoader("Eliminando");
                                 $.ajax({
                                     type    : "POST",
                                     url     : '${createLink(action:'delete_ajax')}',
@@ -120,7 +116,7 @@
             }
             function createEditRow(id) {
                 var title = id ? "Editar" : "Crear";
-                var data = id ? { id : id } : {};
+                var data = id ? { id: id } : {};
                 $.ajax({
                     type    : "POST",
                     url     : "${createLink(action:'form_ajax')}",
@@ -128,7 +124,7 @@
                     success : function (msg) {
                         var b = bootbox.dialog({
                             id      : "dlgCreateEdit",
-                            title   : title + " Rol de Persona",
+                            title   : title + " Fase",
                             message : msg,
                             buttons : {
                                 cancelar : {
@@ -148,7 +144,7 @@
                             } //buttons
                         }); //dialog
                         setTimeout(function () {
-                            b.find(".form-control").not(".datepicker").first().focus()
+                            b.find(".form-control").first().focus()
                         }, 500);
                     } //success
                 }); //ajax
@@ -156,12 +152,13 @@
 
             $(function () {
 
-                $(".btnCrear").click(function () {
+                $(".btnCrear").click(function() {
                     createEditRow();
                     return false;
                 });
 
-                $("tr").contextMenu({
+
+                $("tbody tr").contextMenu({
                     items  : {
                         header   : {
                             label  : "Acciones",
@@ -180,7 +177,7 @@
                                     },
                                     success : function (msg) {
                                         bootbox.dialog({
-                                            title   : "Ver Rol de persona",
+                                            title   : "Ver fase",
                                             message : msg,
                                             buttons : {
                                                 ok : {
@@ -220,6 +217,8 @@
                         $(".trHighlight").removeClass("trHighlight");
                     }
                 });
+
+
             });
         </script>
 

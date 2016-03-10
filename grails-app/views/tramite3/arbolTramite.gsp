@@ -103,9 +103,7 @@
         });
 
         return recibio
-
     }
-
 
     function createContextMenu(node) {
         var nodeId = node.id;
@@ -114,15 +112,7 @@
         var nodeType = $node.data("jstree").type;
         var tramiteId = $node.data("jstree").tramite;
         var prtrId =  $node.data("prtr").prtrId;
-
-
-//        console.log("data " + $node.data("prtr").prtrId);
-
         var items = {
-//                    header : {
-//                        label  : "Sin Acciones",
-//                        header : true
-//                    }
         };
         if (!nodeType.contains("tramite")) {
             var detalles = {
@@ -142,15 +132,6 @@
                     $("#dialog").modal("show")
                 }
             };
-//            var plazo = {
-//                label  : 'Ampliar Plazo',
-//                icon   : "fa fa-check",
-//                action : function (e) {
-//
-//                  }
-//            };
-
-
 
             var plazo = {
                 label  : "Ampliar plazo",
@@ -202,12 +183,8 @@
                 }
             };
 
-
-
             <g:if test="${session.usuario.getPuedeVer()}">
-//                    items.header.label = "Acciones";
             items.detalles = detalles;
-
 
             <g:if test="${session.usuario.puedePlazo}">
                     if(!comprobar(nodeId)){

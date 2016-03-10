@@ -26,10 +26,8 @@
         <tbody>
             <g:each in="${tramites}" var="tramite">
                 <g:set var="now" value="${new java.util.Date()}"/>
-
                 <g:set var="type" value=""/>
                 <g:set var="clase" value=""/>
-
                 <g:if test="${tramite.fechaRecepcion}">
                     <g:if test="${tramite.fechaLimiteRespuesta < now}">
                         <g:set var="clase" value="retrasado"/>
@@ -133,6 +131,5 @@
                 $(".trHighlight").removeClass("trHighlight");
             }
         });
-
     });
 </script>

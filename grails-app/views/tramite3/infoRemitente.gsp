@@ -10,11 +10,9 @@
             <div class="col-md-3 text-info">
                 Institución
             </div>
-
             <div class="col-md-9">
                 <g:fieldValue bean="${tramite}" field="paraExterno"/>
             </div>
-
         </div>
     </g:if>
 
@@ -23,7 +21,6 @@
             <div class="col-md-3 text-info">
                 Número documento externo
             </div>
-
             <div class="col-md-9">
                 <g:fieldValue bean="${tramite}" field="numeroDocExterno"/>
             </div>
@@ -36,7 +33,6 @@
             <div class="col-md-3 text-info">
                 Teléfono
             </div>
-
             <div class="col-md-9">
                 <g:fieldValue bean="${tramite}" field="telefono"/>
             </div>
@@ -49,7 +45,6 @@
             <div class="col-md-3 text-info">
                 Contacto
             </div>
-
             <div class="col-md-9">
                 <g:fieldValue bean="${tramite}" field="contacto"/>
             </div>

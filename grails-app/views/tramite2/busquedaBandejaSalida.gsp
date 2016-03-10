@@ -88,7 +88,6 @@
                     </g:else>
                     </td>
                     <g:set var="infoExtra" value=""/>
-                    %{--<g:each in="${PersonaDocumentoTramite.findAllByTramiteAndRolPersonaTramiteInList(tramite, [RolPersonaTramite.findByCodigo('R001'), RolPersonaTramite.findByCodigo('R002')])}" var="pdt">--}%
                         <g:each in="${[para] + copias}" var="pdt">
                         <g:if test="${pdt}">
                             <g:if test="${infoExtra != ''}">
@@ -134,24 +133,18 @@
                                             </g:each>
                                         </span>
                                     </g:if>
-                                %{--${para?.departamento?.triangulos && para?.departamento?.triangulos.size() > 0 ? para?.departamento?.triangulos.first() : ''}--}%
-                                %{--<g:set var="dest" value="${1}"/>--}%
                                 </g:else>
                             </g:if>
-                        %{--<g:else>--}%
                             <span class="small">
                                 <g:each in="${copias}" var="copia" status="i">
                                     <g:set var="dest" value="${dest + 1}"/>
-                                %{--/${dest}/--}%
                                     [CC] ${copia.persona ? copia.persona.login : copia.departamento?.codigo}
                                     <g:if test="${i < copias.size() - 1}">
                                         ,
                                     </g:if>
                                 </g:each>
                             </span>
-                        %{--</g:else>--}%
                         </g:else>
-                    %{--*${dest}*--}%
                         <g:if test="${dest == 0}">
                             <span class="label label-danger" style="margin-top: 3px;">
                                 <i class="fa fa-warning"></i> Sin destinatario ni copias
@@ -172,11 +165,7 @@
                         </g:if>
                     </td>
                     <td id="${tramite?.id}" class="ck text-center">
-                        %{--<g:if test="${tramite.estadoTramite.codigo == 'E001'}">--}%
-                            %{--<g:checkBox name="porEnviar" tramite="${tramite?.id}" style="margin-left: 20px" class="form-control combo" checked="false"/>--}%
-                        %{--</g:if>--}%
                     </td>
-
                 </tr>
             </g:if>
         </g:each>

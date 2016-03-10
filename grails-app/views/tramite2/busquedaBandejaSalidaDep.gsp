@@ -1,12 +1,7 @@
 <%@ page import="happy.tramites.DocumentoTramite; happy.tramites.RolPersonaTramite; happy.tramites.PersonaDocumentoTramite" %>
-%{--<script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>--}%
-
-%{--<script type="text/javascript" src="${resource(dir: 'js/plugins/lzm.context/js', file: 'lzm.context-0.5.js')}"></script>--}%
-%{--<link href="${resource(dir: 'js/plugins/lzm.context/css', file: 'lzm.context-0.5.css')}" rel="stylesheet">--}%
 
         <g:each in="${tramites}" var="tramite">
-            %{--<g:each in="${pxtTramites}" var="pxt">--}%
-                %{--<g:if test="${tramite?.id == pxt?.id}">--}%
+
                     <g:if test="${tramite.tipoDocumento.codigo != 'DEX' || (tramite.tipoDocumento.codigo == 'DEX' && tramite.estadoTramite.codigo == 'E001')}">
                         <g:set var="limite" value="${tramite.getFechaBloqueo()}"/>
                         <g:set var="padre" value=""/>
@@ -52,11 +47,6 @@
                         </g:if>
 
                         <tr id="${tramite?.id}" data-id="${tramite?.id}"
-                            %{--class="${(limite) ? ((limite < new Date()) ? 'alerta' + ' ' + clase : tramite.estadoTramite.codigo) : tramite.estadoTramite.codigo + " " + clase}--}%
-                            %{--${tramite.fechaEnvio /*&& tramite.noRecibido*/ ? 'desenviar' + ' ' + clase : ''} ${tramite.estadoTramiteExterno ? 'estado' : ''} ${tramite.externo == '1' ? ((tramite.tipoDocumento.codigo == 'DEX') ? 'DEX' : 'externo') : ''} "--}%
-                            %{--codigo="${tramite.codigo}" departamento="${tramite.de?.departamento?.codigo}"--}%
-                            %{--estado="${tramite.estadoTramite.codigo}" de="${tramite.de.id}"--}%
-                            %{--anio="${tramite.fechaCreacion.format('yyyy')}" padre="${padre}">--}%
                             class=" trTramite ${(limite) ? ((limite < new Date()) ? 'alerta' + ' ' + clase : tramite.estadoTramite.codigo) : tramite.estadoTramite.codigo + " " + clase}
                             ${tramite.fechaEnvio /*&& tramite.noRecibido*/ ? 'desenviar' + ' ' + clase : ''} ${tramite.estadoTramiteExterno ? 'estado' : ''} ${tramite?.tipoDocumento?.codigo} ${externo}  "
                             codigo="${tramite.codigo}" departamento="${tramite.de?.departamento?.codigo}"
@@ -149,11 +139,8 @@
                                                 </g:each>
                                             </span>
                                         </g:if>
-                                    %{--${para?.departamento?.triangulos && para?.departamento?.triangulos.size() > 0 ? para?.departamento?.triangulos.first() : ''}--}%
-                                    %{--<g:set var="dest" value="${1}"/>--}%
                                     </g:else>
                                 </g:if>
-                            %{--<g:else>--}%
                                 <span class="small">
                                     <g:if test="${dest == null}">
                                         <g:set var="dest" value="${0}"/>
@@ -167,13 +154,11 @@
                                         <g:elseif test="${copia.persona}">
                                             ${copia.persona.login}
                                         </g:elseif>
-                                    %{--[CC] ${copia.persona ? copia.persona.login : copia.departamento.codigo}--}%
                                         <g:if test="${i < copias.size() - 1}">
                                             ,
                                         </g:if>
                                     </g:each>
                                 </span>
-                            %{--</g:else>--}%
                             </g:else>
                             <g:if test="${dest == 0}">
                                 <span class="label label-danger" style="margin-top: 3px;">
@@ -185,14 +170,8 @@
                             <td>${tramite.fechaEnvio?.format("dd-MM-yyyy HH:mm")}</td>
                             <td>${limite ? limite.format("dd-MM-yyyy HH:mm") : ''}</td>
                             <td>${tramite?.estadoTramite.descripcion}</td>
-                            %{--<td id="${tramite?.id}" class="ck text-center">--}%
-                                %{--<g:if test="${tramite.estadoTramite.codigo == 'E001'}">--}%
-                                    %{--<g:checkBox name="porEnviar" tramite="${tramite?.id}" style="margin-left: 30px" class="form-control combo" checked="false"/>--}%
-                                %{--</g:if>--}%
-                            %{--</td>--}%
                             <td id="${tramite?.id}" class="ck text-center">
                                 <g:if test="${tramite.estadoTramite.codigo == 'E001'}">
-                                %{--<g:if test="${PersonaDocumentoTramite.countByTramiteAndRolPersonaTramiteInList(tramite, [RolPersonaTramite.findByCodigoInList(['R001', 'R002'])]) > 0}">--}%
                                     <g:if test="${dest > 0}">
                                         <g:checkBox name="porEnviar" tramite="${tramite?.id}" style="margin-left: 30px" class="form-control combo" checked="false"/>
                                     </g:if>
@@ -203,9 +182,6 @@
                             </td>
                         </tr>
                     </g:if>
-                %{--</g:if>--}%
-            %{--</g:each>--}%
-
         </g:each>
 
 

@@ -121,20 +121,15 @@
                                 <i class="fa fa-user"></i>
                                 ${row.deprlogn}
                             </g:else>
-                        %{--${row.deprlogn ?: row.deprdscr}--}%
                         </td>
                         <td class="text-center">${row.trmtfclr?.format("dd-MM-yyyy HH:mm")}</td>
                         <td class="text-center">${row.rltrdscr}</td>
                         <td class="text-center">${estado}</td>
                         <td class="text-center">
                             <g:if test="${row.dpto__de}">
-                            %{--<g:select class="form-control input-sm select" name="cmbRedirect_${tr.id}" from="${personas}" optionKey="id"/>--}%
                                 <g:select class="form-control input-sm select" name="cmbRedirect_${row.trmt__id}" from="${filtradas}" optionKey="id"/>
                             </g:if>
                             <g:else>
-
-                            %{--<g:set var="pers2" value="${personas - tr.tramite.de}"/>--}%
-                            %{--<g:set var="pers2" value="${filtradas - tr.tramite.de}"/>--}%
                                 <g:set var="pers2" value="${filtradas - filtradas.find { it.login == row.deprlogn }}"/>
                                 <g:select class="form-control input-sm select" name="cmbRedirect_${row.trmt__id}" from="${pers2}" optionKey="id"
                                           noSelection="[('-' + dep.id): dep.descripcion]"/>
@@ -241,7 +236,6 @@
                     </g:each>
                 </tbody>
             </table>
-
         </div>
     </div>
 
@@ -259,7 +253,6 @@
                     $tr.addClass("loading");
                     $cmb.addClass("loading").prop('disabled', 'disabled');
 
-//                    console.log(pr, quien);
                     $.ajax({
                         type    : "POST",
                         url     : "${createLink(controller: 'tramiteAdmin', action: 'redireccionarTramite_ajax')}",

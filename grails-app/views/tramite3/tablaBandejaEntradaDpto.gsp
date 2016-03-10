@@ -61,9 +61,6 @@
         <g:if test="${row.trmtfcrc}">%{-- fecha de recepcion --}%
             <g:if test="${row.trmtfclr < now}">%{-- fecha limite respuesta --}%
                 <g:set var="clase" value="retrasado"/>
-            %{--<g:if test="${tramite.respuestasVivas.size() > 0}">--}%
-            %{--<g:set var="clase" value="recibido"/>--}%
-            %{--</g:if>--}%
             </g:if>
             <g:else>
                 <g:set var="clase" value="recibido"/>
@@ -107,11 +104,6 @@
 
         <g:set var="paraLbl"/>
         <g:set var="paraTitle"/>
-        %{--<g:if test="${row.tpdccdgo == 'OFI'}">--}%%{--tipo doc cdgo--}%
-            %{--<g:set var="paraLbl" value="${row.trmtprex}"/>--}%
-            %{--<g:set var="paraTitle" value="${row.trmtprex} (ext.)"/>     --}%%{--para externo--}%
-        %{--</g:if>--}%
-        %{--<g:else>--}%
             <g:if test="${row.prtrprsn}">%{--para persona--}%
                 <g:set var="paraLbl" value="${row.prtrprsn}"/>
                 <g:set var="paraTitle" value="${row.prtrprsn} (${row.prtrdpto})"/>
@@ -120,7 +112,6 @@
                 <g:set var="paraLbl" value="${row.prtrdpto}"/>%{-- para dpto cdgo--}%
                 <g:set var="paraTitle" value="${row.prtrdpds}"/> %{--para dpto descripcion--}%
             </g:else>
-        %{--</g:else>--}%
 
         <tr data-id="${row.trmt__id}"
             class="doc ${clase}" de="${de}"

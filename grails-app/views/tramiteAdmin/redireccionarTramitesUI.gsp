@@ -36,24 +36,18 @@
     Se muestran máximo 10 coincidencias por búsqueda.
         <div class="well" id="divPersonas">
             <div class="alert alert-info">
-
                 <i class="fa fa-info-circle text-shadow pull-left fa-6x"></i>
-
                 <p>
                     Ingrese uno o varios criterios de búsqueda para ubicar a la persona.
                 </p>
-
                 <p>
                     Haga clic en el botón Buscar para mostrar los resultados.
                 </p>
-
                 <p>
                     No se mostrarán más de 10 coincidencias por búsqueda.
                 </p>
             </div>
         </div>
-
-
 
         <script type="text/javascript">
             $(function () {

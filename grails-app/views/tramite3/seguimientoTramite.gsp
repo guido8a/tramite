@@ -42,9 +42,6 @@
                     <i class="fa fa-list"></i> Bandeja de salida
                 </g:link>
                 <g:if test="${params.prev == 'crearTramite'}">
-                %{--<util:renderHTML html="${g.link(controller: params.controller, action: params.action, params: [padre:params.padre], class: '') {--}%
-                %{--params.lbl--}%
-                %{--}}"/>--}%
                     <g:link controller="tramite" action="crearTramite" params="[padre: selected.id]" class="btn btn-primary">
                         Ir a crear trámite
                     </g:link>
@@ -58,9 +55,7 @@
             <p class="css-vertical-text">Doc. Principal</p>
 
             <div class="linea"></div>
-
             <div class="row"><div class="col-xs-3 negrilla">${tramite.codigo} </div></div>
-
             <div class="row">
                 <div class="col-xs-1 negrilla">
                     Asunto:
@@ -143,7 +138,6 @@
                     <div class="col-xs-1 negrilla" title="Observaciones">
                         Obs.:
                     </div>
-
                     <div class="col-xs-11 text-primary" style="padding: 0">
                         ${tramite.observaciones}
                     </div>
@@ -165,7 +159,6 @@
                     <div class="col-xs-1 negrilla">
                         Asunto:
                     </div>
-
                     <div class="col-xs-11 text-primary" style="padding: 0" id="divAsunto">
                     </div>
                 </div>
@@ -174,7 +167,6 @@
                     <div class="col-xs-1 negrilla">
                         Observaciones:
                     </div>
-
                     <div class="col-xs-11 text-primary" style="padding: 0" id="divObservaciones">
                     </div>
                 </div>

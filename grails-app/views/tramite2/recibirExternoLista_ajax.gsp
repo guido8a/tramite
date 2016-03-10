@@ -8,7 +8,6 @@
 <style type="text/css">
 .lista {
     height     : 300px;
-    /*background : red;*/
     overflow-x : hidden;
     overflow-y : auto;
 }
@@ -30,13 +29,10 @@ td {
     </div>
 </g:if>
 <g:else>
-
     <i class='fa fa-check-square-o fa-3x pull-left text-default text-shadow'></i>
-
     <p>
         ¿Está seguro que desea confirmar la recepción del trámite ${tramite.codigo}?<br/>Esta acción no se puede deshacer.
     </p>
-
     <p>
         A continuación se muestra una lista con las personas a las cuales se envió el trámite con su respectivo rol, seleccione aquellos
         que desea confirmar la recepción.

@@ -57,10 +57,6 @@
 
 </div>
 
-
-
-
-
 <script type="text/javascript">
     $(function () {
         $("tr").contextMenu({

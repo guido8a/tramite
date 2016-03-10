@@ -12,7 +12,6 @@
     <div class="col-md-3"><strong>Solicitado por</strong></div>
 
     <div class="col-md-9">
-        %{--<input type="text" class="form-control" id="aut"/>--}%
         <g:select class="form-control" name="aut" from="${personas}" optionKey="key" optionValue="value"/>
     </div>
 </div>

@@ -82,7 +82,6 @@
     </tr>
 </g:if>
 <g:else>
-%{--${rows}--}%
     <g:each in="${rows}" var="row">
         <g:set var="clase" value="${row.tpdccdgo}"/> %{--tipo documento codigo--}%
         <g:if test="${row.trmtimpr && row.trmtimpr?.toInteger() > 0}">%{--es imprimir o no--}%

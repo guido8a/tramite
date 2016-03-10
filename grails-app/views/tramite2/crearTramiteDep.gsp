@@ -477,17 +477,14 @@
         var $divBotonInfo = $("#divBotonInfo");
         var $chkAnexos = $("#anexo");
         var $chkExterno = $("#externo");
-
         var cod = $tipoDoc.find("option:selected").attr("class");
+
         $tituloCopia.text("Con copia");
         $divOrigen.addClass("hide");
-
         $divPara.html(spinner);
         $divBotonInfo.remove();
 
         var html = null;
-
-//                console.log(codigoTipoDoc);
 
         switch (codigoTipoDoc) {
 
@@ -532,10 +529,6 @@
 
         switch (cod) {
             case "CIR":
-                /*** gdo ***/
-//                        $divPara.html("");
-//                        $divPara.addClass("hide");
-//                        $divBotonInfo.addClass("hide");
                 $divCopia.removeClass("hide");
                 $divCc.addClass("hide");
                 $tituloCopia.text("Circular");
@@ -710,7 +703,6 @@
     }
 
     $(function () {
-
         <g:if test="${bloqueo}">
         $("#modalTabelGray").css({marginTop : "-20px", zIndex : "999"}).show();
         </g:if>

@@ -31,15 +31,12 @@
 
         <div class="btn-toolbar toolbar" style="margin-top: 10px !important">
             <div class="btn-group">
-
                 <a href="javascript: history.go(-1)" class="btn btn-primary regresar">
                     <i class="fa fa-arrow-left"></i> Regresar
                 </a>
-
                 <g:link controller="tramiteExport" action="arbolPdf" id="${tramite?.id}" class="btn btn-default">
                     <i class="fa fa-print"></i> Imprimir
                 </g:link>
-
             </div>
         </div>
 
@@ -129,15 +126,6 @@
                     }
                 }
 
-                %{--console.log("tramite " + "${tramite?.de?.departamento}");--}%
-                %{--console.log("tramite " + '${Persona.findAllByDepartamento(Departamento.get(tramite?.de?.departamento?.id))}')--}%
-                %{--console.log("departamento " + ${Departamento.get(tramite?.deDepartamentoId)});--}%
-                %{--console.log("personas " + ${Persona.findAllByDepartamento(Departamento.get(tramite?.deDepartamentoId))});--}%
-
-//                console.log("-->" + tramiteDe)
-
-//        console.log(padreEstaAnulado);
-
                 var items = {};
                 if (!nodeTipo.contains("tramite")) {
                     items.detalles = {
@@ -160,84 +148,6 @@
 
                     if (!estaAnulado && !estaArchivado) {
                         if (esMio) {
-//                        if (estaEnviado) {
-                            %{--items.copia = {--}%
-                            %{--separator_before : true,--}%
-                            %{--label            : "Copia para",--}%
-                            %{--icon             : "fa fa-files-o",--}%
-                            %{--action           : function () {--}%
-                            %{--$.ajax({--}%
-                            %{--type    : "POST",--}%
-                            %{--url     : "${createLink(controller: 'tramiteAdmin', action:'copiaParaLista_ajax')}",--}%
-                            %{--data    : {--}%
-                            %{--id : nodeId--}%
-                            %{--},--}%
-                            %{--success : function (msg) {--}%
-                            %{--bootbox.dialog({--}%
-                            %{--id      : "dlgCopiaPara",--}%
-                            %{--title   : '<i class="fa fa-files-o"></i> Copia para',--}%
-                            %{--class   : "long",--}%
-                            %{--message : msg,--}%
-                            %{--buttons : {--}%
-                            %{--cancelar : {--}%
-                            %{--label     : '<i class="fa fa-times"></i> Cancelar',--}%
-                            %{--className : 'btn-danger',--}%
-                            %{--callback  : function () {--}%
-                            %{--}--}%
-                            %{--},--}%
-                            %{--enviar   : {--}%
-                            %{--id        : 'btnEnviarCopia',--}%
-                            %{--label     : '<i class="fa fa-check"></i> Enviar copias',--}%
-                            %{--className : "btn-success",--}%
-                            %{--callback  : function () {--}%
-                            %{--var cc = "";--}%
-                            %{--$("#ulSeleccionados li").not(".disabled").each(function () {--}%
-                            %{--cc += $(this).data("id") + "_";--}%
-                            %{--});--}%
-                            %{--openLoader("Enviando copias");--}%
-                            %{--$.ajax({--}%
-                            %{--type    : "POST",--}%
-                            %{--url     : "${createLink(controller: 'tramiteAdmin', action:'enviarCopias_ajax')}",--}%
-                            %{--data    : {--}%
-                            %{--id     : nodeId,--}%
-                            %{--copias : cc--}%
-                            %{--},--}%
-                            %{--success : function (msg) {--}%
-                            %{--var parts = msg.split("*");--}%
-                            %{--if (parts[0] == 'OK') {--}%
-                            %{--log("Copias enviadas exitosamente", 'success');--}%
-                            %{--setTimeout(function () {--}%
-                            %{--location.reload(true);--}%
-                            %{--}, 500);--}%
-                            %{--} else if (msg == 'NO') {--}%
-                            %{--closeLoader();--}%
-                            %{--log(parts[1], 'error');--}%
-                            %{--}--}%
-                            %{--}--}%
-                            %{--});--}%
-                            %{--}--}%
-                            %{--}--}%
-                            %{--}--}%
-                            %{--});--}%
-                            %{--}--}%
-                            %{--});--}%
-                            %{--}--}%
-                            %{--};--}%
-//                        }
-                            %{--if (tienePadre) {--}%
-                            %{--items.crearHermano = {--}%
-                            %{--label  : "Agregar documento al trámite",--}%
-                            %{--icon   : "fa fa-paste",--}%
-                            %{--action : function () {--}%
-                            %{--<g:if test="${session.usuario.esTriangulo()}">--}%
-                            %{--location.href = '${createLink(controller: "tramite2", action: "crearTramiteDep")}?padre=' + padreId + '&hermano=' + tramiteId;--}%
-                            %{--</g:if>--}%
-                            %{--<g:else>--}%
-                            %{--location.href = '${createLink(controller: "tramite", action: "crearTramite")}?padre=' + padreId + '&hermano=' + tramiteId;--}%
-                            %{--</g:else>--}%
-                            %{--}--}%
-                            %{--};--}%
-                            %{--}--}%
                         }
                         if (!tienePadre && ${session.usuario.getPuedeAsociar()}) {
 
@@ -321,14 +231,6 @@
                                                 callback  : function () {
                                                 }
                                             }
-//                                        asociar  : {
-//                                            id        : 'btnAsociar',
-//                                            label     : '<i class="fa fa-check"></i> Asociar',
-//                                            className : "btn-success",
-//                                            callback  : function () {
-//
-//                                            }
-//                                        }
                                         }
                                     });
                                 }
@@ -337,141 +239,12 @@
                         if (!esMio && !tienePadre && ${session.usuario.getPuedeAsociar()}) {
                             items.agregarPadre.separator_before = true;
                         }
-
-//                    if (!tieneHijos && estaRecibido) {
-                        %{--items.archivar = {--}%
-                        %{--separator_before : true,--}%
-                        %{--label            : "Archivar",--}%
-                        %{--icon             : "fa fa-folder-open-o",--}%
-                        %{--action           : function () {--}%
-                        %{--var msg = "<i class='fa fa-folder-open-o fa-3x pull-left text-warning text-shadow'></i>" +--}%
-                        %{--"<p class='lead'>El trámite <strong>" + tramiteInfo + "</strong> está por ser archivado.</p>" +--}%
-                        %{--"<label for='observacionArchivar'>Observaciones:</label>" +--}%
-                        %{--'<textarea id="observacionArchivar" style="resize: none; height: 150px;" ' +--}%
-                        %{--'class="form-control" maxlength="255" name="observacionArchivar"></textarea>';--}%
-                        %{--bootbox.dialog({--}%
-                        %{--id      : "dlgArchivar",--}%
-                        %{--title   : '<span class="text-warning"><i class="fa fa-folder-open-o"></i> Archivar Tramite</span>',--}%
-                        %{--message : msg,--}%
-                        %{--buttons : {--}%
-                        %{--cancelar : {--}%
-                        %{--label     : '<i class="fa fa-times"></i> Cancelar',--}%
-                        %{--className : 'btn-danger',--}%
-                        %{--callback  : function () {--}%
-                        %{--}--}%
-                        %{--},--}%
-                        %{--archivar : {--}%
-                        %{--id        : 'btnArchivar',--}%
-                        %{--label     : '<i class="fa fa-check"></i> Archivar',--}%
-                        %{--className : "btn-success",--}%
-                        %{--callback  : function () {--}%
-                        %{--openLoader("Archivando");--}%
-                        %{--$.ajax({--}%
-                        %{--type    : 'POST',--}%
-                        %{--url     : '${createLink(controller: "tramite", action: "archivar")}',--}%
-                        %{--data    : {--}%
-                        %{--id    : nodeId,--}%
-                        %{--texto : $("#observacionArchivar").val()--}%
-                        %{--},--}%
-                        %{--success : function (msg) {--}%
-                        %{--if (msg == 'ok') {--}%
-                        %{--log("Trámite archivado correctamente", 'success');--}%
-                        %{--setTimeout(function () {--}%
-                        %{--location.reload(true);--}%
-                        %{--}, 500);--}%
-                        %{--} else if (msg == 'no') {--}%
-                        %{--closeLoader();--}%
-                        %{--log("Error al archivar el trámite el trámite", 'error');--}%
-                        %{--}--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--}--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--};--}%
-//                    }
                     }
                     if (!estaAnulado && !estaArchivado) {
                         if (esCircular) {
                             if (estaEnviado) {
-
-                                %{--items.anularCircular = {--}%
-                                %{--label  : "Anular todo",--}%
-                                %{--icon   : "fa fa-ban",--}%
-                                %{--action : function () {--}%
-                                %{--var hijosAnular = findAllHijos($node);--}%
-                                %{--if (hijosAnular != "") {--}%
-                                %{--hijosAnular = "<p>Se anularán todos los hijos asociados a la circular</p>"--}%
-                                %{--}--}%
-
-                                %{--$.ajax({--}%
-                                %{--type    : "POST",--}%
-                                %{--url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAdmin')}",--}%
-                                %{--url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAnulados')}",--}%
-                                %{--data    : {--}%
-                                %{--id  : tramiteId,--}%
-                                %{--msg : "<p class='lead'>El trámite <strong>" + tramiteInfo + "</strong> está por ser anulado.</p>" +--}%
-                                %{--hijosAnular,--}%
-                                %{--icon : "fa-ban"--}%
-                                %{--},--}%
-                                %{--success : function (msg) {--}%
-                                %{--bootbox.dialog({--}%
-                                %{--id      : "dlgAnular",--}%
-                                %{--title   : '<span class="text-danger"><i class="fa fa-ban"></i> Anular Tramite</span>',--}%
-                                %{--message : msg,--}%
-                                %{--buttons : {--}%
-                                %{--cancelar : {--}%
-                                %{--label     : '<i class="fa fa-times"></i> Cancelar',--}%
-                                %{--className : 'btn-danger',--}%
-                                %{--callback  : function () {--}%
-                                %{--}--}%
-                                %{--},--}%
-                                %{--anular   : {--}%
-                                %{--id        : 'btnArchivar',--}%
-                                %{--label     : '<i class="fa fa-check"></i> Anular',--}%
-                                %{--className : "btn-success",--}%
-                                %{--callback  : function () {--}%
-                                %{--var $txt = $("#aut");--}%
-                                %{--if (validaAutorizacion($txt)) {--}%
-                                %{--openLoader("Anulando");--}%
-                                %{--$.ajax({--}%
-                                %{--type    : 'POST',--}%
-                                %{--url     : '${createLink(controller: "tramiteAdmin", action: "anularCircular")}',--}%
-                                %{--data    : {--}%
-                                %{--id    : nodeId,--}%
-                                %{--texto : $("#observacion").val(),--}%
-                                %{--aut   : $txt.val()--}%
-                                %{--},--}%
-                                %{--success : function (msg) {--}%
-                                %{--var parts = msg.split("*");--}%
-                                %{--if (parts[0] == 'OK') {--}%
-                                %{--log("Trámite anulado correctamente", 'success');--}%
-                                %{--setTimeout(function () {--}%
-                                %{--location.reload(true);--}%
-                                %{--}, 500);--}%
-                                %{--} else if (parts[0] == 'NO') {--}%
-                                %{--closeLoader();--}%
-                                %{--log("Error al anular el trámite!", 'error');--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--});--}%
-                                %{--} else {--}%
-                                %{--return false;--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--});--}%
-                                %{--}--}%
-                                %{--});--}%
-                                %{--}--}%
-                                %{--};--}%
                             }
                         }
-                        //quitado el 21-07-2015
-//                        if (estaEnviado) {
                         items.anular = {
                             label  : "Anular",
                             icon   : "fa fa-ban",
@@ -493,7 +266,6 @@
                                 }
                                 $.ajax({
                                     type    : "POST",
-                                    %{--url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAdmin')}",--}%
                                     url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAnulados')}",
                                     data    : {
                                         id   : tramiteId,
@@ -556,8 +328,8 @@
                                 });
                             }
                         };
-//                        }
                     }
+
                     if (!estaAnulado && !estaArchivado) {
                         if (esExterno) {
                             items.externo = {
@@ -624,11 +396,7 @@
                             };
                         }
                     }
-//                    console.log("anulado", estaAnulado, "tiene padre", tienePadre, "padre archivado", padreEstaArchivado, "padre recibido", padreEstaRecibido, "padre anulado", padreEstaAnulado);
-//                    console.log("anulado", estaAnulado, "!tiene padre", !tienePadre, "padre archivado or padre recibido", padreEstaArchivado || padreEstaRecibido, "!padre anulado", !padreEstaAnulado);
-//                    console.log("anulado", estaAnulado, "!tiene padre or (padre archivado or padre recibido)", !tienePadre || (padreEstaArchivado || padreEstaRecibido), "!padre anulado", !padreEstaAnulado);
-//                    console.log("anulado", estaAnulado, "!tiene padre or ((padre archivado or padre recibido) and !padre anulado)", !tienePadre || ((padreEstaArchivado || padreEstaRecibido) && !padreEstaAnulado));
-//                    console.log("anulado and (!tiene padre or ((padre archivado or padre recibido) and !padre anulado))", estaAnulado && (!tienePadre || ((padreEstaArchivado || padreEstaRecibido) && !padreEstaAnulado)));
+
                     if (estaAnulado && ((!tienePadre || ((padreEstaArchivado || padreEstaRecibido) && !padreEstaAnulado)) || esAgregado)) {
                         if (puedeDesanular) {
                             items.desAnular = {
@@ -702,66 +470,6 @@
                                         }
                                     });
                                 }
-                                %{--action           : function () {--}%
-                                %{--var msg = "<i class='fa fa-magic fa-3x pull-left text-danger text-shadow'></i>" +--}%
-                                %{--"<p class='lead'>Está por quitar el anulado del trámite<br/><strong>" + tramiteInfo + "</strong>.</p>" +--}%
-                                %{--'<div class="row">' +--}%
-                                %{--'<div class="col-md-3"><strong>Solicitado por</strong></div>' +--}%
-                                %{--'<div class="col-md-9">' +--}%
-                                %{--'<input type="text" class="form-control" id="autDesanular"/>' +--}%
-                                %{--'</div>' +--}%
-                                %{--'</div>' +--}%
-                                %{--"<label for='observacionDesanular'>Observaciones:</label>" +--}%
-                                %{--'<textarea id="observacionDesanular" style="resize: none; height: 150px;" ' +--}%
-                                %{--'class="form-control" maxlength="255" name="observacionDesanular"></textarea>';--}%
-                                %{--bootbox.dialog({--}%
-                                %{--id      : "dlgAnular",--}%
-                                %{--title   : '<i class="fa fa-magic"></i> Quitar anulado del Trámite',--}%
-                                %{--message : msg,--}%
-                                %{--buttons : {--}%
-                                %{--cancelar  : {--}%
-                                %{--label     : '<i class="fa fa-times"></i> Cancelar',--}%
-                                %{--className : 'btn-danger',--}%
-                                %{--callback  : function () {--}%
-                                %{--}--}%
-                                %{--},--}%
-                                %{--desanular : {--}%
-                                %{--id        : 'btnDesanular',--}%
-                                %{--label     : '<i class="fa fa-check"></i> Quitar anulado',--}%
-                                %{--className : "btn-success",--}%
-                                %{--callback  : function () {--}%
-                                %{--var $txt = $("#autDesanular");--}%
-                                %{--if (validaAutorizacion($txt)) {--}%
-                                %{--openLoader("Procesando");--}%
-                                %{--$.ajax({--}%
-                                %{--type    : 'POST',--}%
-                                %{--url     : '${createLink(controller: "tramiteAdmin", action: "desanular")}',--}%
-                                %{--data    : {--}%
-                                %{--id    : nodeId,--}%
-                                %{--texto : $("#observacionDesanular").val(),--}%
-                                %{--aut   : $txt.val()--}%
-                                %{--},--}%
-                                %{--success : function (msg) {--}%
-                                %{--var parts = msg.split("*");--}%
-                                %{--if (parts[0] == 'OK') {--}%
-                                %{--log("Quitado el anulado del trámite correctamente", 'success');--}%
-                                %{--setTimeout(function () {--}%
-                                %{--location.reload(true);--}%
-                                %{--}, 500);--}%
-                                %{--} else if (parts[0] == 'NO') {--}%
-                                %{--closeLoader();--}%
-                                %{--log("Error al quitar el anulado del trámite el trámite", 'error')--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--});--}%
-                                %{--} else {--}%
-                                %{--return false;--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--}--}%
-                                %{--});--}%
-                                %{--}--}%
                             };
                         }
                     }
@@ -837,6 +545,7 @@
                             }
                         };
                     }
+
                     if (estaRecibido && !estaAnulado && !estaArchivado && !tieneHijos) {
                         items.desRecibir = {
                             separator_before : true,
@@ -845,7 +554,6 @@
                             action           : function () {
                                 $.ajax({
                                     type    : "POST",
-                                    %{--url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAdmin')}",--}%
                                     url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAnulados')}",
                                     data    : {
                                         id   : tramiteId,
@@ -918,7 +626,6 @@
                             action           : function () {
                                 $.ajax({
                                     type    : "POST",
-                                    %{--url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAdmin')}",--}%
                                     url     : "${createLink(controller: 'tramiteAdmin', action: 'dialogAnulados')}",
                                     data    : {
                                         id   : tramiteId,
@@ -965,7 +672,6 @@
                                                                         setTimeout(function () {
                                                                             location.reload(true);
                                                                         }, 500);
-
                                                                     }
                                                                 }
                                                             });
@@ -1031,7 +737,6 @@
                         paraRecibido     : {
                             icon : "fa fa-file-o text-success"
                         },
-
                         copia          : {
                             icon : "fa fa-files-o"
                         },
