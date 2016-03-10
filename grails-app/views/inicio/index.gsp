@@ -69,7 +69,6 @@
     <g:if test="${!(session.usuario.getPuedeDirector() || session.usuario.getPuedeJefe())}">
 
         <div class="body ui-corner-all" style="width: 575px;position: relative;margin: auto;margin-top: 40px;height: 280px; ">
-    %{--<div class="body ui-corner-all" style="width: 575px;position: relative;margin: auto;margin-top: 0px;height: 280px; background: #40709a;">--}%
 
         <g:if test="${session.usuario.esTriangulo()}">
             <a href= "${createLink(controller:'tramite3', action: 'bandejaEntradaDpto')}" style="text-decoration: none">
