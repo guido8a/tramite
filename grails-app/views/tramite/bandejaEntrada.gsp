@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: luz
-  Date: 28/07/15
-  Time: 10:09 AM
---%>
-
 <%@ page import="happy.seguridad.Persona" contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
@@ -14,29 +7,14 @@
         <style type="text/css">
 
         body {
-            background-color : #DFD;
+            background-color : #e0ecef;
         }
 
-        .etiqueta {
-            float       : left;
-            /*width: 100px;*/
-            margin-left : 5px;
-            /*margin-top: 5px;*/
-
-        }
-
-        /*.alert {*/
-        /*padding: 0;*/
-        /*!important;*/
-        /*}*/
         .alertas {
             float       : left;
-            /*width       : 100px;*/
-            /*height      : 40px;*/
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-            /*margin-top: -5px;*/
         }
 
         .cabecera {
@@ -46,14 +24,6 @@
 
         .cabecera.sortable {
             cursor : pointer;
-        }
-
-        .container-celdas {
-            width      : 1070px;
-            height     : 310px;
-            float      : left;
-            overflow   : auto;
-            overflow-y : auto;
         }
 
         .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -68,23 +38,23 @@
             background-color : transparent;
         }
 
-        tr.sinRecepcion {
-            /*background-color: #FFFFCC! important;*/
-            background-color : #FC2C04 ! important;
-            color            : #ffffff
+        .sinRecepcion {
+            background-color : #fcc0b8 ! important;
         }
 
+        tr.sinRecepcion {
+            background-color : #fcc0b8 ! important;
+        }
+
+        .retrasados {
+            background-color : #f2dfcb ! important;
+        }
         tr.retrasado {
-            /*background-color: #fc2c04! important;*/
-            background-color : #F2DEDE ! important;
-            /*color: #ffffff;*/
+            background-color : #f2dfcb ! important;
         }
 
         .letra {
-
-            /*font-family: "Arial Black", arial-black;*/
-            /*background-color: #7eb75e;*/
-            background-color : #8fe6c3;
+            background-color : #a2e2f8;
         }
         </style>
 
@@ -93,20 +63,10 @@
     <body>
 
         <div class="row" style="margin-top: 0; margin-left: 1px">
-            <span class="grupo">
-                <label class="well well-sm letra" style="text-align: center">
-                    BANDEJA DE ENTRADA PERSONAL
-                </label>
-            </span>
-
-
-            <span class="grupo">
-                <label class="well well-sm"
-                       style="text-align: center;">
-                    Usuario: ${persona?.nombre + " " + persona?.apellido + " - " +
+                <label class="well well-sm letra" style="text-align: center; width: 100%; border-radius: 8px; border-color: #5292a8">
+                    BANDEJA DE ENTRADA PERSONAL DE: ${persona?.nombre + " " + persona?.apellido + " - " +
                             persona?.departamento?.descripcion}
                 </label>
-            </span>
         </div>
 
         <elm:flashMessage tipo="${flash.tipo}" clase="${flash.clase}">${flash.message}</elm:flashMessage>
@@ -140,7 +100,7 @@
 
 
                 %{--<div>--}%
-                <div data-type="pendiente" class="alert alert-otroRojo alertas" clase="sinRecepcion">
+                <div data-type="pendiente" class="alert alertas sinRecepcion" clase="sinRecepcion">
                     (<span id="numPen"></span>)
                 Sin Recepción
                 </div>
@@ -154,7 +114,7 @@
                 %{--</div>--}%
 
                 %{--<div>--}%
-                <div data-type="retrasado" class="alert alert-danger alertas" clase="retrasado">
+                <div data-type="retrasado" class="alert alertas retrasados" clase="retrasado">
                     (<span id="numRet"></span>)
                 Retrasados
                 </div>

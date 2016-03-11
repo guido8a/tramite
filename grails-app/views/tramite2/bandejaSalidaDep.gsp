@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 18/02/14
-  Time: 12:52 PM
---%>
-
-
 <%@ page import="happy.tramites.EstadoTramite; org.apache.commons.lang.WordUtils" contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
@@ -14,12 +6,7 @@
 
         <style type="text/css">
         body {
-            background-color : #D1DDE8;
-        }
-
-        .etiqueta {
-            float       : left;
-            margin-left : 5px;
+            background-color : #f8ffed;
         }
 
         .alertas {
@@ -27,12 +14,6 @@
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-        }
-
-        .alert-blanco {
-            color            : #666;
-            background-color : #ffffff;
-            border-color     : #d0d0d0;
         }
 
         th {
@@ -45,13 +26,6 @@
 
         .cabecera.sortable {
             cursor : pointer;
-        }
-
-        .container-celdas {
-            width    : 1070px;
-            height   : 310px;
-            float    : left;
-            overflow : auto;
         }
 
         .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -81,21 +55,16 @@
         }
 
         tr.alerta, tr.alerta td {
-            background-color : #f2c1b9;
+            background-color : #f2dfcb;
             font-weight      : bold;
         }
 
         .letra {
-            background-color : #8fc6f3;
+            background-color : #f7d3a2;
         }
 
-        .para {
-            font-weight : bold;
-            font-size   : 9pt;
-        }
-
-        .copias {
-            font-size : 8pt;
+        .retrasados {
+            background-color : #f2dfcb ! important;
         }
 
         </style>
@@ -104,18 +73,9 @@
     <body>
 
         <div class="row" style="margin-top: 0px; margin-left: 1px">
-
-            <span class="grupo">
-                <label class="well well-sm letra" style="text-align: center">
-                    BANDEJA DE SALIDA DEPARTAMENTO
+                <label class="well well-sm letra" style="text-align: center; border-radius: 8px; border-color: #b7a362">
+                    BANDEJA DE SALIDA LA UNIDAD: ${persona?.departamento?.descripcion}
                 </label>
-            </span>
-
-            <span class="grupo">
-                <label class="well well-sm" style="text-align: center">
-                    Departamento: ${persona?.departamento?.descripcion}
-                </label>
-            </span>
         </div>
 
         <div class="btn-toolbar toolbar" style="margin-top: 10px !important">
@@ -142,7 +102,7 @@
                 ${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E003').descripcion)}
                 </div>
 
-                <div data-type="noRecibido" class="alert alert-danger alertas" clase="alerta">
+                <div data-type="noRecibido" class="alert alertas retrasados" clase="alerta">
                     (<span id="numNoRec"></span>)
                 No recibidos
                 </div>

@@ -93,7 +93,7 @@
             var spinner24Url = "${resource(dir:'images/spinners', file:'spinner_24.GIF')}";
             var spinner64Url = "${resource(dir:'images/spinners', file:'spinner_64.GIF')}";
 
-            var spinnerSquare64Url = "${resource(dir: 'images/spinners', file: 'loading_new.GIF')}";
+            var spinnerSquare64Url = "${resource(dir: 'images/spinners', file: 'spinner.gif')}";
 
             var spinner = $("<img src='" + spinner24Url + "' alt='Cargando...'/>");
             var spinner64 = $("<img src='" + spinner64Url + "' alt='Cargando...'/>");
@@ -144,13 +144,13 @@
 
         <div id="modalDiv" class="ui-corner-all">
             <div class="loading-title">Procesando</div>
-            <img src="${resource(dir: 'images/spinners', file: 'loading_new.GIF')}">
+            <img src="${resource(dir: 'images/spinners', file: 'spinner.GIF')}">
 
             <div class="loading-footer">Espere por favor</div>
         </div>
         <mn:menu title="${g.layoutTitle(default: 'Happy')}"/>
         <g:if test="${session.departamento.estado == 'B' && session.usuario.esTriangulo()}">
-            <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-danger " style="z-index: 200001; width: 240px; height: 190px;">
+            <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-danger " style="z-index: 200001; width: 260px; height: 160px;">
                 <div class="titulo-bloqueo">
                     <i class="fa fa-exclamation-circle"></i>
                     Alerta de bloqueo
@@ -166,7 +166,7 @@
             </div>
         </g:if>
         <g:if test="${session.departamento.estado == 'W' && session.usuario.esTriangulo()}">
-            <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-warning " style="width: 240px; height: 150px;" style="z-index: 200001; ">
+            <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-warning " style="width: 260px; height: 160px;" style="z-index: 200001; ">
                 <div class="titulo-bloqueo">
                     <i class="fa fa-exclamation-circle"></i>
                     Aviso: Trámites No Recibidos

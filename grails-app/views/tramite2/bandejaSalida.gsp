@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: luz
-  Date: 07/08/15
-  Time: 09:10 AM
---%>
-
-
 <%@ page import="org.apache.commons.lang.WordUtils; happy.tramites.EstadoTramite; happy.tramites.PermisoTramite" contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
@@ -15,12 +7,7 @@
         <style type="text/css">
 
         body {
-            background-color : #D1DDE8;
-        }
-
-        .etiqueta {
-            float       : left;
-            margin-left : 5px;
+            background-color : #e8efdd;
         }
 
         .alertas {
@@ -28,12 +15,6 @@
             margin-left : 20px;
             padding     : 10px;
             cursor      : pointer;
-        }
-
-        .alert-blanco {
-            color            : #666;
-            background-color : #ffffff;
-            border-color     : #d0d0d0;
         }
 
         th {
@@ -46,13 +27,6 @@
 
         .cabecera.sortable {
             cursor : pointer;
-        }
-
-        .container-celdas {
-            width    : 1070px;
-            height   : 310px;
-            float    : left;
-            overflow : auto;
         }
 
         .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -82,41 +56,27 @@
         }
 
         tr.alerta, tr.alerta td {
-            background-color : #f2c1b9;
+            background-color : #f2dfcb;
             font-weight      : bold;
         }
 
         .letra {
-            background-color : #8fc6f3;
+            background-color : #f7d3a2;
         }
 
-        .para {
-            font-weight : bold;
-            font-size   : 9pt;
+        .retrasados {
+            background-color : #f2dfcb ! important;
         }
 
-        .copias {
-            font-size : 8pt;
-        }
         </style>
     </head>
 
     <body>
         <div class="row" style="margin-top: 0; margin-left: 1px">
-            <span class="grupo">
-                <label class="well well-sm letra" style="text-align: center">
-                    BANDEJA DE SALIDA PERSONAL
-                </label>
-            </span>
-
-
-            <span class="grupo">
-                <label class="well well-sm" style="text-align: center">
-                    Usuario:
-                    ${persona?.nombre + " " + persona?.apellido + " - " +
+                <label class="well well-sm letra" style="text-align: center; width: 100%; border-radius: 8px; border-color: #a78352">
+                    BANDEJA DE SALIDA PERSONAL DE: ${persona?.nombre + " " + persona?.apellido + " - " +
                             persona?.departamento?.descripcion}
                 </label>
-            </span>
         </div>
 
         <elm:flashMessage tipo="${flash.tipo}" clase="${flash.clase}">${flash.message}</elm:flashMessage>
@@ -148,7 +108,7 @@
                 ${WordUtils.capitalizeFully(EstadoTramite.findByCodigo('E003').descripcion)}
                 </div>
 
-                <div data-type="noRecibido" class="alert alert-danger alertas" clase="alerta">
+                <div data-type="noRecibido" class="alert alertas retrasados" clase="alerta">
                     (<span id="numNoRec"></span>)
                 Sin Recepción
                 </div>

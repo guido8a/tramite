@@ -25,7 +25,7 @@
         <g:set var="inst" value="${happy.utilitarios.Parametros.get(1)}"></g:set>
         <div style="text-align: center; margin-top: -60px; height: ${(flash.message) ? '650' : '580'}px;" class="well">
             <div class="page-header" style="margin-top: 10px;">
-                <h1>Paperwork</h1>
+                %{--<h1>Paperwork</h1>--}%
                 <h3>
                     %{--<p class="text-info">${inst.institucion}</p>--}%
                     <p class="text-info">Licenced to ${inst.institucion}</p>

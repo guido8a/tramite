@@ -110,7 +110,7 @@
                     </p>
 
                     <p>
-                        <img src="${resource(dir: 'images/spinners', file: 'loading_new.GIF')}" alt='Cargando...'/>
+                        <img src="${resource(dir: 'images/spinners', file: 'spinner.gif')}" alt='Cargando...'/>
                     </p>
 
                     <p>

@@ -84,7 +84,7 @@
             var spinner24Url = "${resource(dir:'images/spinners', file:'spinner_login.GIF')}";
             var spinner64Url = "${resource(dir:'images/spinners', file:'spinner_64.GIF')}";
 
-            var spinnerSquare64Url = "${resource(dir: 'images/spinners', file: 'loading_new.GIF')}";
+            var spinnerSquare64Url = "${resource(dir: 'images/spinners', file: 'spinner.gif')}";
 
             var spinner = $("<img src='" + spinner24Url + "' alt='Cargando...'/>");
             var spinner64 = $("<img src='" + spinner64Url + "' alt='Cargando...'/>");

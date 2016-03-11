@@ -12,17 +12,16 @@
     }
 
     .item {
-        width: 260px;
+        width: 320px;
         height: 260px;
         float: left;
         margin: 4px;
         font-family: 'open sans condensed';
         border: none;
-
     }
 
     .imagen {
-        width: 160px;
+        width: 200px;
         height: 160px;
         margin: auto;
         margin-top: 10px;
@@ -42,7 +41,7 @@
         margin-left: 15px;
         margin-top: 20px;
         /*background-color: #317fbf; */
-        background-color: rgba(200, 200, 200, 0.9);
+        background-color: rgba(200, 200, 190, 0.9);
         border: none;
     }
 
@@ -68,7 +67,7 @@
 
     <g:if test="${!(session.usuario.getPuedeDirector() || session.usuario.getPuedeJefe())}">
 
-        <div class="body ui-corner-all" style="width: 575px;position: relative;margin: auto;margin-top: 40px;height: 280px; ">
+        <div class="body ui-corner-all" style="width: 680px;position: relative;margin: auto;margin-top: 40px;height: 280px; ">
 
         <g:if test="${session.usuario.esTriangulo()}">
             <a href= "${createLink(controller:'tramite3', action: 'bandejaEntradaDpto')}" style="text-decoration: none">
@@ -79,10 +78,10 @@
         <div class="ui-corner-all  item fuera">
             <div class="ui-corner-all ui-widget-content item">
                 <div class="imagen">
-                    <img src="${resource(dir: 'images', file: 'personales1.png')}" width="100%" height="100%"/>
+                    <img src="${resource(dir: 'images', file: 'entrada.png')}" width="100%" height="100%"/>
                 </div>
 
-                <div class="texto"><span class="text-success"><strong>Bandeja de entrada</strong></span>: trámites que le han enviado y pendientes de contestación</div>
+                <div class="texto"><span class="text-info"><strong>Entrada</strong></span>: trámites y procesos que le han enviado y que se hallan pendientes</div>
             </div>
         </div>
 
@@ -98,10 +97,10 @@
         <div class="ui-corner-all item fuera">
             <div class="ui-corner-all ui-widget-content item">
                 <div class="imagen">
-                    <img src="${resource(dir: 'images', file: 'salida1.png')}" width="100%" height="100%"/>
+                    <img src="${resource(dir: 'images', file: 'salida.png')}" width="100%" height="100%"/>
                 </div>
 
-                <div class="texto"><span class="text-info"><strong>Bandeja de salida</strong></span>: Documentos por enviar y trámites que no le han recibido</div>
+                <div class="texto"><span class="text-success"><strong>Salida</strong></span>: Trámites y procesos por enviar o que aún no han sido recibidos</div>
             </div>
         </div>
         </a>
@@ -123,9 +122,9 @@
                 <img src="${resource(dir: 'images', file: 'ingreso_adm1.jpeg')}" width="640px" height="330px"/>
             </g:link>
         </g:if>
-
-        <p>Reportes de trámites generados, retrasados y Gestión de trámites</p>
-
+        <g:if test="${session.usuario.getPuedeJefe()}">
+            <p>Reportes de trámites generados, retrasados y Gestión de trámites</p>
+        </g:if>
     </div>
 
 
