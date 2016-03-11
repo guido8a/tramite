@@ -6,6 +6,7 @@ class Dato {
     String descripcion
     String valor
     String tipo
+    Fase fase
 
 
     static mapping = {
@@ -18,6 +19,7 @@ class Dato {
             descripcion column: 'datodscr'
             valor column: 'datovlor'
             tipo column: 'datotipo'
+            fase column: 'fase__id'
         }
     }
 
