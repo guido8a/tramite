@@ -108,4 +108,80 @@ class DatoController extends happy.seguridad.Shield {
         render "NO_No se encontró Dato."
     } //notFound para ajax
 
+
+
+    def cargarDatos () {
+
+    }
+
+
+    def datos_ajax () {
+
+        def datos = Dato.list()
+        return datos
+    }
+
+
+    def tablaDatos_ajax () {
+
+        def fase = Fase.get(params.idFase)
+        def datos = Dato.findAllByFase(fase)
+
+        return [datos: datos]
+    }
+
+
+    def saveDato_ajax() {
+        println("params save" + params)
+
+        def fase = Fase.get(params.id)
+
+        def nuevoDato
+
+        if(params.idDato){
+
+            nuevoDato = Dato.get(params.idDato)
+
+            nuevoDato.descripcion = params.descripcion
+            nuevoDato.valor = params.valor
+            nuevoDato.tipo = params.tipo
+
+        }else{
+
+            nuevoDato = new Dato();
+
+            nuevoDato.fase =  fase
+            nuevoDato.descripcion = params.descripcion
+            nuevoDato.valor = params.valor
+            nuevoDato.tipo = params.tipo
+        }
+
+        try {
+
+            nuevoDato.save(flush: true)
+            render "ok"
+
+        }catch(e){
+            println("error grabar datos " + nuevoDato.errors)
+            render "no"
+
+        }
+
+    }
+
+    def borrarDato_ajax() {
+        println("params borrar" + params)
+        def dato = Dato.get(params.id)
+
+        try{
+            dato.delete(flush: true)
+            render "ok"
+        }catch(e){
+            println("errores borrado datos " + dato.errors)
+            render "no"
+        }
+    }
+
+
+
 }
