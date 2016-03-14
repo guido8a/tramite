@@ -14,14 +14,14 @@
         <elm:bootstrapCss/>
 
         <!-- FontAwsome y mFizz: las fuentes con dibujitos para los iconos -->
-        <link href="${resource(dir: 'font-awesome-4.2.0/css', file: 'font-awesome.min.css')}" rel="stylesheet">
-        <link href="${resource(dir: 'font-mfizz-1.2', file: 'font-mfizz.css')}" rel="stylesheet">
+        %{--<link href="${resource(dir: 'font-awesome-4.2.0/css', file: 'font-awesome.min.css')}" rel="stylesheet">--}%
+        %{--<link href="${resource(dir: 'font-mfizz-1.2', file: 'font-mfizz.css')}" rel="stylesheet">--}%
 
         <!-- Custom styles -->
-        <link href="${resource(dir: 'css', file: 'custom.css')}" rel="stylesheet">
-        <link href="${resource(dir: 'css', file: 'custom/modals.css')}" rel="stylesheet">
-        <link href="${resource(dir: 'css', file: 'custom/tablas.css')}" rel="stylesheet">
-        <link href="${resource(dir: 'css', file: 'custom/datepicker.css')}" rel="stylesheet">
+        %{--<link href="${resource(dir: 'css', file: 'custom.css')}" rel="stylesheet">--}%
+        %{--<link href="${resource(dir: 'css', file: 'custom/modals.css')}" rel="stylesheet">--}%
+        %{--<link href="${resource(dir: 'css', file: 'custom/tablas.css')}" rel="stylesheet">--}%
+        %{--<link href="${resource(dir: 'css', file: 'custom/datepicker.css')}" rel="stylesheet">--}%
 
         <!-- JQuery -->
         <script src="${resource(dir: 'js/jquery/js', file: 'jquery-1.9.1.js')}"></script>
@@ -36,19 +36,19 @@
 
         <!-- plugins -->
         <!-- para los alerts y confirms y dialogs -->
-        <script src="${resource(dir: 'js/plugins/bootbox/js', file: 'bootbox.js')}"></script>
+        %{--<script src="${resource(dir: 'js/plugins/bootbox/js', file: 'bootbox.js')}"></script>--}%
 
         %{--<!-- el datepicker -->--}%
-        <script src="${resource(dir: 'js/plugins/bootstrap-datepicker/js', file: 'bootstrap-datepicker.js')}"></script>
-        <script src="${resource(dir: 'js/plugins/bootstrap-datepicker/js/locales', file: 'bootstrap-datepicker.es.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/bootstrap-datepicker/css', file: 'datepicker.css')}" rel="stylesheet">
+        %{--<script src="${resource(dir: 'js/plugins/bootstrap-datepicker/js', file: 'bootstrap-datepicker.js')}"></script>--}%
+        %{--<script src="${resource(dir: 'js/plugins/bootstrap-datepicker/js/locales', file: 'bootstrap-datepicker.es.js')}"></script>--}%
+        %{--<link href="${resource(dir: 'js/plugins/bootstrap-datepicker/css', file: 'datepicker.css')}" rel="stylesheet">--}%
 
         %{--<!-- el datetime picker no vale bien -->--}%
         %{--<script src="${resource(dir: 'js/plugins/bootstrap-datetimepicker/js', file: 'bootstrap-datetimepicker.min.js')}"></script>--}%
         %{--<link href="${resource(dir: 'js/plugins/bootstrap-datetimepicker/css', file: 'bootstrap-datetimepicker.min.css')}" rel="stylesheet">--}%
 
         <!-- lo q muestra la cantidad restante de caracteres en los texts -->
-        <script src="${resource(dir: 'js/plugins/bootstrap-maxlength/js', file: 'bootstrap-maxlength.js')}"></script>
+        %{--<script src="${resource(dir: 'js/plugins/bootstrap-maxlength/js', file: 'bootstrap-maxlength.js')}"></script>--}%
 
         <!-- la validacion del lado del cliente -->
         <script src="${resource(dir: 'js/plugins/jquery-validation-1.11.1/js', file: 'jquery.validate.min.js')}"></script>
@@ -56,28 +56,28 @@
         <script src="${resource(dir: 'js', file: 'jquery.validate.custom.js')}"></script>
 
         <!-- las alertas growl -->
-        <script src="${resource(dir: 'js/plugins/pines/js', file: 'jquery.pnotify.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/pines/css', file: 'jquery.pnotify.default.css')}" rel="stylesheet">
+        %{--<script src="${resource(dir: 'js/plugins/pines/js', file: 'jquery.pnotify.js')}"></script>--}%
+        %{--<link href="${resource(dir: 'js/plugins/pines/css', file: 'jquery.pnotify.default.css')}" rel="stylesheet">--}%
 
         <!-- los tooltips bonitos -->
-        <script src="${resource(dir: 'js/plugins/jquery.qtip-2.2.0', file: 'jquery.qtip.min.js')}"></script>
-        <link href='${resource(dir: "js/plugins/jquery.qtip-2.2.0", file: "jquery.qtip.min.css")}' rel='stylesheet' type='text/css'>
+        %{--<script src="${resource(dir: 'js/plugins/jquery.qtip-2.2.0', file: 'jquery.qtip.min.js')}"></script>--}%
+        %{--<link href='${resource(dir: "js/plugins/jquery.qtip-2.2.0", file: "jquery.qtip.min.css")}' rel='stylesheet' type='text/css'>--}%
 
         <!-- context menu para el click derecho -->
-        <script src="${resource(dir: 'js/plugins/context/js', file: 'context.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/context/css', file: 'context.css')}" rel="stylesheet">
-        <script type="text/javascript" src="${resource(dir: 'js/plugins/lzm.context/js', file: 'lzm.context-0.5.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/lzm.context/css', file: 'lzm.context-0.5.css')}" rel="stylesheet">
+        %{--<script src="${resource(dir: 'js/plugins/context/js', file: 'context.js')}"></script>--}%
+        %{--<link href="${resource(dir: 'js/plugins/context/css', file: 'context.css')}" rel="stylesheet">--}%
+        %{--<script type="text/javascript" src="${resource(dir: 'js/plugins/lzm.context/js', file: 'lzm.context-0.5.js')}"></script>--}%
+        %{--<link href="${resource(dir: 'js/plugins/lzm.context/css', file: 'lzm.context-0.5.css')}" rel="stylesheet">--}%
 
         <!-- el timer para cerrar la sesion -->
-        <script src="${resource(dir: 'js/plugins/jquery.countdown', file: 'jquery.countdown.min.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/jquery.countdown', file: 'jquery.countdown.css')}" rel="stylesheet">
+        %{--<script src="${resource(dir: 'js/plugins/jquery.countdown', file: 'jquery.countdown.min.js')}"></script>--}%
+        %{--<link href="${resource(dir: 'js/plugins/jquery.countdown', file: 'jquery.countdown.css')}" rel="stylesheet">--}%
 
-        <link href='${resource(dir: "font/open", file: "stylesheet.css")}' rel='stylesheet' type='text/css'>
-        <link href='${resource(dir: "font/tulpen", file: "stylesheet.css")}' rel='stylesheet' type='text/css'>
+        %{--<link href='${resource(dir: "font/open", file: "stylesheet.css")}' rel='stylesheet' type='text/css'>--}%
+        %{--<link href='${resource(dir: "font/tulpen", file: "stylesheet.css")}' rel='stylesheet' type='text/css'>--}%
 
         <!-- el manager de fechas -->
-        <script src="${resource(dir: 'js/plugins', file: 'date.js')}"></script>
+        %{--<script src="${resource(dir: 'js/plugins', file: 'date.js')}"></script>--}%
 
         <script type="text/javascript">
             var spinner24Url = "${resource(dir:'images/spinners', file:'spinner_login.GIF')}";
