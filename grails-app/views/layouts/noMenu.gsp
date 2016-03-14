@@ -104,7 +104,7 @@
 
         <div id="modalDiv" class="ui-corner-all">
             <div class="loading-title">Procesando</div>
-            <img src="${resource(dir: 'images/spinners', file: 'spinner.GIF')}">
+            <img src="${resource(dir: 'images/spinners', file: 'spinner.gif')}">
 
             <div class="loading-footer">Espere por favor</div>
         </div>
