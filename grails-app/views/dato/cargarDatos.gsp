@@ -5,7 +5,7 @@
   Time: 03:55 PM
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="happy.proceso.Dato" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="main">
@@ -59,7 +59,8 @@
         <div class="col-xs-1 negrilla">Tipo:</div>
 
         <div class="col-xs-4">
-            <g:textField name="tipo_name" id="tipo" class="form-control" maxlength="63" style="width: 335px"/>
+            %{--<g:textField name="tipo_name" id="tipo" class="form-control" maxlength="63" style="width: 335px"/>--}%
+            <g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>
         </div>
 
         <div class="col-xs-2">

@@ -20,12 +20,16 @@ class Dato {
             valor column: 'datovlor'
             tipo column: 'datotipo'
             fase column: 'fase__id'
+
         }
     }
 
     static constraints = {
         descripcion(nullable: false, blank: false, size: 1..255)
         valor(nullable: false, blank: false, size: 1..255)
-        tipo(nullable: false, blank: false, size: 1..63)
+//        tipo(nullable: false, blank: false, size: 1..63)
+        tipo inList: ['String','Numérico']
+
     }
+
 }
