@@ -902,7 +902,8 @@ class TramiteAdminController /*extends Shield*/ {
 
 //                println("entro")
             if (prtrCopia?.persona) {
-                if (tramite?.de?.departamento != prtrCopia.persona.departamento) {
+//                if (tramite?.de?.departamento != prtrCopia.persona.departamento) {
+                if (tramite?.departamento != prtrCopia.persona.departamento) {
                     Persona.findAllByDepartamento(prtrCopia?.persona?.departamento).each { rc ->
                         if (rc.estaActivo) {
                             def k = [:]
@@ -913,7 +914,8 @@ class TramiteAdminController /*extends Shield*/ {
                     }
                 }
             } else {
-                if (tramite?.de?.departamento != prtrCopia.departamento) {
+//                if (tramite?.de?.departamento != prtrCopia.departamento) {
+                if (tramite?.departamento != prtrCopia.departamento) {
                     Persona.findAllByDepartamento(prtrCopia?.departamento).each { rc ->
                         if (rc.estaActivo) {
                             def k = [:]
@@ -926,7 +928,8 @@ class TramiteAdminController /*extends Shield*/ {
             }
 
         } else {
-            if (tramite?.de?.departamento != tramite?.para?.departamento) {
+//            if (tramite?.de?.departamento != tramite?.para?.departamento) {
+            if (tramite?.departamento != tramite?.para?.departamento) {
                 Persona.findAllByDepartamento(tramite.para?.departamento).each { r ->
                     if (r.estaActivo) {
                         def n = [:]
@@ -942,14 +945,7 @@ class TramiteAdminController /*extends Shield*/ {
         def msg = params.msg
         def personas = []
 
-        def dep
-        if(tramite?.de?.departamento){
-            dep = tramite?.de?.departamento
-        }else{
-            dep = tramite?.departamento
-        }
-
-        Persona.findAllByDepartamento(dep).each { p ->
+        Persona.findAllByDepartamento(tramite.departamento).each { p ->
             if (p.estaActivo) {
                 def m = [:]
                 m.key = p.nombre + " " + p.apellido + " (funcionario de ${p.departamento.codigo})"
@@ -970,13 +966,7 @@ class TramiteAdminController /*extends Shield*/ {
         def icon = params.icon
         def msg = params.msg
         def personas = []
-        def dep
-        if(tramite?.de?.departamento){
-            dep = tramite?.de?.departamento
-        }else{
-            dep = tramite?.departamento
-        }
-
+        def dep = tramite.departamento
 
         Persona.findAllByDepartamento(dep).each { p ->
             if (p.estaActivo) {
@@ -989,7 +979,7 @@ class TramiteAdminController /*extends Shield*/ {
 
         def personasRec = []
 
-        if (tramite?.de?.departamento != tramite?.para?.departamento) {
+        if (tramite?.departamento != tramite?.para?.departamento) {
             Persona.findAllByDepartamento(tramite.para?.departamento).each { r ->
                 if (r.estaActivo) {
                     def n = [:]
