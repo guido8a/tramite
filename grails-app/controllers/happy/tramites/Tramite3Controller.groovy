@@ -11,6 +11,9 @@ class Tramite3Controller extends happy.seguridad.Shield {
     def tramitesService
     def dbConnectionService
 
+    def contador_borre = 0
+
+
     def save() {
         params.tramite.asunto = params.tramite.asunto.decodeHTML()
         params.tramite.asunto = params.tramite.asunto.replaceAll(/</, /&lt;/)
@@ -1117,6 +1120,11 @@ class Tramite3Controller extends happy.seguridad.Shield {
 
 
     def arbolTramite() {
+        // para medir el tiempo
+        println "arbolTramite)"
+        def pruebasInicio = new Date()
+        def pruebasFin
+
         def tramite = Tramite.get(params.id.toLong())
         def principal = tramite
         if (tramite.padre) {
@@ -1129,9 +1137,14 @@ class Tramite3Controller extends happy.seguridad.Shield {
                 }
             }
         }
+        pruebasFin = new Date()
+        println "tiempo antes de makeTreeExtended: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
         def html2 = "<ul>" + "\n"
         html2 += makeTreeExtended(principal)
         html2 += "</ul>" + "\n"
+        pruebasFin = new Date()
+        println "tiempo después de makeTreeExtended: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
+        println html2
 
         def url = ""
         switch (params.b) {
@@ -1212,8 +1225,9 @@ class Tramite3Controller extends happy.seguridad.Shield {
             }
             def strInfo = tramiteInfo(pdt)
             def hijos = Tramite.findAllByAQuienContesta(pdt, [sort: "fechaCreacion", order: "asc"])
+//            println "hijos: ${hijos.size()}"
             if (hijos.size() > 0) {
-                clase += " jstree-open"
+                clase += "jstree-open"
             }
             data += ',"tramite":"' + pdt.tramiteId + '"'
             if (pdt.tramite.esRespuestaNueva == "N") {
@@ -1223,7 +1237,7 @@ class Tramite3Controller extends happy.seguridad.Shield {
                     data += ',"icon":"fa fa-files-o text-warning"'
                 }
             }
-            html += "<li id='${pdt.id}' class='${clase}' data-jstree='{\"type\":\"${rel}\"${data}}' data-prtr='{\"prtrId\":\"${pdt.id}\"}' >"
+            html += "<li id='${pdt.id}' class='${clase}' data-jstree='{\"type\":\"${rel}\"${data}}' data-prtr='{\"prtrId\":\"${pdt.id}\"}'>"
             if (pdt.fechaAnulacion) {
                 html += "<span class='text-muted'>"
             }
@@ -1282,11 +1296,15 @@ class Tramite3Controller extends happy.seguridad.Shield {
         //esto muestra una hoja por destinatario
         paras.each { para ->
             html += makeLeaf(para)
+            contador_borre++
         }
         //el para y las copias son hermanos
         ccs.each { para ->
             html += makeLeaf(para)
+            contador_borre++
         }
+
+        println "total registros en el html: $contador_borre"
 
         return html
     }

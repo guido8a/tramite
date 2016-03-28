@@ -118,7 +118,7 @@
     <elm:bootstrapJs/>
 
     <!-- funciones de ui (tooltips, maxlength, bootbox, contextmenu, validacion en keydown para los numeros) -->
-        <script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>
+        %{--<script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>--}%
         <script type="text/javascript">
             var ot = document.title;
 
@@ -132,18 +132,18 @@
                 document.title = ot;
             }
 
-            function validarSesion() {
-                $.ajax({
-                    url     : '${createLink(controller: "login", action: "validarSesion")}',
-                    success : function (msg) {
-                        if (msg == "NO") {
-                            location.href = "${g.createLink(controller: 'login', action: 'login')}";
-                        } else {
-                            resetTimer();
-                        }
-                    }
-                });
-            }
+//            function validarSesion() {
+//                $.ajax({
+                    %{--url     : '${createLink(controller: "login", action: "validarSesion")}',--}%
+//                    success : function (msg) {
+//                        if (msg == "NO") {
+                            %{--location.href = "${g.createLink(controller: 'login', action: 'login')}";--}%
+//                        } else {
+//                            resetTimer();
+//                        }
+//                    }
+//                });
+//            }
 
             function highlight(periods) {
                 if ((periods[5] == 5 && periods[6] == 0) || (periods[5] < 5)) {
@@ -152,22 +152,23 @@
                 }
             }
 
-            $(function () {
-                var ahora = new Date();
-                var fin = ahora.clone().add(20).minute();
-
-                $('#countdown').countdown({
-                    until    : fin,
-                    format   : 'MS',
-                    compact  : true,
-                    onExpiry : validarSesion,
-                    onTick   : highlight
-                });
-
-                $(".btn-ajax").click(function () {
-                    resetTimer();
-                });
-            });
+//            $(function () {
+//            function validarSesion() {
+//                var ahora = new Date();
+//                var fin = ahora.clone().add(20).minute();
+//
+//                $('#countdown').countdown({
+//                    until    : fin,
+//                    format   : 'MS',
+//                    compact  : true,
+//                    onExpiry : validarSesion,
+//                    onTick   : highlight
+//                });
+//
+//                $(".btn-ajax").click(function () {
+//                    resetTimer();
+//                });
+//            });
 
         </script>
 

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 14/03/14
-  Time: 11:18 AM
---%>
-
 <%@ page import="happy.seguridad.Persona; happy.tramites.Tramite" contentType="text/html;charset=UTF-8" %>
 <html>
     <head>
