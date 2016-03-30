@@ -83,6 +83,13 @@
         .cambiado {
             background : #A0BF99;
         }
+
+        .res {
+            height: 280px;
+            margin-top: -50px;
+        }
+
+
         </style>
     </head>
 
@@ -97,11 +104,14 @@
         </g:if>
         <g:if test="${tramite.padre}">
             <g:if test="${tramite.padre.personaPuedeLeer(session.usuario)}">
-                <div class="nota padre ui-corner-all" id="divInfo" style="height: 200px;">
-                    <h4 style="height: 100%" class="text-info">${tramite.padre.codigo} - ${tramite.padre.asunto}</h4>
-                    <div class="contenido" id="divInfoContenido">
-                        <util:renderHTML html="${tramite.padre.texto}"/>
+                <div class="nota padre ui-corner-all" id="divInfo" style="height: 400px;">
+                    <h4 style="height: 40%" class="text-info">${tramite.padre.codigo} - ${tramite.padre.asunto}</h4>
+
+                    <div class="contenido res" id="divInfoContenido">
+                    <util:renderHTML html="${tramite.padre.texto}"/>
                     </div>
+
+
                 </div>
             </g:if>
         </g:if>
@@ -143,9 +153,13 @@
                                     class="leave btn-editar btn btn-sm btn-azul btnRegresar" title="Editar encabezado">
                                 <i class="fa fa-pencil"></i>
                             </g:link>
+
                         </g:else>
                     </g:if>
+
                 </div>
+
+
 
                 <div class="btn-group membrete" data-con="${tramite.conMembrete ?: '0'}">
                     <g:if test="${tramite.conMembrete == '1'}">
@@ -157,12 +171,77 @@
                 </div>
 
             </div>
+            <a href="#" id="btnRevisarProcesos" class="btn btn-success" title="Registrar valores" style="float: right" data-id="${tramite?.id}">
+            <i class="fa fa-tag"></i>
+             </a>
+
             <elm:headerTramite tramite="${tramite}"/>
 
             <textarea id="editorTramite" class="editor" rows="100" cols="80">${tramite.texto}</textarea>
         </div>
 
         <script type="text/javascript">
+
+
+            $("#btnRevisarProcesos").click(function () {
+                    var tram = ${tramite?.id}
+
+                $.ajax({
+                    type: 'POST',
+                    url: "${createLink(controller: 'procesoPersona', action: 'revisarProcesos_ajax')}",
+                    data: {
+                            idTramite: tram
+                    },
+                    success: function (msg) {
+                        bootbox.dialog({
+                            id      : "dlgRevisar",
+                            title   :  "Revisar procesos de la persona",
+                            message : msg,
+                            buttons : {
+                                cancelar : {
+                                    label     : "Cancelar",
+                                    className : "btn-primary",
+                                    callback  : function () {
+                                    }
+                                },
+                                aceptar  : {
+                                    id        : "btnSave",
+                                    label     : "<i class='fa fa-save'></i> Aceptar",
+                                    className : "btn-success",
+                                    callback  : function () {
+
+                                        if($("#procesoSel").val()){
+                                                location.href= "${createLink(controller: 'valorProceso', action: 'asignarValor')}/" + ${tramite?.id} + "?proceso=" + $("#procesoSel").data("id");
+                                        }else{
+                                            bootbox.alert("El cliente seleccionado no tiene un proceso asociado al tipo de trámite <br> Si desea continuar seleccione otro cliente");
+                                            return false;
+                                        }
+
+
+
+                                        %{--$.ajax({--}%
+                                           %{--type: 'POST',--}%
+                                            %{--url: "${createLink(controller: 'tramiteProceso', action: '')}",--}%
+                                            %{--data: {--}%
+
+                                            %{--},--}%
+                                            %{--success: function (msg) {--}%
+                                            %{----}%
+                                        %{--}--}%
+                                        %{--});--}%
+                                    } //callback
+                                } //guardar
+                            } //buttons
+                        }); //dialog
+                    }
+                });
+
+
+
+
+
+            });
+
 
             function arreglarTexto(texto) {
                 texto = $.trim(texto);
@@ -228,27 +307,33 @@
 
                 $(".header-tramite").append($(".btn-editar"));
 
-                $("#divInfo").resizable({
-                    maxWidth  : 450,
-                    maxHeight : 500,
-                    minWidth  : 200,
-                    minHeight : 100,
-                    resize    : function (event, ui) {
-                        var $div = ui.element;
-                        var $also = ui.element.find("#divInfoContenido");
-                        var divH = ui.size.height;
-                        var divW = ui.size.width;
+//                $("#divInfo").resizable({
+//                    maxWidth  : 450,
+//                    maxHeight : 500,
+//                    minWidth  : 200,
+//                    minHeight : 100,
+//                    resize    : function (event, ui) {
+//                        var $div = ui.element;
+//                        var $also = ui.element.find("#divInfoContenido");
+//                        var divH = ui.size.height;
+//                        var divW = ui.size.width;
+//
+//                        var nw = divW - 20;
+//                        var nh = divH - 60;
+//
+//                        $also.css({
+//                            width     : nw,
+//                            height    : nh,
+//                            maxHeight : nh
+//                        });
+//                    }
+//                });
 
-                        var nw = divW - 20;
-                        var nh = divH - 60;
-
-                        $also.css({
-                            width     : nw,
-                            height    : nh,
-                            maxHeight : nh
-                        });
-                    }
-                });
+//                $("#divInfoContenido").resizable({
+//
+//
+//
+//                });
 
 
                 $("#btnInfoPara").click(function () {

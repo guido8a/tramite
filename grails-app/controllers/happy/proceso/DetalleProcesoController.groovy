@@ -111,15 +111,19 @@ class DetalleProcesoController extends happy.seguridad.Shield {
     def formulario () {
 
         def proceso
+        def procesoDocumento
+
+
         if(params.id){
             proceso = Proceso.get(params.id)
+            procesoDocumento = ProcesoDocumento.findByProceso(proceso)
         }
 
-        return [proceso: proceso]
+        return [proceso: proceso, procesoDocumento: procesoDocumento]
     }
 
     def saveProceso_ajax () {
-        println("params save pro " + params)
+//        println("params save pro " + params)
 
         def proceso
 
@@ -155,7 +159,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
 
     def cargarDatos_ajax () {
 
-        println("params da" + params)
+//        println("params da" + params)
 
         def fase = Fase.get(params.id)
         def datos = Dato.findAllByFase(fase)
@@ -166,7 +170,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
     }
 
     def tablaDatos_ajax () {
-        println("tabla datos " + params)
+//        println("tabla datos " + params)
         def dato = Dato.get(params.id)
         def proceso = Proceso.get(params.idPro)
         def detalleProceso = DetalleProceso.findByDatoAndProceso(dato, proceso)
@@ -178,22 +182,169 @@ class DetalleProcesoController extends happy.seguridad.Shield {
 
     def saveDetalle_ajax() {
 
-        println("save deta " + params)
+//        println("save deta " + params)
 
         def dato = Dato.get(params.idD)
         def proceso = Proceso.get(params.idP)
         def detalleProceso
+        def cadena
 
         if(params.idDP){
         detalleProceso = DetalleProceso.get(params.idDP)
         detalleProceso.etiqueta = params.etiqueta
-        detalleProceso.orden = params.orden
+        detalleProceso.orden = params.orden.toInteger()
+        if(dato?.tipo == 'String'){
+            cadena = (params.desde + "," + params.hasta)
+            detalleProceso.rango = cadena
+        }else{
+            detalleProceso.numericoMinimo = params.desde
+            detalleProceso.numericoMaximo = params.hasta
 
+        }
 
+        detalleProceso.aporte = params.aporte.toDouble()
+        detalleProceso.posicionReporte = params.posicion.toInteger()
+        detalleProceso.observacion = params.observacion
 
+        if(params.nulo == 'false'){
+            detalleProceso.nulo = '0'
+        }else{
+            detalleProceso.nulo = '1'
+        }
+        if(params.ruta == 'false'){
+                detalleProceso.ruta = '0'
+        }else{
+                detalleProceso.ruta = '1'
+        }
+
+        detalleProceso.fechaModificacion = new Date()
+
+            try {
+                detalleProceso.save(flush: true)
+                render "ok_" + detalleProceso?.id
+                println("de act " + detalleProceso.id)
+            }catch(e){
+                println("error actualizar detalleproceso" + detalleProceso.errors)
+                render "no"
+            }
 
         }else{
 
+            detalleProceso = new DetalleProceso();
+            detalleProceso.dato = dato
+            detalleProceso.proceso = proceso
+            detalleProceso.etiqueta = params.etiqueta
+            detalleProceso.orden = params.orden
+            if(dato?.tipo == 'String'){
+                cadena = (params.desde + "," + params.hasta)
+                detalleProceso.rango = cadena
+                detalleProceso.numericoMaximo = 0
+                detalleProceso.numericoMinimo = 0
+            }else{
+                detalleProceso.rango = 'numerico'
+                detalleProceso.numericoMinimo = params.desde
+                detalleProceso.numericoMaximo = params.hasta
+            }
+
+            detalleProceso.aporte = params.aporte.toDouble()
+            detalleProceso.posicionReporte = params.posicion
+            detalleProceso.observacion = params.observacion
+            if(params.nulo == false){
+                detalleProceso.nulo = '0'
+            }else{
+                detalleProceso.nulo = '1'
+            }
+            if(params.ruta == false){
+                detalleProceso.ruta = '0'
+            }else{
+                detalleProceso.ruta = '1'
+            }
+
+            detalleProceso.fecha = new Date()
+            detalleProceso.fechaModificacion = new Date()
+
+            try {
+                detalleProceso.save(flush: true)
+                detalleProceso.refresh();
+                render "ok_" + detalleProceso?.id
+            }catch(e){
+                println("error al guardar detalleproceso" + detalleProceso.errors)
+                render "no"
+            }
+
+        }
+
+    }
+
+    def lista_ajax () {
+
+        def detalle = DetalleProceso.get(params.idDetalle);
+
+        return [detalle: detalle]
+    }
+
+    def tablaLista_ajax () {
+
+        def detalle = DetalleProceso.get(params.id);
+        def listaDetalle = ListaValores.findAllByDetalleProceso(detalle);
+
+        return [lista: listaDetalle, detalle: detalle]
+    }
+
+    def saveItems_ajax () {
+
+        def detalleProceso = DetalleProceso.get(params.idDetalle);
+        def itemLista
+
+        itemLista = new ListaValores()
+        itemLista.detalleProceso = detalleProceso
+        itemLista.descripcion = params.descripcion
+        itemLista.defecto = '0'
+
+        try {
+            itemLista.save(flush: true)
+            render "ok"
+        }catch(e){
+            render "no"
+            print("error al guardar el item de la lista " + itemLista.errors)
+        }
+
+    }
+
+    def saveDefecto_ajax () {
+
+//        println("params " + params)
+
+        def lista = ListaValores.get(params.id)
+        def detalle = DetalleProceso.get(lista.detalleProceso.id)
+        def otrosItems = ListaValores.findAllByDetalleProceso(detalle)
+
+        if(otrosItems != null || otrosItems != ''){
+            otrosItems.each { t->
+                t.defecto = '0'
+                t.save(flush: true)
+            }
+        }
+
+        lista.defecto = '1'
+        try {
+            lista.save(flush: true)
+            render "ok"
+        }catch(e){
+            render "no"
+        }
+    }
+
+    def borrarLista_ajax () {
+
+        def item = ListaValores.get(params.id)
+
+        try{
+            item.delete(flush: true)
+            render "ok"
+        }catch (e){
+            render "no"
+            println("error al borrar el item " + item.errors)
         }
 
     }

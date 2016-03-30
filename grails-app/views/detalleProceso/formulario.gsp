@@ -22,30 +22,37 @@
 
 
     <div class="row">
-        <div class="col-xs-1 negrilla control-label">Nombre del proceso: </div>
+        <div class="col-xs-2 negrilla control-label">Nombre del proceso: </div>
 
         <div class="col-md-4" style="margin-bottom: 20px">
             <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control" maxlength="1023" style="width: 350px" />
         </div>
 
-        <div class="col-xs-1 negrilla control-label">Objetivo del proceso: </div>
+        <div class="col-xs-2 negrilla control-label">Objetivo del proceso: </div>
 
         <div class="col-md-4" style="margin-bottom: 20px">
-            <g:textField name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="width: 350px"/>
+            %{--<g:textField name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="width: 350px"/>--}%
+            <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}"class="form-control" maxlength="1023" style="resize: none"/>
         </div>
 
-        <div class="col-xs-2">
-            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar proceso">
-                <i class="fa fa-save"> Guardar</i>
-            </a>
+        <div class="row "></div>
+
+        <div class="col-xs-2 negrilla control-label">Asignar tipo de documento al proceso: </div>
+
+        <div class="col-md-6" style="margin-bottom: 20px">
+            <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control" style="width: 350px"/>
         </div>
 
-        <div class="col-xs-2" style="margin-top: 5px">
+        <div class="col-xs-1">
             <a href="#" id="btnNuevo" class="btn btn-info" title="Nuevo proceso">
                 <i class="fa fa-plus"> Nuevo</i>
             </a>
         </div>
-
+        <div class="col-xs-1">
+            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar proceso">
+                <i class="fa fa-save"> Guardar</i>
+            </a>
+        </div>
 
     </div>
 </div>
@@ -56,7 +63,7 @@
 
         <div class="linea"></div>
 
-        <div class="row "  >
+        <div class="row" >
 
             <div class="col-xs-1 negrilla control-label">Fase: </div>
 
@@ -107,6 +114,7 @@
         var  nombreProceso = $("#proceso").val();
         var  objetivoProceso = $("#objetivo").val();
         var idProceso = '${proceso?.id}';
+        var tipoDoc = $("#tipo").val();
 
         if(nombreProceso == '' || objetivoProceso == '' || nombreProceso == null || objetivoProceso == null){
             log("Debe ingresar los dos campos solicitados!","error")
@@ -115,6 +123,7 @@
             $.ajax({
                 type: 'POST',
                 url: '${createLink(controller: 'detalleProceso', action: 'saveProceso_ajax')}',
+                async: false,
                 data: {
                     proceso: nombreProceso,
                     objetivo: objetivoProceso,
@@ -123,12 +132,26 @@
                 success: function (msg) {
                     var parts =  msg.split("_");
                     if(parts[0] == 'ok'){
-                        log("Proceso guardado correctamente!","success");
 
-                        setTimeout(function () {
-                            location.href = "${createLink(controller:'detalleProceso',action:'formulario')}/" + parts[1];
-                        }, 1000);
+                        $.ajax({
+                           type: 'POST',
+                            url: "${createLink(controller: 'procesoDocumento', action: 'saveProcesoDocumento_ajax')}",
+                            data: {
+                                tipo: tipoDoc,
+                                id: parts[1]
+                            },
+                            success: function (msg) {
+                                if(msg == 'ok'){
+                                    log("Proceso guardado correctamente!","success");
 
+                                    setTimeout(function () {
+                                        location.href = "${createLink(controller:'detalleProceso',action:'formulario')}/" + parts[1];
+                                    }, 1000);
+                                }else{
+                                    log("Ocurrió un error al guardar el proceso!","error")
+                                }
+                            }
+                        });
                     } else {
                         log("Ocurrió un error al guardar el proceso!","error")
                     }

@@ -397,7 +397,7 @@ class ElementosTagLib {
             } else {
                 if (tramite?.tipoDocumento?.codigo == 'OFI') {
                     if (tramite.de) {
-                        html += "                    ${tramite.de.departamento.descripcion}"
+                        html += "                    ${tramite?.de?.departamento.descripcion}"
                     } else {
                         html += "                    ${tramite.deDepartamento.descripcion}"
                     }
@@ -405,7 +405,7 @@ class ElementosTagLib {
                     //cambiado el 21-07-2015
 //                    html += "                    ${tramite.de.departamento.descripcion} - (${tramite.de.nombre} ${tramite.de.apellido})"
                     if (tramite.de) {
-                        html += "                    ${tramite.de.departamento.descripcion}"
+                        html += "                    ${tramite?.de?.departamento.descripcion}"
                     } else {
                         html += "                    ${tramite.deDepartamento.descripcion}"
                     }
