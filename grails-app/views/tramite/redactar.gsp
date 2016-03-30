@@ -50,10 +50,6 @@
             width        : 290px;
         }
 
-        .nota.padre .contenido {
-
-        }
-
         .padre h4 {
             font-size     : 15px;
             margin-top    : 0;
@@ -80,10 +76,6 @@
             border-radius         : 5px;
         }
 
-        .cambiado {
-            background : #A0BF99;
-        }
-
         .res {
             height: 280px;
             margin-top: -50px;
@@ -105,9 +97,9 @@
         <g:if test="${tramite.padre}">
             <g:if test="${tramite.padre.personaPuedeLeer(session.usuario)}">
                 <div class="nota padre ui-corner-all" id="divInfo" style="height: 400px;">
-                    <h4 style="height: 40%" class="text-info">${tramite.padre.codigo} - ${tramite.padre.asunto}</h4>
+                    <h4 class="text-info">${tramite.padre.codigo} - ${tramite.padre.asunto}</h4>
 
-                    <div class="contenido res" id="divInfoContenido">
+                    <div class="contenido res" id="divInfoContenido" style="margin-top: 20px; height: 85%">
                     <util:renderHTML html="${tramite.padre.texto}"/>
                     </div>
 
@@ -307,34 +299,12 @@
 
                 $(".header-tramite").append($(".btn-editar"));
 
-//                $("#divInfo").resizable({
-//                    maxWidth  : 450,
-//                    maxHeight : 500,
-//                    minWidth  : 200,
-//                    minHeight : 100,
-//                    resize    : function (event, ui) {
-//                        var $div = ui.element;
-//                        var $also = ui.element.find("#divInfoContenido");
-//                        var divH = ui.size.height;
-//                        var divW = ui.size.width;
-//
-//                        var nw = divW - 20;
-//                        var nh = divH - 60;
-//
-//                        $also.css({
-//                            width     : nw,
-//                            height    : nh,
-//                            maxHeight : nh
-//                        });
-//                    }
-//                });
-
-//                $("#divInfoContenido").resizable({
-//
-//
-//
-//                });
-
+                $("#divInfo").resizable({
+                    maxWidth  : 450,
+                    maxHeight : 600,
+                    minWidth  : 240,
+                    minHeight : 400
+                });
 
                 $("#btnInfoPara").click(function () {
                     var para = $("#para").val();
