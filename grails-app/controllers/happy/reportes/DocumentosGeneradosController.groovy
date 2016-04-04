@@ -103,8 +103,8 @@ class DocumentosGeneradosController extends Shield{
         def sql
         def cn2 = dbConnectionService.getConnection()
         def cn = dbConnectionService.getConnection()
-        desde = desde.format("yyyy/MM/dd")
-        hasta = hasta.format("yyyy/MM/dd")
+        desde = desde.format("yyyy/MM/dd HH:mm")
+        hasta = hasta.format("yyyy/MM/dd HH:mm")
 
         if(usuario.esTriangulo()){
             sqlGen = "select * from trmt_generados("+ params.id +","+ departamentoUsuario +"," + "'"  + desde + "'" + "," +  "'" + hasta + "'" + ")"
@@ -429,8 +429,8 @@ class DocumentosGeneradosController extends Shield{
         def tablaTotalesGenerados = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([100]),0,0)
         def tablaTotalesRecibidos = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([100]),0,0)
 
-        desde = desde.format("yyyy/MM/dd")
-        hasta = hasta.format("yyyy/MM/dd")
+        desde = desde.format("yyyy/MM/dd HH:mm")
+        hasta = hasta.format("yyyy/MM/dd HH:mm")
 
         reportesPdfService.addCellTabla(tablaCabeceraGenerados, new Paragraph("Trámites Generados", fontBold), paramsCenter)
         document.add(tablaCabeceraGenerados)
@@ -636,8 +636,8 @@ class DocumentosGeneradosController extends Shield{
         def sql
         def cn2 = dbConnectionService.getConnection()
         def cn = dbConnectionService.getConnection()
-        desde = desde.format("yyyy/MM/dd")
-        hasta = hasta.format("yyyy/MM/dd")
+        desde = desde.format("yyyy/MM/dd HH:mm")
+        hasta = hasta.format("yyyy/MM/dd HH:mm")
 
         if(usuario.esTriangulo()){
             sqlGen = "select * from trmt_generados("+ params.id +","+ departamentoUsuario +"," + "'"  + desde + "'" + "," +  "'" + hasta + "'" + ")"
@@ -877,8 +877,8 @@ class DocumentosGeneradosController extends Shield{
         def sqlGen
         def totalGenerado = 0
         def totalRecibido = 0
-        desde = desde.format("yyyy/MM/dd")
-        hasta = hasta.format("yyyy/MM/dd")
+        desde = desde.format("yyyy/MM/dd HH:mm")
+        hasta = hasta.format("yyyy/MM/dd HH:mm")
         def cn2 = dbConnectionService.getConnection()
 
         if(usuario.esTriangulo()){
