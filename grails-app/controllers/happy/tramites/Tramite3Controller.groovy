@@ -1121,11 +1121,14 @@ class Tramite3Controller extends happy.seguridad.Shield {
 
     def arbolTramite() {
         // para medir el tiempo
-        println "arbolTramite)"
+//        println "arbolTramite)"
         def pruebasInicio = new Date()
         def pruebasFin
 
         def tramite = Tramite.get(params.id.toLong())
+
+        /** arbol anterior **/
+/*
         def principal = tramite
         if (tramite.padre) {
             principal = tramite.padre
@@ -1137,14 +1140,22 @@ class Tramite3Controller extends happy.seguridad.Shield {
                 }
             }
         }
-        pruebasFin = new Date()
-        println "tiempo antes de makeTreeExtended: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
+
         def html2 = "<ul>" + "\n"
         html2 += makeTreeExtended(principal)
         html2 += "</ul>" + "\n"
+
+        // fin anterior
+ */
+
+
+        /** arbol nuevo **/
+        def html2 = arbolAbierto(tramite)
+
+//        println html2
+
         pruebasFin = new Date()
-        println "tiempo después de makeTreeExtended: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
-        println html2
+        println "tiempo total: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
 
         def url = ""
         switch (params.b) {
@@ -1283,6 +1294,65 @@ class Tramite3Controller extends happy.seguridad.Shield {
 
         return html
     }
+
+    /** trmt: Tramite del cualse requiere la cadena **/
+    def arbolAbierto(trmt){
+        //invoca a cadena y arma el arbol
+        def pruebasInicio = new Date()
+        def pruebasFin
+        def html = "<ul>"
+        def cierre = ""
+        def data = ""
+
+        def sql = "select * from cadena(${trmt.id}, 0, 0)"
+        def cn = dbConnectionService.getConnection()
+        def nivel = 1
+        def i = 0
+        cn.eachRow(sql.toString()){ d ->
+            if(!pruebasFin) {
+                pruebasFin = new Date()
+//                println "primer registro: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
+            }
+            if(d.nivel > nivel) {
+                nivel = d.nivel
+                html += "<ul>"
+            } else if(d.nivel < nivel) {
+                html += "</ul></li>\n" * (nivel - d.nivel)
+                nivel = d.nivel
+            }
+
+            data = ''
+            if (d.esrn == "N") {
+                if (d.tipo == "para") {
+                    data = ',"icon":"fa fa-file-o text-warning"'
+                } else if (d.tipo == "copia") {
+                    data = ',"icon":"fa fa-files-o text-warning"'
+                }
+            }
+
+            if(i>0 && d.nivel == nivel) {
+                cierre = "</li>\n"
+            }
+
+            html += "${cierre}<li id='${d.prtr__id}' class='${d.es__pdre == 'S' ? 'jstree-open' : ''} ${d.tipo}' " +
+                    "data-jstree='{\"type\":\"${d.tipo}\",\"tramite\":\"${d.trmt__id}\"${data}}' " +
+                    "data-prtr='{\"prtrId\":\"${d.prtr__id}\"'}>${d.tipo == 'copia' ? 'c ': ''}<b>" +
+                    "${d.trmtcdgo} </b><small>(<strong>DE</strong>: ${d.trmt__de}, <strong>PARA</strong>: ${d.trmtpara}, " +
+                    "${d.fchacrea}${d.fchaenvi}${d.fcharcbe}${d.fchaarch}${d.fchaanul}"
+            html += ")</small>"
+            i++
+        }
+        cn.close()
+        if(nivel > 1){
+            html += "</ul>" * (nivel - 1)
+            cierre = "</li>"
+        }
+        html += "</ul>\n"
+        pruebasFin = new Date()
+        println "total registros: $i, tiempo armar html: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"
+        return html
+    }
+
 
     //Antes de cambiar la estructura de tramites relacionados
     private String makeTreeExtended(Tramite principal) {

@@ -19,6 +19,9 @@
         overflow-y : auto;
         height     : 600px;
     }
+    .anulado {
+        color: gray;
+    }
     </style>
 
 </head>
