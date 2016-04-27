@@ -286,7 +286,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
     def tablaLista_ajax () {
 
         def detalle = DetalleProceso.get(params.id);
-        def listaDetalle = ListaValores.findAllByDetalleProceso(detalle);
+        def listaDetalle = ListaValores.findAllByDetalleProceso(detalle, [sort: 'descripcion']);
 
         return [lista: listaDetalle, detalle: detalle]
     }

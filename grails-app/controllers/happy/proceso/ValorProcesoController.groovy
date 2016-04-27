@@ -131,11 +131,57 @@ class ValorProcesoController extends happy.seguridad.Shield {
 
         def datos = DetalleProceso.findAllByProceso(trpc?.procesoPersona?.proceso, [sort: 'orden', order: 'asc'])
 
-        return [trpc: trpc, datos: datos]
+        def vlpc = ValorProceso.findAllByDetalleProcesoInListAndProcesoPersona(datos,pccl)
+
+
+        return [trpc: trpc, datos: datos, pccl: pccl, vlpc: vlpc]
 
     }
 
     def procesos_ajax() {
+
+    }
+
+    def saveValor_ajax () {
+
+        println("params save valor " + params)
+
+        def procesoPersona = ProcesoPersona.get(params.pccl)
+        def detalleProceso = DetalleProceso.get(params.dtpc)
+        def valorProceso
+
+        if(params.vlpc){
+            valorProceso = ValorProceso.get(params.vlpc)
+            valorProceso.valor =  params.val
+            valorProceso.observaciones = params.obs
+            valorProceso.fechaModificacion = new Date();
+
+            try{
+                valorProceso.save(flush: true)
+                render "ok"
+            }catch(e){
+                render "no"
+                println("error al guardar el valor " + valorProceso.errors)
+            }
+
+        }else{
+            valorProceso = new ValorProceso()
+            valorProceso.procesoPersona = procesoPersona
+            valorProceso.detalleProceso = detalleProceso
+            valorProceso.valor =  params.val
+            valorProceso.observaciones = params.obs
+            valorProceso.fecha = new Date();
+            valorProceso.fechaModificacion = new Date();
+
+            try{
+                valorProceso.save(flush: true)
+                render "ok"
+            }catch(e){
+                render "no"
+                println("error al guardar el valor " + valorProceso.errors)
+            }
+
+        }
 
     }
 

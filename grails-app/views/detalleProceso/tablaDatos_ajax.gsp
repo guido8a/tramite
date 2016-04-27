@@ -125,12 +125,14 @@
         <g:select id="lista" name="lista.id" from="${happy.proceso.ListaValores.findAllByDetalleProceso(detalleProceso, [sort: 'defecto', order: 'desc'])}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
     </div>
 
-    <div class="col-md-3">
+    <div class="btn-group">
         <a href="#" id="btnAgregar" class="btn btn-info" title="Agregar items a la lista">
             <i class="fa fa-plus"> Agregar</i>
         </a>
+        <a href="#" id="btnBorrarLista" class="btn btn-danger" title="Borrar todos los items de la lista">
+            <i class="fa fa-trash"> Borrar todos</i>
+        </a>
     </div>
-
 
     <div class="col-xs-2" style="float: right; margin-bottom: 20px">
         <a href="#" id="btnGuardarDetalle" class="btn btn-success" title="Guardar detalle">
@@ -278,6 +280,16 @@
 
 
 
+    });
+
+
+    $("#btnBorrarLista").click(function () {
+        bootbox.confirm("Borrar todos los items de la lista?", function (result) {
+            if(result){
+
+            }
+
+        });
     });
 
 

@@ -27,10 +27,10 @@
       </td>
       <td style="text-align: center">
         <g:if test="${l?.defecto == '1'}">
-          <g:radio name="defecto_name" class="defecto" value="${''}" checked="true" lis="${l?.id}"/>
+          <g:radio name="defecto_name" class="defecto" checked="true" lis="${l?.id}" value=""/>
         </g:if>
         <g:else>
-          <g:radio name="defecto_name" class="defecto" value="${''}" checked="false" lis="${l?.id}"/>
+          <g:radio name="defecto_name" class="defecto" lis="${l?.id}" value=""/>
         </g:else>
       </td>
       <td style="text-align: center">

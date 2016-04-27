@@ -7,7 +7,7 @@
 <g:each in="${datos}" var="d">
     <tr>
         <td>
-            ${d?.fase?.descripcion} ${d?.id}
+            ${d?.fase?.descripcion}
         </td>
         <td>
             ${d?.descripcion}

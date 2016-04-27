@@ -31,8 +31,7 @@
         <div class="col-xs-2 negrilla control-label">Objetivo del proceso: </div>
 
         <div class="col-md-4" style="margin-bottom: 20px">
-            %{--<g:textField name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="width: 350px"/>--}%
-            <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}"class="form-control" maxlength="1023" style="resize: none"/>
+            <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="resize: none"/>
         </div>
 
         <div class="row "></div>
@@ -43,17 +42,14 @@
             <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control" style="width: 350px"/>
         </div>
 
-        <div class="col-xs-1">
-            <a href="#" id="btnNuevo" class="btn btn-info" title="Nuevo proceso">
-                <i class="fa fa-plus"> Nuevo</i>
-            </a>
+        <div class="btn-group">
+                <a href="#" id="btnNuevo" class="btn btn-info" title="Nuevo proceso">
+                    <i class="fa fa-plus"> Nuevo</i>
+                </a>
+                <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar proceso">
+                    <i class="fa fa-save"> Guardar</i>
+                </a>
         </div>
-        <div class="col-xs-1">
-            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar proceso">
-                <i class="fa fa-save"> Guardar</i>
-            </a>
-        </div>
-
     </div>
 </div>
 
