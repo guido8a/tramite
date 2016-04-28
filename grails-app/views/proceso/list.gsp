@@ -200,6 +200,14 @@
                                 createEditRow(id);
                             }
                         },
+                        detalle   : {
+                            label  : "Detalle",
+                            icon   : "fa fa-check",
+                            action : function ($element) {
+                                var id = $element.data("id")
+                                location.href="${createLink(controller: 'detalleProceso', action: 'formulario')}/" + id
+                            }
+                        },
                         eliminar : {
                             label            : "Eliminar",
                             icon             : "fa fa-trash-o",
