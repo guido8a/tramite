@@ -20,13 +20,15 @@ class FaseController extends happy.seguridad.Shield {
             def c = Fase.createCriteria()
             lista = c.list(params) {
                 or {
-                    /* TODO: cambiar aqui segun sea necesario */
-                    ilike("codigo", "%" + params.search + "%")
+                    /* cambiar campos aqui segun sea necesario */
+                    ilike("objetivo", "%" + params.search + "%")
                     ilike("descripcion", "%" + params.search + "%")
                 }
+                order("descripcion", "asc")
             }
         } else {
             lista = Fase.list(params)
+            lista = lista.sort{it.descripcion}
         }
         return lista
     }

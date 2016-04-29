@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta name="layout" content="main">
-        <title>Lista de Fases</title>
+        <title>Fases de un Proceso</title>
     </head>
     <body>
 
@@ -14,7 +14,7 @@
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
                 <g:link action="form" class="btn btn-default btnCrear">
-                    <i class="fa fa-file-o"></i> Nueva fase
+                    <i class="fa fa-file-o"></i> Nueva Fase
                 </g:link>
             </div>
             <div class="btn-group pull-right col-md-3">
@@ -33,9 +33,9 @@
             <thead>
                 <tr>
                     
-                    <g:sortableColumn property="descripcion" title="Descripción" />
+                    <g:sortableColumn property="descripcion" title="Nombre de la Fase" />
                     
-                    <g:sortableColumn property="objetivo" title="Objetivo" />
+                    <g:sortableColumn property="objetivo" title="Objetivo o Propósito de la Fase" />
                     
                 </tr>
             </thead>

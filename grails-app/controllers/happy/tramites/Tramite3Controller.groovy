@@ -1153,6 +1153,11 @@ class Tramite3Controller extends happy.seguridad.Shield {
         def html2 = arbolAbierto(tramite)
 
 //        println html2
+        if(html2.contains("<ul></ul>")) {
+            html2 = '<ul><li class="fa fa-exclamation-circle text-danger">El trámite señalado es el primero de la cadena, pero aún no existe formalmente: ' +
+                    'No ha sido enviado</li></ul>'
+        }
+//        println "....>>>" + html2
 
         pruebasFin = new Date()
         println "tiempo total: ${TimeCategory.minus(pruebasFin, pruebasInicio)}"

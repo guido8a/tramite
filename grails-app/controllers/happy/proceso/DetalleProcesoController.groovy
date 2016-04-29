@@ -193,7 +193,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
         detalleProceso = DetalleProceso.get(params.idDP)
         detalleProceso.etiqueta = params.etiqueta
         detalleProceso.orden = params.orden.toInteger()
-        if(dato?.tipo == 'String'){
+        if(dato?.tipo == 'Alfanumérico'){
             cadena = (params.desde + "," + params.hasta)
             detalleProceso.rango = cadena
         }else{
@@ -235,7 +235,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
             detalleProceso.proceso = proceso
             detalleProceso.etiqueta = params.etiqueta
             detalleProceso.orden = params.orden
-            if(dato?.tipo == 'String'){
+            if(dato?.tipo == 'Alfanumérico'){
                 cadena = (params.desde + "," + params.hasta)
                 detalleProceso.rango = cadena
                 detalleProceso.numericoMaximo = 0

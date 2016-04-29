@@ -2145,7 +2145,7 @@ class RetrasadosController extends Shield {
                 document.add(tablaTotalesRecibidos)
             }
 
-        }else{
+        } else {
 
             tablaTotalesRecibidos = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([40,30,15,15]),0,0)
 

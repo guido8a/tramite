@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta name="layout" content="main">
-        <title>Lista de Proceso</title>
+        <title>Procesos</title>
     </head>
     <body>
 
@@ -14,7 +14,7 @@
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
                 <g:link action="form" class="btn btn-default btnCrear">
-                    <i class="fa fa-file-o"></i> Nuevo proceso
+                    <i class="fa fa-file-o"></i> Nuevo Proceso
                 </g:link>
             </div>
             <div class="btn-group pull-right col-md-3">
@@ -33,9 +33,9 @@
             <thead>
                 <tr>
                     
-                    <g:sortableColumn property="nombre" title="Nombre" />
+                    <g:sortableColumn property="nombre" title="Nombre del Proceso" />
                     
-                    <g:sortableColumn property="objetivo" title="Objetivo" />
+                    <g:sortableColumn property="objetivo" title="Objetivo o Propósito del Proceso" />
                     
                 </tr>
             </thead>
@@ -201,8 +201,8 @@
                             }
                         },
                         detalle   : {
-                            label  : "Detalle",
-                            icon   : "fa fa-check",
+                            label  : "Definir el formulario",
+                            icon   : "fa fa-table",
                             action : function ($element) {
                                 var id = $element.data("id")
                                 location.href="${createLink(controller: 'detalleProceso', action: 'formulario')}/" + id

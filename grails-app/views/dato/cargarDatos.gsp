@@ -1,46 +1,37 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 10/03/16
-  Time: 03:55 PM
---%>
-
 <%@ page import="happy.proceso.Dato" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="main">
-    <title>Cargar Datos de Fases</title>
+    <title>Datos para la Fase del Proceso</title>
 </head>
 
 <body>
-<div style="margin-top: 30px;" class="vertical-container">
-    <p class="css-vertical-text" style="margin-top: -10px;">Fase</p>
+<div style="width: 100%; text-align: center; margin-top: -10px"><h3>Datos para cada fase del Proceso</h3></div>
+<div style="margin-top: 0px;" class="vertical-container">
+    <p class="css-vertical-text" style="margin-top: -20px;">Fase</p>
 
     <div class="linea"></div>
-
     <div class="row">
+        <div class="col-md-2 negrilla control-label">Nombre de la Fase: </div>
 
-        <div class="col-xs-1 negrilla control-label">Fase: </div>
-
-        <div class="col-md-4" style="margin-bottom: 20px">
+        <div class="col-md-10" style="margin-bottom: 20px">
             <g:select id="fase" name="fase.id" from="${happy.proceso.Fase.list()}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
         </div>
-
     </div>
 </div>
 
-
-<div style="margin-top: 30px; min-height: 100px" class="vertical-container divDatos">
+<div style="margin-top: 20px; min-height: 100px" class="vertical-container divDatos">
     <p class="css-vertical-text" style="margin-top: -10px;">Datos</p>
 
     <div class="linea"></div>
 
     <div class="row">
         <g:hiddenField name="id_name" value="" id="oculto"/>
-        <div class="col-xs-1 negrilla">Descripción:</div>
+        <div class="col-xs-1 negrilla">Nombre del dato:</div>
 
         <div class="col-xs-9">
-            <g:textField name="descripcion_name" id="descripcion" class="form-control" maxlength="255" style="width: 800px"/>
+            %{--<g:textField name="descripcion_name" id="descripcion" class="form-control" maxlength="255" style="width: 800px"/>--}%
+            <g:textField name="descripcion_name" id="descripcion" class="form-control" maxlength="255" />
         </div>
 
         <div class="col-xs-2">
@@ -50,15 +41,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-1 negrilla">Valor:</div>
-
-        <div class="col-xs-4">
-            <g:textField name="valor_name" id="valor" class="form-control" maxlength="255" style="width: 350px"/>
+        <div class="col-xs-1 negrilla">Descripción del dato:</div>
+        <div class="col-xs-6">
+            <g:textField name="valor_name" id="valor" class="form-control" maxlength="255"/>
         </div>
 
-        <div class="col-xs-1 negrilla">Tipo:</div>
+        <div class="col-xs-1 negrilla">Tipo de dato:</div>
 
-        <div class="col-xs-4">
+        <div class="col-xs-2">
             %{--<g:textField name="tipo_name" id="tipo" class="form-control" maxlength="63" style="width: 335px"/>--}%
             <g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>
         </div>
@@ -73,8 +63,8 @@
 
 </div>
 
-<div style="margin-top: 30px; min-height: 300px" class="vertical-container ">
-    <p class="css-vertical-text" style="margin-top: -10px;">Datos Asignados</p>
+<div style="margin-top: 20px; min-height: 300px" class="vertical-container ">
+    <p class="css-vertical-text" style="margin-top: -10px;">Datos Requeridos</p>
 
     <div class="linea"></div>
 
@@ -82,9 +72,9 @@
     <table class="table table-bordered  table-condensed table-hover">
     <thead>
     <tr>
-            <th>Fase</th>
-        <th>Descripción</th>
-        <th>Valor</th>
+        <th>Fase</th>
+        <th>Nombre del dato</th>
+        <th>Descripción del dato requerido</th>
         <th>Tipo</th>
         <th style="width: 100px">Acciones</th>
     </tr>

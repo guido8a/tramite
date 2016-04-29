@@ -1,20 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 14/03/16
-  Time: 03:13 PM
---%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta name="layout" content="main">
-    <title>Formulario de detalle de Proceso</title>
+    <title>Formulario del Proceso</title>
+
+    <style type="text/css">
+    input{
+        font-size: 10px !important;
+        margin: 0px;
+    }
+    </style>
 </head>
 
 <body>
 
-
+<div style="width: 100%; text-align: center; margin-top: -10px"><h3>Formulario del Proceso</h3></div>
 <div style="margin-top: 30px;min-height: 80px" class="vertical-container">
     <p class="css-vertical-text" style="margin-top: -10px;">Proceso </p>
 
@@ -22,48 +22,52 @@
 
 
     <div class="row">
-        <div class="col-xs-2 negrilla control-label">Nombre del proceso: </div>
+        <div class="col-xs-1 negrilla control-label">Proceso: </div>
 
-        <div class="col-md-4" style="margin-bottom: 20px">
-            <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control" maxlength="1023" style="width: 350px" />
+        <div class="col-md-5" style="margin-bottom: 20px">
+            <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control" maxlength="1023" />
         </div>
 
-        <div class="col-xs-2 negrilla control-label">Objetivo del proceso: </div>
+        <div class="col-xs-1 negrilla control-label">Objetivo del proceso: </div>
 
-        <div class="col-md-4" style="margin-bottom: 20px">
+        <div class="col-md-5" style="margin-bottom: 20px">
             <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="resize: none"/>
         </div>
 
-        <div class="row "></div>
+        %{--<div class="row "></div>--}%
 
-        <div class="col-xs-2 negrilla control-label">Asignar tipo de documento al proceso: </div>
+        <div class="col-xs-1 negrilla control-label">Aplica a Documentos: </div>
 
-        <div class="col-md-6" style="margin-bottom: 20px">
-            <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control" style="width: 350px"/>
+        <div class="col-md-5" style="margin-bottom: 20px">
+            <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control"/>
         </div>
 
-        <div class="btn-group">
-                <a href="#" id="btnNuevo" class="btn btn-info" title="Nuevo proceso">
-                    <i class="fa fa-plus"> Nuevo</i>
-                </a>
-                <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar proceso">
-                    <i class="fa fa-save"> Guardar</i>
+        <div class="col-md-1">
+        </div>
+        <div class="btn-group col-md-2">
+            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar cambios al proceso">
+                <i class="fa fa-save"> Guardar</i>
+            </a>
+        </div>
+        <div class="btn-group col-md-2">
+                <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
+                    <i class="fa fa-plus"> Nuevo Proceso</i>
                 </a>
         </div>
     </div>
 </div>
 
 <g:if test="${proceso?.id}">
-    <div style="margin-top: 30px;" class="vertical-container">
-        <p class="css-vertical-text" style="margin-top: -10px;">Fase</p>
+    <div style="margin-top: 20px;" class="contenedor-vertical">
+        <p class="css-texto-vertical" style="margin-top: 0px;">Datos</p>
 
         <div class="linea"></div>
 
         <div class="row" >
 
-            <div class="col-xs-1 negrilla control-label">Fase: </div>
+            <div class="col-xs-1 negrilla control-label">Fase del Proceso: </div>
 
-            <div class="col-md-4" style="margin-bottom: 20px">
+            <div class="col-md-3" style="margin-bottom: 20px">
                 <g:if test="${proceso?.id}">
                     <g:select id="fase" name="fase.id" from="${happy.proceso.Fase.list()}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
                 </g:if>
@@ -73,9 +77,10 @@
 
             </div>
 
-            <div class="col-xs-1 negrilla control-label">Dato: </div>
+            <div class="col-xs-1 negrilla control-label">Dato a definir: </div>
 
-            <div class="col-md-4" style="margin-bottom: 20px" id="divDatos">
+            %{--<div class="col-md-7 text-info" style="margin-bottom: 20px" id="divDatos">--}%
+            <div class="col-md-7 text-info" style="margin-left: -10px" id="divDatos">
 
             </div>
 
@@ -88,10 +93,10 @@
 
 
 <g:if test="${proceso?.id}">
-    <div style="margin-top: 30px;min-height: 200px" class="vertical-container">
+    <div style="margin-top: -20px;min-height: 200px" class="vertical-container">
         <p class="css-vertical-text" style="margin-top: -10px;">Detalle de datos</p>
 
-        <div class="linea"></div>
+        <div class="linea" style="color: #888; !important;"></div>
 
         <div class="row" id="divTabla">
 

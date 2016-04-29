@@ -20,13 +20,14 @@ class ProcesoController extends happy.seguridad.Shield {
             def c = Proceso.createCriteria()
             lista = c.list(params) {
                 or {
-                    /* TODO: cambiar aqui segun sea necesario */
-                    ilike("codigo", "%" + params.search + "%")
-                    ilike("descripcion", "%" + params.search + "%")
+                    ilike("nombre", "%" + params.search + "%")
+                    ilike("objetivo", "%" + params.search + "%")
                 }
+                order("nombre", "asc")
             }
         } else {
             lista = Proceso.list(params)
+            lista = lista.sort{it.nombre}
         }
         return lista
     }

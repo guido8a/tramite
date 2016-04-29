@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 14/03/16
-  Time: 03:24 PM
---%>
 
-  <g:select id="dato" name="dato.id" from="${datos}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
+<g:select id="dato" name="dato.id" from="${datos}" optionKey="id" optionValue='${{"" + it.descripcion + " (" + it.valor.trim() + ")"}}' class="many-to-one form-control"/>
 
 <script type="text/javascript">
 

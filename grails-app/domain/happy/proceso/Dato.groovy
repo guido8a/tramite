@@ -28,8 +28,12 @@ class Dato {
         descripcion(nullable: false, blank: false, size: 1..255)
         valor(nullable: false, blank: false, size: 1..255)
 //        tipo(nullable: false, blank: false, size: 1..63)
-        tipo inList: ['String','Numérico']
+        tipo inList: ['Alfanumérico','Numérico']
 
+    }
+
+    String toString() {
+        "${descripcion}: ${valor}"
     }
 
 }
