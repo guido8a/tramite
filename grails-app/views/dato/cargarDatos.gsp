@@ -20,48 +20,54 @@
     </div>
 </div>
 
-<div style="margin-top: 20px; min-height: 100px" class="vertical-container divDatos">
-    <p class="css-vertical-text" style="margin-top: -10px;">Datos</p>
 
-    <div class="linea"></div>
 
-    <div class="row">
-        <g:hiddenField name="id_name" value="" id="oculto"/>
-        <div class="col-xs-1 negrilla">Nombre del dato:</div>
+<g:form class="form-horizontal" name="frmCargarDatos" role="form" action="save" method="POST">
+    <div style="margin-top: 20px; min-height: 100px" class="vertical-container divDatos">
+        <p class="css-vertical-text" style="margin-top: -10px;">Datos</p>
 
-        <div class="col-xs-9">
-            %{--<g:textField name="descripcion_name" id="descripcion" class="form-control" maxlength="255" style="width: 800px"/>--}%
-            <g:textField name="descripcion_name" id="descripcion" class="form-control" maxlength="255" />
+        <div class="linea"></div>
+
+        <div class="row">
+            <g:hiddenField name="id_name" value="" id="oculto"/>
+            <div class="col-xs-1 negrilla">Nombre del dato:</div>
+
+            <span class="grupo">
+                <div class="col-xs-9">
+                    <g:textField name="descripcion_name" id="descripcion" class="form-control required" maxlength="255" />
+                </div>
+            </span>
+
+            <div class="col-xs-2">
+                <a href="#" id="btnAgregar" class="btn btn-info" title="Agregar datos">
+                    <i class="fa fa-plus"> Agregar</i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-1 negrilla">Descripción del dato:</div>
+            <span class="grupo">
+                <div class="col-xs-6">
+                    <g:textField name="valor_name" id="valor" class="form-control required" maxlength="255"/>
+                </div>
+            </span>
+
+            <div class="col-xs-1 negrilla">Tipo de dato:</div>
+
+            <div class="col-xs-2">
+                <g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>
+            </div>
+
+            <div class="col-xs-2">
+                <a href="#" id="btnGuardar" class="btn btn-success hide" title="Guardar datos">
+                    <i class="fa fa-save"> Guardar</i>
+                </a>
+            </div>
+
         </div>
 
-        <div class="col-xs-2">
-            <a href="#" id="btnAgregar" class="btn btn-info" title="Agregar datos">
-                <i class="fa fa-plus"> Agregar</i>
-            </a>
-        </div>
     </div>
-    <div class="row">
-        <div class="col-xs-1 negrilla">Descripción del dato:</div>
-        <div class="col-xs-6">
-            <g:textField name="valor_name" id="valor" class="form-control" maxlength="255"/>
-        </div>
-
-        <div class="col-xs-1 negrilla">Tipo de dato:</div>
-
-        <div class="col-xs-2">
-            %{--<g:textField name="tipo_name" id="tipo" class="form-control" maxlength="63" style="width: 335px"/>--}%
-            <g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>
-        </div>
-
-        <div class="col-xs-2">
-            <a href="#" id="btnGuardar" class="btn btn-success hide" title="Guardar datos">
-                <i class="fa fa-save"> Guardar</i>
-            </a>
-        </div>
-
-    </div>
-
-</div>
+</g:form>
 
 <div style="margin-top: 20px; min-height: 300px" class="vertical-container ">
     <p class="css-vertical-text" style="margin-top: -10px;">Datos Requeridos</p>
@@ -70,18 +76,18 @@
 
 
     <table class="table table-bordered  table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Fase</th>
-        <th>Nombre del dato</th>
-        <th>Descripción del dato requerido</th>
-        <th>Tipo</th>
-        <th style="width: 100px">Acciones</th>
-    </tr>
-    </thead>
-    <tbody id="divTabla">
+        <thead>
+        <tr>
+            <th>Fase</th>
+            <th>Nombre del dato</th>
+            <th>Descripción del dato requerido</th>
+            <th>Tipo</th>
+            <th style="width: 100px">Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="divTabla">
 
-    </tbody>
+        </tbody>
     </table>
 </div>
 
@@ -114,11 +120,21 @@
     }
 
     $("#btnAgregar").click(function () {
-        guardar();
+        var $form = $("#frmCargarDatos");
+        if($form.valid()){
+            guardar();
+        }else{
+            return false;
+        }
     });
 
     $("#btnGuardar").click(function () {
-        guardar();
+        var $form = $("#frmCargarDatos");
+        if($form.valid()) {
+            guardar();
+        }else{
+            return false;
+        }
         $("#btnAgregar").removeClass('hide');
         $("#btnGuardar").addClass('hide')
     });
@@ -159,6 +175,21 @@
     }
 
 
+
+    var validator = $("#frmCargarDatos").validate({
+        errorClass     : "help-block",
+        errorPlacement : function (error, element) {
+            if (element.parent().hasClass("input-group")) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+            element.parents(".grupo").addClass('has-error');
+        },
+        success        : function (label) {
+            label.parents(".grupo").removeClass('has-error');
+        }
+    });
 
 </script>
 

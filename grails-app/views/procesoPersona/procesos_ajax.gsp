@@ -6,7 +6,9 @@
 --%>
 
 <g:if test="${proceso}">
-    <g:textField name="procesoSel_name" id="procesoSel" value="${proceso?.proceso?.nombre}" class="form-control" readonly="true" data-id="${proceso?.id}"/>
+
+    %{--<g:textField name="procesoSel_name" id="procesoSel" value="${proceso?.proceso?.nombre}" class="form-control" readonly="true" data-id="${proceso?.id}"/>--}%
+    <g:select name="procesoSel_name" id="procesoSel" from="${proceso}" class="form-control" optionValue="${{it.proceso.nombre}}" optionKey="id"/>
 </g:if>
 <g:else>
     <strong style="color: #d83917"> El cliente seleccionado no tiene un proceso asociado a este tipo de trámite</strong>

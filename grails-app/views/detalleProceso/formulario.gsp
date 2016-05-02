@@ -5,10 +5,10 @@
     <title>Formulario del Proceso</title>
 
     <style type="text/css">
-    input{
-        font-size: 10px !important;
-        margin: 0px;
-    }
+    /*input{*/
+        /*font-size: 10px !important;*/
+        /*margin: 0px;*/
+    /*}*/
     </style>
 </head>
 
@@ -16,25 +16,26 @@
 
 <div style="width: 100%; text-align: center; margin-top: -10px"><h3>Formulario del Proceso</h3></div>
 <div style="margin-top: 30px;min-height: 80px" class="vertical-container">
-    <p class="css-vertical-text" style="margin-top: -10px;">Proceso </p>
+<p class="css-vertical-text" style="margin-top: -10px;">Proceso </p>
 
-    <div class="linea"></div>
+<div class="linea"></div>
 
 
+<g:form class="form-horizontal" name="frmProceso" role="form" action="save" method="POST">
     <div class="row">
         <div class="col-xs-1 negrilla control-label">Proceso: </div>
 
+        <span class="grupo">
         <div class="col-md-5" style="margin-bottom: 20px">
-            <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control" maxlength="1023" />
+            <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control required" maxlength="1023" />
         </div>
+        </span>
 
         <div class="col-xs-1 negrilla control-label">Objetivo del proceso: </div>
 
         <div class="col-md-5" style="margin-bottom: 20px">
             <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="resize: none"/>
         </div>
-
-        %{--<div class="row "></div>--}%
 
         <div class="col-xs-1 negrilla control-label">Aplica a Documentos: </div>
 
@@ -50,12 +51,13 @@
             </a>
         </div>
         <div class="btn-group col-md-2">
-                <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
-                    <i class="fa fa-plus"> Nuevo Proceso</i>
-                </a>
+            <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
+                <i class="fa fa-plus"> Nuevo Proceso</i>
+            </a>
         </div>
     </div>
-</div>
+    </div>
+</g:form>
 
 <g:if test="${proceso?.id}">
     <div style="margin-top: 20px;" class="contenedor-vertical">
@@ -112,54 +114,61 @@
 <script type="text/javascript">
 
     $("#btnGuardar").click(function () {
+        var $form = $("#frmProceso");
         var  nombreProceso = $("#proceso").val();
         var  objetivoProceso = $("#objetivo").val();
         var idProceso = '${proceso?.id}';
         var tipoDoc = $("#tipo").val();
 
-        if(nombreProceso == '' || objetivoProceso == '' || nombreProceso == null || objetivoProceso == null){
-            log("Debe ingresar los dos campos solicitados!","error")
-        }else{
+        if($form.valid()){
+            if(nombreProceso == '' || objetivoProceso == '' || nombreProceso == null || objetivoProceso == null){
+                log("Debe ingresar los dos campos solicitados!","error")
+            }else{
 
-            $.ajax({
-                type: 'POST',
-                url: '${createLink(controller: 'detalleProceso', action: 'saveProceso_ajax')}',
-                async: false,
-                data: {
-                    proceso: nombreProceso,
-                    objetivo: objetivoProceso,
-                    id: idProceso
-                },
-                success: function (msg) {
-                    var parts =  msg.split("_");
-                    if(parts[0] == 'ok'){
+                $.ajax({
+                    type: 'POST',
+                    url: '${createLink(controller: 'detalleProceso', action: 'saveProceso_ajax')}',
+                    async: false,
+                    data: {
+                        proceso: nombreProceso,
+                        objetivo: objetivoProceso,
+                        id: idProceso
+                    },
+                    success: function (msg) {
+                        var parts =  msg.split("_");
+                        if(parts[0] == 'ok'){
 
-                        $.ajax({
-                           type: 'POST',
-                            url: "${createLink(controller: 'procesoDocumento', action: 'saveProcesoDocumento_ajax')}",
-                            data: {
-                                tipo: tipoDoc,
-                                id: parts[1]
-                            },
-                            success: function (msg) {
-                                if(msg == 'ok'){
-                                    log("Proceso guardado correctamente!","success");
+                            $.ajax({
+                                type: 'POST',
+                                url: "${createLink(controller: 'procesoDocumento', action: 'saveProcesoDocumento_ajax')}",
+                                data: {
+                                    tipo: tipoDoc,
+                                    id: parts[1]
+                                },
+                                success: function (msg) {
+                                    if(msg == 'ok'){
+                                        log("Proceso guardado correctamente!","success");
 
-                                    setTimeout(function () {
-                                        location.href = "${createLink(controller:'detalleProceso',action:'formulario')}/" + parts[1];
-                                    }, 1000);
-                                }else{
-                                    log("Ocurrió un error al guardar el proceso!","error")
+                                        setTimeout(function () {
+                                            location.href = "${createLink(controller:'detalleProceso',action:'formulario')}/" + parts[1];
+                                        }, 1000);
+                                    }else{
+                                        log("Ocurrió un error al guardar el proceso!","error")
+                                    }
                                 }
-                            }
-                        });
-                    } else {
-                        log("Ocurrió un error al guardar el proceso!","error")
-                    }
+                            });
+                        } else {
+                            log("Ocurrió un error al guardar el proceso!","error")
+                        }
 
-                }
-            })
+                    }
+                })
+            }
+        }else{
+            return false;
         }
+
+
 
     });
 
@@ -177,26 +186,40 @@
 
         <g:if test="${proceso?.id}">
         idProceso = ${proceso?.id}
-        </g:if>
+                </g:if>
 
 
-        $.ajax({
-            type: 'POST',
-            url: '${createLink(controller: 'detalleProceso', action: 'cargarDatos_ajax')}',
-            data: {
-                id: idF,
-                idPro: idProceso
-            },
-            success: function (msg){
-                $("#divDatos").html(msg);
-            }
-        });
+                $.ajax({
+                    type: 'POST',
+                    url: '${createLink(controller: 'detalleProceso', action: 'cargarDatos_ajax')}',
+                    data: {
+                        id: idF,
+                        idPro: idProceso
+                    },
+                    success: function (msg){
+                        $("#divDatos").html(msg);
+                    }
+                });
     }
 
     $("#btnNuevo").click(function () {
         location.href = "${createLink(controller:'detalleProceso',action:'formulario')}"
     });
 
+    var validator = $("#frmProceso").validate({
+        errorClass     : "help-block",
+        errorPlacement : function (error, element) {
+            if (element.parent().hasClass("input-group")) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+            element.parents(".grupo").addClass('has-error');
+        },
+        success        : function (label) {
+            label.parents(".grupo").removeClass('has-error');
+        }
+    });
 
 
 </script>

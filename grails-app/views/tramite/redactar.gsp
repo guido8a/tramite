@@ -203,7 +203,7 @@
                                     callback  : function () {
 
                                         if($("#procesoSel").val()){
-                                                location.href= "${createLink(controller: 'valorProceso', action: 'asignarValor')}/" + ${tramite?.id} + "?proceso=" + $("#procesoSel").data("id");
+                                                location.href= "${createLink(controller: 'valorProceso', action: 'asignarValor')}/" + ${tramite?.id} + "?proceso=" + $("#procesoSel").val();
                                         }else{
                                             bootbox.alert("El cliente seleccionado no tiene un proceso asociado al tipo de trámite <br> Si desea continuar seleccione otro cliente");
                                             return false;

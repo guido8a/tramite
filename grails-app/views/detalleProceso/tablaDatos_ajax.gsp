@@ -68,7 +68,7 @@
 
 
 
-    %{--<div class="row"></div>--}%
+
     <div class="col-md-3 negrilla control-label">Aporte (%): </div>
 
     <div class="col-md-1" style="margin-bottom: 20px">
@@ -106,17 +106,7 @@
 
     <div class="col-md-2 negrilla control-label">Es parte de la ruta crítica: </div>
 
-    <g:if test="${detalleProceso?.ruta == '1'}">
-        %{--<div class="col-md-1" style="margin-bottom: 20px">--}%
-            <g:checkBox name="ruta_name" id="ruta" checked="true"/>
-        %{--</div>--}%
-    </g:if>
-    <g:else>
-        %{--<div class="col-md-1" style="margin-bottom: 20px">--}%
-            <g:checkBox name="ruta_name" id="ruta"/>
-        %{--</div>--}%
-    </g:else>
-
+    <g:checkBox name="ruta_name" id="ruta" checked="${(detalleProceso?.ruta == '1') ? 'true' : 'false'}"/>
 
     <div class="row"></div>
     <div class="col-xs-2 negrilla control-label">Lista de valores: </div>

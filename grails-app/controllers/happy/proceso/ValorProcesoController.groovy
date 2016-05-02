@@ -134,7 +134,7 @@ class ValorProcesoController extends happy.seguridad.Shield {
         def vlpc = ValorProceso.findAllByDetalleProcesoInListAndProcesoPersona(datos,pccl)
 
 
-        return [trpc: trpc, datos: datos, pccl: pccl, vlpc: vlpc]
+        return [trpc: trpc, datos: datos, pccl: pccl, vlpc: vlpc, pro: params.proceso]
 
     }
 

@@ -182,7 +182,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
 
     def saveDetalle_ajax() {
 
-//        println("save deta " + params)
+        println("save deta " + params)
 
         def dato = Dato.get(params.idD)
         def proceso = Proceso.get(params.idP)
@@ -197,8 +197,8 @@ class DetalleProcesoController extends happy.seguridad.Shield {
             cadena = (params.desde + "," + params.hasta)
             detalleProceso.rango = cadena
         }else{
-            detalleProceso.numericoMinimo = params.desde
-            detalleProceso.numericoMaximo = params.hasta
+            detalleProceso.numericoMinimo = params.desde.toDouble()
+            detalleProceso.numericoMaximo = params.hasta.toDouble()
 
         }
 
@@ -234,20 +234,24 @@ class DetalleProcesoController extends happy.seguridad.Shield {
             detalleProceso.dato = dato
             detalleProceso.proceso = proceso
             detalleProceso.etiqueta = params.etiqueta
-            detalleProceso.orden = params.orden
+            detalleProceso.orden = params.orden.toInteger()
             if(dato?.tipo == 'Alfanumérico'){
                 cadena = (params.desde + "," + params.hasta)
                 detalleProceso.rango = cadena
                 detalleProceso.numericoMaximo = 0
                 detalleProceso.numericoMinimo = 0
             }else{
+
+                params.desde = params.desde.Math.ceil(params.desde)
+                params.hasta = params.hasta.Marh.round(params.hasta)
+
                 detalleProceso.rango = 'numerico'
                 detalleProceso.numericoMinimo = params.desde
                 detalleProceso.numericoMaximo = params.hasta
             }
 
             detalleProceso.aporte = params.aporte.toDouble()
-            detalleProceso.posicionReporte = params.posicion
+            detalleProceso.posicionReporte = params.posicion.toInteger()
             detalleProceso.observacion = params.observacion
             if(params.nulo == false){
                 detalleProceso.nulo = '0'

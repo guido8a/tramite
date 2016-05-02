@@ -190,10 +190,8 @@ class ProcesoPersonaController extends happy.seguridad.Shield {
 
         def cliente = Persona.get(params.idCliente)
         def tipoDoc = TipoDocumento.findByCodigo(params.tipoCodigo)
-
-        def pctd = ProcesoDocumento.findByTipoDocumento(tipoDoc)
-
-        def pccl = ProcesoPersona.findByPersonaAndProceso(cliente,pctd?.proceso)
+        def pctd = ProcesoDocumento.findAllByTipoDocumento(tipoDoc).proceso
+        def pccl = ProcesoPersona.findAllByPersonaAndProcesoInList(cliente,pctd)
 
         return [proceso: pccl]
     }
