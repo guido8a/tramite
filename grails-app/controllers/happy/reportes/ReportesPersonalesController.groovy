@@ -8,6 +8,7 @@ import com.lowagie.text.Phrase
 import com.lowagie.text.pdf.PdfWriter
 import happy.proceso.DetalleProceso
 import happy.proceso.Fase
+import happy.proceso.ListaValores
 import happy.proceso.Proceso
 import happy.proceso.ProcesoPersona
 import happy.proceso.TramiteProceso
@@ -39,7 +40,7 @@ class ReportesPersonalesController extends Shield {
 
         def paramsCenter = [align: Element.ALIGN_CENTER, valign: Element.ALIGN_MIDDLE, bg: Color.WHITE, borderColor: Color.GRAY]
         def paramsLeft = [align: Element.ALIGN_LEFT, valign: Element.ALIGN_MIDDLE, bg: Color.WHITE, borderColor: Color.GRAY]
-        def paramsLeftColor = [align: Element.ALIGN_CENTER, valign: Element.ALIGN_CENTER, bg: Color.DARK_GRAY, borderColor: Color.GRAY]
+        def paramsLeftColor = [align: Element.ALIGN_CENTER, valign: Element.ALIGN_CENTER, bg: Color.LIGHT_GRAY, borderColor: Color.GRAY]
         def paramsRight = [align: Element.ALIGN_RIGHT, valign: Element.ALIGN_RIGHT, bg: Color.WHITE, borderColor: Color.GRAY ]
 
         def tramiteProceso = TramiteProceso.get(params.id)
@@ -48,9 +49,11 @@ class ReportesPersonalesController extends Shield {
         def sql
         def cn = dbConnectionService.getConnection()
 
-        sql= "select fasedscr, datodscr, dtpcetqt, vlpcvlor\n" +
+        sql= "select fasedscr, datodscr, dtpcetqt, vlpcvlor, dtpc.dtpc__id, datotipo\n" +
                 "from dtpc left join vlpc on vlpc.dtpc__id = dtpc.dtpc__id, fase, dato\n" +
-                "where dato.dato__id = dtpc.dato__id and fase.fase__id = dato.fase__id and  prcs__id = '${tramiteProceso?.procesoPersona?.proceso?.id}' "
+                "where dato.dato__id = dtpc.dato__id and fase.fase__id = dato.fase__id and  prcs__id = '${tramiteProceso?.procesoPersona?.proceso?.id}' order by datotipo"
+
+//        println("sql " + sql)
 
 
         def fileName = "reporte_proceso_${tramiteProceso?.procesoPersona?.proceso?.nombre}"
@@ -58,7 +61,6 @@ class ReportesPersonalesController extends Shield {
         def title2 = tramiteProceso?.procesoPersona?.persona?.nombre + " " + tramiteProceso?.procesoPersona?.persona?.apellido
 
         def usuario = Persona.get(params.id)
-
 
         def baos = new ByteArrayOutputStream()
         def name = fileName + "_" + new Date().format("ddMMyyyy_hhmm") + ".pdf";
@@ -77,9 +79,8 @@ class ReportesPersonalesController extends Shield {
         paragraph.add(new Phrase('Cliente: ' + title2, fontBold));
         document.add(paragraph)
 
-//        def tabla = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([17, 13, 19, 13, 13]), 10, 0)
-
         def faseUno
+        def multi = 0
 
         cn.eachRow(sql.toString()){
 //            println(it)
@@ -94,10 +95,29 @@ class ReportesPersonalesController extends Shield {
 
             }
 
-            def tablaDatos = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([30,70]), 0,0)
-            reportesPdfService.addCellTabla(tablaDatos, new Paragraph(it?.dtpcetqt + ": ", fontBold), paramsRight)
-            reportesPdfService.addCellTabla(tablaDatos, new Paragraph(it?.vlpcvlor, font), paramsCenter)
-            document.add(tablaDatos)
+            if(it.datotipo == 'Selección Múltiple'){
+                if(multi != 1){
+                    def tablaDatos = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([10,90]), 0,0)
+                    def detalle = DetalleProceso.get(it.dtpc__id)
+                    def lista = ListaValores.findAllByDetalleProceso(detalle)
+
+                    lista.each { l->
+                        reportesPdfService.addCellTabla(tablaDatos,
+                                new Paragraph((ValorProceso.findByDetalleProcesoAndValor(detalle, l?.id?.toString()) ? 'X' : ''), fontBold), paramsCenter)
+                        reportesPdfService.addCellTabla(tablaDatos, new Paragraph(l?.descripcion, font), paramsLeft)
+                    }
+                    document.add(tablaDatos)
+                    multi = 1
+                }
+
+            }else{
+                def tablaDatos = reportesPdfService.crearTabla(reportesPdfService.arregloEnteros([30,70]), 0,0)
+                reportesPdfService.addCellTabla(tablaDatos, new Paragraph(it?.dtpcetqt + ": ", fontBold), paramsRight)
+                reportesPdfService.addCellTabla(tablaDatos, new Paragraph(it?.vlpcvlor, font), paramsCenter)
+                document.add(tablaDatos)
+            }
+
+
 
 
 //            Paragraph dato = new Paragraph();

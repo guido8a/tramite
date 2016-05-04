@@ -109,4 +109,9 @@ class ProcesoController extends happy.seguridad.Shield {
         render "NO_No se encontró Proceso."
     } //notFound para ajax
 
+    def buscadorProceso () {
+
+    }
+
+
 }

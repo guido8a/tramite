@@ -85,7 +85,8 @@
                         ${z?.descripcion}
                       </td>
                       <td style="text-align: center">
-                          <g:checkBox name="multi_name" class="multi" lis="${z?.id}" value="" checked="${happy.proceso.ValorProceso.findByDetalleProcesoAndValor(d, z?.id?.toString()) ? 'true' : 'false'}"/>
+                          <g:checkBox name="multi_name" class="multi" lis="${z?.id}" value=""
+                                      checked="${happy.proceso.ValorProceso.findByDetalleProcesoAndValor(d, z?.id?.toString()) ? 'true' : 'false'}"/>
                       </td>
                     </tr>
                   </g:each>
