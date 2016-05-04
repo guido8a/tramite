@@ -36,10 +36,6 @@
 
     <div>
 
-      %{--<g:link class="btn btn-primary generar" controller="reportesPersonales" action="reporteProceso" params="[id: trpc?.id]" style="float: right">--}%
-      %{--<i class="fa fa-print"></i> Imprimir--}%
-      %{--</g:link>--}%
-
       <a href="#" id="btnImprimir" class="btn btn-primary" title="Imprimir formulario" style="float: right">
         <i class="fa fa-print"> Imprimir</i>
       </a>
@@ -60,17 +56,51 @@
 
 
     <div class="row">
+
+
+    %{--<g:each in="${datos.dato.fase}" var="s">--}%
+
+    %{----}%
+
+    %{--</g:each>--}%
+
+
       <g:each in="${datos}" var="d" status="l">
         <div class="col-md-12" style="margin-left: 10px; margin-bottom: 20px">
           <div class="col-md-1 negrilla control-label">
             ${d?.etiqueta}
           </div>
           <g:if test="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}">
-            <div class="col-md-5" style="margin-bottom: 20px">
-              <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"
-                        data-vl="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.valor}"
-                        optionKey="descripcion" optionValue="descripcion" class="form-control"/>
-            </div>
+
+            <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
+              <div class="col-md-5" style="margin-bottom: 20px">
+
+                <table class="table table-bordered table-condensed table-hover" style="width: 450px">
+                  <thead>
+                  </thead>
+                  <tbody>
+                  <g:each in="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" var="z">
+                    <tr>
+                      <td>
+                        ${z?.descripcion}
+                      </td>
+                      <td style="text-align: center">
+                          <g:checkBox name="multi_name" class="multi" lis="${z?.id}" value="" checked="${happy.proceso.ValorProceso.findByDetalleProcesoAndValor(d, z?.id?.toString()) ? 'true' : 'false'}"/>
+                      </td>
+                    </tr>
+                  </g:each>
+                  </tbody>
+                </table>
+              </div>
+
+            </g:if>
+            <g:else>
+              <div class="col-md-5" style="margin-bottom: 20px">
+                <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"
+                          data-vl="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.valor}"
+                          optionKey="descripcion" optionValue="descripcion" class="form-control"/>
+              </div>
+            </g:else>
           </g:if>
           <g:else>
             <g:if test="${d?.rango == "numerico"}">
@@ -93,13 +123,26 @@
             </g:else>
           </g:else>
           <div class="col-md-4">
-            <g:textArea name="obser" id="observaciones_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.observaciones}" class="form-control" maxlength="255" style="resize: none" title="Observaciones"/>
+            <g:if test="${d?.observacionRequerida == '1'}">
+              <g:textArea name="obser" id="observaciones_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.observaciones}" class="form-control" maxlength="255" style="resize: none" title="Observaciones"/>
+            </g:if>
+            <g:else>
+              <g:textArea name="obser" id="observaciones_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.observaciones}" class="form-control hide" maxlength="255" style="resize: none" title="Observaciones"/>
+            </g:else>
           </div>
 
           <div class="col-md-2">
-            <a href="#" id="btnGuardar" class="btn btn-success btnG" title="Guardar valores" data-id="${d?.id}" style="float: right">
-              <i class="fa fa-save"></i>
-            </a>
+            <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
+              <a href="#" id="btnGuardar" class="btn btn-success btnS" title="Guardar valores" data-id="${d?.id}" style="float: right">
+                <i class="fa fa-save"></i>
+              </a>
+            </g:if>
+            <g:else>
+              <a href="#" id="btnGuardar" class="btn btn-success btnG" title="Guardar valores" data-id="${d?.id}" style="float: right">
+                <i class="fa fa-save"></i>
+              </a>
+            </g:else>
+
           </div>
         </div>
       </g:each>
@@ -115,13 +158,57 @@
 <script type="text/javascript">
 
 
-  $("#btnImprimir").click(function () {
-      var $form = $("#frmValor");
-      if($form.valid()){
-        location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
-      }else{
-        return false
+  $(".btnS").click(function () {
+
+
+    var idRow = $(this).data("id");
+    var observa = $("#observaciones_" + idRow).val();
+    var proPer = '${pccl?.id}';
+    var arr = []
+    var strIds = ""
+
+
+    $(".multi").each(function () {
+      if($(this).prop("checked") == true){
+//      console.log("-->"  + $(this).attr("lis"))
+//      arr += $(this).attr("lis")
+        if (strIds != "") {
+          strIds += ",";
+        }
+        strIds += $(this).attr("lis")
       }
+    });
+
+
+    $.ajax({
+      type:'POST',
+      url: '${createLink(controller: 'valorProceso', action: 'guardarListaMarcada_ajax')}',
+      data:{
+        dtpc: idRow,
+        arreglo: strIds,
+        obs: observa,
+        pccl: proPer
+      },
+      success: function (msg) {
+        if(msg == 'ok'){
+          log("Elementos seleccionados correctamente","success")
+        }else{
+          log("Error al guardar la selección de elementos","error")
+        }
+      }
+    });
+  });
+
+
+
+
+  $("#btnImprimir").click(function () {
+    var $form = $("#frmValor");
+    if($form.valid()){
+      location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
+    }else{
+      return false
+    }
   });
 
 

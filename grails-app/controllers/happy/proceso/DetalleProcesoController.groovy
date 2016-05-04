@@ -193,7 +193,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
         detalleProceso = DetalleProceso.get(params.idDP)
         detalleProceso.etiqueta = params.etiqueta
         detalleProceso.orden = params.orden.toInteger()
-        if(dato?.tipo == 'Alfanumérico'){
+        if(dato?.tipo == 'Alfanumérico' || dato?.tipo == 'Selección Múltiple'){
             cadena = (params.desde + "," + params.hasta)
             detalleProceso.rango = cadena
         }else{
@@ -215,6 +215,11 @@ class DetalleProcesoController extends happy.seguridad.Shield {
                 detalleProceso.ruta = '0'
         }else{
                 detalleProceso.ruta = '1'
+        }
+        if(params.tiene == 'false'){
+         detalleProceso.observacionRequerida = '0'
+        }else{
+         detalleProceso.observacionRequerida = '1'
         }
 
         detalleProceso.fechaModificacion = new Date()
@@ -262,6 +267,11 @@ class DetalleProcesoController extends happy.seguridad.Shield {
                 detalleProceso.ruta = '0'
             }else{
                 detalleProceso.ruta = '1'
+            }
+            if(params.tiene == 'false'){
+                detalleProceso.observacionRequerida = '0'
+            }else{
+                detalleProceso.observacionRequerida = '1'
             }
 
             detalleProceso.fecha = new Date()

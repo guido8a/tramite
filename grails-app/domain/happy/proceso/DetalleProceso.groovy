@@ -19,7 +19,7 @@ class DetalleProceso {
     Date fecha
     Date fechaModificacion
     String ruta
-
+    String observacionRequerida
 
 
     static mapping = {
@@ -44,6 +44,7 @@ class DetalleProceso {
             fecha column: 'dtpcfcha'
             fechaModificacion column: 'dtpcfcmd'
             ruta column: 'dtpcruta'
+            observacionRequerida column: 'dtpcrqob'
 
         }
     }
@@ -56,6 +57,7 @@ class DetalleProceso {
         defecto(nullable: true, blank: true, size: 1..63)
         observacion(nullable: true, blank: true, size: 1..255)
         ruta(nullable: true, blank: true)
+        observacionRequerida(nullable: true, blank: true)
 
     }
 }

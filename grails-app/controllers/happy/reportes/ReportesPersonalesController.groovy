@@ -82,7 +82,7 @@ class ReportesPersonalesController extends Shield {
         def faseUno
 
         cn.eachRow(sql.toString()){
-            println(it)
+//            println(it)
 
             if(faseUno != it.fasedscr){
 

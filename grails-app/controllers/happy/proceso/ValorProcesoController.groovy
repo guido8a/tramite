@@ -1,6 +1,7 @@
 package happy.proceso
 
 import happy.tramites.Tramite
+import static org.apache.commons.collections.CollectionUtils.*
 
 
 class ValorProcesoController extends happy.seguridad.Shield {
@@ -119,9 +120,9 @@ class ValorProcesoController extends happy.seguridad.Shield {
         def trpc = TramiteProceso.findByTramiteAndProcesoPersona(tramite, pccl);
 
         if(!trpc){
-         trpc = new TramiteProceso()
-         trpc.tramite = tramite
-         trpc.procesoPersona = pccl
+            trpc = new TramiteProceso()
+            trpc.tramite = tramite
+            trpc.procesoPersona = pccl
             try{
                 trpc.save(flush: true)
             }catch(e){
@@ -184,5 +185,146 @@ class ValorProcesoController extends happy.seguridad.Shield {
         }
 
     }
+
+
+    def guardarListaMarcada_ajax () {
+
+        println("params lista " + params)
+
+        def arr = []
+
+        def detalleProceso = DetalleProceso.get(params.dtpc)
+        def pccl = ProcesoPersona.get(params.pccl)
+        def listaCompleta = ListaValores.findAllByDetalleProceso(detalleProceso)
+        def marcados = []
+        def arreglo
+
+
+
+        if(!params.arreglo){
+            marcados = []
+        }else{
+            arreglo = params.arreglo
+            marcados = arreglo.split(",").toList()
+        }
+
+        println("marcados " + marcados)
+
+        def listaValores = ValorProceso.findAllByDetalleProceso(detalleProceso).valor
+
+        def comunes
+        def borrar
+        def vlpc
+        def errores = ''
+
+        println("lista valores " + listaValores)
+
+        if(!listaValores){
+            if(marcados){
+                println("agrega todos")
+
+                marcados.each { m->
+                   vlpc = new ValorProceso()
+                    vlpc.detalleProceso = detalleProceso
+                    vlpc.procesoPersona = pccl
+                    vlpc.valor = m
+                    vlpc.fecha = new Date()
+                    vlpc.fechaModificacion = new Date()
+
+                    try{
+                        vlpc.save(flush: true)
+                    }catch(e){
+                        errores += vlpc.errors
+                        println("agregar todos - error")
+                    }
+
+                }
+
+                if(errores == ''){
+                    render "ok"
+                }else{
+                    render "no"
+                }
+            }else{
+                println("no pasa nada")
+                render "ok"
+            }
+        }else{
+            if(marcados){
+                if(disjunction(marcados,listaValores)){
+                    comunes = marcados.intersect(listaValores)
+                    marcados.removeAll(comunes)
+                    listaValores.removeAll(comunes)
+
+                    def mb
+                    listaValores.each {b->
+                        mb = ValorProceso.findByValorAndDetalleProceso(b,detalleProceso)
+                        try{
+                            mb.delete(flush: true)
+                        }catch(e){
+                            errores += mb.errors
+                            println("borrados dis - error")
+                        }
+                    }
+
+
+                    marcados.each { n->
+                        vlpc = new ValorProceso()
+                        vlpc.detalleProceso = detalleProceso
+                        vlpc.procesoPersona = pccl
+                        vlpc.valor = n
+                        vlpc.fecha = new Date()
+                        vlpc.fechaModificacion = new Date()
+                        try{
+                            vlpc.save(flush: true)
+                        }catch(e){
+                            errores += vlpc.errors
+                            println("agregar marcados - error")
+                        }
+
+                    }
+
+
+                    if(errores == ''){
+                        render "ok"
+                    }else{
+                        render "no"
+                    }
+
+
+                }else{
+                    render "ok"
+                    println("no pasa nada")
+                }
+
+            }else{
+                println("borra todos")
+
+                def pb
+                listaValores.each {b->
+                pb = ValorProceso.findByValorAndDetalleProceso(b,detalleProceso)
+                try{
+                    pb.delete(flush: true)
+                }catch(e){
+                    errores += pb.errors
+                    println("borrados todos - error")
+                }
+                }
+
+
+                if(errores == ''){
+                    render "ok"
+                }else{
+                    render "no"
+                }
+
+            }
+        }
+
+
+    }
+
+
+
 
 }

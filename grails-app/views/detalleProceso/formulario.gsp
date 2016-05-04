@@ -6,8 +6,8 @@
 
     <style type="text/css">
     /*input{*/
-        /*font-size: 10px !important;*/
-        /*margin: 0px;*/
+    /*font-size: 10px !important;*/
+    /*margin: 0px;*/
     /*}*/
     </style>
 </head>
@@ -26,9 +26,9 @@
         <div class="col-xs-1 negrilla control-label">Proceso: </div>
 
         <span class="grupo">
-        <div class="col-md-5" style="margin-bottom: 20px">
-            <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control required" maxlength="1023" />
-        </div>
+            <div class="col-md-5" style="margin-bottom: 20px">
+                <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control required" maxlength="1023" />
+            </div>
         </span>
 
         <div class="col-xs-1 negrilla control-label">Objetivo del proceso: </div>

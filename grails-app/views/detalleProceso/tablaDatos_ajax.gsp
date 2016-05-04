@@ -14,60 +14,80 @@
         <g:textField name="etiqueta_name" id="etiqueta" value="${detalleProceso?.etiqueta}" class="form-control required" maxlength="255" style="width: 530px"/>
     </div>
 
-    <div class="col-xs-3 negrilla control-label">Orden de aparición: </div>
+    <div class="col-xs-1 negrilla control-label">Tiene observaciones </div>
+    <div class="col-md-1" style="margin-bottom: 20px">
+        <g:if test="${detalleProceso?.observacionRequerida == '0'}">
+            <g:checkBox name="tiene_name" id="tiene" checked="false"/>
+        </g:if>
+        <g:else>
+            <g:checkBox name="tiene_name" id="tiene" checked="true"/>
+        </g:else>
+    </div>
+
+    <div class="col-xs-1 negrilla control-label">Orden de aparición: </div>
 
     <div class="col-md-2" style="margin-bottom: 20px">
         <g:textField name="orden_name" id="orden" value="${detalleProceso?.orden}" class="form-control required number" maxlength="1" style="width: 100px"/>
     </div>
 
+
+
     <div class="row"></div>
 
-    <div class="col-xs-1 negrilla control-label">Rango: </div>
 
-    <div class="col-xs-1 negrilla control-label">Desde </div>
+    <g:if test="${dato?.tipo == 'Selección Múltiple'}">
 
+    <div class="col-md-5">
 
-    <g:if test="${detalleProceso}">
-
-        <g:if test="${dato?.tipo == 'Alfanumérico'}">
-
-            <div class="col-md-1" style="margin-bottom: 20px">
-                <g:textField name="desde_name" id="desde" value="${(detalleProceso?.rango?.split(",")[0]) ?:  ''}" class="form-control required number" maxlength="14" style="width:100px"/>
-            </div>
-
-            <div class="col-xs-1 negrilla control-label">Hasta </div>
-
-            <div class="col-md-1" style="margin-bottom: 20px">
-                <g:textField name="hasta_name" id="hasta" value="${(detalleProceso?.rango?.split(",")[1])  ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
-            </div>
-        </g:if>
-        <g:else>
-            <div class="col-md-1" style="margin-bottom: 20px">
-                <g:textField name="desde_name" id="desde" value="${detalleProceso?.numericoMinimo ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
-            </div>
-
-            <div class="col-xs-1 negrilla control-label">Hasta </div>
-
-            <div class="col-md-1" style="margin-bottom: 20px">
-                <g:textField name="hasta_name" id="hasta" value="${detalleProceso?.numericoMaximo ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
-            </div>
-        </g:else>
+    </div>
 
     </g:if>
     <g:else>
-        <div class="col-md-1" style="margin-bottom: 20px">
-            <g:textField name="desde_name" id="desde" value="${''}" class="form-control required number" maxlength="14" style="width:100px"/>
-        </div>
+        <div class="col-xs-1 negrilla control-label">Rango: </div>
 
-        <div class="col-xs-1 negrilla control-label">Hasta </div>
+        <div class="col-xs-1 negrilla control-label">Desde </div>
 
-        <div class="col-md-1" style="margin-bottom: 20px">
-            <g:textField name="hasta_name" id="hasta" value="${''}" class="form-control required number" maxlength="14" style="width:100px"/>
-        </div>
+
+        <g:if test="${detalleProceso}">
+
+            <g:if test="${dato?.tipo == 'Alfanumérico'}">
+
+                <div class="col-md-1" style="margin-bottom: 20px">
+                    <g:textField name="desde_name" id="desde" value="${(detalleProceso?.rango?.split(",")[0]) ?:  ''}" class="form-control required number" maxlength="14" style="width:100px"/>
+                </div>
+
+                <div class="col-xs-1 negrilla control-label">Hasta </div>
+
+                <div class="col-md-1" style="margin-bottom: 20px">
+                    <g:textField name="hasta_name" id="hasta" value="${(detalleProceso?.rango?.split(",")[1])  ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
+                </div>
+            </g:if>
+            <g:else>
+                <div class="col-md-1" style="margin-bottom: 20px">
+                    <g:textField name="desde_name" id="desde" value="${detalleProceso?.numericoMinimo ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
+                </div>
+
+                <div class="col-xs-1 negrilla control-label">Hasta </div>
+
+                <div class="col-md-1" style="margin-bottom: 20px">
+                    <g:textField name="hasta_name" id="hasta" value="${detalleProceso?.numericoMaximo ?: ''}" class="form-control required number" maxlength="14" style="width:100px"/>
+                </div>
+            </g:else>
+
+        </g:if>
+        <g:else>
+            <div class="col-md-1" style="margin-bottom: 20px">
+                <g:textField name="desde_name" id="desde" value="${''}" class="form-control required number" maxlength="14" style="width:100px"/>
+            </div>
+
+            <div class="col-xs-1 negrilla control-label">Hasta </div>
+
+            <div class="col-md-1" style="margin-bottom: 20px">
+                <g:textField name="hasta_name" id="hasta" value="${''}" class="form-control required number" maxlength="14" style="width:100px"/>
+            </div>
+        </g:else>
+
     </g:else>
-
-
-
 
     <div class="col-md-3 negrilla control-label">Aporte (%): </div>
 
@@ -147,15 +167,27 @@
         idDeta = ${detalleProceso?.id};
         </g:if>
 
+        var des
+        var has
+
+        if(${dato?.tipo == 'Selección Múltiple'}){
+           des = '1';
+           has = '1';
+
+        }else{
+            des = $("#desde").val();
+            has = $("#hasta").val();
+        }
+
+
         var eti = $("#etiqueta").val();
         var ord = $("#orden").val();
-        var des = $("#desde").val();
-        var has = $("#hasta").val();
         var apo = $("#aporte").val();
         var pos = $("#posicion").val();
         var obs = $("#observacion").val();
         var nul = $("#nulo").prop('checked');
         var rut = $("#ruta").prop('checked');
+        var tie = $("#tiene").prop('checked');
         var $frm = $("#frmTabla");
 
 
@@ -177,7 +209,8 @@
                    posicion: pos,
                    observacion: obs,
                    nulo: nul,
-                   ruta: rut
+                   ruta: rut,
+                   tiene: tie
 
                },
                success: function (msg) {
@@ -213,6 +246,7 @@
         var obs = $("#observacion").val();
         var nul = $("#nulo").prop('checked');
         var rut = $("#ruta").prop('checked');
+        var tie = $("#tiene").prop('checked');
         var $frm = $("#frmTabla");
 
         if ($frm.valid()) {
@@ -232,7 +266,8 @@
                     posicion: pos,
                     observacion: obs,
                     nulo: nul,
-                    ruta: rut
+                    ruta: rut,
+                    tiene: tie
 
                 },
                 success: function (msg) {

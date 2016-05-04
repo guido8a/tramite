@@ -28,7 +28,7 @@ class Dato {
         descripcion(nullable: false, blank: false, size: 1..255)
         valor(nullable: false, blank: false, size: 1..255)
 //        tipo(nullable: false, blank: false, size: 1..63)
-        tipo inList: ['Alfanumérico','Numérico']
+        tipo inList: ['Alfanumérico','Numérico','Selección Multiple']
 
     }
 
