@@ -23,7 +23,7 @@
       <table class="table table-bordered table-condensed table-hover">
         <tbody>
         <g:each in="${pccl}" var="p">
-          <tr data-pro="${p?.proceso?.id}" data-per="${p?.persona?.id}">
+          <tr data-pro="${p?.proceso?.id}" data-per="${p?.persona?.id}" data-pccl="${p.id}">
             <td style="width: 320px">${p?.proceso?.nombre}</td>
             <td style="width: 320px">${p?.persona?.nombre + " " + p?.persona?.apellido}</td>
             <td style="width: 150px"></td>
@@ -50,8 +50,8 @@
           label  : "Editar",
           icon   : "fa fa-pencil",
           action : function ($element) {
-            var idT = $element.data("pro");
-            location.href="${createLink(controller: 'tramite', action: 'redactar')}/" + idT;
+            var idT = $element.data("pccl");
+            location.href="${createLink(controller: 'valorProceso', action: 'editarValores')}/" + idT;
           }
         },
         detalle   : {

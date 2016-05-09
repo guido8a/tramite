@@ -6,7 +6,7 @@
 --%>
 
 <div class="row">
-    <div class="col-md-6 negrilla control-label" style="margin-left: 50px">Descripción del Item</div>
+    <div class="col-md-6 negrilla control-label" style="margin-left: 50px">Texto de la opción</div>
 </div>
 
 <div class="row">

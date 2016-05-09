@@ -24,14 +24,14 @@
     <div class="col-xs-1 negrilla control-label">Cliente </div>
 
     <div class="col-md-4" style="margin-bottom: 20px">
-      <g:textField name="cliente_name" id="cliente" value="${trpc?.procesoPersona?.persona?.apellido + " " + trpc?.procesoPersona?.persona?.nombre}" readonly="true" class="form-control"/>
+      <g:textField name="cliente_name" id="cliente" value="${pccl?.persona?.apellido + " " + pccl?.persona?.nombre}" readonly="true" class="form-control"/>
     </div>
 
     <div class="col-xs-1 negrilla control-label">Proceso </div>
 
 
     <div class="col-md-4" style="margin-bottom: 20px">
-      <g:textField name="proceso_name" id="proceso" value="${trpc?.procesoPersona?.proceso?.nombre}" readonly="true" class="form-control"/>
+      <g:textField name="proceso_name" id="proceso" value="${pccl?.proceso?.nombre}" readonly="true" class="form-control"/>
     </div>
 
     <div>

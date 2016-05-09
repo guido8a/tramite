@@ -282,12 +282,12 @@
                             success: function (msg1){
                                 bootbox.dialog({
                                     id: "dlgLista",
-                                    title: "Lista",
+                                    title: "Lista de valores para el Dato",
                                     message: msg1,
                                     buttons: {
                                         cancelar :{
-                                            label     : '<i class="fa fa-times"></i> Cancelar',
-                                            className : 'btn-danger',
+                                            label     : '<i class="fa fa-arrow-left"></i> Regresar',
+                                            className : 'btn-warning',
                                             callback  : function () {
                                                 openLoader();
                                                 location.href = "${createLink(controller:'detalleProceso',action:'formulario')}/" + idProc

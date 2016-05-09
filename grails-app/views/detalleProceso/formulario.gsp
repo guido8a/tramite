@@ -5,16 +5,23 @@
     <title>Formulario del Proceso</title>
 
     <style type="text/css">
-    /*input{*/
-    /*font-size: 10px !important;*/
-    /*margin: 0px;*/
-    /*}*/
+        /*input{*/
+            /*font-size: 14px !important;*/
+            /*margin: 0px;*/
+        /*}*/
     </style>
 </head>
 
 <body>
+<div class="btn-toolbar toolbar">
+    <div class="btn-group">
+        <g:link controller="proceso" action="list" class="btn btn-default">
+            <i class="fa fa-arrow-left"></i> Volver a lista de Procesos
+        </g:link>
+    </div>
+    <div style="width: 100%; text-align: center; margin-top: -10px"><h3>Formulario del proceso: ${proceso?.nombre}</h3></div>
+</div>
 
-<div style="width: 100%; text-align: center; margin-top: -10px"><h3>Formulario del Proceso</h3></div>
 <div style="margin-top: 30px;min-height: 80px" class="vertical-container">
 <p class="css-vertical-text" style="margin-top: -10px;">Proceso </p>
 

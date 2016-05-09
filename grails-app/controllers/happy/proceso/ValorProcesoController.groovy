@@ -139,6 +139,19 @@ class ValorProcesoController extends happy.seguridad.Shield {
 
     }
 
+    def editarValores () {
+        println("params asignar valor" + params)
+        def pccl = ProcesoPersona.get(params.id);
+
+        def datos = DetalleProceso.findAllByProceso(pccl?.proceso, [sort: 'orden', order: 'asc'])
+
+        def vlpc = ValorProceso.findAllByDetalleProcesoInListAndProcesoPersona(datos, pccl)
+
+        println "editarValores, pccl: ${pccl?.persona}"
+//        render view: asignarValor(action: "asignarValor", datos: datos, pccl: pccl, vlpc: vlpc, pro: pccl.proceso)
+        render view: "asignarValor", model: [datos: datos, pccl: pccl, vlpc: vlpc, pro: pccl.proceso]
+    }
+
     def procesos_ajax() {
 
     }

@@ -4,13 +4,162 @@
     <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/RetrasadosController.groovy" line="55" mnemonic="2" />
     <bookmark url="file://$PROJECT_DIR$/grails-app/views/buscarTramite/tablaBusquedaTramite.gsp" line="108" mnemonic="1" />
     <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/Tramite3Controller.groovy" line="147" mnemonic="3" />
-    <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/Tramite2Controller.groovy" line="1886" mnemonic="5" />
     <bookmark url="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/TramiteController.groovy" line="206" mnemonic="9" />
     <bookmark url="file://$PROJECT_DIR$/grails-app/services/happy/utilitarios/EnviarService.groovy" line="257" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp" line="53" mnemonic="5" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b478c391-25da-4691-866e-c80725612215" name="Default" comment="redactar tramites a pdf cuando hay &lt;tr&gt;&lt;/tr&gt;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-app/images/paloma.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10_closure25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10_closure25_closure28.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10_closure26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10_closure27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure14_closure29.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure6_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure19_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure9_closure24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_outputAttributes_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_renderAttributes_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15_closure29.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15_closure30.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15_closure31.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15_closure32.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16_closure33.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16_closure34.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16_closure35.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16_closure36.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16_closure37.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure5_closure26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure6_closure27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_lstaModulos_closure25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_save_ajax_closure24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_bandejaSalida_old_closure15.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalidaDep_closure53.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalidaDep_closure53_closure73.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalidaDep_closure54.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalidaDep_closure54_closure74.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure22.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure23.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure24.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure25.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure25_closure65.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure26.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_busquedaBandejaSalida_closure26_closure66.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure31.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure32.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure33.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure33_closure67.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure34.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure35.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure36.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure36_closure68.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure36_closure69.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure36_closure70.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_crearTramiteDep_closure36_closure71.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviarLista_ajax_closure13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviarLista_ajax_closure13_closure59.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_closure10.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_closure11.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_closure9_closure58.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure4_closure56.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure4_closure57.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_ajax_old88_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_desenviar_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_enviarVarios_closure21.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_enviarVarios_closure21_closure63.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_enviarVarios_closure21_closure64.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_enviar_closure20.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_permisoImprimir_ajax_closure14.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_permisoImprimir_ajax_closure14_closure60.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_permisoImprimir_ajax_closure14_closure60_closure61.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_permisoImprimir_closure51.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_permisoImprimir_closure52.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_recibirExternoLista_ajax_closure12.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure41_closure72.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure45.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure46.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure47.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure48.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure49.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure50.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalidaDep_old_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalidaDep_old_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalidaDep_old_closure2_closure55.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalida_old_closure16.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalida_old_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalida_old_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalida_old_closure19.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_tablaBandejaSalida_old_closure19_closure62.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_verRezagadosUsu_closure28.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_verRezagados_closure27.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_bandejaImprimir_closure38.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25_closure45.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_getCadenaDown_closure36.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_getHijos_closure37.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTreeExtended_closure32.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTree_closure34.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure23_closure43.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure5_closure40.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure18_closure41.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure19_closure42.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaImprimir_closure39.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anularCircular_closure48.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anularCircular_closure48_closure69.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anularCircular_closure48_closure70.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anularCircular_closure49.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anular_closure50.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anular_closure50_closure71.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anular_closure50_closure72.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anular_closure51.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_anular_closure51_closure73.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4_closure55.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4_closure55_closure57.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4_closure55_closure58.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4_closure56.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure59.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure59_closure62.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure60.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure60_closure63.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure60_closure64.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5_closure61.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_copiaParaLista_ajax_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_copiaParaLista_ajax_closure6_closure65.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_copiaParaLista_ajax_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_desanular_closure52.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_desrecibir_closure47.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_desrecibir_closure47_closure68.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure38.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure39.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAnulados_closure41.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAnulados_closure42.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_enviarCopias_ajax_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_getCadenaDown_closure53.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_getCadenaDown_closure53_closure74.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_getHijos_closure54.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_makeLeaf_closure46.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_makeNewTreeExtended_closure43.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_makeTreeExtended_closure44.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_makeTreeExtended_closure45.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure33.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure34.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure17.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure18.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure19_closure66.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure19_closure67.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure29.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure30.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/AccionesController.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/AccionesController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Accn.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Accn.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Accs.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Accs.class" />
@@ -44,6 +193,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Ctrl.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Ctrl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/CtrlController.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/CtrlController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure4_closure7.class" afterPath="$PROJECT_DIR$/target/classes/DataSource$_run_closure3_closure4_closure7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DataSource.class" afterPath="$PROJECT_DIR$/target/classes/DataSource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/DbConnectionService.class" afterPath="$PROJECT_DIR$/target/classes/happy/DbConnectionService.class" />
@@ -61,9 +211,32 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/utilitarios/DiasLaborablesService.class" afterPath="$PROJECT_DIR$/target/classes/happy/utilitarios/DiasLaborablesService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/DocumentoTramite.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/DocumentoTramite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/DocumentoTramiteController.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/DocumentoTramiteController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure5.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure6.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure7.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure8.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoPdf_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure15.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure16.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteDetalladoXlsx_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController$_reporteGeneralXlsx_closure9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/DocumentosGeneradosController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/utilitarios/DomainFixController.class" afterPath="$PROJECT_DIR$/target/classes/happy/utilitarios/DomainFixController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure6.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure19.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure20.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure8_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure9_closure23.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib$_closure9_closure23.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib.class" afterPath="$PROJECT_DIR$/target/classes/happy/ElementosTagLib.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/utilitarios/EnviarService.class" afterPath="$PROJECT_DIR$/target/classes/happy/utilitarios/EnviarService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/ErrorLog.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/ErrorLog.class" />
@@ -110,7 +283,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/kerberos/KerberosService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/kerberos/KerberosService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/kerberos/Krbs.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/kerberos/Krbs.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/tramites/GSTI/2016/MEM-84-GSTI-16.pdf" afterPath="$PROJECT_DIR$/web-app/tramites/GSTI/2016/MEM-84-GSTI-16.pdf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/MailGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/MailGrailsPlugin.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/MailJob.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/MailJob.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/MailMessageBuilder.class" />
@@ -144,11 +316,52 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/PermisoUsuario.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/PermisoUsuario.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/PermisoUsuarioController.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/PermisoUsuarioController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Persona.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Persona.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cambiarNombresUsuarios_closure29.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cambiarNombresUsuarios_closure29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cambioDpto_ajax_closure25.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cambioDpto_ajax_closure25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cargarUsuariosLdap_closure28.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_cargarUsuariosLdap_closure28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_config_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_config_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_delete_ajax_closure26.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_delete_ajax_closure26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_delete_ajax_closure27.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_delete_ajax_closure27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_eliminarAcceso_ajax_closure15.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_eliminarAcceso_ajax_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_eliminarAcceso_ajax_closure16.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_eliminarAcceso_ajax_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_redireccionarTramites_closure24.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_redireccionarTramites_closure24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure10_closure37.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure10_closure37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_saveAccesos_ajax_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure17.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure18.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure19.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure20.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure21.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure22.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure23.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_savePerfiles_ajax_closure23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_terminarAcceso_ajax_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_terminarAcceso_ajax_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_terminarAcceso_ajax_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController$_terminarAcceso_ajax_closure14.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PersonaController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/PersonaDocumentoTramite.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/PersonaDocumentoTramite.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/PersonaDocumentoTramiteController.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/PersonaDocumentoTramiteController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/PlainTextMailTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/mail/PlainTextMailTagLib.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Prfl.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Prfl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure12_closure28.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure12_closure28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure17.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure18.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure3.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure4.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure5.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure6.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure7.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure8.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController$_closure9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/PrflController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Prms.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Prms.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Prpf.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Prpf.class" />
@@ -196,9 +409,87 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/seguridad/Tpac.class" afterPath="$PROJECT_DIR$/target/classes/happy/seguridad/Tpac.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure4.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure4_closure8.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure4_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure5.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$__clinit__closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getAllCopias_closure2.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getAllCopias_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3_closure6.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3_closure6_closure7.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getCopias_closure3_closure6_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getRespuestas_closure1.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite$_getRespuestas_closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure37.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure38.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure38.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure39.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure39.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure40.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure41.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure41.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure42.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure42.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure43.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure43.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure44.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller$_saveDep_closure44.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite2Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25_closure46.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25_closure46.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25_closure47.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure25_closure47.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure26.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure27.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure28.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_busquedaBandeja_closure28.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlSeguimiento_closure17.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlSeguimiento_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlVer_closure15.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlVer_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlVer_closure16.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_creaHtmlVer_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeLeaf_closure30.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeLeaf_closure30.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeNewTreeExtended_closure31.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeNewTreeExtended_closure31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTreeExtended_closure33.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTreeExtended_closure33.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTree_closure35.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_makeTree_closure35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure23.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure23_closure44.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure23_closure44.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure24.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_recibirTramite_closure24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure1.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure2.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure3.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure4.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure5.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure6.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure7.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure8.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_save_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaArchivadosDep_closure29.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaArchivadosDep_closure29.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure18.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure19.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure20.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure21.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure22.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller$_tablaBandejaEntradaDpto_old_closure22.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/Tramite3Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramiteExterno_ajax_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_asociarTramite_ajax_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure35.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure35.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure36.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure36.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure37.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAdmin_closure37.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAnulados_closure40.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_dialogAnulados_closure40.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure31.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure31.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure32.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramite_ajax_closure32.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure10.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure11.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure12.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure13.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure13.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure14.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure14.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure15.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure15.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure16.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure9.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_closure9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure19.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure20.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure21.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure21.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure22.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure22.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure23.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure24.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure25.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure26.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure27.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure27.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure28.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController$_redireccionarTramites_old_closure28.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteAdminController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteController.class" afterPath="$PROJECT_DIR$/target/classes/happy/tramites/TramiteController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/happy/reportes/TramiteExportController.class" afterPath="$PROJECT_DIR$/target/classes/happy/reportes/TramiteExportController.class" />
@@ -224,12 +515,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_GrailsWar_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_GrailsWar_groovy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_PackagePlugins_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_PackagePlugins_groovy.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/scriptCache/_PluginDependencies_groovy.class" afterPath="$PROJECT_DIR$/target/work/scriptCache/_PluginDependencies_groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/logo.png" afterPath="$PROJECT_DIR$/web-app/images/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/logo_reportes.png" afterPath="$PROJECT_DIR$/web-app/images/logo_reportes.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/resources.class" afterPath="$PROJECT_DIR$/target/classes/resources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp" afterPath="$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/happy/proceso/ValorProcesoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/happy/proceso/ValorProcesoController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/valorProceso/asignarValor.gsp" afterPath="$PROJECT_DIR$/grails-app/views/valorProceso/asignarValor.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/detalleProceso/formulario.gsp" afterPath="$PROJECT_DIR$/grails-app/views/detalleProceso/formulario.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/detalleProceso/lista_ajax.gsp" afterPath="$PROJECT_DIR$/grails-app/views/detalleProceso/lista_ajax.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/resources/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/target/work/resources/grails-app/i18n/messages.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/detalleProceso/tablaDatos_ajax.gsp" afterPath="$PROJECT_DIR$/grails-app/views/detalleProceso/tablaDatos_ajax.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp" afterPath="$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="cb6d943e-a5ea-4086-bbc9-e9cd9c74d579" name="no_commit" comment="" />
@@ -266,6 +561,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties converted="true" />
     <breakpoint_any converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -303,7 +599,6 @@
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules converted="true" />
-    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -311,101 +606,117 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ElementosTagLib.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/taglib/happy/ElementosTagLib.groovy">
+      <file leaf-file-name="lista_ajax.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/lista_ajax.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="20958">
-              <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+            <state vertical-scroll-proportion="-5.7826085" vertical-offset="112" max-vertical-offset="1260">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buscarExternos.gsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp">
+      <file leaf-file-name="ValorProcesoController.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/proceso/ValorProcesoController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27027026" vertical-offset="918" max-vertical-offset="3626">
-              <caret line="82" column="66" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5163934" vertical-offset="1589" max-vertical-offset="4872">
+              <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
+      <file leaf-file-name="asignarValor.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/valorProceso/asignarValor.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3319" max-vertical-offset="5040">
-              <caret line="251" column="45" selection-start-line="251" selection-start-column="42" selection-end-line="251" selection-end-column="45" />
+            <state vertical-scroll-proportion="-4.9863014" vertical-offset="0" max-vertical-offset="3878">
+              <caret line="26" column="84" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InicioController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/seguridad/InicioController.groovy">
+      <file leaf-file-name="buscadorProceso.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/proceso/buscadorProceso.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="602">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state vertical-scroll-proportion="-3.0684931" vertical-offset="0" max-vertical-offset="1526">
+              <caret line="16" column="41" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+              <folding>
+                <marker date="1462806813293" expanded="true" signature="2382:2413" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tablabuscarProceso.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.130435" vertical-offset="506" max-vertical-offset="1148">
+              <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/inicio/index.gsp">
+      <file leaf-file-name="ProcesoController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/proceso/ProcesoController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="2366">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state vertical-scroll-proportion="-5.478261" vertical-offset="0" max-vertical-offset="2282">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/login/login.gsp">
+      <file leaf-file-name="TramiteController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/TramiteController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="2352">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.956522" vertical-offset="158" max-vertical-offset="25004">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reporteWeb.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/bloqueados/reporteWeb.gsp">
+      <file leaf-file-name="ReportesPersonalesController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/ReportesPersonalesController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="980">
+            <state vertical-scroll-proportion="-2.4347825" vertical-offset="210" max-vertical-offset="1834">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tablaDatos_ajax.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/tablaDatos_ajax.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3654" max-vertical-offset="4774">
+              <caret line="278" column="18" selection-start-line="278" selection-start-column="18" selection-end-line="278" selection-end-column="18" />
+              <folding>
+                <marker date="1462484739363" expanded="true" signature="117:6037" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="666:753" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="770:858" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="1259:1312" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="1325:3485" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="1501:2907" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="1560:2223" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="2244:2890" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="2924:3470" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="4516:4670" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="4683:4824" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="6258:6314" placeholder="..." />
+                <marker date="1462484739363" expanded="true" signature="8116:8180" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cargarDatos_ajax.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/cargarDatos_ajax.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="490">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BloqueadosController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/BloqueadosController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2618" max-vertical-offset="3738">
-              <caret line="238" column="58" selection-start-line="238" selection-start-column="58" selection-end-line="238" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuTagLib.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/taglib/happy/MenuTagLib.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="974" max-vertical-offset="1932">
-              <caret line="111" column="49" selection-start-line="111" selection-start-column="49" selection-end-line="111" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1302">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -430,13 +741,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/tramite2/verTramite.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/happy/seguridad/ShieldController.groovy" />
-        <option value="$PROJECT_DIR$/web-app/js/plugins/bootstrap-datetimepicker-master/test/basic-test-cases/no-collapsible/index.html" />
-        <option value="$PROJECT_DIR$/web-app/js/plugins/bootstrap-datetimepicker-master/test/basic-test-cases/TEMPLATE/template.html" />
-        <option value="$PROJECT_DIR$/web-app/js/plugins/bootstrap-datetimepicker-master/test/issues.coffee" />
-        <option value="$PROJECT_DIR$/web-app/js/plugins/bootstrap-datetimepicker-master/test/utils.coffee" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/happy/reportes/RetrasadosExcelController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/happy/reportes/ReporteGestionExcelController.groovy" />
         <option value="$PROJECT_DIR$/web-app/js/loader.js" />
         <option value="$PROJECT_DIR$/grails-app/controllers/happy/tramites/ExternosController.groovy" />
@@ -476,11 +780,18 @@
         <option value="$PROJECT_DIR$/grails-app/services/happy/utilitarios/EnviarService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/services/happy/ReportesPdfService.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/inicio/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/taglib/happy/ElementosTagLib.groovy" />
         <option value="$PROJECT_DIR$/grails-app/taglib/happy/MenuTagLib.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/login/login.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/dato/cargarDatos.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/detalleProceso/formulario.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/detalleProceso/tablaDatos_ajax.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/detalleProceso/lista_ajax.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/valorProceso/asignarValor.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/happy/proceso/ValorProcesoController.groovy" />
       </list>
     </option>
   </component>
@@ -491,8 +802,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1317" />
-    <option name="height" value="1055" />
+    <option name="width" value="1284" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -537,7 +848,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="busca&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/busquedaExternos/buscarExternos.gsp&#10;Data&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/conf/DataSource.groovy&#10;inicio&#9;null&#9;null&#10;redactar&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/redactar.gsp&#10;arbol&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbol.gsp&#10;tramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;bandeja&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/bandejaEntradaDpto.gsp&#10;customS&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/web-app/css/CustomSvt.css&#10;custom.css&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/web-app/css/custom.css&#10;persona&#9;null&#9;null&#10;messa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;busqueda&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/buscarTramite/busquedaTramite.gsp&#10;verificarEsta&#9;null&#9;null&#10;crear&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;arbolreportes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbolReportes.gsp&#10;data&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;creartra&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;job&#9;null&#9;null&#10;tramite3&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/tramites/Tramite3Controller.groovy&#10;bandejaSalida&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalida.gsp&#10;bandejaSa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/tablaBandejaSalidaDep.gsp&#10;mess&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;docum&#9;null&#9;null&#10;arbolTr&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/arbolTramite.gsp&#10;personadocum&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/domain/happy/tramites/PersonaDocumentoTramite.groovy&#10;mes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;Bandeja&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalidaDep.gsp&#10;redirecc&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramiteAdmin/redireccionarTramites.gsp&#10;cron&#9;PSI&#9;JAVA://org.springframework.scheduling.config.CronTask&#10;retrasa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/reportes/RetrasadosController.groovy&#10;creartramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/crearTramite.gsp&#10;tramite2&#9;null&#9;null&#10;arbolre&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbolReportes.gsp&#10;datas&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;reportes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/reportes/ReportesPersonalesController.groovy&#10;adminTra&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramiteAdmin/arbolAdminTramite.gsp&#10;Tramite&#9;null&#9;null&#10;crearTramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;crearTr&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/crearTramite.gsp&#10;reportere&#9;null&#9;null&#10;bandejaentrada&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/bandejaEntradaDpto.gsp&#10;bandejasalida&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalidaDep.gsp&#10;Persona&#9;null&#9;null&#10;Da&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;personal&#9;null&#9;null&#10;crearTra&#9;null&#9;null&#10;saveTra&#9;null&#9;null&#10;pers&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/seguridad/PersonaController.groovy&#10;shie&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/seguridad/Shield.groovy&#10;tramiteadmi&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/tramites/TramiteAdminController.groovy" />
+    <property name="SearchEverywhereHistoryKey" value="BuscadorP&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/proceso/buscadorProceso.gsp&#10;valorPro&#9;null&#9;null&#10;list&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/proceso/list.gsp&#10;formulario&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/detalleProceso/formulario.gsp&#10;cargar&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/dato/cargarDatos.gsp&#10;Data&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/conf/DataSource.groovy&#10;busca&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/tramites/grails-app/views/busquedaExternos/buscarExternos.gsp&#10;inicio&#9;null&#9;null&#10;redactar&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/redactar.gsp&#10;arbol&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbol.gsp&#10;tramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;bandeja&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/bandejaEntradaDpto.gsp&#10;customS&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/web-app/css/CustomSvt.css&#10;custom.css&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/web-app/css/custom.css&#10;persona&#9;null&#9;null&#10;messa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;busqueda&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/buscarTramite/busquedaTramite.gsp&#10;verificarEsta&#9;null&#9;null&#10;crear&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;arbolreportes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbolReportes.gsp&#10;data&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;creartra&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;job&#9;null&#9;null&#10;tramite3&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/tramites/Tramite3Controller.groovy&#10;bandejaSalida&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalida.gsp&#10;bandejaSa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/tablaBandejaSalidaDep.gsp&#10;mess&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;docum&#9;null&#9;null&#10;arbolTr&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/arbolTramite.gsp&#10;personadocum&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/domain/happy/tramites/PersonaDocumentoTramite.groovy&#10;mes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/i18n/messages.properties&#10;Bandeja&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalidaDep.gsp&#10;redirecc&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramiteAdmin/redireccionarTramites.gsp&#10;cron&#9;PSI&#9;JAVA://org.springframework.scheduling.config.CronTask&#10;retrasa&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/reportes/RetrasadosController.groovy&#10;creartramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/crearTramite.gsp&#10;tramite2&#9;null&#9;null&#10;arbolre&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/departamento/arbolReportes.gsp&#10;datas&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;reportes&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/controllers/happy/reportes/ReportesPersonalesController.groovy&#10;adminTra&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramiteAdmin/arbolAdminTramite.gsp&#10;Tramite&#9;null&#9;null&#10;crearTramite&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/crearTramiteDep.gsp&#10;crearTr&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite/crearTramite.gsp&#10;reportere&#9;null&#9;null&#10;bandejaentrada&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite3/bandejaEntradaDpto.gsp&#10;bandejasalida&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/views/tramite2/bandejaSalidaDep.gsp&#10;Persona&#9;null&#9;null&#10;Da&#9;FILE&#9;file:///home/grails/aplicaciones/git-hub/happyNew/grails-app/conf/DataSource.groovy&#10;personal&#9;null&#9;null" />
     <property name="LayoutCode.rearrangeEntriesGroovy" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
@@ -549,155 +860,127 @@
       <recent name="$PROJECT_DIR$/src/templates" />
     </key>
   </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/grails-app/controllers/happy/proceso/ProcesoController.groovy</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/grails-app/views/proceso/buscadorProceso.gsp</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager" selected="Grails.Grails:tramites">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="_happyNew_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="34490" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -786,6 +1069,206 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_happyNew_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Cover" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="34490" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54941" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -842,9 +1325,7 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -863,18 +1344,17 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="/usr/bin/flashplayerdebugger" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -894,61 +1374,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="LOCAL" value="false" />
-      <deployment />
-      <server-settings>
-        <data>
-          <option name="transportHostId" />
-        </data>
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="54941" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="Grails:happyNew" type="GrailsRunConfigurationType" factoryName="Grails">
@@ -1382,6 +1807,13 @@
       <workItem from="1455837578426" duration="850000" />
       <workItem from="1455891187896" duration="862000" />
       <workItem from="1455901291373" duration="666000" />
+      <workItem from="1462395661822" duration="104000" />
+      <workItem from="1462395809087" duration="1606000" />
+      <workItem from="1462462420965" duration="644000" />
+      <workItem from="1462477263572" duration="1411000" />
+      <workItem from="1462482052338" duration="3072000" />
+      <workItem from="1462543116763" duration="1436000" />
+      <workItem from="1462805857244" duration="1960000" />
     </task>
     <task id="LOCAL-00055" summary="version">
       <created>1407278712873</created>
@@ -2449,7 +2881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1025830000" />
+    <option name="totallyTimeSpent" value="1036063000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -2472,44 +2904,44 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1317" height="1055" extended-state="0" />
+    <frame x="0" y="0" width="1284" height="1052" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23319502" sideWeight="0.427907" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28068304" sideWeight="0.50036687" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22937942" sideWeight="0.572093" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32757267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29499468" sideWeight="0.49963316" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295796" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276414" sideWeight="0.49962264" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24799357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.0037593986" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884312" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28068304" sideWeight="0.50036687" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884312" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295796" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24799357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20887096" sideWeight="0.572093" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276414" sideWeight="0.49962264" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29443255" sideWeight="0.49963316" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27944326" sideWeight="0.4988995" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28436762" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32550693" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2796158" sideWeight="0.4988995" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23319502" sideWeight="0.427907" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26360726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254818" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26360726" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -2570,91 +3002,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web-app/js/plugins/bootstrap-maxlength/bootstrap-maxlength.jquery.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="910">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/DocumentosGeneradosController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4227" max-vertical-offset="14770">
-          <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main2.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="4760">
-          <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/plugins/bootstrap-maxlength/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21962096" vertical-offset="153" max-vertical-offset="1050">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/tramite/tablaBandeja.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="976" max-vertical-offset="2660">
-          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/departamento/arbolReportes.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2991" max-vertical-offset="7616">
-          <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/tramite3/bandejaImprimir.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9130435" vertical-offset="4026" max-vertical-offset="7084">
-          <caret line="307" column="41" selection-start-line="307" selection-start-column="41" selection-end-line="307" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/tramite2/bandejaSalidaDep.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11715" max-vertical-offset="13888">
-          <caret line="854" column="22" selection-start-line="854" selection-start-column="22" selection-end-line="854" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/tramite2/tablaBandejaSalidaDep.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42088607" vertical-offset="1309" max-vertical-offset="3304">
-          <caret line="103" column="18" selection-start-line="101" selection-start-column="8" selection-end-line="103" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/buscarTramite/tablaBusquedaTramite.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="3668">
-          <caret line="123" column="74" selection-start-line="123" selection-start-column="74" selection-end-line="123" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/buscarTramite/busquedaTramite.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3129" max-vertical-offset="8876">
-          <caret line="231" column="60" selection-start-line="231" selection-start-column="60" selection-end-line="231" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="3248">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/CustomSvt.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="2268">
@@ -2697,13 +3044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="275" max-vertical-offset="11550">
           <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/tramite/redactarTramite.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20930232" vertical-offset="0" max-vertical-offset="602">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -2765,14 +3105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/TramiteController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2199" max-vertical-offset="25004">
-          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///opt/grails-2.3.11/lib/org.xhtmlrenderer/core-renderer/jars/core-renderer-R8-sources.jar!/org/xhtmlrenderer/pdf/ITextRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1609" max-vertical-offset="5782">
@@ -2795,63 +3127,63 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/seguridad/Accs.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="826">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/seguridad/Persona.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/seguridad/Persona.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="5236">
           <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/Departamento.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/Departamento.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="1358">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/PermisoUsuario.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/PermisoUsuario.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="1330">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/Tramite.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/Tramite.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="6818">
           <caret line="105" column="38" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="38" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/TipoPersona.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/happy/tramites/TipoPersona.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="392">
           <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
         </state>
-      </provider>
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application.properties">
@@ -2880,7 +3212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="28" max-vertical-offset="602">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2895,7 +3226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="2366">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2903,15 +3233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="980">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/BloqueadosController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2618" max-vertical-offset="3738">
-          <caret line="238" column="58" selection-start-line="238" selection-start-column="58" selection-end-line="238" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2925,9 +3246,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/main.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3319" max-vertical-offset="5040">
-          <caret line="251" column="45" selection-start-line="251" selection-start-column="42" selection-end-line="251" selection-end-column="45" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3514" max-vertical-offset="4998">
+          <caret line="251" column="34" selection-start-line="251" selection-start-column="34" selection-end-line="251" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/login/login.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="2352">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1148" max-vertical-offset="3514">
+          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2939,26 +3273,144 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/BloqueadosController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2618" max-vertical-offset="3738">
+          <caret line="238" column="58" selection-start-line="238" selection-start-column="58" selection-end-line="238" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="1302">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="1302">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/login/login.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/dato/cargarDatos.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="2352">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.826087" vertical-offset="70" max-vertical-offset="2856">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proceso/list.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="3360">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/busquedaExternos/buscarExternos.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/formulario.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27027026" vertical-offset="918" max-vertical-offset="3626">
-          <caret line="82" column="66" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2548" max-vertical-offset="3374">
+          <caret line="200" column="86" selection-start-line="200" selection-start-column="86" selection-end-line="200" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/proceso/DetalleProcesoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2196" max-vertical-offset="5208">
+          <caret line="171" column="8" selection-start-line="171" selection-start-column="8" selection-end-line="171" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/cargarDatos_ajax.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="490">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/tablaDatos_ajax.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3654" max-vertical-offset="4774">
+          <caret line="278" column="18" selection-start-line="278" selection-start-column="18" selection-end-line="278" selection-end-column="18" />
+          <folding>
+            <marker date="1462484739363" expanded="true" signature="117:6037" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="666:753" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="770:858" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="1259:1312" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="1325:3485" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="1501:2907" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="1560:2223" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="2244:2890" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="2924:3470" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="4516:4670" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="4683:4824" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="6258:6314" placeholder="..." />
+            <marker date="1462484739363" expanded="true" signature="8116:8180" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/detalleProceso/lista_ajax.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7826085" vertical-offset="112" max-vertical-offset="1260">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/reportes/ReportesPersonalesController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4347825" vertical-offset="210" max-vertical-offset="1834">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proceso/buscadorProceso.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0684931" vertical-offset="0" max-vertical-offset="1526">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <marker date="1462806813293" expanded="true" signature="2382:2413" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/tramites/TramiteController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.956522" vertical-offset="158" max-vertical-offset="25004">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/proceso/ProcesoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.478261" vertical-offset="0" max-vertical-offset="2282">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/proceso/tablabuscarProceso.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.130435" vertical-offset="506" max-vertical-offset="1148">
+          <caret line="53" column="75" selection-start-line="53" selection-start-column="75" selection-end-line="53" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/valorProceso/asignarValor.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.9863014" vertical-offset="0" max-vertical-offset="3878">
+          <caret line="26" column="84" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/happy/proceso/ValorProcesoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5163934" vertical-offset="1589" max-vertical-offset="4872">
+          <caret line="137" column="19" selection-start-line="137" selection-start-column="19" selection-end-line="137" selection-end-column="19" />
           <folding />
         </state>
       </provider>
