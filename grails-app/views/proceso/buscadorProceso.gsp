@@ -5,6 +5,13 @@
   Time: 03:40 PM
 --%>
 
+<script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>
+<script type="text/javascript" src="${resource(dir: 'js/plugins/lzm.context/js', file: 'lzm.context-0.5.js')}"></script>
+<link href="${resource(dir: 'js/plugins/lzm.context/css', file: 'lzm.context-0.5.css')}" rel="stylesheet">
+
+<script type="text/javascript" src="${resource(dir: 'js/plugins/fixed-header-table-1.3', file: 'jquery.fixedheadertable.min.js')}"></script>
+<link href="${resource(dir: 'js/plugins/fixed-header-table-1.3/css', file: 'defaultTheme.css')}" rel="stylesheet">
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -23,17 +30,17 @@
     <div style="margin-bottom: 20px">
         <div class="col-md-2">
             <label>Proceso</label>
-            <g:textField name="memorando" value="" maxlength="20" class="form-control allCaps" style="width: 180px;margin-left: -20px"/>
+            <g:textField name="proceso_name" id="proceso" value="" maxlength="20" class="form-control" style="width: 180px;margin-left: -20px"/>
         </div>
 
         <div class="col-md-2">
             <label>Cliente</label>
-            <g:textField name="asunto" value="" style="width: 300px" maxlength="30" class="form-control"/>
+            <g:textField name="cliente_name" id="cliente" value="" style="width: 300px" maxlength="30" class="form-control"/>
         </div>
 
         <div class="col-md-2" style="margin-left: 150px">
             <label>Fecha Completado hasta</label>
-            <elm:datepicker name="fechaRecepcion" class="datepicker form-control" value=""/>
+            <elm:datepicker name="fecha_name" id="fecha" class="datepicker form-control" value=""/>
         </div>
 
         <div style="padding-top: 25px">
@@ -49,7 +56,7 @@
 
 </div>
 
-<div style="margin-top: 30px; min-height: 460px" class="vertical-container">
+<div style="margin-top: 30px; min-height: 350px" class="vertical-container">
 
     <p class="css-vertical-text">Procesos</p>
 
@@ -64,9 +71,28 @@
 
 <script type="text/javascript">
 
-    $("#busqueda").click(function () {
+    $(".btnBusqueda").click(function () {
         $("#tablaProcesos").html("").append($("<div style='width:100%; text-align: center;'/>").append(spinnerSquare64));
+        cargarTablaProcesos();
     });
+
+    function cargarTablaProcesos () {
+        var pro = $("#proceso").val();
+        var cli = $("#cliente").val();
+        var fec = $("#fecha").val();
+        $.ajax({
+           type: 'POST',
+            url: '${createLink(controller: 'proceso', action: 'tablabuscarProceso')}',
+            data:{
+                proceso: pro,
+                cliente: cli,
+                fecha: fec
+            },
+            success: function (msg) {
+                $("#tablaProcesos").html(msg)
+            }
+        });
+    }
 
 
 

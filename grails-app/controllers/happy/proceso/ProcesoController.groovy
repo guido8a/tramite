@@ -113,5 +113,45 @@ class ProcesoController extends happy.seguridad.Shield {
 
     }
 
+    def tablabuscarProceso () {
+        println("params buscar "  + params)
+
+        if(params.fecha){
+            params.fecha = new Date().parse("dd-MM-yyyy",params.fecha)
+        }
+
+        def pccl
+
+       pccl = ProcesoPersona.withCriteria {
+
+           proceso{
+               if(params.proceso){
+                   ilike("nombre", '%' + params.proceso + '%')
+               }
+           }
+
+           persona{
+               if(params.cliente){
+                   or{
+                       ilike("nombre", '%' + params.cliente + '%')
+                       ilike("apellido", '%' + params.cliente + '%')
+                   }
+               }
+           }
+
+
+           println("pccl " + pccl)
+
+//           if(params.fecha){
+//               gt('')
+//           }
+
+
+       }
+
+
+        return [pccl: pccl]
+    }
+
 
 }
