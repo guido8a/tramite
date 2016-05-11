@@ -349,6 +349,27 @@ class TramiteAdminController /*extends Shield*/ {
             def cn = dbConnectionService.getConnection()
             todos = cn.rows(sql.toString())
 
+            def existen = []
+            def borrar = []
+            sql = "SELECT prsn__id, dpto__id from prtr where trmt__id = ${tramite.id} and rltr__id in (1,2)"
+//            println "sql: $sql"
+            cn.eachRow(sql.toString()){ d ->
+                existen.add(d?.prsn__id?.toInteger() > 0 ? d.prsn__id : -d.dpto__id)
+            }
+
+            def aBorrar
+            if(existen){
+                existen.each { c ->
+//                    aBorrar = todos.find { it.id == c}
+                    borrar.add(todos.find { it.id == c})
+//                    println "existe: ${aBorrar}"
+                }
+            }
+
+//            println "existen: $existen: ${borrar.label}"
+//            println "todos: ${todos[1..10]}"
+            todos = todos - borrar
+
             return [tramite: tramite, disponibles: todos]
         }
     }
