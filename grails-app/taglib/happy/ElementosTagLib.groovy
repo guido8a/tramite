@@ -85,8 +85,9 @@ class ElementosTagLib {
     }
 
     def bootstrapCss = { attrs ->
-        def html = "<link href=\"${resource(dir: 'bootstrap-3.1.1/css', file: 'bootstrap.css')}\" rel=\"stylesheet\">"
-        html += "<link href=\"${resource(dir: 'bootstrap-3.1.1/css', file: 'bootstrap-theme-spacelab.css')}\" rel=\"stylesheet\">"
+        def html = "<link href=\"${resource(dir: 'bootstrap-3.1.1/css', file: 'bootstrap.min.css')}\" rel=\"stylesheet\">"
+//        html += "<link href=\"${resource(dir: 'bootstrap-3.1.1/css', file: 'bootstrap-theme-spacelab.css')}\" rel=\"stylesheet\">"
+        html += "<link href=\"${resource(dir: 'bootstrap-3.1.1/css', file: 'bootstrap-theme.min.css')}\" rel=\"stylesheet\">"
         out << html
     }
 
