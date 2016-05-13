@@ -177,6 +177,8 @@
         }else{
             des = $("#desde").val();
             has = $("#hasta").val();
+
+
         }
 
 
@@ -217,6 +219,7 @@
                    var dt = msg.split("_");
                    if(dt[0] == 'ok'){
                        log("Detalle guardado correctamente","success")
+                       cargarTablaInfo();
                    }else{
                        log("Error al guardar el detalle","error")
                    }
@@ -273,6 +276,7 @@
                 success: function (msg) {
                     var dt = msg.split("_");
                     if(dt[0] == 'ok'){
+                        cargarTablaInfo();
                         $.ajax({
                             type: "POST",
                             url: "${createLink(controller: 'detalleProceso', action:  'lista_ajax')}",

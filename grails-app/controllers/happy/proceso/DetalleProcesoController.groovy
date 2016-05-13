@@ -182,7 +182,7 @@ class DetalleProcesoController extends happy.seguridad.Shield {
 
     def saveDetalle_ajax() {
 
-        println("save deta " + params)
+//        println("save deta " + params)
 
         def dato = Dato.get(params.idD)
         def proceso = Proceso.get(params.idP)
@@ -247,8 +247,11 @@ class DetalleProcesoController extends happy.seguridad.Shield {
                 detalleProceso.numericoMinimo = 0
             }else{
 
-                params.desde = params.desde.Math.ceil(params.desde)
-                params.hasta = params.hasta.Marh.round(params.hasta)
+                params.desde = params.desde.toDouble()
+                params.hasta = params.hasta.toDouble()
+
+//                params.desde = params.desde.Math.ceil(params.desde)
+//                params.hasta = params.hasta.Marh.round(params.hasta)
 
                 detalleProceso.rango = 'numerico'
                 detalleProceso.numericoMinimo = params.desde
@@ -360,6 +363,19 @@ class DetalleProcesoController extends happy.seguridad.Shield {
             render "no"
             println("error al borrar el item " + item.errors)
         }
+
+    }
+
+    def tablaInfo_ajax (){
+
+        println("params tabla info" + params)
+
+        def proceso = Proceso.get(params.id)
+        def dtpc = DetalleProceso.findAllByProceso(proceso, [sort: 'dato.fase.descripcion'])
+
+        println("dtpc"   +  dtpc)
+
+        return [detalle: dtpc]
 
     }
 

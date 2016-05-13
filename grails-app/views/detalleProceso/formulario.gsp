@@ -5,10 +5,10 @@
     <title>Formulario del Proceso</title>
 
     <style type="text/css">
-        /*input{*/
-            /*font-size: 14px !important;*/
-            /*margin: 0px;*/
-        /*}*/
+    /*input{*/
+    /*font-size: 14px !important;*/
+    /*margin: 0px;*/
+    /*}*/
     </style>
 </head>
 
@@ -30,39 +30,71 @@
 
 <g:form class="form-horizontal" name="frmProceso" role="form" action="save" method="POST">
     <div class="row">
-        <div class="col-xs-1 negrilla control-label">Proceso: </div>
 
-        <span class="grupo">
-            <div class="col-md-5" style="margin-bottom: 20px">
+        <div class="col-md-6">
+            <div class="col-md-2 negrilla control-label">Proceso: </div>
+
+            <div class="col-md-9" style="margin-bottom: 20px">
                 <g:textField name="proceso_name" id="proceso" value="${proceso?.nombre}" class="form-control required" maxlength="1023" />
             </div>
-        </span>
 
-        <div class="col-xs-1 negrilla control-label">Objetivo del proceso: </div>
+            <div class="col-md-2 negrilla control-label">Aplica a Documentos: </div>
 
-        <div class="col-md-5" style="margin-bottom: 20px">
-            <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="resize: none"/>
+            <div class="col-md-9" style="margin-bottom: 20px">
+                <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control"/>
+            </div>
+
+            <div class="col-md-2 negrilla control-label">Objetivo del proceso: </div>
+
+            <div class="col-md-9" style="margin-bottom: 20px">
+                <g:textArea name="objetivo_name" id="objetivo" value="${proceso?.objetivo}" class="form-control" maxlength="1023" style="resize: none"/>
+            </div>
+
+            <div class="col-md-3"></div>
+
+            <div class="btn-group col-md-7">
+                <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar cambios al proceso">
+                    <i class="fa fa-save"> Guardar</i>
+                </a>
+                <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
+                    <i class="fa fa-plus"> Nuevo Proceso</i>
+                </a>
+            </div>
         </div>
 
-        <div class="col-xs-1 negrilla control-label">Aplica a Documentos: </div>
+        <div class="col-md-6">
 
-        <div class="col-md-5" style="margin-bottom: 20px">
-            <g:select name="tipo_name" from="${happy.tramites.TipoDocumento.list()}" value="${procesoDocumento?.tipoDocumento?.id}" optionKey="id"  optionValue="descripcion" id="tipo" class="many-to-one form-control"/>
+            <div class="col-md-9 negrilla control-label">Datos que contienen información del Proceso</div>
+            <div class="col-md-12" style="height: 200px;">
+                <table class="table table-bordered table-hover table-condensed" style="margin-top: 5px">
+                    <thead>
+                    <tr>
+                        <th style="width:20%;">Fase</th>
+                        <th style="width:40%;">Dato</th>
+                        <th style="width:40%;">Etiqueta</th>
+                    </tr>
+                    </thead>
+                 </table>
+
+                <div class="row-fluid"  style="width: 99.7%;height: 180px;overflow-y: auto;float: right; margin-top: -20px">
+                    <div class="span12">
+                        <table  class="table table-bordered table-hover table-condensed">
+                            <tbody id="tablaInfo">
+
+                            </tbody>
+                        </table>
+                </div>
+                </div>
+
+
+            </div>
+
         </div>
 
-        <div class="col-md-1">
-        </div>
-        <div class="btn-group col-md-2">
-            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar cambios al proceso">
-                <i class="fa fa-save"> Guardar</i>
-            </a>
-        </div>
-        <div class="btn-group col-md-2">
-            <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
-                <i class="fa fa-plus"> Nuevo Proceso</i>
-            </a>
-        </div>
+
     </div>
+
+
     </div>
 </g:form>
 
@@ -119,6 +151,26 @@
 
 
 <script type="text/javascript">
+
+    //función para cargar la tabla de informacion de datos por proceso
+
+    cargarTablaInfo();
+
+    function cargarTablaInfo () {
+        var idProce = ${proceso?.id}
+        $.ajax({
+           type: 'POST',
+            url: '${createLink(controller: 'detalleProceso', action: 'tablaInfo_ajax')}',
+            data:{
+                id: idProce
+            },
+            success: function (msg){
+                $("#tablaInfo").html(msg)
+            }
+        });
+    }
+
+
 
     $("#btnGuardar").click(function () {
         var $form = $("#frmProceso");
