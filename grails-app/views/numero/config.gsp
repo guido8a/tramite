@@ -28,16 +28,16 @@
         <!-- botones -->
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
-                <a href="#" class="btn btn-default btn-save">
+                <a href="#" class="btn btn-primary btn-save">
                     <i class="fa fa-save"></i> Guardar
                 </a>
             </div>
-        <g:link class="btn btn-default col-md-2" style="width: 100px;" controller="inicio" action="parametros"><i class="fa fa-arrow-left"></i> Regresar</g:link>
+        <g:link class="btn btn-primary col-md-2" style="width: 100px;" controller="inicio" action="parametros"><i class="fa fa-arrow-left"></i> Regresar</g:link>
             %{--<div class="btn-group pull-right col-md-3">--}%
             %{--<div class="input-group">--}%
             %{--<input type="text" class="form-control span2 input-search" placeholder="Buscar" value="${params.search}">--}%
             %{--<span class="input-group-btn">--}%
-            %{--<a href="#" class="btn btn-default btn-search">--}%
+            %{--<a href="#" class="btn btn-primary btn-search">--}%
             %{--<i class="fa fa-search"></i>&nbsp;--}%
             %{--</a>--}%
             %{--</span>--}%

@@ -90,7 +90,7 @@
                 <i class="fa fa-search"></i> Detalles
             </a>
         </g:if>
-        <g:link controller="tramite3" action="bandejaEntradaDpto" class="btn btn-default btnRegresar">
+        <g:link controller="tramite3" action="bandejaEntradaDpto" class="btn btn-primary btnRegresar">
             <i class="fa fa-times"></i> Cancelar
         </g:link>
     </div>
@@ -392,16 +392,16 @@
 
         <div class="divBotones">
             <div class="btn-group-vertical">
-                <a href="#" class="btn btn-default" title="Agregar todos" id="btnAddAll">
+                <a href="#" class="btn btn-primary" title="Agregar todos" id="btnAddAll">
                     <i class="fa fa-angle-double-right"></i>
                 </a>
-                <a href="#" class="btn btn-default" title="Agregar seleccionados" id="btnAddSelected">
+                <a href="#" class="btn btn-primary" title="Agregar seleccionados" id="btnAddSelected">
                     <i class="fa fa-angle-right"></i>
                 </a>
-                <a href="#" class="btn btn-default" title="Quitar seleccionados" id="btnRemoveSelected">
+                <a href="#" class="btn btn-primary" title="Quitar seleccionados" id="btnRemoveSelected">
                     <i class="fa fa-angle-left"></i>
                 </a>
-                <a href="#" class="btn btn-default" title="Quitar todos" id="btnRemoveAll">
+                <a href="#" class="btn btn-primary" title="Quitar todos" id="btnRemoveAll">
                     <i class="fa fa-angle-double-left"></i>
                 </a>
             </div>
@@ -445,7 +445,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

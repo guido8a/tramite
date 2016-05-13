@@ -26,7 +26,7 @@
         <!-- botones -->
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
-                <g:link action="form" class="btn btn-default btnCrear">
+                <g:link action="form" class="btn btn-primary btnCrear">
                     <i class="fa fa-file-o"></i> Crear
                 </g:link>
             </div>
@@ -35,7 +35,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control span2 input-search" placeholder="Buscar" value="${params.search}">
                     <span class="input-group-btn">
-                        <g:link action="list" class="btn btn-default btn-search">
+                        <g:link action="list" class="btn btn-primary btn-search">
                             <i class="fa fa-search"></i>&nbsp;
                         </g:link>
                     </span>
@@ -51,7 +51,7 @@
                     <th style="width: 60px;" class="text-center">
                         <!-- Single button -->
                         <div class="btn-group text-left">
-                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown">
                                 <g:if test="${params.estado}">
                                     <g:if test="${params.estado == 'usuario'}">
                                         <i class="fa fa-user text-info"></i>

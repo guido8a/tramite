@@ -63,7 +63,7 @@
                 <!-- botones -->
                 <div class="btn-toolbar toolbar">
                     <div class="btn-group">
-                        <g:link controller="inicio" action="parametros" class="btn btn-default">
+                        <g:link controller="inicio" action="parametros" class="btn btn-primary">
                             <i class="fa fa-arrow-left"></i> Regresar
                         </g:link>
                     </div>
@@ -129,7 +129,7 @@
             <script type="text/javascript">
 
                 var index = 0;
-                var $btnCloseModal = $('<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>');
+                var $btnCloseModal = $('<button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>');
                 var $btnSave = $('<button type="button" class="btn btn-success"><i class="fa fa-save"></i> Guardar</button>');
 
                 function submitForm() {

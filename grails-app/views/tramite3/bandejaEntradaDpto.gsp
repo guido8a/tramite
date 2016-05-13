@@ -80,7 +80,7 @@
                     <i class="fa fa-refresh"></i> Actualizar
                 </a>
 
-                <g:link controller="tramite2" action="crearTramiteDep" class="btn btn-default btnCrearTramite" style="margin-left: 10px">
+                <g:link controller="tramite2" action="crearTramiteDep" class="btn btn-primary btnCrearTramite" style="margin-left: 10px">
                     <i class="fa fa-edit"></i> Crear Trámite Principal
                 </g:link>
             </div>
@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -485,7 +485,7 @@
                                 setTimeout(function () {
                                     if (msg.indexOf("error") > -1) {
                                         b.find(".btn-success").remove();
-                                        b.find(".btn-danger").removeClass("btn-danger").addClass("btn-default").html("Cerrar");
+                                        b.find(".btn-danger").removeClass("btn-danger").addClass("btn-primary").html("Cerrar");
                                     }
                                 }, 300);
                             }
@@ -705,7 +705,7 @@
                             buttons : {
                                 cancelar : {
                                     label     : '<i class="fa fa-times"></i> Aceptar',
-                                    className : 'btn-default',
+                                    className : 'btn-primary',
                                     callback  : function () {
                                     }
                                 }

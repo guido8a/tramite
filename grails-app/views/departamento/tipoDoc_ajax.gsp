@@ -75,8 +75,8 @@
             <div id="collapseTipoDocs" class="panel-collapse collapse in">
                 <div class="panel panel-default">
                     <p>
-                        <a href="#" class="btn btn-default btn-sm" id="allPerf">Asignar todos los tipos</a>
-                        <a href="#" class="btn btn-default btn-sm" id="nonePerf">Quitar todos los tipos</a>
+                        <a href="#" class="btn btn-primary btn-sm" id="allPerf">Asignar todos los tipos</a>
+                        <a href="#" class="btn btn-primary btn-sm" id="nonePerf">Quitar todos los tipos</a>
                     </p>
                     <g:form name="frmTipoDocumentos" action="savetipoDoc_ajax">
                         <ul class="fa-ul">

@@ -28,10 +28,10 @@
 
         <div class="btn-toolbar toolbar" style="margin-left: 100px; margin-top: 20px;">
             <div class="btn-group">
-                <g:link class="btn btn-default" controller="retrasados" action="reporteRetrasadosDetalle" params="${params}">
+                <g:link class="btn btn-primary" controller="retrasados" action="reporteRetrasadosDetalle" params="${params}">
                     <i class="fa fa-file-pdf-o"></i> Reporte detallado pdf
                 </g:link>
-                <g:link class="btn btn-default" controller="retrasados" action="reporteRetrasadosConsolidado" params="${params}">
+                <g:link class="btn btn-primary" controller="retrasados" action="reporteRetrasadosConsolidado" params="${params}">
                     <i class="fa fa-file-pdf-o"></i> Reporte resumido pdf
                 </g:link>
             </div>

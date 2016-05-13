@@ -13,7 +13,7 @@
     <!-- botones -->
         <div class="btn-toolbar toolbar">
             %{--<div class="btn-group">--}%
-                %{--<g:link action="form" class="btn btn-default btnCrear">--}%
+                %{--<g:link action="form" class="btn btn-primary btnCrear">--}%
                     %{--<i class="fa fa-file-o"></i> Nuevo Dato--}%
                 %{--</g:link>--}%
             %{--</div>--}%
@@ -21,7 +21,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar" value="${params.search}">
                     <span class="input-group-btn">
-                        <g:link action="list" class="btn btn-default btn-search" type="button">
+                        <g:link action="list" class="btn btn-primary btn-search" type="button">
                             <i class="fa fa-search"></i>&nbsp;
                         </g:link>
                     </span>

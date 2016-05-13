@@ -32,7 +32,7 @@ th, td {
                                 </td>
                                 <td>${d[1]}</td>
                                 <td><input type="text" id="mn${d[0]}" value="${d[2]?.encodeAsHTML()}">
-                                    <input class="ok btn btn-default btn-xs" type="button" id="${d[0]}" value="Grabar">
+                                    <input class="ok btn btn-primary btn-xs" type="button" id="${d[0]}" value="Grabar">
                                 </td>
                                 <td>${d[3]?.encodeAsHTML()}</td>
                             </tr>

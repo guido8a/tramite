@@ -185,7 +185,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -405,7 +405,7 @@
                                     };
                                     buttons.desenviar = {
                                         label     : "<i class='fa fa-check-square-o'></i> Confirmar recepción",
-                                        className : "btn-default",
+                                        className : "btn-primary",
                                         callback  : function () {
                                             var ids = "";
                                             $(".chkOne").each(function () {

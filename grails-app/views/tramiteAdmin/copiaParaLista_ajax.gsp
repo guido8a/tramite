@@ -108,16 +108,16 @@ li {
 
     <div class="divBotones">
         <div class="btn-group-vertical">
-            <a href="#" class="btn btn-default" title="Agregar todos" id="btnAddAll">
+            <a href="#" class="btn btn-primary" title="Agregar todos" id="btnAddAll">
                 <i class="fa fa-angle-double-right"></i>
             </a>
-            <a href="#" class="btn btn-default" title="Agregar seleccionados" id="btnAddSelected">
+            <a href="#" class="btn btn-primary" title="Agregar seleccionados" id="btnAddSelected">
                 <i class="fa fa-angle-right"></i>
             </a>
-            <a href="#" class="btn btn-default" title="Quitar seleccionados" id="btnRemoveSelected">
+            <a href="#" class="btn btn-primary" title="Quitar seleccionados" id="btnRemoveSelected">
                 <i class="fa fa-angle-left"></i>
             </a>
-            <a href="#" class="btn btn-default" title="Quitar todos" id="btnRemoveAll">
+            <a href="#" class="btn btn-primary" title="Quitar todos" id="btnRemoveAll">
                 <i class="fa fa-angle-double-left"></i>
             </a>
         </div>

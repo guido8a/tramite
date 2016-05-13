@@ -15,7 +15,7 @@
 <body>
 <div class="btn-toolbar toolbar">
     <div class="btn-group">
-        <g:link controller="proceso" action="list" class="btn btn-default">
+        <g:link controller="proceso" action="list" class="btn btn-primary">
             <i class="fa fa-arrow-left"></i> Volver a lista de Procesos
         </g:link>
     </div>

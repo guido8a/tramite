@@ -51,7 +51,7 @@
 <div class="btn-toolbar toolbar" style="margin-top: 20px; ">
 
     <div class="btn-group">
-        <g:link class="btn btn-default" controller="bloqueados" action="reporteConsolidado">
+        <g:link class="btn btn-primary" controller="bloqueados" action="reporteConsolidado">
             <i class="fa fa-file-pdf-o"></i> Reporte en  pdf
         </g:link>
     </div>

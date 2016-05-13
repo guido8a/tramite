@@ -80,7 +80,7 @@
         <!-- botones -->
         <div class="btn-toolbar toolbar">
             <div class="btn-group">
-                <g:link controller="inicio" action="parametros" class="btn btn-default">
+                <g:link controller="inicio" action="parametros" class="btn btn-primary">
                     <i class="fa fa-arrow-left"></i> Regresar
                 </g:link>
             </div>
@@ -89,7 +89,7 @@
                 <a href="#" class="btn btn-success" id="btnGuardar">
                     <i class="icon fa fa-check"></i> Guardar
                 </a>
-                <a href="#" class="btn btn-default" id="btnDesactivar">
+                <a href="#" class="btn btn-primary" id="btnDesactivar">
                     <i class="icon fa fa-power-off"></i> Cerrar el año de proceso
                 </a>
             </div>
@@ -258,7 +258,7 @@
                             },
                             desactivar : {
                                 label     : "<i class='fa fa-power-off'></i> Desactivar",
-                                className : "btn-default",
+                                className : "btn-primary",
                                 callback  : function () {
                                     openLoader();
                                     location.href = "${createLink(action: 'desactivar')}/${anio.id}";

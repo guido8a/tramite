@@ -42,7 +42,7 @@
         <g:link action="list" class="btn btn-success btnActualizar">
             <i class="fa fa-refresh"></i> Actualizar
         </g:link>
-        <g:link action="index" controller="inicio" class="btn btn-default ">
+        <g:link action="index" controller="inicio" class="btn btn-primary ">
             <i class="fa fa-sing-out"></i> Salir
         </g:link>
     </div>

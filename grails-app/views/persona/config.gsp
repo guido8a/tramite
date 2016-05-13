@@ -63,7 +63,7 @@
         %{--<div class="well well-sm">--}%
         <div class="form-group keeptogether">
             <div>
-                <g:link class="btn btn-default col-md-1" controller="persona" action="list"><i class="fa fa-arrow-left"></i> Regresar</g:link>
+                <g:link class="btn btn-primary col-md-1" controller="persona" action="list"><i class="fa fa-arrow-left"></i> Regresar</g:link>
                 <span class="col-md-11" style="text-align: center">
                     <div class="panel panel-default" style="margin-left: 30px;">
                         <div class="panel-heading">Configuración de los datos del usuario: <strong>${usuario.nombre} ${usuario.apellido}</strong>
@@ -86,8 +86,8 @@
                 <div id="collapsePerfiles" class="panel-collapse collapse in">
                     <div class="panel-body">
                         <p>
-                            %{--<a href="#" class="btn btn-default btn-sm" id="allPerf">Asignar todos los perfiles</a>--}%
-                            <a href="#" class="btn btn-default btn-sm" id="nonePerf">Quitar todos los perfiles</a>
+                            %{--<a href="#" class="btn btn-primary btn-sm" id="allPerf">Asignar todos los perfiles</a>--}%
+                            <a href="#" class="btn btn-primary btn-sm" id="nonePerf">Quitar todos los perfiles</a>
                         </p>
                         <g:form name="frmPerfiles" action="savePerfiles_ajax">
                             <ul class="fa-ul">

@@ -128,7 +128,7 @@
             <span>Seleccionar archivos</span>
             <input type="file" name="file" id="file" class="file" multiple accept=".doc, .docx, .pdf, .odt, .xls, .xlsx, .jpeg, .jpg, .png">
         </span>
-        <span class="btn btn-default fileinput-button" id="reset-files" style="position: relative;height: 40px;margin-top: 10px">
+        <span class="btn btn-primary fileinput-button" id="reset-files" style="position: relative;height: 40px;margin-top: 10px">
             <i class="glyphicon glyphicon-refresh"></i>
             <span>Limpiar</span>
         </span>
@@ -161,7 +161,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                         <a href="#" id="adj-tramite" class="btn btn-primary">Adjuntar seleccionados</a>
                     </div>
                 </div><!-- /.modal-content -->

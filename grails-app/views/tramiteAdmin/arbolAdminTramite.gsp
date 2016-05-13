@@ -34,7 +34,7 @@
                 <a href="javascript: history.go(-1)" class="btn btn-primary regresar">
                     <i class="fa fa-arrow-left"></i> Regresar
                 </a>
-                <g:link controller="tramiteExport" action="arbolPdf" id="${tramite?.id}" class="btn btn-default">
+                <g:link controller="tramiteExport" action="arbolPdf" id="${tramite?.id}" class="btn btn-primary">
                     <i class="fa fa-print"></i> Imprimir
                 </g:link>
             </div>
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
@@ -227,7 +227,7 @@
                                         buttons : {
                                             cancelar : {
                                                 label     : '<i class="fa fa-times"></i> Aceptar',
-                                                className : 'btn-default',
+                                                className : 'btn-primary',
                                                 callback  : function () {
                                                 }
                                             }

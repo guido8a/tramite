@@ -10,7 +10,7 @@
 
     <div class="btn-toolbar toolbar">
         <div class="btn-group">
-            <g:link controller="inicio" action="parametros" class="btn btn-default">
+            <g:link controller="inicio" action="parametros" class="btn btn-primary">
                 <i class="fa fa-arrow-left"></i> Regresar
             </g:link>
         </div>
