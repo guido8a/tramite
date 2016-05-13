@@ -147,7 +147,7 @@
             <div class="loading-footer">Espere por favor</div>
         </div>
         <mn:menu title="${g.layoutTitle(default: 'Happy')}"/>
-        <g:if test="${session.departamento.estado == 'B' && session.usuario.esTriangulo()}">
+        <g:if test="${session?.departamento?.estado == 'B' && session?.usuario?.esTriangulo()}">
             <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-danger " style="z-index: 200001; width: 260px; height: 160px;">
                 <div class="titulo-bloqueo">
                     <i class="fa fa-exclamation-circle"></i>
@@ -163,7 +163,7 @@
                 <a href="${g.createLink(controller: 'tramite3', action: 'bandejaEntradaDpto')}" class="" style="margin-top: 30px">Ver trámites no recibidos</a>
             </div>
         </g:if>
-        <g:if test="${session.departamento.estado == 'W' && session.usuario.esTriangulo()}">
+        <g:if test="${session.departamento?.estado == 'W' && session.usuario?.esTriangulo()}">
             <div id="bloqueo-warning" class="bloqueo ui-corner-all alert alert-warning " style="width: 260px; height: 160px;" style="z-index: 200001; ">
                 <div class="titulo-bloqueo">
                     <i class="fa fa-exclamation-circle"></i>
@@ -178,8 +178,8 @@
                 </div>
             </div>
         </g:if>
-        <g:if test="${!session.usuario.esTriangulo()}">
-            <g:if test="${session.usuario.estado == 'B'}">
+        <g:if test="${!session.usuario?.esTriangulo()}">
+            <g:if test="${session.usuario?.estado == 'B'}">
                 <div id="bloqueo-warning" class="bloqueoUsu ui-corner-all alert alert-danger " style="z-index: 200001; width: 240px; height: 190px;">
                     <div class="titulo-bloqueo">
                         <i class="fa fa-exclamation-circle"></i>
@@ -195,7 +195,7 @@
                     <a href="${g.createLink(controller: 'tramite', action: 'bandejaEntrada')}" class="" style="margin-top: 30px">Ver trámites no recibidos</a>
                 </div>
             </g:if>
-            <g:if test="${session.usuario.estado == 'W'}">
+            <g:if test="${session.usuario?.estado == 'W'}">
                 <div id="bloqueo-warning" class="bloqueoUsu  ui-corner-all alert alert-warning " style="width: 240px; height: 150px;" style="z-index: 200001">
                     <div class="titulo-bloqueo">
                         <i class="fa fa-exclamation-circle"></i>
