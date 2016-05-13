@@ -42,13 +42,13 @@
                 </div>
 
                 <div class="archivo">
-                    Le recomendamos descargar y leer el
-                    <a href="${createLink(uri: '/manual del usuario.pdf')}"><img
-                            src="${resource(dir: 'images', file: 'pdf_pq.png')}"/>manual del usuario</a>
+                    Para mator información puede consultar el
+                    <a href="${createLink(uri: '/descriptivo.pdf')}"><img
+                            src="${resource(dir: 'images', file: 'pdf_pq.png')}"/>descriptivo del sistema</a>
                 </div>
 
 
-                <p class="text-info pull-right" style="font-size: 10px;">
+                <p class="text-info pull-right" style="font-size: 10px; margin-top: 20px">
                     Desarrollado por: TEDEIN S.A. Versión ${message(code: 'version', default: '1.1.0x')}
                 </p>
             </div>
