@@ -36,7 +36,7 @@
         </div>
 
         <div class="col-md-2" style="margin-left: 150px">
-            <label>Fecha Completado hasta</label>
+            <label>Aprobado hasta</label>
             <elm:datepicker name="fecha_name" id="fecha" class="datepicker form-control" value=""/>
         </div>
 
