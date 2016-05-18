@@ -6,11 +6,6 @@
 --%>
 
 <script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>
-<script type="text/javascript" src="${resource(dir: 'js/plugins/lzm.context/js', file: 'lzm.context-0.5.js')}"></script>
-<link href="${resource(dir: 'js/plugins/lzm.context/css', file: 'lzm.context-0.5.css')}" rel="stylesheet">
-
-<script type="text/javascript" src="${resource(dir: 'js/plugins/fixed-header-table-1.3', file: 'jquery.fixedheadertable.min.js')}"></script>
-<link href="${resource(dir: 'js/plugins/fixed-header-table-1.3/css', file: 'defaultTheme.css')}" rel="stylesheet">
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -56,11 +51,21 @@
 
 </div>
 
+
 <div style="margin-top: 30px; min-height: 350px" class="vertical-container">
 
     <p class="css-vertical-text">Procesos</p>
-
     <div class="linea"></div>
+    <table class="table table-bordered table-hover table-condensed">
+        <thead>
+        <tr>
+            <td style="width: 300px">Proceso</td>
+            <td style="width: 300px">Cliente</td>
+            <td style="width: 150px">Fecha de aprobación</td>
+        </tr>
+        </thead>
+    </table>
+
 
     <div id="tablaProcesos">
 

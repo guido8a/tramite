@@ -23,7 +23,7 @@
 
     <div class="col-xs-1 negrilla control-label">Cliente </div>
 
-    <div class="col-md-4" style="margin-bottom: 20px">
+    <div class="col-md-3" style="margin-bottom: 20px">
       <g:textField name="cliente_name" id="cliente" value="${pccl?.persona?.apellido + " " + pccl?.persona?.nombre}" readonly="true" class="form-control"/>
     </div>
 
@@ -45,8 +45,8 @@
         </a>
       </g:if>
 
-      %{--</div>--}%
-    </div>
+      </div>
+    %{--</div>--}%
 
   </div>
 </div>

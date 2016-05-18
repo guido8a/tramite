@@ -6,16 +6,16 @@
 --%>
 
 
-<table class="table table-bordered table-condensed table-hover table-striped">
-  <thead>
-  <tr>
-    <td style="width: 300px">Proceso</td>
-    <td style="width: 300px">Cliente</td>
-    <td style="width: 150px">Fecha</td>
-  </tr>
-  </thead>
+%{--<table class="table table-bordered table-hover table-condensed">--}%
+  %{--<thead>--}%
+  %{--<tr>--}%
+    %{--<td style="width: 300px">Proceso</td>--}%
+    %{--<td style="width: 300px">Cliente</td>--}%
+    %{--<td style="width: 150px">Fecha de aprobación</td>--}%
+  %{--</tr>--}%
+%{--</thead>--}%
 
-</table>
+%{--</table>--}%
 
 <div class="row-fluid"  style="width: 99.7%;height: 300px;overflow-y: auto;float: right; margin-top: -20px">
   <div class="span12">
@@ -26,7 +26,13 @@
           <tr data-pro="${p?.proceso?.id}" data-per="${p?.persona?.id}" data-pccl="${p.id}">
             <td style="width: 320px">${p?.proceso?.nombre}</td>
             <td style="width: 320px">${p?.persona?.nombre + " " + p?.persona?.apellido}</td>
-            <td style="width: 150px"></td>
+            <g:if test="${p?.fechaCompletado}">
+              <td style="width: 150px">${p?.fechaCompletado?.format("dd-MM-yyyy")}</td>
+            </g:if>
+            <g:else>
+              <td style="color: #ff0d21">No se encuentra aprobado</td>
+            </g:else>
+
           </tr>
         </g:each>
         </tbody>

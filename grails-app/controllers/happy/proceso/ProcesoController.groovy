@@ -140,17 +140,15 @@ class ProcesoController extends happy.seguridad.Shield {
            }
 
 
-           println("pccl " + pccl)
+//           println("pccl " + pccl)
 
-//           if(params.fecha){
-//               gt('')
-//           }
+           if (params.fecha) {
+               gt('fechaCompletado', params.fecha)
+           }
 
 
        }
 
-
-        def vlpc
 
 
 
