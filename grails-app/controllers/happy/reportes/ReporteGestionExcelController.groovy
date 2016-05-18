@@ -43,10 +43,10 @@ class ReporteGestionExcelController extends Shield {
 
         XSSFRow rowTitle = sheet.createRow((short) 0);
         Cell cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("GAD DE LA PROVINCIA DE PICHINCHA");
+        cellTitle.setCellValue("${happy.utilitarios.Parametros.get(1)?.institucion}");
         rowTitle = sheet.createRow((short) 1);
         cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("SISTEMA DE ADMINISTRACION DOCUMENTAL");
+        cellTitle.setCellValue("Trámites y Procesos");
         rowTitle = sheet.createRow((short) 2);
         cellTitle = rowTitle.createCell((short) 0);
         cellTitle.setCellValue(titulo);

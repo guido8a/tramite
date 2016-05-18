@@ -342,10 +342,10 @@ class DocumentosGeneradosController extends Shield{
 
         XSSFRow rowTitle = sheet.createRow((short) 0);
         Cell cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("GAD DE LA PROVINCIA DE PICHINCHA");
+        cellTitle.setCellValue("${happy.utilitarios.Parametros.get(1)?.institucion}");
         rowTitle = sheet.createRow((short) 1);
         cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("SISTEMA DE ADMINISTRACION DOCUMENTAL");
+        cellTitle.setCellValue("Trámites y Procesos");
         rowTitle = sheet.createRow((short) 2);
         cellTitle = rowTitle.createCell((short) 0);
         cellTitle.setCellValue(title[0]);
@@ -479,10 +479,10 @@ class DocumentosGeneradosController extends Shield{
 
         XSSFRow rowTitle = sheet.createRow((short) 0);
         Cell cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("GAD DE LA PROVINCIA DE PICHINCHA");
+        cellTitle.setCellValue("${happy.utilitarios.Parametros.get(1)?.institucion}");
         rowTitle = sheet.createRow((short) 1);
         cellTitle = rowTitle.createCell((short) 0);
-        cellTitle.setCellValue("SISTEMA DE ADMINISTRACION DOCUMENTAL");
+        cellTitle.setCellValue("Trámites y Procesos");
         rowTitle = sheet.createRow((short) 2);
         cellTitle = rowTitle.createCell((short) 0);
         cellTitle.setCellValue(title[0]);
@@ -612,10 +612,10 @@ class DocumentosGeneradosController extends Shield{
 //cabecera
         XSSFRow rowTitle2 = sheet2.createRow((short) 0);
         Cell cellTitle2 = rowTitle2.createCell((short) 0);
-        cellTitle2.setCellValue("GAD DE LA PROVINCIA DE PICHINCHA");
+        cellTitle2.setCellValue("${happy.utilitarios.Parametros.get(1)?.institucion}");
         rowTitle2 = sheet2.createRow((short) 1);
         cellTitle2 = rowTitle2.createCell((short) 0);
-        cellTitle2.setCellValue("SISTEMA DE ADMINISTRACION DOCUMENTAL");
+        cellTitle2.setCellValue("Trámites y Procesos");
         rowTitle2 = sheet2.createRow((short) 2);
         cellTitle2 = rowTitle2.createCell((short) 0);
         cellTitle2.setCellValue("Reporte de documentos recibidos");

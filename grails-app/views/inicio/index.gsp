@@ -68,9 +68,10 @@
         </h2>
     </div>
 
-    <g:if test="${!(session.usuario.getPuedeDirector() || session.usuario.getPuedeJefe())}">
+    <div class="body ui-corner-all" style="width: 680px;position: relative;margin: auto;margin-top: 40px;height: 280px; ">
 
-        <div class="body ui-corner-all" style="width: 680px;position: relative;margin: auto;margin-top: 40px;height: 280px; ">
+        <g:if test="${!(session.usuario.getPuedeDirector() || session.usuario.getPuedeJefe())}">
+
 
         <g:if test="${session.usuario.esTriangulo()}">
             <a href= "${createLink(controller:'tramite3', action: 'bandejaEntradaDpto')}" style="text-decoration: none">
@@ -108,7 +109,9 @@
         </div>
         </a>
 
-        <a href= "${createLink(controller:'buscarTramite', action: 'busquedaTramite')}" style="text-decoration: none">
+    </g:if>
+
+    <a href= "${createLink(controller:'buscarTramite', action: 'busquedaTramite')}" style="text-decoration: none">
         <div class="ui-corner-all item fuera">
             <div class="ui-corner-all item">
                 <div class="imagen">
@@ -134,26 +137,28 @@
         </div>
         </a>
 
+
+    <g:if test="${session.usuario.getPuedeDirector() || session.usuario.getPuedeJefe() || session.usuario.getPuedeJefe()}">
+        <div>
+        <div class="ui-corner-all item fuera" style="text-align: center">
+            <div class="ui-corner-all item">
+            %{--<g:link controller="retrasadosWeb" action="reporteRetrasadosConsolidadoDir" class="openImagenDir" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']">--}%
+            <g:link controller="departamento" action="arbolReportes" class="openImagenDir"
+                    params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']"  style="text-decoration: none">
+                <div class="imagen">
+                <img src="${resource(dir: 'images', file: 'ingreso_adm.png')}" width="240px" height="165px"/>
+                </div>
+            <div class="texto">
+                    <span class="text-success"><strong>Reportes</strong></span></div>
+            </div>
+            </g:link>
+        </div>
+        </div>
+
+        </div>
+
     </g:if>
 
-    <div style="text-align: center; margin-top: 40px">
-
-        <g:if test="${session.usuario.getPuedeDirector()}">
-            %{--<g:link controller="retrasadosWeb" action="reporteRetrasadosConsolidadoDir" class="openImagenDir" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']">--}%
-            <g:link controller="departamento" action="arbolReportes" class="openImagenDir" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']">
-                <img src="${resource(dir: 'images', file: 'ingreso_adm.png')}" width="240px" height="165px"/>
-            </g:link>
-        </g:if>
-
-        <g:if test="${session.usuario.getPuedeJefe()}">
-            %{--<g:link controller="retrasadosWeb" action="reporteRetrasadosConsolidado" class="openImagen" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1']">--}%
-            <g:link controller="departamento" action="arbolReportes" class="openImagen" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1']">
-                <img src="${resource(dir: 'images', file: 'ingreso_adm.png')}" width="640px" height="330px"/>
-            </g:link>
-        </g:if>
-        <g:if test="${session.usuario.getPuedeJefe()}">
-            <p>Reportes de trámites generados, retrasados y Gestión de trámites</p>
-        </g:if>
     </div>
 
 

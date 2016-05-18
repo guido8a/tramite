@@ -47,7 +47,7 @@ class EnviarService {
         } else {
             mensaje = parametros.first().imagenes
         }
-//        def leyenda = "GAD de la provincia de Pichincha"
+
         def leyenda = "TEDEIN S.A."
         def aux = Parametros.list([sort: "id", order: "asc"])
         if (aux.size() == 1) {
@@ -63,7 +63,7 @@ class EnviarService {
         def path = pathImages + "redactar/" + usuario.id + "/"
 
 //        def membrete = pathImages + "logo_gadpp_reportes.png"
-        def membrete = pathImages + "logo.png"
+        def membrete = pathImages + "logo_reportes.png"
 
         new File(path).mkdirs()
 
@@ -221,8 +221,8 @@ class EnviarService {
             content += "</div>"
 
             content += "<div class='footer'>" +
-                    "Manuel Larrea N13-45 y Antonio Ante • Teléfonos troncal: (593-2) 2527077 • 2549163 • " +
-                    "<strong>www.pichincha.gob.ec</strong>" +
+                    "Calle 1 N17-45 y Calle 2  • Teléfonos troncal: (593-2) 2544477 • 25444553 • " +
+                    "<strong>www.institucion.com.ec</strong>" +
                     "</div>"
         }
         content += "<div class='hoja'>\n"

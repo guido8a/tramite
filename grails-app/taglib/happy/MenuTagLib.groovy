@@ -83,10 +83,9 @@ class MenuTagLib {
         html += '<span class="icon-bar"></span>'
         html += '<span class="icon-bar"></span>'
         html += '</button>'
-        html += '<a class="navbar-brand" href="#" style="margin-top:-10px;font-size: 11px !important;width:310px;color:white;cursor:default">'
+        html += '<a class="navbar-brand" href="' + g.createLink(controller: 'inicio', action: 'index') + '" style="margin-top:-10px;font-size: 11px !important;width:310px;color:white;cursor:default">'
         html += '<img src="'+g.resource(dir: 'images',file: 'logo.png')+'" height="38px" style="float:left" >'
         html += '<div style="width:210px !important;float:left;height:40px;margin-left:5px;font-weight:bold;text-align:center">'
-//        html += 'Gobierno de la Provincia de Pichincha Eficiencia y Solidaridad '
         html += Parametros.get(1).institucion
         html += '</div>'
         html += '</a>'

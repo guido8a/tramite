@@ -45,7 +45,7 @@
 </head>
 
 <body>
-<div style="margin-left:230px;"><h2 class="titl">Sistema de Administración Documental - Usuarios Bloqueados</h2>
+<div style="margin-left:230px;"><h2 class="titl">Trámites y Procesos - Usuarios Bloqueados</h2>
 </div>
 
 <div class="btn-toolbar toolbar" style="margin-top: 20px; ">
