@@ -117,7 +117,8 @@ class ProcesoController extends happy.seguridad.Shield {
         println("params buscar "  + params)
 
         if(params.fecha){
-            params.fecha = new Date().parse("dd-MM-yyyy",params.fecha)
+//            params.fecha = new Date().parse("dd-MM-yyyy",params.fecha)
+            params.fecha = new Date().parse("dd-MM-yyyy HH:mm:ss", params.fecha + " 23:59:59")
         }
 
         def pccl
@@ -143,7 +144,7 @@ class ProcesoController extends happy.seguridad.Shield {
 //           println("pccl " + pccl)
 
            if (params.fecha) {
-               gt('fechaCompletado', params.fecha)
+               lte('fechaCompletado', params.fecha)
            }
 
 

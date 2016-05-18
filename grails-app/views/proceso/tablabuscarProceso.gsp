@@ -27,10 +27,10 @@
             <td style="width: 320px">${p?.proceso?.nombre}</td>
             <td style="width: 320px">${p?.persona?.nombre + " " + p?.persona?.apellido}</td>
             <g:if test="${p?.fechaCompletado}">
-              <td style="width: 150px">${p?.fechaCompletado?.format("dd-MM-yyyy")}</td>
+              <td style="width: 150px">${p?.fechaCompletado?.format("dd-MM-yyyy HH:mm:ss")}</td>
             </g:if>
             <g:else>
-              <td style="color: #ff0d21">No se encuentra aprobado</td>
+              <td>No se encuentra aprobado</td>
             </g:else>
 
           </tr>
