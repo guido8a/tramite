@@ -13,11 +13,14 @@
 
     .item {
         width: 320px;
-        height: 260px;
+        height: 220px;
         float: left;
         margin: 4px;
         font-family: 'open sans condensed';
-        border: none;
+        background-color: #eceeff;
+        border: 1px;
+        border-color: #5c6e80;
+        border-style: solid;
     }
 
     .imagen {
@@ -41,7 +44,7 @@
         margin-left: 15px;
         margin-top: 20px;
         /*background-color: #317fbf; */
-        background-color: rgba(200, 200, 190, 0.9);
+        background-color: rgba(114, 131, 147, 0.9);
         border: none;
     }
 
@@ -60,8 +63,8 @@
     <g:set var="inst" value="${happy.utilitarios.Parametros.get(1)}"></g:set>
 
     <div style="text-align: center;"><h2 class="titl">
-            <p class="text-info">${inst.institucion}</p>
-            <p class="text-info">Sistema de Administración de Procesos y Trámites</p>
+            <p class="text-warning">${inst.institucion}</p>
+            <p class="text-warning">Sistema de Administración de Procesos y Trámites</p>
         </h2>
     </div>
 
@@ -75,13 +78,13 @@
         <g:else>
             <a href= "${createLink(controller:'tramite', action: 'bandejaEntrada')}" style="text-decoration: none">
         </g:else>
-        <div class="ui-corner-all  item fuera">
-            <div class="ui-corner-all ui-widget-content item">
+        <div class="ui-corner-all item fuera">
+            <div class="ui-corner-all item">
                 <div class="imagen">
                     <img src="${resource(dir: 'images', file: 'entrada.png')}" width="100%" height="100%"/>
                 </div>
 
-                <div class="texto"><span class="text-info"><strong>Entrada</strong></span>: trámites y procesos que le han enviado y que se hallan pendientes</div>
+                <div class="texto"><span class="text-info"><strong>Entrada</strong></span> de trámites y procesos</div>
             </div>
         </div>
 
@@ -95,12 +98,38 @@
             <a href= "${createLink(controller:'tramite2', action: 'bandejaSalida')}" style="text-decoration: none">
         </g:else>
         <div class="ui-corner-all item fuera">
-            <div class="ui-corner-all ui-widget-content item">
+            <div class="ui-corner-all item">
                 <div class="imagen">
                     <img src="${resource(dir: 'images', file: 'salida.png')}" width="100%" height="100%"/>
                 </div>
 
-                <div class="texto"><span class="text-success"><strong>Salida</strong></span>: Trámites y procesos por enviar o que aún no han sido recibidos</div>
+                <div class="texto text-success"><strong>Salida</strong> de trámites y procesos</div>
+            </div>
+        </div>
+        </a>
+
+        <a href= "${createLink(controller:'buscarTramite', action: 'busquedaTramite')}" style="text-decoration: none">
+        <div class="ui-corner-all item fuera">
+            <div class="ui-corner-all item">
+                <div class="imagen">
+                    <img src="${resource(dir: 'images', file: 'buscar tramites.png')}" width="100%" height="100%"/>
+                </div>
+
+                <div class="texto">
+                    <span class="text-success"><strong>Buscar trámites</strong></span></div>
+            </div>
+        </div>
+        </a>
+
+        <a href= "${createLink(controller:'proceso', action: 'buscadorProceso')}" style="text-decoration: none">
+        <div class="ui-corner-all item fuera">
+            <div class="ui-corner-all item">
+                <div class="imagen">
+                    <img src="${resource(dir: 'images', file: 'buscar procesos.png')}" width="100%" height="100%"/>
+                </div>
+
+                <div class="texto">
+                    <span class="text-success"><strong>Buscar procesos</strong></span></div>
             </div>
         </div>
         </a>
