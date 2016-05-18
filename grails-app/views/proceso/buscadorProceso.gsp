@@ -6,6 +6,7 @@
 --%>
 
 <script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>
+<link href="${resource(dir: '/css/custom', file: 'tablas.css')}" rel="stylesheet">
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -60,9 +61,9 @@
     <table class="table table-bordered table-hover table-condensed">
         <thead>
         <tr>
-            <td style="width: 300px">Proceso</td>
-            <td style="width: 300px">Cliente</td>
-            <td style="width: 150px">Fecha de aprobación</td>
+            <th style="width: 300px">Proceso</th>
+            <th style="width: 300px">Cliente</th>
+            <th style="width: 150px">Fecha de aprobación</th>
         </tr>
         </thead>
     </table>
