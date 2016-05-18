@@ -102,6 +102,13 @@
     }
 
 
+    $(".btnBorrar").click(function () {
+        $("#proceso").val("");
+        $("#cliente").val("");
+        $("#fecha").val('');
+    });
+
+
 
 
 </script>
