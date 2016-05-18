@@ -368,13 +368,10 @@ class DetalleProcesoController extends happy.seguridad.Shield {
 
     def tablaInfo_ajax (){
 
-        println("params tabla info" + params)
-
+//        println("params tabla info" + params)
         def proceso = Proceso.get(params.id)
         def dtpc = DetalleProceso.findAllByProceso(proceso, [sort: 'dato.fase.descripcion'])
-
-        println("dtpc"   +  dtpc)
-
+//        println("dtpc"   +  dtpc)
         return [detalle: dtpc]
 
     }

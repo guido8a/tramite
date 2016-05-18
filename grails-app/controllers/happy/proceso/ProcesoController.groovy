@@ -150,6 +150,10 @@ class ProcesoController extends happy.seguridad.Shield {
        }
 
 
+        def vlpc
+
+
+
         return [pccl: pccl]
     }
 

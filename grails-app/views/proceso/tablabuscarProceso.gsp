@@ -47,7 +47,7 @@
           header : true
         },
         editar   : {
-          label  : "Editar",
+          label  : "Asignar Valores",
           icon   : "fa fa-pencil",
           action : function ($element) {
             var idT = $element.data("pccl");
@@ -58,7 +58,7 @@
           label  : "Definir el formulario",
           icon   : "fa fa-table",
           action : function ($element) {
-            var id = $element.data("pro")
+            var id = $element.data("pro");
             location.href="${createLink(controller: 'detalleProceso', action: 'formulario')}/" + id
           }
         }

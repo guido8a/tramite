@@ -8,6 +8,7 @@ class ProcesoPersona {
     Proceso proceso
     Persona persona
     String estado
+    Date fechaCompletado
 
 
     static mapping = {
@@ -20,6 +21,7 @@ class ProcesoPersona {
             proceso column: 'prcs__id'
             persona column: 'prsn__id'
             estado column: 'pccletdo'
+            fechaCompletado column: 'pcclfcha'
         }
     }
 

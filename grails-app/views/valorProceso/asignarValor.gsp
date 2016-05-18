@@ -35,11 +35,17 @@
     </div>
 
     <div>
+      %{--<div class="btn-group">--}%
+        <a href="#" id="btnImprimir" class="btn btn-primary" title="Imprimir formulario" style="float: right">
+          <i class="fa fa-print"> Imprimir</i>
+        </a>
+      <g:if test="${!pccl?.fechaCompletado}">
+        <a href="#" id="btnAprobar" class="btn btn-success" title="Aprobar formulario" style="float: right">
+          <i class="fa fa-check-circle-o"> Aprobar</i>
+        </a>
+      </g:if>
 
-      <a href="#" id="btnImprimir" class="btn btn-primary" title="Imprimir formulario" style="float: right">
-        <i class="fa fa-print"> Imprimir</i>
-      </a>
-
+      %{--</div>--}%
     </div>
 
   </div>
@@ -56,13 +62,6 @@
 
 
     <div class="row">
-
-
-    %{--<g:each in="${datos.dato.fase}" var="s">--}%
-
-    %{----}%
-
-    %{--</g:each>--}%
 
 
       <g:each in="${datos}" var="d" status="l">
@@ -200,19 +199,6 @@
     });
   });
 
-
-
-
-  $("#btnImprimir").click(function () {
-    var $form = $("#frmValor");
-    if($form.valid()){
-      location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
-    }else{
-      return false
-    }
-  });
-
-
   $(".btnG").click(function () {
 
     var $form = $("#frmValor");
@@ -245,6 +231,46 @@
       return false
     }
   });
+
+
+  $("#btnImprimir").click(function () {
+    var $form = $("#frmValor");
+    if($form.valid()){
+      location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
+    }else{
+      return false
+    }
+  });
+
+
+  $("#btnAprobar").click(function (){
+    bootbox.confirm("<i class='fa fa-exclamation-triangle fa-3x text-danger text-shadow'></i> Está seguro de aprobar este formulario?", function (result) {
+      if(result){
+
+        $.ajax({
+          type: 'POST',
+          url: '${createLink(controller: 'valorProceso', action: 'aprobar_ajax')}',
+          data:{
+            id: '${pccl?.id}'
+          },
+          success: function (msg) {
+            if(msg == 'ok'){
+              log("Formulario aprobado correctamente","success");
+              setTimeout(function () {
+                location.reload(true)
+              }, 1500);
+            }else{
+              log("Error al aprobar el formulario","error")
+            }
+          }
+        })
+
+      }
+    });
+  });
+
+
+
 
 
   var validator = $("#frmValor").validate({

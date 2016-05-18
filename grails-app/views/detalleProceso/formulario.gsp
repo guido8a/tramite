@@ -66,7 +66,7 @@
 
             <div class="col-md-9 negrilla control-label">Datos que contienen información del Proceso</div>
             <div class="col-md-12" style="height: 200px;">
-                <table class="table table-bordered table-hover table-condensed" style="margin-top: 5px">
+                <table class="table table-bordered table-hover table-condensed" style="margin-top: 5px; border: solid">
                     <thead>
                     <tr>
                         <th style="width:20%;">Fase</th>
@@ -78,7 +78,7 @@
 
                 <div class="row-fluid"  style="width: 99.7%;height: 180px;overflow-y: auto;float: right; margin-top: -20px">
                     <div class="span12">
-                        <table  class="table table-bordered table-hover table-condensed">
+                        <table  class="table table-bordered table-hover table-condensed" style="border: solid">
                             <tbody id="tablaInfo">
 
                             </tbody>

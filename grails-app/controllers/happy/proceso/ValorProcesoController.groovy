@@ -333,11 +333,20 @@ class ValorProcesoController extends happy.seguridad.Shield {
 
             }
         }
-
-
     }
 
 
+    def aprobar_ajax () {
+        def pccl = ProcesoPersona.get(params.id)
+        pccl.fechaCompletado = new Date()
+        try{
+            pccl.save(flush: true)
+            render "ok"
+        }catch (e){
+            render "no"
+            println("error al aprobar el formulario vlpc")
+        }
+    }
 
 
 }
