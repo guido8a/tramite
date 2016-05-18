@@ -6,8 +6,8 @@
 --%>
 <g:each in="${detalle}" var="d">
     <tr>
-        <td style="width: 21%">${d?.dato?.fase?.descripcion}</td>
-        <td style="width: 40%;">${d?.dato?.descripcion}</td>
-        <td style="width: 39%">${d?.etiqueta}</td>
+        <td style="width: 25%">${d?.dato?.fase?.descripcion}</td>
+        <td style="width: 35%;">${d?.dato?.descripcion}</td>
+        <td style="width: 37%">${d?.etiqueta}</td>
     </tr>
 </g:each>

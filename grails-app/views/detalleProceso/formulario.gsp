@@ -62,45 +62,39 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-
-            <div class="col-md-9 negrilla control-label">Datos que contienen información del Proceso</div>
+        <div class="col-md-6" style="margin-top: -30px; margin-left: -20px">
+            <div class="col-md-9 negrilla control-label">Datos que se Registran para el Proceso</div>
             <div class="col-md-12" style="height: 200px;">
-                <table class="table table-bordered table-hover table-condensed" style="margin-top: 5px; border: solid">
+                <table class="table table-bordered table-hover table-condensed" >
                     <thead>
                     <tr>
-                        <th style="width:20%;">Fase</th>
-                        <th style="width:40%;">Dato</th>
-                        <th style="width:40%;">Etiqueta</th>
+                        <th style="width:25%;">Fase</th>
+                        <th style="width:35%;">Dato</th>
+                        <th style="width:37%;">Etiqueta</th>
+                        <th style="width:3%;"></th>
                     </tr>
                     </thead>
                  </table>
 
                 <div class="row-fluid"  style="width: 99.7%;height: 180px;overflow-y: auto;float: right; margin-top: -20px">
-                    <div class="span12">
-                        <table  class="table table-bordered table-hover table-condensed" style="border: solid">
+                    <div class="span12" style="border: solid; border-width: thin">
+                        <table  class="table table-bordered table-hover table-condensed">
                             <tbody id="tablaInfo">
 
                             </tbody>
                         </table>
                 </div>
                 </div>
-
-
             </div>
-
         </div>
-
-
     </div>
-
 
     </div>
 </g:form>
 
 <g:if test="${proceso?.id}">
     <div style="margin-top: 20px;" class="contenedor-vertical">
-        <p class="css-texto-vertical" style="margin-top: 0px;">Datos</p>
+        <p class="css-vertical-text" style="margin-top: 0px;">Datos</p>
 
         <div class="linea"></div>
 

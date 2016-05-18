@@ -1,42 +1,18 @@
 .css-vertical-text {
     position          : absolute;
     left              : 5px;
-    bottom            : 5px;
-    color             : #1E2832;
-    border            : 0px solid red;
-    -webkit-transform : rotate(270deg);
-    -moz-transform    : rotate(270deg);
-    -o-transform      : rotate(270deg);
-    white-space       : nowrap;
-    display           : block;
-    width             : 20px;
-    height            : 50px;
-    font-size         : 25px;
-    font-family       : 'Tulpen One', cursive;
-    font-weight       : bold;
-    font-size         : 35px;
-    /*text-shadow       : -2px 2px 1px rgba(0, 0, 0, 0.25);*/
-
-    /*text-shadow: 0px 0px 1px #333;*/
-}
-
-.css-texto-vertical {
-    position          : absolute;
-    left              : 5px;
     bottom            : -15px;
-    color             : #1E2832;
-    border            : 0px solid red;
+    color             : #5a6b7d;
     -webkit-transform : rotate(270deg);
     -moz-transform    : rotate(270deg);
     -o-transform      : rotate(270deg);
     white-space       : nowrap;
     display           : block;
     width             : 20px;
-    height            : 50px;
-    font-size         : 25px;
+    height            : 60px;
+    font-size         : 40px;
     font-family       : 'Tulpen One', cursive;
-    font-weight       : bold;
-    font-size         : 35px;
+    text-shadow       : -2px 2px 1px rgba(0, 0, 0, 0.40);
 }
 
 .vertical-container {
@@ -68,12 +44,6 @@
 
     /*text-shadow: 0px 0px 1px #333;*/
 }
-
-/*.negrilla-puntos:after{*/
-/*content: ":";*/
-/*position: absolute;*/
-/*right: 0;*/
-/*}*/
 
 .titulo-horizontal {
     padding-bottom : 10px;
@@ -107,7 +77,6 @@
     font-size   : 14px;
     /*text-shadow : -2px 2px 1px rgba(0, 0, 0, 0.25);*/
     line-height : 14px;
-
 }
 
 .label-shared {
@@ -158,12 +127,6 @@
     background-position : 0 -3px;
 }
 
-/*a.btn-azul:hover {*/
-/*background  : #327BbA;*/
-/*color       : #ffffff;*/
-/*border      : 1px solid #327BbA;*/
-/*text-shadow : -2px 2px 1px rgba(0, 0, 0, 0.25);*/
-/*}*/
 .modalTabelGray {
     position         : absolute;
     width            : 100%;
