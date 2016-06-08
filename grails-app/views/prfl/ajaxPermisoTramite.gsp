@@ -5,15 +5,15 @@
     <g:if test="${datos?.size() > 0}">
         <div class="ui-corner-all" style="height: 500px; overflow:auto; margin-bottom: 5px; margin-left: -20px; background-color: #efeff8;
         border-style: solid; border-color: #AAA; border-width: 1px; ">
-            <table border="0" cellpadding="0" width="900px">
+            <table border="0" width="900px">
                 <thead style="color: #101010; background-color: #69b0d3">
                     <tr>
-                        <th style="padding:4px;" width="60px">Activado</th>
+                        <th style="padding:6px;" width="60px">Activado</th>
                         <th width="150px" style="text-align: center">Permiso</th>
                         <th width="690px" style="text-align: center">Descripción</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="padding: 2px">
                 %{--<hr>Hola ${datos}</hr>--}%
                     <g:each in="${datos}" status="i" var="d">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}" style="background: ${(d[3]) ? '#7cf' : ''}">
@@ -192,6 +192,7 @@
                     success : function (msg) {
 //                        $("#ajx").html(msg)
                         var parts = msg.split("_");
+                        $("#perfil").change();
                         log(parts[1], parts[0] == "NO" ? "error" : "success");
                     }
                 });

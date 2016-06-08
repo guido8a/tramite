@@ -26,7 +26,7 @@
                 </g:link>
             </div>
             <div class="btn-group">
-                <g:link controller="prfl" action="permisos" id="1" class="aPrfl btn btn-primary">
+                <g:link controller="prfl" action="permisos" id="1" class="aPrfl btn btn-warning">
                     Gestionar Permisos de Trámites
                 </g:link>
             </div>

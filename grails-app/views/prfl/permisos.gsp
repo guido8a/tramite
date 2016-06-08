@@ -30,38 +30,18 @@
 </div>
 
 <div id="tipo" class="alert ">
-%{--
-            Selecione el tipo de acción
-            <div class="btn-group" data-toggle="buttons">
-                <g:each var="tp" in="${happy.seguridad.Tpac.list()}" status="i">
-                    <label class="btn btn-primary tipo ${(tp.id == 1) ? 'active' : ''}">
-                        <input type="radio" id="tpac${i}" name="tpac" value="${tp.id}" ${(tp.id == 1) ? 'checked=' : ''}> ${tp.tipo}
-                    </label>
-                </g:each>
-            </div>
-
-            <span style="font-size: 10pt; color: black; margin-left: 160px;">Seleccione un Perfil
-            <g:select optionKey="id" from="${happy.seguridad.Prfl.list()}" name="perfil" value="${prflInstace?.id}" style="width: 180px;"/>
-            </span>
-        </div>
---}%
 
 <div class="" id="parm">
     <g:form action="registro" method="post">
         <input type="hidden" id="prfl__id" name="id" value="${prflInstance?.id}"/>
 
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary modulo">
-                <input type="radio" id="check${i}" name="modulo" value="1000"
-                       nombre="Permisos"> Gestionar los permisos concedidos sobre los trámites
-            </label>
+        <div class="alert alert-info modulo" style="text-align: center; width: 900px;">
+            <strong>Permisos:</strong>
+            Gestionar los permisos concedidos sobre los Trámites y Procesos
         </div>
+
     </g:form>
     <div id="ajx" style="width:900px; padding-left: 20px;"></div>
-
-    <div id="ajx_prfl" style="width:520px;"></div>
-
-    <div id="ajx_menu" style="width:520px;"></div>
 
 </div>
 
