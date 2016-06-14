@@ -255,31 +255,15 @@ class BuscarTramiteController extends happy.seguridad.Shield {
         def msg = ""
         if (tramitesFiltrados.size() > 20) {
             tramitesFiltrados = tramitesFiltrados[0..19]
-            msg = "<div class='alert alert-danger'> <i class='fa fa-warning fa-2x pull-left'></i> Su búsqueda ha generado más de 20 resultados. Por favor utilice los filtros.</div>"
+            msg = "<div class='alert-danger' style='margin-top:-20px; diplay:block; height:25px;margin-bottom: 20px;'> " +
+                    "<i class='fa fa-warning fa-2x pull-left'></i> Su búsqueda ha generado más de 20 resultados. " +
+                    "Por favor utilice los filtros.</div>"
         }
 
 //        def fin = new Date()
 //        println "${TimeCategory.minus(fin, inicio)}"
 
         return [tramites: tramitesFiltrados, persona: persona, msg: msg]
-    }
-
-    def resTramites(Tramite tramite) {
-
-        def sql = ""
-
-        def result = []
-        def idsUnicos = []
-
-        def cn = dbConnectionService.getConnection();
-
-        sql = "select * from tramites(" + tramite.id + ") "
-        cn.eachRow(sql) { r ->
-            result.add(r.toRowResult())
-        }
-
-        return result
-
     }
 
     def busquedaEnviados() {

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gato
-  Date: 04/05/16
-  Time: 03:40 PM
---%>
-
 <script type="text/javascript" src="${resource(dir: 'js', file: 'ui.js')}"></script>
 <link href="${resource(dir: '/css/custom', file: 'tablas.css')}" rel="stylesheet">
 
@@ -54,7 +47,7 @@
 </div>
 
 
-<div style="margin-top: 30px; min-height: 350px" class="vertical-container">
+<div style="margin-top: 30px; min-height: 550px" class="vertical-container">
 
     <p class="css-vertical-text">Procesos</p>
     <div class="linea"></div>
