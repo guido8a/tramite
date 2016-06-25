@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: luz
-  Date: 3/17/14
-  Time: 3:13 PM
---%>
-
 <%@ page import="happy.tramites.Departamento" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -48,13 +41,6 @@
 
     <!-- botones -->
     <div class="btn-toolbar toolbar">
-        %{--
-                        <div class="btn-group">
-                            <g:link controller="inicio" action="parametros" class="btn btn-primary">
-                                <i class="fa fa-arrow-left"></i> Regresar
-                            </g:link>
-                        </div>
-        --}%
         <div class="btn-group" style="margin-top: 4px;">
             <p style="font-size: 18px; font-weight: bold; margin-right: 40px;">Reportes del Sistema</p>
         </div>
@@ -177,20 +163,7 @@
         var items = {};
 
         if (nodeType != "root" && !nodeType.match("inactivo") && !nodeType.match("Inactivo")) {
-            %{--console.log("${session.usuario.puedeJefe}", "${session.usuario.puedeDirector}", "${session.usuario.departamentoId}");--}%
-            %{--if (("${session.usuario.puedeJefe}" == "true" && "${session.usuario.departamentoId}" == nodeId.toString()) ||--}%
-            %{--"${session.usuario.puedeDirector}" == "true") {--}%
             items.retrasadosWeb = {
-                %{--label  : "Trámites retrasados",--}%
-                %{--icon   : " fa fa-globe",--}%
-                %{--action : function (e, e2) {--}%
-                %{--if (nodeType.match("padre") || nodeType.match("hijo")) {--}%
-                %{--location.href = "${g.createLink(controller: 'retrasadosWeb',action: 'reporteRetrasadosConsolidado')}?dpto=" + nodeId;--}%
-                %{--} else {--}%
-                %{--location.href = "${g.createLink(controller: 'retrasadosWeb',action: 'reporteRetrasadosConsolidado')}?prsn=" + nodeId;--}%
-                %{--}--}%
-                %{--}--}%
-
                 label   : "Documentos retrasados",
                 icon    : "fa fa-globe",
                 submenu : {
@@ -232,6 +205,7 @@
                         label   : "PDF",
                         icon    : "fa fa-file-pdf-o",
                         action : function () {
+                            $("#modalFecha_title").html("Periodo:");
                             $('#modalFechas').modal('show');
                             $("#btnPrint").unbind("click").click(function () {
                                 if ($("#formFechas").valid()) {
@@ -246,51 +220,12 @@
                                 }
                             });
                         }
-
-
-
-
-                        %{--submenu : {--}%
-                        %{--detallado   : {--}%
-                        %{--label  : "Detallado",--}%
-                        %{--icon   : "fa fa-files-o",--}%
-                        %{--action : function () {--}%
-                        %{--$('#modalFechas').modal('show');--}%
-                        %{--$("#btnPrint").unbind("click").click(function () {--}%
-                        %{--if ($("#formFechas").valid()) {--}%
-                        %{--if (nodeType.match("padre") || nodeType.match("hijo")) {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteDetalladoPdf')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=dpto";--}%
-                        %{--} else {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteDetalladoPdf')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=prsn&dpto=" + parentId;--}%
-                        %{--}--}%
-                        %{--$('#modalFechas').modal('hide');--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--},--}%
-                        %{--noDetallado : {--}%
-                        %{--label  : "Resumen",--}%
-                        %{--icon   : "fa fa-files-o",--}%
-                        %{--action : function () {--}%
-                        %{--$('#modalFechas').modal('show');--}%
-                        %{--$("#btnPrint").unbind("click").click(function () {--}%
-                        %{--if ($("#formFechas").valid()) {--}%
-                        %{--if (nodeType.match("padre") || nodeType.match("hijo")) {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteGeneralPdf')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=dpto";--}%
-                        %{--} else {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteGeneralPdf')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=prsn&dpto=" + parentId;--}%
-                        %{--}--}%
-                        %{--$('#modalFechas').modal('hide');--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--}--}%
-                        %{--}--}%
                     },
                     xls : {
                         label   : "EXCEL",
                         icon   : "fa fa-file-excel-o",
                         action : function () {
+                                    $("#modalFecha_title").html("Periodo:");
                                     $('#modalFechas').modal('show');
                                     $("#btnPrint").unbind("click").click(function () {
                                         if ($("#formFechas").valid()) {
@@ -305,42 +240,6 @@
                                         }
                                     });
                         }
-                        %{--submenu : {--}%
-                        %{--detallado   : {--}%
-                        %{--label  : "Detallado",--}%
-                        %{--icon   : "fa fa-files-o",--}%
-                        %{--action : function () {--}%
-                        %{--$('#modalFechas').modal('show');--}%
-                        %{--$("#btnPrint").unbind("click").click(function () {--}%
-                        %{--if ($("#formFechas").valid()) {--}%
-                        %{--if (nodeType.match("padre") || nodeType.match("hijo")) {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteDetalladoXlsx')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=dpto";--}%
-                        %{--} else {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteDetalladoXlsx')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=prsn&dpto=" + parentId;--}%
-                        %{--}--}%
-                        %{--$('#modalFechas').modal('hide');--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--},--}%
-                        %{--noDetallado : {--}%
-                        %{--label  : "Resumen",--}%
-                        %{--icon   : "fa fa-files-o",--}%
-                        %{--action : function () {--}%
-                        %{--$('#modalFechas').modal('show');--}%
-                        %{--$("#btnPrint").unbind("click").click(function () {--}%
-                        %{--if ($("#formFechas").valid()) {--}%
-                        %{--if (nodeType.match("padre") || nodeType.match("hijo")) {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteGeneralXlsx')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=dpto";--}%
-                        %{--} else {--}%
-                        %{--location.href = "${g.createLink(controller: 'documentosGenerados',action: 'reporteGeneralXlsx')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val() + "&tipo=prsn&dpto=" + parentId;--}%
-                        %{--}--}%
-                        %{--$('#modalFechas').modal('hide');--}%
-                        %{--}--}%
-                        %{--});--}%
-                        %{--}--}%
-                        %{--}--}%
-                        %{--}--}%
                     }
                 }
             };
@@ -355,6 +254,7 @@
                             label  : "PDF",
                             icon   : "fa fa-file-pdf-o",
                             action : function () {
+                                $("#modalFecha_title").html("Periodo:");
                                 $('#modalFechas').modal('show');
                                 $("#btnPrint").unbind("click").click(function () {
                                     if ($("#formFechas").valid()) {
@@ -368,6 +268,7 @@
                             label  : "Excel",
                             icon   : "fa fa-file-excel-o",
                             action : function () {
+                                $("#modalFecha_title").html("Periodo:");
                                 $('#modalFechas').modal('show');
                                 $("#btnPrint").unbind("click").click(function () {
                                     if ($("#formFechas").valid()) {
@@ -380,6 +281,86 @@
                     }
                 };
             }
+
+            if (!nodeType.match("usuario") && !nodeType.match("jefe") && !nodeType.match("director")) {
+                items.tiempos = {
+                    label: "Tiempos de respuesta",
+                    icon: "fa fa-file-text",
+                    submenu: {
+                        pdf: {
+                            label: "PDF",
+                            icon: "fa fa-file-pdf-o",
+                            action: function () {
+                                $("#modalFecha_title").html("Trámites enviados en el periodo:");
+                                $('#modalFechas').modal('show');
+                                $("#btnPrint").unbind("click").click(function () {
+                                    if ($("#formFechas").valid()) {
+                                        location.href = "${g.createLink(controller: 'reporteGestionExcel',action: 'reporteTiempoRespuestaDepPdf')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val();
+                                        $('#modalFechas').modal('hide');
+                                    }
+                                });
+                            }
+                        },
+                        xls: {
+                            label: "Excel",
+                            icon: "fa fa-file-excel-o",
+                            action: function () {
+                                $("#modalFecha_title").html("Trámites enviados en el periodo:");
+                                $('#modalFechas').modal('show');
+                                $("#btnPrint").unbind("click").click(function () {
+                                    if ($("#formFechas").valid()) {
+                                        location.href = "${g.createLink(controller: 'reporteGestionExcel',action: 'reporteTiempoRespuesta')}/" + nodeId + "?desde=" + $("#desde_input").val() + "&hasta=" + $("#hasta_input").val();
+                                        $('#modalFechas').modal('hide');
+                                    }
+                                });
+                            }
+                        }
+                    }
+                };
+            }
+
+
+            if (nodeType.match("usuario") || nodeType.match("jefe") || nodeType.match("director")) {
+                items.tiempos = {
+                    label: "Tiempos de respuesta",
+                    icon: "fa fa-file-text",
+                    submenu: {
+                        pdf: {
+                            label: "PDF",
+                            icon: "fa fa-file-pdf-o",
+                            action: function () {
+                                $("#modalFecha_title").html("Trámites enviados en el periodo:");
+                                $('#modalFechas').modal('show');
+                                $("#btnPrint").unbind("click").click(function () {
+                                    if ($("#formFechas").valid()) {
+                                        location.href = "${g.createLink(controller: 'reporteGestionExcel',action:
+                                          'reporteTiempoRespuestaUsuarioPdf')}/" + nodeId + "?desde=" +
+                                                $("#desde_input").val() + "&hasta=" + $("#hasta_input").val();
+                                        $('#modalFechas').modal('hide');
+                                    }
+                                });
+                            }
+                        },
+                        xls: {
+                            label: "Excel",
+                            icon: "fa fa-file-excel-o",
+                            action: function () {
+                                $("#modalFecha_title").html("Trámites enviados en el periodo:");
+                                $('#modalFechas').modal('show');
+                                $("#btnPrint").unbind("click").click(function () {
+                                    if ($("#formFechas").valid()) {
+                                        location.href = "${g.createLink(controller: 'reporteGestionExcel',action:
+                                        'reporteTiempoRespuestaUsuario')}/" + nodeId + "?desde=" +
+                                                $("#desde_input").val() + "&hasta=" + $("#hasta_input").val();
+                                        $('#modalFechas').modal('hide');
+                                    }
+                                });
+                            }
+                        }
+                    }
+                };
+            }
+
         }
 
         return items;
