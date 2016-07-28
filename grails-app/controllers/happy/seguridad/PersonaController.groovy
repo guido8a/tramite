@@ -674,16 +674,16 @@ class PersonaController extends happy.seguridad.Shield {
             }
         }
 
-        println "ADD " + arrAdd
-        println "REMOVE " + arrRemove
+        println "Perfiles a ñadir " + arrAdd
+        println "Perfiles a quitar " + arrRemove
 
         arrRemove.each { pid ->
             def perf = Prfl.get(pid)
-            def sesn = Sesn.findByUsuarioAndPerfil(usu, perf)
+            def sesn = Sesn.findAllByUsuarioAndPerfilAndFechaFinIsNull(usu, perf)  // puede haber el mismo perfil activo y desactivo
             try {
-                sesn.fechaFin = new Date()
-//                sesn.fechaInicio = null
-//                sesn.delete(flush: true)
+                sesn.each { sn ->
+                    sn.fechaFin = new Date()
+                }
             } catch (e) {
                 errores += "<li>No se puedo remover el perfil ${perf.nombre}</li>"
             }

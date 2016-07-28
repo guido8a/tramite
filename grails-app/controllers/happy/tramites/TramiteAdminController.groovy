@@ -1548,16 +1548,15 @@ class TramiteAdminController /*extends Shield*/ {
                     }
                 }
             }
+            /*** reactiva trámite si no está archivado ni anulado ***/
             if (pdt.tramite.aQuienContesta) {
-                if (pdt.tramite.aQuienContesta.fechaRecepcion) {
-                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E004")
+                if (pdt.tramite.aQuienContesta.fechaRecepcion && !pdt.tramite.aQuienContesta.fechaArchivo && !pdt.tramite.aQuienContesta.fechaAnulacion) {
+                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E004")  // recibido
                 } else if (pdt.tramite.aQuienContesta.fechaEnvio) {
-                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E003")
+                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E003")  // enviado
                 } else {
-                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E001")
+                    pdt.tramite.aQuienContesta.estado = EstadoTramite.findByCodigo("E001")  // por enviar
                 }
-                pdt.tramite.aQuienContesta.fechaAnulacion = null
-                pdt.tramite.aQuienContesta.fechaArchivo = null
                 def nuevaObs = "Reactivado por anulación de: ${persDocTram.tramite.codigo}"
                 def observacionOriginal = pdt.tramite.aQuienContesta.observaciones
                 def accion = "Reactivado por anulación de trámite derivado"
