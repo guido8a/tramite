@@ -112,27 +112,9 @@ class BloqueadosController extends Shield {
         tablaTramites.setWidthPercentage(100);
         def parH = new Paragraph("Departamento", times10bold)
         def cell = new PdfPCell(parH);
-//        cell.setBorderColor(Color.WHITE)
-//        tablaTramites.addCell(cell);
-//        cell = new PdfPCell(new Paragraph("Usuario", times10bold));
-//        cell.setBorderColor(Color.WHITE)
-//        tablaTramites.addCell(cell);
-//        cell = new PdfPCell(new Paragraph("Trámite", times10bold));
-//        cell.setBorderColor(Color.WHITE)
-//        tablaTramites.addCell(cell);
         def par
         deps.each { d ->
             if (d.estado == "B" && d.codigo != 'X-EXT' && d.remoto == 0) {
-
-//                par = new Paragraph("" + d, times8normal)
-//                cell = new PdfPCell(par);
-//                cell.setBorderColor(Color.WHITE)
-//                tablaTramites.addCell(cell);
-//                par = new Paragraph("(Oficina)", times8normal)
-//                cell = new PdfPCell(par);
-//                cell.setBorderColor(Color.WHITE)
-//                tablaTramites.addCell(cell);
-
                 par = new Paragraph("" + d + " - (Oficina)", times8bold)
                 cell = new PdfPCell(par);
                 cell.setBorderColor(Color.WHITE)
@@ -148,57 +130,30 @@ class BloqueadosController extends Shield {
                 def sqlDpto = ""
                 def resultDpto = []
                 def cadenaTramites = ''
-                sqlDpto = "select * from  entrada_dpto(" + triangulos.first() + ") where trmtfcbq < now() and trmtfcrc is NULL"
-                def ind = 0
-                cnDpto.eachRow(sqlDpto) { row ->
 
-                    if(ind == 0){
-                        cadenaTramites += (row?.trmtcdgo + " (" + row?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
-                    }else{
-                        cadenaTramites += (' - ' +row?.trmtcdgo + " (" + row?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
+                if (triangulos) {
+                    sqlDpto = "select * from  entrada_dpto(" + triangulos.first() + ") where trmtfcbq < now() and trmtfcrc is NULL"
+                    def ind = 0
+                    cnDpto.eachRow(sqlDpto) { row ->
+
+                        if (ind == 0) {
+                            cadenaTramites += (row?.trmtcdgo + " (" + row?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
+                        } else {
+                            cadenaTramites += (' - ' + row?.trmtcdgo + " (" + row?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
+                        }
+                        ind++
                     }
-
-
-//                           resultDpto.add(dp.toRowResult())
-//                    if (ind == 0) {
-//                        par = new Paragraph(row?.trmtcdgo, times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                    } else {
-//                        par = new Paragraph('', times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                        par = new Paragraph('', times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                        par = new Paragraph(row?.trmtcdgo, times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                    }
-                    ind++
                 }
 
-                        par = new Paragraph(cadenaTramites, times8normal)
-                        cell = new PdfPCell(par);
-                        cell.setBorderColor(Color.WHITE)
-                        cell.setPaddingLeft(15)
-                        tablaTramites.addCell(cell);
+                par = new Paragraph(cadenaTramites, times8normal)
+                cell = new PdfPCell(par);
+                cell.setBorderColor(Color.WHITE)
+                cell.setPaddingLeft(15)
+                tablaTramites.addCell(cell);
                 total++
             }
 
             Persona.findAllByDepartamentoAndEstado(d, "B").each { p ->
-//                par = new Paragraph("" + d, times8normal)
-//                cell = new PdfPCell(par);
-//                cell.setBorderColor(Color.WHITE)
-//                tablaTramites.addCell(cell);
-//                par = new Paragraph("" + p, times8normal)
-//                cell = new PdfPCell(par);
-//                cell.setBorderColor(Color.WHITE)
-//                tablaTramites.addCell(cell);
 
                 par = new Paragraph("" + d + ' - ' + p, times8bold)
                 cell = new PdfPCell(par);
@@ -217,39 +172,18 @@ class BloqueadosController extends Shield {
 
                 result.eachWithIndex { pers, j ->
 
-                    if(j==0){
+                    if (j == 0) {
                         cadenaPersona += (pers?.trmtcdgo + " (" + pers?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
-                    }else{
+                    } else {
                         cadenaPersona += (" - " + pers?.trmtcdgo + " (" + pers?.trmtfcen?.format("dd-MM-yyyy HH:mm") + ")")
-
                     }
-
-//                    if (j == 0) {
-//                        par = new Paragraph(pers?.trmtcdgo, times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                    } else {
-//                        par = new Paragraph('', times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                        par = new Paragraph('', times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                        par = new Paragraph(pers?.trmtcdgo, times8normal)
-//                        cell = new PdfPCell(par);
-//                        cell.setBorderColor(Color.WHITE)
-//                        tablaTramites.addCell(cell);
-//                    }
                 }
 
-                        par = new Paragraph(cadenaPersona, times8normal)
-                        cell = new PdfPCell(par);
-                        cell.setBorderColor(Color.WHITE)
-                        cell.setPaddingLeft(15)
-                        tablaTramites.addCell(cell);
+                par = new Paragraph(cadenaPersona, times8normal)
+                cell = new PdfPCell(par);
+                cell.setBorderColor(Color.WHITE)
+                cell.setPaddingLeft(15)
+                tablaTramites.addCell(cell);
 
                 total++
             }
@@ -259,11 +193,6 @@ class BloqueadosController extends Shield {
         cell = new PdfPCell(par);
         cell.setBorderColor(Color.WHITE)
         tablaTramites.addCell(cell);
-//        par = new Paragraph("" + total, times8bold)
-//        cell = new PdfPCell(par);
-//        cell.setBorderColor(Color.WHITE)
-//        cell.setHorizontalAlignment(Element.ALIGN_RIGHT)
-//        tablaTramites.addCell(cell);
         contenido.add(tablaTramites)
         document.add(contenido)
         document.close();
@@ -284,7 +213,6 @@ class BloqueadosController extends Shield {
             }
         }
         return res
-
     }
 
 }
