@@ -121,6 +121,11 @@
                         <i class="fa fa-file"></i> ver PDF
                     </a>
                 </div>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-sm btn-primary" id="descarga">
+                        <i class="fa fa-file"></i> descargar
+                    </a>
+                </div>
 
                 <div class="btn-group">
                     <g:if test="${tramite.deDepartamento && !esEditor}">
@@ -386,39 +391,15 @@
                     return false;
                 });
 
-                function imprimir() {
-                    openLoader("Generando PDF");
+                $("#descarga").click(function () {
                     var url = '${createLink(controller:"tramiteExport", action: "crearPdf")}';
-                    var data = {
-                        id            : "${tramite.id}",
-                        editorTramite : $("#editorTramite").val(),
-                        para          : $("#para").val(),
-                        asunto        : $("#asunto").val(),
-                        type          : "download",
-                        enviar        : 1,
-                        timestamp     : new Date().getTime()
-                    };
-                    $.ajax({
-                        type     : "POST",
-                        url      : url,
-                        data     : data,
-                        success  : function (msg) {
-                            var parts = msg.split("*");
-                            if (parts[0] == "OK") {
-                                textoInicial = arreglarTexto($("#editorTramite").val());
-                                closeLoader();
-                                window.open("${resource(dir:'tramites')}/" + parts[1]);
-                            }
-                        },
-                        complete : function () {
-                            resetTimer();
-                        }
-                    });
-                }
 
-                $(".btnPrint").click(function () {
-                    imprimir();
-                    return false;
+                    var id  = "${tramite.id}";
+                    var timestamp = new Date().getTime()
+
+                    location.href = "${createLink(controller:'tramiteExport',action:'crearPdf')}?id=" + id +
+                            "&type=download" + "&enviar=1" + "&timestamp=" + timestamp
+
                 });
 
                 //  Checks whether CKEDITOR is defined or not

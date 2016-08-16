@@ -197,6 +197,7 @@ class TramiteExportController extends Shield{
 
     def crearPdf() {
 
+        println "params para pdf: $params"
         def tramite = Tramite.get(params.id.toLong())
         def usuario = Persona.get(session.usuario.id)
         def realPath = servletContext.getRealPath("/")
@@ -232,7 +233,17 @@ class TramiteExportController extends Shield{
                 }
             }
         }
-        render enviarService.crearPdf(tramite, usuario, params.enviar.toString(), params.type.toString(), realPath.toString(), mensaje)
+//        render enviarService.crearPdf(tramite, usuario, params.enviar.toString(), params.type.toString(), realPath.toString(), mensaje)
+
+        def baos = enviarService.crearPdf(tramite, usuario, params.enviar.toString(), params.type.toString(), realPath.toString(), mensaje)
+        byte[] b = baos.toByteArray();
+        response.setContentType("application/pdf")
+        response.setHeader("Content-disposition", "attachment; filename=yyyy")
+        response.setContentLength(b.length)
+        response.getOutputStream().write(b)
+
+//        render "Ok"
+        return
     }
 
     def verPdf() {

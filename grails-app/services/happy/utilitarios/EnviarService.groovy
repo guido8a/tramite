@@ -17,6 +17,18 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 import org.w3c.dom.Document;
 import happy.ElementosTagLib
 
+import com.lowagie.text.*
+import com.lowagie.text.pdf.*
+import jxl.Workbook
+import jxl.WorkbookSettings
+import jxl.write.WritableCellFormat
+import jxl.write.WritableFont
+import jxl.write.WritableSheet
+import jxl.write.WritableWorkbook
+import org.springframework.dao.DataIntegrityViolationException
+
+import java.awt.Color
+
 class EnviarService {
 
     static transactional = false
@@ -263,14 +275,15 @@ class EnviarService {
 //        println "crea layout pdf"
         renderer.createPDF(baos);
 //        println "creado pdf"
-        byte[] b = baos.toByteArray();
+//        byte[] b = baos.toByteArray();
+
 
 //        file.delete()
 
+/*
         def dpto = ""
         def anio = tramite.fechaCreacion.format("yyyy")
         if (enviar == "1") {
-//            println("entro enviar")
             def pathPdf = realPath + "tramites/"
             if (tramite?.de?.departamento?.codigo || tramite?.deDepartamento?.codigo) {
                 if(tramite.de) {
@@ -283,24 +296,23 @@ class EnviarService {
             }
             new File(pathPdf).mkdirs()
             def fileSave = new File(pathPdf + tramite.codigo + ".pdf")
-//            println("filesave" + fileSave)
             OutputStream os = new FileOutputStream(fileSave);
             renderer.layout();
             renderer.createPDF(os);
             os.close();
         }
+*/
 
+/*
         if (type == "download") {
-//            println("entro!!!!!")
-//            render "OK*" + tramite.codigo + ".pdf"
             return "OK*" + dpto + "/" + anio + "/" + tramite.codigo + ".pdf"
         } else {
-//            response.setContentType("application/pdf")
-//            response.setHeader("Content-disposition", "attachment; filename=" + (tramite.tipoDocumento.descripcion + "_" + tramite.codigo + ".pdf"))
-//            response.setContentLength(b.length)
-//            response.getOutputStream().write(b)
             return "NO"
         }
+*/
+
+        println "retorna el array b"
+        return baos
     }
 
 
