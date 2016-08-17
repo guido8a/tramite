@@ -9,13 +9,18 @@ class PdfService {
 /*  A Simple fetcher to turn a specific URL into a PDF.  */
 
     byte[] buildPdf(url) {
+        println("url --->" + url)
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ITextRenderer renderer = new ITextRenderer();
         try {
-            renderer.setDocument(url);
+            println("entro")
+            renderer.setDocument(url.toString());
+            println("entro 2")
             renderer.layout();
             renderer.createPDF(baos);
+            println("3 ")
             byte[] b = baos.toByteArray();
+            println("bbb " + b)
             return b
         }
         catch (Throwable e) {
@@ -23,7 +28,7 @@ class PdfService {
         }
     }
 
-/*  
+/*
   A Simple fetcher to turn a well formated XHTML string into a PDF
   The baseUri is included to allow for relative URL's in the XHTML string
 */
@@ -44,4 +49,5 @@ class PdfService {
     }
 
 }
+
 

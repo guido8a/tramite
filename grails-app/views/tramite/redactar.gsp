@@ -116,14 +116,14 @@
                         <i class="fa fa-save"></i> Guardar texto
                     </a>
                 </div>
-                <div class="btn-group">
-                    <a href="#" class="btn btn-sm btn-primary btnPrint">
-                        <i class="fa fa-file"></i> ver PDF
-                    </a>
-                </div>
+                %{--<div class="btn-group">--}%
+                    %{--<a href="#" class="btn btn-sm btn-primary btnPrint">--}%
+                        %{--<i class="fa fa-file"></i> ver PDF--}%
+                    %{--</a>--}%
+                %{--</div>--}%
                 <div class="btn-group">
                     <a href="#" class="btn btn-sm btn-primary" id="descarga">
-                        <i class="fa fa-file"></i> descargar
+                        <i class="fa fa-file"></i>  ver PDF
                     </a>
                 </div>
 

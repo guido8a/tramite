@@ -1747,4 +1747,7 @@ class Tramite2Controller extends happy.seguridad.Shield {
         }
         return [tramites: tramites.unique()]
     }
-}
+
+
+
+  }

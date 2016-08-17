@@ -1,6 +1,8 @@
 package happy
 
 import happy.tramites.Tramite
+import happy.utilitarios.Parametros
+import org.xhtmlrenderer.pdf.ITextRenderer
 
 class UtilitariosTagLib {
 
@@ -228,4 +230,13 @@ class UtilitariosTagLib {
     def renderHTML = { attrs ->
         out << attrs.html
     }
+
+
+
+
+//    def crearNuevoPdf(Tramite tramite, Persona usuario, String enviar, String type, String realPath, String mensaje) {
+
+
+
+
 }

@@ -10,6 +10,7 @@ class PdfController extends Shield {
     def index = { redirect(action: demo) }
 
     def pdfLink = {
+        println("params pdf link " + params)
         try {
             byte[] b
             def baseUri = request.scheme + "://" + request.serverName + ":" + request.serverPort
@@ -30,10 +31,11 @@ class PdfController extends Shield {
         }
         catch (Throwable e) {
             println "there was a problem with PDF generation 2 ${e}"
+            e.printStackTrace()
             if (params.pdfController) {
                 redirect(controller: params.pdfController, action: params.pdfAction, params: params)
             } else {
-                redirect(action: "index", controller: "reportes", params: [msn: "Hubo un error en la genración del reporte. Si este error vuelve a ocurrir comuniquelo al administrador del sistema."])
+                redirect(action: "index", controller: "reportes", params: [msn: "Hubo un error en la generación del reporte. Si este error vuelve a ocurrir comuniquelo al administrador del sistema."])
             }
         }
     }
