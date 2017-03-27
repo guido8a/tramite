@@ -21,7 +21,9 @@ class BuscarTramiteController extends happy.seguridad.Shield {
             render "OK"
             return
         }
-        if (esDepartamento && tramite.deDepartamento == persona.departamento) {
+
+        //el triángulo puede agregar trámite de cualquiera de su oficina (2017)
+        if (esDepartamento && tramite.departamento == persona.departamento) {
 //            println "1.2: " + persona.departamento
             render "OK"
             return
