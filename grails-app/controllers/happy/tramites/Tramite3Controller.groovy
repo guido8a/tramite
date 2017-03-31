@@ -1309,7 +1309,7 @@ class Tramite3Controller extends happy.seguridad.Shield {
         def cierre = ""
         def data = ""
 
-        def sql = "select * from cadena(${trmt.id}, 0, 0)"
+        def sql = "select * from cadena(${trmt.id}, 0, 0) where nivel < 90"  //Despliega solo hasta nivel 87
         def cn = dbConnectionService.getConnection()
         def nivel = 1
         def i = 0
