@@ -887,6 +887,9 @@ class TramiteAdminController /*extends Shield*/ {
                         }
                     }
                 }
+//                println("principal " + principal)
+//                def pp = Tramite.get(586708)
+//                println("principal " + pp)
                 html = "<ul>" + "\n"
                 html += makeTreeExtended(principal)
                 html += "</ul>" + "\n"
@@ -1012,6 +1015,7 @@ class TramiteAdminController /*extends Shield*/ {
         def html = ""
 
         //esto muestra una hoja por destinatario
+
         paras.each { para ->
             html += makeLeaf(para)
         }
@@ -1104,6 +1108,7 @@ class TramiteAdminController /*extends Shield*/ {
         html += "<li id='${pdt.id}' class='${clase}' data-jstree='{\"type\":\"${rel}\"${data}}' >"
         html += tramiteInfo(pdt)
         html += "\n"
+
         if (hijos.size() > 0) {
             html += "<ul>" + "\n"
             hijos.each { hijo ->

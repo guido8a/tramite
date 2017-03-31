@@ -111,7 +111,8 @@
                                     ${tramite.deDepartamento.descripcion}
                                 </g:if>
                                 <g:elseif test="${tramite.de}">
-                                    ${tramite.de.nombre} ${tramite.de.apellido} (${tramite.de.departamento.codigo})
+                                    %{--${tramite.de.nombre} ${tramite.de.apellido} (${tramite.de.departamento.codigo})--}%
+                                    ${tramite.de.nombre} ${tramite.de.apellido} (${tramite.departamentoSigla})
                                 </g:elseif>
                             </g:else>
                         </td>

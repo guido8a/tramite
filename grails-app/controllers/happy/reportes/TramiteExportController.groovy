@@ -197,7 +197,7 @@ class TramiteExportController extends Shield{
 
     def crearPdf() {
 
-        println "params para pdf: $params"
+//        println "params para pdf: $params"
         def tramite = Tramite.get(params.id.toLong())
         def usuario = Persona.get(session.usuario.id)
         def realPath = servletContext.getRealPath("/")

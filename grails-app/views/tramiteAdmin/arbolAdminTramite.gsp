@@ -10,8 +10,10 @@
     <head>
         <meta name="layout" content="main">
         <title>Administración de trámite</title>
-        <script src="${resource(dir: 'js/plugins/jstree-e22db21/dist', file: 'jstree.min.js')}"></script>
-        <link href="${resource(dir: 'js/plugins/jstree-e22db21/dist/themes/default', file: 'style.min.css')}" rel="stylesheet">
+        %{--<script src="${resource(dir: 'js/plugins/jstree-e22db21/dist', file: 'jstree.min.js')}"></script>--}%
+        <script src="${resource(dir: 'js/plugins/jstree333/dist', file: 'jstree.min.js')}"></script>
+        %{--<link href="${resource(dir: 'js/plugins/jstree-e22db21/dist/themes/default', file: 'style.min.css')}" rel="stylesheet">--}%
+        <link href="${resource(dir: 'js/plugins/jstree333/dist/themes/default', file: 'style.min.css')}" rel="stylesheet">
 
         <style type="text/css">
         #jstree {

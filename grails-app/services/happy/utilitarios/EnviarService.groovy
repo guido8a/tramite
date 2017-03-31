@@ -41,7 +41,7 @@ class EnviarService {
      *  mensaje         : mandar message(code: 'pathImages').toString()
      */
     def crearPdf(Tramite tramite, Persona usuario, String enviar, String type, String realPath, String mensaje) {
-        println "crea pdf de ${tramite.codigo} caracteres: ${tramite.texto?.size()}"
+//        println "crea pdf de ${tramite.codigo} caracteres: ${tramite.texto?.size()}"
 
 //        println "INTENTANDO CREAR PDF DEL TRAMITE " + tramite.id + "  " + tramite.codigo + "  creado por: " +
 //                tramite.de.login + " el " + tramite.fechaCreacion.format("dd-MM-yyyy HH:mm:ss") + "  con contenido: " + tramite.texto
@@ -51,10 +51,10 @@ class EnviarService {
 
         def parametros = Parametros.list()
         if (parametros.size() == 0) {
-            println "NO HAY PARAMETROS!!!!!!"
+//            println "NO HAY PARAMETROS!!!!!!"
             mensaje = "/happy/images/"
         } else if (parametros.size() > 1) {
-            println "HAY ${parametros.size()} REGISTROS DE PARAMETROS!!!!"
+//            println "HAY ${parametros.size()} REGISTROS DE PARAMETROS!!!!"
             mensaje = parametros.first().imagenes
         } else {
             mensaje = parametros.first().imagenes
@@ -311,7 +311,7 @@ class EnviarService {
         }
 */
 
-        println "retorna el array b"
+//        println "retorna el array b"
         return baos
     }
 
