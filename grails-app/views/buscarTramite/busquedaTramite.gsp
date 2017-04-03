@@ -285,6 +285,16 @@
             }
         };
 
+
+        var parcialDetalle = {
+            label  : 'Cadena a partir del trámite',
+            icon   : "fa fa-puzzle-piece",
+            action : function (e) {
+                location.href = '${createLink(controller: 'tramite3', action: 'arbolTramiteParcial')}/' + id + "?b=bqt"
+            }
+        };
+
+
         var detalles = {
             label: 'Detalles',
             icon: "fa fa-search",
@@ -383,12 +393,21 @@
         %{--};--}%
 
         var administrar = {
-            label: "Administrar trámite",
+            label: "Administrar toda la cadena del trámite",
             icon: "fa fa-cogs",
             action: function () {
                 location.href = '${createLink(controller: "tramiteAdmin", action: "arbolAdminTramite")}?id=' + id;
             }
         };
+
+        var parcialAdmin = {
+            label  : 'Administrar a partir del trámite',
+            icon   : "fa fa-cog",
+            action : function () {
+                location.href = '${createLink(controller: "tramiteAdmin", action: "arbolAdminTramiteParcial")}?id=' + id;
+            }
+        };
+
 
         var anexos = {
             label: 'Anexos',
@@ -568,9 +587,11 @@
         <g:if test="${session.usuario.getPuedeVer()}">
         items.detalles = detalles;
         items.arbol = arbol;
+        items.parcialDetalle = parcialDetalle;
         </g:if>
         <g:if test="${session.usuario.getPuedeAdmin()}">
         items.administrar = administrar;
+        items.parcialAdmin = parcialAdmin;
         </g:if>
 //                if (conPadre || tienePrincipal || esPrincipal) {
         if (esMio) {

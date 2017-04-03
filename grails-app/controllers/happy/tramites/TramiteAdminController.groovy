@@ -1734,4 +1734,20 @@ class TramiteAdminController /*extends Shield*/ {
         }
         return res
     }
+
+    def arbolAdminTramiteParcial() {
+        def html = "", url = "", tramite = null
+
+        if (params.id) {
+            tramite = Tramite.get(params.id.toLong())
+            if (tramite) {
+                def principal = tramite
+                html = "<ul>" + "\n"
+                html += makeTreeExtended(principal)
+                html += "</ul>" + "\n"
+            }
+            url = createLink(controller: "buscarTramite", action: "busquedaTramite")
+        }
+        return [html2: html, url: url, tramite: tramite]
+    }
 }
