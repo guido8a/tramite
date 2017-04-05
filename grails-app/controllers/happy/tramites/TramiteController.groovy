@@ -160,6 +160,79 @@ class TramiteController extends happy.seguridad.Shield {
         }
     }
 
+//    def saveTramite() {
+////        println "saveTramite, params: $params"
+//
+//        def tramite = Tramite.get(params.id)
+//        def paratr = tramite.para
+//        def copiastr = tramite.copias
+//        def enviado = false
+//        (copiastr + paratr).each { c ->
+//            if (c?.estado?.codigo == "E003") {
+//                enviado = true
+//            }
+//        }
+//
+//
+//        def tramitetr = Tramite.get(params.id)
+//        if (tramitetr) {
+//            def paratr1 = tramitetr.para
+//            def copiastr1 = tramitetr.copias
+//            (copiastr1 + paratr1).each { c ->
+//                if (c?.estado?.codigo == "E006") {
+//                    render "NO_Este trámite ya ha sido anulado, no puede guardar modificaciones"
+//                    return
+//                }
+//                if (c?.estado?.codigo == 'E005') {
+//                    render "NO_Este trámite ya ha sido archivado, no puede guardar modificaciones"
+//                    return
+//                } else {
+//
+//                    if (!enviado) {
+//                        tramite.texto = (params.editorTramite).replaceAll("\\n", "")
+//                        tramite.fechaModificacion = new Date()
+//                        //log Jefe
+//                        if(session.usuario) {
+//                            if (session.usuario.getPuedeJefe()) {
+//                                tramite.fechaModificacion = new Date()
+//                                tramite.observaciones = tramitesService.observaciones(tramite.observaciones, 'Editado por: ' + session.usuario.login, '', ' ', '', '')
+//                            }
+//                        }  else {
+//                            tramite.save(flush: true)
+//                            println "guardar redaccion tramite, sesion perdida: ${tramite.codigo}"
+//                            redirect(controller: 'login', action: 'login')
+//                            return
+//                        }
+//
+//                        if (tramite.save(flush: true)) {
+//                            def para = tramite.para
+//                            enviarService.crearPdf(tramite, session.usuario, "1", 'download', servletContext.getRealPath("/"), message(code: 'pathImages').toString());
+//                            if (params.para) {
+//                                if (params.para.toLong() > 0) {
+//                                    para.persona = Persona.get(params.para.toLong())
+//                                } else {
+//                                    para.departamento = Departamento.get(params.para.toLong() * -1)
+//                                }
+//                                if (para.save(flush: true)) {
+//                                    render "OK_Trámite guardado exitosamente"
+//                                } else {
+//                                    render "NO_Ha ocurrido un error al guardar el destinatario: " + renderErrors(bean: para)
+//                                }
+//                            } else {
+//                                render "OK_Trámite guardado exitosamente"
+//                            }
+//                        } else {
+//                            render "NO_Ha ocurrido un error al guardar el trámite: " + renderErrors(bean: tramite)
+//                        }
+//                    } else {
+//                        render "NO_Este trámite ya ha sido enviado, no puede guardar modificaciones"
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
+
     def saveTramite() {
 //        println "saveTramite, params: $params"
 
@@ -167,12 +240,16 @@ class TramiteController extends happy.seguridad.Shield {
         def paratr = tramite.para
         def copiastr = tramite.copias
         def enviado = false
+//        def usuario = Persona.get(session?.usuario?.id)
+        def usuario = tramite.creador
+        println "usuario: ${usuario.login}"
         (copiastr + paratr).each { c ->
             if (c?.estado?.codigo == "E003") {
                 enviado = true
             }
         }
 
+//        print "sesion: ${usuario?.login}:${tramite.creador.login}"
 
         def tramitetr = Tramite.get(params.id)
         if (tramitetr) {
@@ -192,21 +269,25 @@ class TramiteController extends happy.seguridad.Shield {
                         tramite.texto = (params.editorTramite).replaceAll("\\n", "")
                         tramite.fechaModificacion = new Date()
                         //log Jefe
-                        if(session.usuario) {
-                            if (session.usuario.getPuedeJefe()) {
+//                        if(session.usuario) {
+                        if(usuario) {
+//                            if (session.usuario.getPuedeJefe()) {
+                            if (usuario.getPuedeJefe()) {
                                 tramite.fechaModificacion = new Date()
-                                tramite.observaciones = tramitesService.observaciones(tramite.observaciones, 'Editado por: ' + session.usuario.login, '', ' ', '', '')
+//                                tramite.observaciones = tramitesService.observaciones(tramite.observaciones, 'Editado por: ' + session.usuario.login, '', ' ', '', '')
+                                tramite.observaciones = tramitesService.observaciones(tramite.observaciones, 'Editado por: ' + usuario.login, '', ' ', '', '')
                             }
                         }  else {
                             tramite.save(flush: true)
-                            println "guardar redaccion tramite, sesion perdida: ${tramite.codigo}"
+                            println "Guarda sin sesion: ${tramite.creador.login} ${tramite.codigo} -> ${new Date().format('dd HH:mm')}"
                             redirect(controller: 'login', action: 'login')
                             return
                         }
 
                         if (tramite.save(flush: true)) {
                             def para = tramite.para
-                            enviarService.crearPdf(tramite, session.usuario, "1", 'download', servletContext.getRealPath("/"), message(code: 'pathImages').toString());
+//                            enviarService.crearPdf(tramite, session.usuario, "1", 'download', servletContext.getRealPath("/"), message(code: 'pathImages').toString());
+                            enviarService.crearPdf(tramite, usuario, "1", 'download', servletContext.getRealPath("/"), message(code: 'pathImages').toString());
                             if (params.para) {
                                 if (params.para.toLong() > 0) {
                                     para.persona = Persona.get(params.para.toLong())
