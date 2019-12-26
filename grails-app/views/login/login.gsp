@@ -18,7 +18,7 @@
 
     <body>
         <g:set var="inst" value="${happy.utilitarios.Parametros.get(1)}"></g:set>
-        <div style="text-align: center; margin-top: 20px; height: ${(flash.message) ? '650' : '580'}px;" class="well">
+        <div style="text-align: center; margin-top: 20px; height: ${(flash.message) ? '650' : '600'}px;" class="well">
             <div class="page-header" style="margin-top: 10px;">
                 <h1>Trámites y Procesos</h1>
                 <h3>

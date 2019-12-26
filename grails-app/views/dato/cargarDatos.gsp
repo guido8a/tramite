@@ -12,9 +12,9 @@
 
     <div class="linea"></div>
     <div class="row">
-        <div class="col-md-2 negrilla control-label">Nombre de la Fase: </div>
+        <div class="col-md-2 negrilla control-label">Denominación de la Fase: </div>
 
-        <div class="col-md-10" style="margin-bottom: 20px">
+        <div class="col-md-8" style="margin-bottom: 20px">
             <g:select id="fase" name="fase.id" from="${happy.proceso.Fase.list()}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
         </div>
     </div>
