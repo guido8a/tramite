@@ -37,16 +37,16 @@
 
     <div>
       %{--<div class="btn-group">--}%
-        <a href="#" id="btnImprimir" class="btn btn-primary" title="Imprimir formulario" style="float: right">
-          <i class="fa fa-print"> Imprimir</i>
-        </a>
+      <a href="#" id="btnImprimir" class="btn btn-primary" title="Imprimir formulario" style="float: right">
+        <i class="fa fa-print"> Imprimir</i>
+      </a>
       <g:if test="${!pccl?.fechaCompletado}">
-        <a href="#" id="btnAprobar" class="btn btn-success" title="Aprobar formulario" style="float: right">
+        <a href="#" id="btnAprobar" class="btn btn-info" title="Aprobar formulario" style="float: right">
           <i class="fa fa-check-circle-o"> Aprobar</i>
         </a>
       </g:if>
 
-      </div>
+    </div>
     %{--</div>--}%
 
   </div>
@@ -67,14 +67,16 @@
 
       <g:each in="${datos}" var="d" status="l">
         <div class="col-md-12" style="margin-left: 10px; margin-bottom: 20px">
-          <div class="col-md-1 negrilla control-label">
-            ${d?.etiqueta}
-          </div>
+        %{--<div class="col-md-2 negrilla control-label">--}%
+        %{--${d?.etiqueta}--}%
+        %{--</div>--}%
           <g:if test="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}">
 
             <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
               <div class="col-md-5" style="margin-bottom: 20px">
-
+                <div class="col-md-8 negrilla control-label">
+                  ${d?.etiqueta}
+                </div>
                 <table class="table table-bordered table-condensed table-hover" style="width: 450px">
                   <thead>
                   </thead>
@@ -85,18 +87,20 @@
                         ${z?.descripcion}
                       </td>
                       <td style="text-align: center">
-                          <g:checkBox name="multi_name" class="multi" lis="${z?.id}" value=""
-                                      checked="${happy.proceso.ValorProceso.findByDetalleProcesoAndValor(d, z?.id?.toString()) ? 'true' : 'false'}"/>
+                        <g:checkBox name="multi_name" class="multi" lis="${z?.id}" value=""
+                                    checked="${happy.proceso.ValorProceso.findByDetalleProcesoAndValor(d, z?.id?.toString()) ? 'true' : 'false'}"/>
                       </td>
                     </tr>
                   </g:each>
                   </tbody>
                 </table>
               </div>
-
             </g:if>
             <g:else>
               <div class="col-md-5" style="margin-bottom: 20px">
+                <div class="col-md-8 negrilla control-label">
+                  ${d?.etiqueta}
+                </div>
                 <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"
                           data-vl="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.valor}"
                           optionKey="descripcion" optionValue="descripcion" class="form-control"/>
@@ -106,6 +110,9 @@
           <g:else>
             <g:if test="${d?.rango == "numerico"}">
               <div class="col-md-5" style="margin-bottom: 20px">
+                <div class="col-md-8 negrilla control-label">
+                  ${d?.etiqueta}
+                </div>
                 <span class="grupo">
                   <g:textField name="nombre_${d?.id}" id="etiqueta_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.valor}"
                                data-vl="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.id}" class="form-control ${d?.nulo == '0' ? 'required' : ''}"
@@ -115,6 +122,9 @@
             </g:if>
             <g:else>
               <div class="col-md-5" style="margin-bottom: 20px">
+                <div class="col-md-8 negrilla control-label">
+                  ${d?.etiqueta}
+                </div>
                 <span class="grupo">
                   <g:textField name="nombre_${d?.id}" id="etiqueta_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.valor}"
                                data-vl="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.id}" class="form-control ${d?.nulo == '0' ? 'required' : ''}"
@@ -125,6 +135,9 @@
           </g:else>
           <div class="col-md-4">
             <g:if test="${d?.observacionRequerida == '1'}">
+              <div class="col-md-8 negrilla control-label">
+                Observaciones
+              </div>
               <g:textArea name="obser" id="observaciones_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.observaciones}" class="form-control" maxlength="255" style="resize: none" title="Observaciones"/>
             </g:if>
             <g:else>
@@ -132,15 +145,15 @@
             </g:else>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-2" style="margin-top: 25px">
             <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
               <a href="#" id="btnGuardar" class="btn btn-success btnS" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"></i>
+                <i class="fa fa-save"> Guardar</i>
               </a>
             </g:if>
             <g:else>
               <a href="#" id="btnGuardar" class="btn btn-success btnG" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"></i>
+                <i class="fa fa-save"> Guardar</i>
               </a>
             </g:else>
 
@@ -159,135 +172,135 @@
 <script type="text/javascript">
 
 
-  $(".btnS").click(function () {
+    $(".btnS").click(function () {
 
 
-    var idRow = $(this).data("id");
-    var observa = $("#observaciones_" + idRow).val();
-    var proPer = '${pccl?.id}';
-    var arr = []
-    var strIds = ""
+        var idRow = $(this).data("id");
+        var observa = $("#observaciones_" + idRow).val();
+        var proPer = '${pccl?.id}';
+        var arr = []
+        var strIds = ""
 
 
-    $(".multi").each(function () {
-      if($(this).prop("checked") == true){
+        $(".multi").each(function () {
+            if($(this).prop("checked") == true){
 //      console.log("-->"  + $(this).attr("lis"))
 //      arr += $(this).attr("lis")
-        if (strIds != "") {
-          strIds += ",";
-        }
-        strIds += $(this).attr("lis")
-      }
-    });
+                if (strIds != "") {
+                    strIds += ",";
+                }
+                strIds += $(this).attr("lis")
+            }
+        });
 
-
-    $.ajax({
-      type:'POST',
-      url: '${createLink(controller: 'valorProceso', action: 'guardarListaMarcada_ajax')}',
-      data:{
-        dtpc: idRow,
-        arreglo: strIds,
-        obs: observa,
-        pccl: proPer
-      },
-      success: function (msg) {
-        if(msg == 'ok'){
-          log("Elementos seleccionados correctamente","success")
-        }else{
-          log("Error al guardar la selección de elementos","error")
-        }
-      }
-    });
-  });
-
-  $(".btnG").click(function () {
-
-    var $form = $("#frmValor");
-    var idRow = $(this).data("id");
-    var valor = $("#etiqueta_" + idRow).val();
-    var observa = $("#observaciones_" + idRow).val();
-    var proPer = '${pccl?.id}';
-    var vl = $("#etiqueta_" + idRow).data("vl");
-
-    if($form.valid()){
-      $.ajax({
-        type:'POST',
-        url: "${createLink(controller: 'valorProceso', action: 'saveValor_ajax')}",
-        data: {
-          dtpc: idRow,
-          val: valor,
-          obs: observa,
-          pccl: proPer,
-          vlpc: vl
-        },
-        success: function (msg) {
-          if(msg == 'ok'){
-            log("Valor guardado correctamente","success")
-          }else{
-            log("Error al guardar el valor","error")
-          }
-        }
-      });
-    }else{
-      return false
-    }
-  });
-
-
-  $("#btnImprimir").click(function () {
-    var $form = $("#frmValor");
-    if($form.valid()){
-      location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
-    }else{
-      return false
-    }
-  });
-
-
-  $("#btnAprobar").click(function (){
-    bootbox.confirm("<i class='fa fa-exclamation-triangle fa-3x text-danger text-shadow'></i> Está seguro de aprobar este formulario?", function (result) {
-      if(result){
 
         $.ajax({
-          type: 'POST',
-          url: '${createLink(controller: 'valorProceso', action: 'aprobar_ajax')}',
-          data:{
-            id: '${pccl?.id}'
-          },
-          success: function (msg) {
-            if(msg == 'ok'){
-              log("Formulario aprobado correctamente","success");
-              setTimeout(function () {
-                location.reload(true)
-              }, 1500);
-            }else{
-              log("Error al aprobar el formulario","error")
+            type:'POST',
+            url: '${createLink(controller: 'valorProceso', action: 'guardarListaMarcada_ajax')}',
+            data:{
+                dtpc: idRow,
+                arreglo: strIds,
+                obs: observa,
+                pccl: proPer
+            },
+            success: function (msg) {
+                if(msg == 'ok'){
+                    log("Elementos seleccionados correctamente","success")
+                }else{
+                    log("Error al guardar la selección de elementos","error")
+                }
             }
-          }
-        })
-
-      }
+        });
     });
-  });
+
+    $(".btnG").click(function () {
+
+        var $form = $("#frmValor");
+        var idRow = $(this).data("id");
+        var valor = $("#etiqueta_" + idRow).val();
+        var observa = $("#observaciones_" + idRow).val();
+        var proPer = '${pccl?.id}';
+        var vl = $("#etiqueta_" + idRow).data("vl");
+
+        if($form.valid()){
+            $.ajax({
+                type:'POST',
+                url: "${createLink(controller: 'valorProceso', action: 'saveValor_ajax')}",
+                data: {
+                    dtpc: idRow,
+                    val: valor,
+                    obs: observa,
+                    pccl: proPer,
+                    vlpc: vl
+                },
+                success: function (msg) {
+                    if(msg == 'ok'){
+                        log("Valor guardado correctamente","success")
+                    }else{
+                        log("Error al guardar el valor","error")
+                    }
+                }
+            });
+        }else{
+            return false
+        }
+    });
+
+
+    $("#btnImprimir").click(function () {
+        var $form = $("#frmValor");
+        if($form.valid()){
+            location.href="${createLink(controller: 'reportesPersonales', action: 'reporteProceso', id: trpc?.id )}";
+        }else{
+            return false
+        }
+    });
+
+
+    $("#btnAprobar").click(function (){
+        bootbox.confirm("<i class='fa fa-exclamation-triangle fa-3x text-danger text-shadow'></i> Está seguro de aprobar este formulario?", function (result) {
+            if(result){
+
+                $.ajax({
+                    type: 'POST',
+                    url: '${createLink(controller: 'valorProceso', action: 'aprobar_ajax')}',
+                    data:{
+                        id: '${pccl?.id}'
+                    },
+                    success: function (msg) {
+                        if(msg == 'ok'){
+                            log("Formulario aprobado correctamente","success");
+                            setTimeout(function () {
+                                location.reload(true)
+                            }, 1500);
+                        }else{
+                            log("Error al aprobar el formulario","error")
+                        }
+                    }
+                })
+
+            }
+        });
+    });
 
 
 
 
 
-  var validator = $("#frmValor").validate({
-    errorClass     : "help-block",
-    errorPlacement : function (error, element) {
-      if (element.parent().hasClass("input-group")) {
-        error.insertAfter(element.parent());
-      } else {
-        error.insertAfter(element);
-      }
-      element.parents(".grupo").addClass('has-error');
-    },
-    success        : function (label) {
-      label.parents(".grupo").removeClass('has-error');
-    }
-  });
+    var validator = $("#frmValor").validate({
+        errorClass     : "help-block",
+        errorPlacement : function (error, element) {
+            if (element.parent().hasClass("input-group")) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+            element.parents(".grupo").addClass('has-error');
+        },
+        success        : function (label) {
+            label.parents(".grupo").removeClass('has-error');
+        }
+    });
 
 
 

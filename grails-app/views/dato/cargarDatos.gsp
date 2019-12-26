@@ -20,8 +20,6 @@
     </div>
 </div>
 
-
-
 <g:form class="form-horizontal" name="frmCargarDatos" role="form" action="save" method="POST">
     <div style="margin-top: 20px; min-height: 100px" class="vertical-container divDatos">
         <p class="css-vertical-text" style="margin-top: -10px;">Datos</p>
@@ -55,7 +53,8 @@
             <div class="col-xs-1 negrilla">Tipo de dato:</div>
 
             <div class="col-xs-2">
-                <g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>
+                %{--<g:select id="tipo" name="tipo.id" from="${happy.proceso.Dato.constraints.tipo.inList}" class="many-to-one form-control"/>--}%
+                <g:select id="tipo" name="tipo.id" from="${["Alfanumérico" : "Alfanumérico","Numérico" : "Numérico","Selección Múltiple" : "Selección Múltiple"]}" optionKey="key" optionValue="value" class="many-to-one form-control"/>
             </div>
 
             <div class="col-xs-2">
