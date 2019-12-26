@@ -98,7 +98,7 @@
             </g:if>
             <g:else>
               <div class="col-md-6" style="margin-bottom: 20px">
-                <div class="col-md-12 negrilla control-label">
+                <div class="col-md-12 negrilla">
                   ${d?.etiqueta}
                 </div>
                 <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"
@@ -145,15 +145,15 @@
             </g:else>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-2" style="margin-top: 25px">
             <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
               <a href="#" id="btnGuardar" class="btn btn-success btnS" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"></i>
+                <i class="fa fa-save"></i> Grabar
               </a>
             </g:if>
             <g:else>
               <a href="#" id="btnGuardar" class="btn btn-success btnG" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"></i>
+                <i class="fa fa-save"></i> Grabar
               </a>
             </g:else>
 
