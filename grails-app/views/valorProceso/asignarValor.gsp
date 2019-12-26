@@ -41,7 +41,7 @@
         <i class="fa fa-print"> Imprimir</i>
       </a>
       <g:if test="${!pccl?.fechaCompletado}">
-        <a href="#" id="btnAprobar" class="btn btn-info" title="Aprobar formulario" style="float: right">
+        <a href="#" id="btnAprobar" class="btn btn-success" title="Aprobar formulario" style="float: right">
           <i class="fa fa-check-circle-o"> Aprobar</i>
         </a>
       </g:if>
@@ -145,15 +145,15 @@
             </g:else>
           </div>
 
-          <div class="col-md-2" style="margin-top: 25px">
+          <div class="col-md-2">
             <g:if test="${d?.dato?.tipo == 'Selección Múltiple'}">
               <a href="#" id="btnGuardar" class="btn btn-success btnS" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"> Guardar</i>
+                <i class="fa fa-save"></i>
               </a>
             </g:if>
             <g:else>
               <a href="#" id="btnGuardar" class="btn btn-success btnG" title="Guardar valores" data-id="${d?.id}" style="float: right">
-                <i class="fa fa-save"> Guardar</i>
+                <i class="fa fa-save"></i>
               </a>
             </g:else>
 
