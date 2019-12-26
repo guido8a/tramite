@@ -97,8 +97,8 @@
               </div>
             </g:if>
             <g:else>
-              <div class="col-md-5" style="margin-bottom: 20px">
-                <div class="col-md-8 negrilla control-label">
+              <div class="col-md-6" style="margin-bottom: 20px">
+                <div class="col-md-12 negrilla control-label">
                   ${d?.etiqueta}
                 </div>
                 <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"
@@ -110,7 +110,7 @@
           <g:else>
             <g:if test="${d?.rango == "numerico"}">
               <div class="col-md-5" style="margin-bottom: 20px">
-                <div class="col-md-8 negrilla control-label">
+                <div class="col-md-12 negrilla control-label">
                   ${d?.etiqueta}
                 </div>
                 <span class="grupo">
@@ -122,7 +122,7 @@
             </g:if>
             <g:else>
               <div class="col-md-5" style="margin-bottom: 20px">
-                <div class="col-md-8 negrilla control-label">
+                <div class="col-md-12 negrilla">
                   ${d?.etiqueta}
                 </div>
                 <span class="grupo">
@@ -133,9 +133,9 @@
               </div>
             </g:else>
           </g:else>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <g:if test="${d?.observacionRequerida == '1'}">
-              <div class="col-md-8 negrilla control-label">
+              <div class="col-md-12 negrilla">
                 Observaciones
               </div>
               <g:textArea name="obser" id="observaciones_${d?.id}" value="${happy.proceso.ValorProceso.findByDetalleProceso(d)?.observaciones}" class="form-control" maxlength="255" style="resize: none" title="Observaciones"/>
