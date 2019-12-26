@@ -124,15 +124,17 @@
     </g:else>
 
 
-    <div class="col-md-2 negrilla control-label">Es parte de la ruta crítica: </div>
+    <div class="col-md-2 negrilla control-label text-info">Es parte de la ruta crítica: </div>
 
     <g:checkBox name="ruta_name" id="ruta" checked="${(detalleProceso?.ruta == '1') ? 'true' : 'false'}"/>
 
     <div class="row"></div>
-    <div class="col-xs-2 negrilla control-label">Lista de valores: </div>
+    <div class="col-xs-2 negrilla control-label text-primary">Lista de valores: </div>
 
-    <div class="col-md-5" style="margin-bottom: 20px">
-        <g:select id="lista" name="lista.id" from="${happy.proceso.ListaValores.findAllByDetalleProceso(detalleProceso, [sort: 'defecto', order: 'desc'])}" optionKey="id" optionValue="descripcion" class="many-to-one form-control"/>
+    <div class="col-md-5 text-info" style="margin-bottom: 20px">
+        <g:select id="lista" name="lista.id"
+                  from="${happy.proceso.ListaValores.findAllByDetalleProceso(detalleProceso, [sort: 'defecto', order: 'desc'])}"
+                  optionKey="id" optionValue="descripcion" class="many-to-one form-control text-info"/>
     </div>
 
     <div class="btn-group">

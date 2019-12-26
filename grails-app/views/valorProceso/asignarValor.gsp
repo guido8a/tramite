@@ -14,6 +14,7 @@
   <title>Registro de Valores por Proceso</title>
 </head>
 <body>
+<div style="text-align: center"><h3>Registro de datos del formulario del proceso</h3></div>
 <div style="margin-top: 30px;min-height: 80px" class="vertical-container">
   <p class="css-vertical-text" style="margin-top: -10px;">Info</p>
 

@@ -5,10 +5,14 @@
     <title>Formulario del Proceso</title>
 
     <style type="text/css">
-    /*input{*/
-    /*font-size: 14px !important;*/
-    /*margin: 0px;*/
-    /*}*/
+    .recuadro {
+        margin-top: -30px;
+        margin-left: -20px;
+        background-color: #efefec;
+        border-color: #cfcfcc;
+        border-style: solid;
+        border-width: 1px;
+    }
     </style>
 </head>
 
@@ -16,7 +20,7 @@
 <div class="btn-toolbar toolbar">
     <div class="btn-group">
         <g:link controller="proceso" action="buscadorProceso" class="btn btn-primary">
-            <i class="fa fa-arrow-left"></i> Volver a lista de Procesos
+            <i class="fa fa-arrow-left"></i> Lista de Procesos
         </g:link>
     </div>
     <div style="width: 100%; text-align: center; margin-top: -10px"><h3>Formulario del proceso: ${proceso?.nombre}</h3></div>
@@ -52,19 +56,20 @@
 
             <div class="col-md-3"></div>
 
-            <div class="btn-group col-md-7">
-                <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar cambios al proceso">
-                    <i class="fa fa-save"> Guardar</i>
-                </a>
-                <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
-                    <i class="fa fa-plus"> Nuevo Proceso</i>
-                </a>
-            </div>
+                        <div class="btn-group col-md-12s">
+                            <a href="#" id="btnGuardar" class="btn btn-success" title="Guardar cambios al proceso">
+                                <i class="fa fa-save"> Guardar</i>
+                            </a>
+                            <a href="#" id="btnNuevo" class="btn btn-info" title="Crear un nuevo proceso">
+                                <i class="fa fa-plus"> Nuevo Proceso</i>
+                            </a>
+                        </div>
         </div>
 
-        <div class="col-md-6" style="margin-top: -30px; margin-left: -20px">
+%{--        <div class="col-md-6" style="margin-top: -30px; margin-left: -20px; background-color: #efefec; border-color: #0a6aa1; border-style: solid; border-width: 1px">--}%
+        <div class="col-md-6 recuadro">
             <div class="col-md-9 negrilla control-label">Datos que se Registran para el Proceso</div>
-            <div class="col-md-12" style="height: 200px;">
+            <div class="col-md-12" style="height: 240px;">
                 <table class="table table-bordered table-hover table-condensed" >
                     <thead>
                     <tr>
@@ -93,12 +98,12 @@
 </g:form>
 
 <g:if test="${proceso?.id}">
-    <div style="margin-top: 20px;" class="contenedor-vertical">
-        <p class="css-vertical-text" style="margin-top: 0px;">Datos</p>
+    <div style="margin-top: 20px; background-color: #efefec" class="contenedor-vertical">
+        <p class="css-vertical-text">Datos</p>
 
         <div class="linea"></div>
 
-        <div class="row" >
+        <div class="row" style="margin-top: -10px; padding-top: 15px" >
 
             <div class="col-xs-1 negrilla control-label">Fase del Proceso: </div>
 
@@ -252,7 +257,7 @@
     }
 
     $("#btnNuevo").click(function () {
-        location.href = "${createLink(controller:'detalleProceso',action:'formulario')}"
+        location.href = "${createLink(controller:'detalleProceso', action:'formulario')}"
     });
 
     var validator = $("#frmProceso").validate({
