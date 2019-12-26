@@ -6,7 +6,7 @@ import happy.seguridad.Persona
 
 class BloqueosJob {
     static triggers = {
-        simple name: 'bloqueoBandejaSalida', startDelay: 1000 * 60, repeatInterval: 1000 * 60 * 5
+        simple name: 'bloqueoBandejaSalida', startDelay: 1000 * 60, repeatInterval: 1000 * 60 * 50
     }
 
     def execute() {

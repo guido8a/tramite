@@ -98,7 +98,7 @@
             </g:if>
             <g:else>
               <div class="col-md-6" style="margin-bottom: 20px">
-                <div class="col-md-12 negrilla">
+                <div class="col-md-6 negrilla">
                   ${d?.etiqueta}
                 </div>
                 <g:select name="nombre_${d?.id}" from="${happy.proceso.ListaValores.findAllByDetalleProceso(d)}" id="etiqueta_${d?.id}"

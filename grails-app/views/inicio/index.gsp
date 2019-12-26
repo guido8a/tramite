@@ -154,7 +154,19 @@
             </g:link>
         </div>
         </div>
-
+        <div class="ui-corner-all item fuera" style="text-align: center">
+        <div class="ui-corner-all item">
+    %{--<g:link controller="retrasadosWeb" action="reporteRetrasadosConsolidadoDir" class="openImagenDir" params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']">--}%
+        <g:link controller="inicio" action="parametros" class="openImagenDir"
+                params="[dpto: Persona.get(session.usuario.id).departamento.id, inicio: '1', dir: '1']"  style="text-decoration: none">
+            <div class="imagen">
+                <img src="${resource(dir: 'images', file: 'parametro.png')}" width="240px" height="165px"/>
+            </div>
+            <div class="texto">
+                <span class="text-success"><strong>Parámetros del sistema</strong></span></div>
+            </div>
+        </g:link>
+        </div>
         </div>
 
     </g:if>
