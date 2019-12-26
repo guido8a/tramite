@@ -29,24 +29,18 @@
             </div>
         </div>
 
-        <table class="table table-condensed table-bordered table-striped">
+        <table class="table table-condensed table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    
                     <g:sortableColumn property="nombre" title="Nombre del Proceso" />
-                    
                     <g:sortableColumn property="objetivo" title="Objetivo o Propósito del Proceso" />
-                    
                 </tr>
             </thead>
             <tbody>
                 <g:each in="${procesoInstanceList}" status="i" var="procesoInstance">
                     <tr data-id="${procesoInstance.id}">
-                        
                         <td>${fieldValue(bean: procesoInstance, field: "nombre")}</td>
-                        
                         <td>${fieldValue(bean: procesoInstance, field: "objetivo")}</td>
-                        
                     </tr>
                 </g:each>
             </tbody>

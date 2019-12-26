@@ -15,7 +15,7 @@
 <body>
 <div class="btn-toolbar toolbar">
     <div class="btn-group">
-        <g:link controller="proceso" action="list" class="btn btn-primary">
+        <g:link controller="proceso" action="buscadorProceso" class="btn btn-primary">
             <i class="fa fa-arrow-left"></i> Volver a lista de Procesos
         </g:link>
     </div>
@@ -220,11 +220,7 @@
         }else{
             return false;
         }
-
-
-
     });
-
 
     cargarCombo($("#fase").val());
 
