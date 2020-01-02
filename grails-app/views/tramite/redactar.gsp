@@ -169,7 +169,7 @@
 
             </div>
             <a href="#" id="btnRevisarProcesos" class="btn btn-success" title="Registrar valores" style="float: right" data-id="${tramite?.id}">
-            <i class="fa fa-tag"></i>
+            <i class="fa fa-tags"></i> Procesos
              </a>
 
             <elm:headerTramite tramite="${tramite}"/>
